@@ -1,0 +1,113 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Testimonials.css */
+.testimonials {
+  padding: 80px 0;
+  background-color: #080F1A;
+  font-family: 'Inter', sans-serif;
+}
+
+.testimonials-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #00FFFF;
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+}
+
+.testimonials-title:after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00FFFF 0%, #0077FF 100%);
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+}
+
+.testimonial {
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.1);
+  position: relative;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.testimonial:before {
+  content: "\201C";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 6rem;
+  color: rgba(0, 255, 255, 0.2);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  color: #00FFFF;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.testimonial-text {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial {
+    padding: 20px;
+  }
+  
+  .testimonial-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+}

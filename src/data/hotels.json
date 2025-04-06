@@ -1,0 +1,293 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Hotel Bilan",
+      "location": "Eastleigh, 7th Street",
+      "priceRange": "$30 - $50 per night",
+      "priceFrom": 30,
+      "description": "A modern hotel offering clean, air-conditioned rooms with free Wi-Fi and breakfast. Ideal for business and leisure travelers.",
+      "amenities": ["Free Wi-Fi", "Breakfast", "24/7 Security", "Conference Room"],
+      "whatsappNumber": "254790958286",
+      "adminNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Al Noor Suites",
+      "location": "Eastleigh, 12th Street",
+      "priceRange": "$25 - $45 per night",
+      "priceFrom": 25,
+      "description": "Comfortable suites featuring spacious rooms, private balconies, and a quiet atmosphere for relaxation.",
+      "amenities": ["Private Balcony", "Air Conditioning", "Restaurant", "Room Service"],
+      "whatsappNumber": "254790958286",
+      "stars": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Golden Star Hotel",
+      "location": "Eastleigh, 1st Avenue",
+      "priceRange": "$35 - $60 per night",
+      "priceFrom": 35,
+      "description": "A premium experience with well-furnished rooms, rooftop dining, and an on-site fitness center.",
+      "amenities": ["Rooftop Dining", "Fitness Center", "Free Parking", "24/7 Front Desk"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 4,
+      "name": "Horizon Palace",
+      "location": "Eastleigh, 5th Street",
+      "priceRange": "$20 - $40 per night",
+      "priceFrom": 20,
+      "description": "Budget-friendly accommodation with excellent service and easy access to local markets and transport.",
+      "amenities": ["Free Wi-Fi", "Laundry Service", "Taxi Booking", "24-Hour Security"],
+      "whatsappNumber": "254790958286",
+      "stars": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "name": "Emerald Inn",
+      "location": "Eastleigh, 9th Street",
+      "priceRange": "$40 - $70 per night",
+      "priceFrom": 40,
+      "description": "A stylish hotel with luxurious suites, a rooftop terrace, and excellent customer service.",
+      "amenities": ["Rooftop Lounge", "Smart TV", "Fine Dining", "Business Center"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 6,
+      "name": "Bluewave Residency",
+      "location": "Eastleigh, 3rd Avenue",
+      "priceRange": "$28 - $55 per night",
+      "priceFrom": 28,
+      "description": "A cozy and affordable stay with modern rooms, a restaurant, and high-speed internet.",
+      "amenities": ["High-Speed Wi-Fi", "Restaurant", "Laundry Service", "Airport Shuttle"],
+      "whatsappNumber": "254790958286",
+      "stars": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 7,
+      "name": "Neon Heights",
+      "location": "Eastleigh, Main Street",
+      "priceRange": "$75 - $120 per night",
+      "priceFrom": 75,
+      "description": "Stunning city view, free Wi-Fi & breakfast included",
+      "amenities": ["Free Wi-Fi", "Breakfast", "City View", "Air Conditioning"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 8,
+      "name": "Cyber Suite",
+      "location": "Eastleigh, Business District",
+      "priceRange": "$120 - $180 per night",
+      "priceFrom": 120,
+      "description": "Urban retreat with smart amenities & rooftop pool",
+      "amenities": ["Rooftop Pool", "Smart Amenities", "Business Center", "Fitness Center"],
+      "whatsappNumber": "254790958286",
+      "stars": 5,
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1578541031144-dec595cfece5?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 9,
+      "name": "Pixel Lodge",
+      "location": "Eastleigh, South Quarter",
+      "priceRange": "$95 - $150 per night",
+      "priceFrom": 95,
+      "description": "Cozy rooms with tech upgrades & complimentary bar",
+      "amenities": ["Tech Upgrades", "Complimentary Bar", "Room Service", "Free Wi-Fi"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 10,
+      "name": "Digital Oasis",
+      "location": "Eastleigh, Hilltop Road",
+      "priceRange": "$110 - $160 per night",
+      "priceFrom": 110,
+      "description": "Modern comfort with panoramic views & spa access",
+      "amenities": ["Panoramic Views", "Spa Access", "Modern Rooms", "Room Service"],
+      "whatsappNumber": "254790958286",
+      "stars": 5,
+      "images": [
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 11,
+      "name": "Quantum Inn",
+      "location": "Eastleigh, Quiet District",
+      "priceRange": "$85 - $130 per night",
+      "priceFrom": 85,
+      "description": "Minimalist design with maximum comfort & gym",
+      "amenities": ["Minimalist Design", "Gym Access", "Work Space", "Fast Internet"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 12,
+      "name": "Matrix Hotel",
+      "location": "Eastleigh, Entertainment District",
+      "priceRange": "$130 - $200 per night",
+      "priceFrom": 130,
+      "description": "VR gaming lounge, tech-forward rooms & cafe",
+      "amenities": ["VR Gaming Lounge", "Tech-Forward Rooms", "Cafe", "Entertainment"],
+      "whatsappNumber": "254790958286",
+      "stars": 5,
+      "images": [
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 13,
+      "name": "Byte Resort",
+      "location": "Eastleigh, Riverside Area",
+      "priceRange": "$70 - $110 per night",
+      "priceFrom": 70,
+      "description": "Riverside views, eco-friendly & breakfast buffet",
+      "amenities": ["Riverside Views", "Eco-Friendly", "Breakfast Buffet", "Lounge"],
+      "whatsappNumber": "254790958286",
+      "stars": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1580041065738-e72023775cdc?auto=format&fit=crop&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 14,
+      "name": "Synth Suites",
+      "location": "Eastleigh, Music Quarter",
+      "priceRange": "$90 - $145 per night",
+      "priceFrom": 90,
+      "description": "Live music venue, artsy rooms & craft cocktails",
+      "amenities": ["Live Music", "Artsy Rooms", "Craft Cocktails", "Bar"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1615460549969-36fa19521a4f?auto=format&fit=crop&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 15,
+      "name": "Neon Nest",
+      "location": "Eastleigh, Downtown",
+      "priceRange": "$65 - $95 per night",
+      "priceFrom": 65,
+      "description": "Compact but luxurious rooms with smart controls",
+      "amenities": ["Smart Controls", "Luxurious Rooms", "Central Location", "Free Wi-Fi"],
+      "whatsappNumber": "254790958286",
+      "stars": 3,
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?auto=format&fit=crop&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 16,
+      "name": "Cyber Central",
+      "location": "Eastleigh, Business Park",
+      "priceRange": "$100 - $150 per night",
+      "priceFrom": 100,
+      "description": "Business center, conference rooms & urban views",
+      "amenities": ["Business Center", "Conference Rooms", "Urban Views", "High-Speed Internet"],
+      "whatsappNumber": "254790958286",
+      "stars": 4,
+      "images": [
+        "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1562790879-dfde0c489689?auto=format&fit=crop&q=80"
+      ],
+      "featured": false
+    },
+    {
+      "id": 17,
+      "name": "Glow Gardens",
+      "location": "Eastleigh, Spa District",
+      "priceRange": "$115 - $180 per night",
+      "priceFrom": 115,
+      "description": "Serene courtyard, luxury amenities & spa treatments",
+      "amenities": ["Serene Courtyard", "Luxury Amenities", "Spa Treatments", "Fine Dining"],
+      "whatsappNumber": "254790958286",
+      "stars": 5,
+      "images": [
+        "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1571003123935-2f6e22a5d2fd?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    },
+    {
+      "id": 18,
+      "name": "Pixel Palace",
+      "location": "Eastleigh, Historic District",
+      "priceRange": "$150 - $220 per night",
+      "priceFrom": 150,
+      "description": "Historic building with modern tech & fine dining",
+      "amenities": ["Historic Building", "Modern Tech", "Fine Dining", "Luxury Suites"],
+      "whatsappNumber": "254790958286",
+      "stars": 5,
+      "images": [
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80"
+      ],
+      "featured": true
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+.why-book-with-us {
+    background-color: #07091A; /* Darker background for luxury feel */
+    color: #F0F2F8; /* Brighter base text color */
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Add subtle grid lines for futuristic feel */
+  .why-book-with-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+  }
+  
+  .why-book-with-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .why-book-with-us h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #FFFFFF; /* White for main heading */
+    position: relative;
+    font-weight: 700; /* Increased from 600 */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                 0 0 40px rgba(0, 255, 255, 0.4); /* Enhanced glow effect */
+  }
+  
+  .why-book-with-us h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(0,255,255,0.2), #00FFFF, rgba(0,255,255,0.2)); /* Glowing gradient line */
+    box-shadow: 0 0 8px #00FFFF; /* Neon glow effect */
+  }
+  
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .reason-card {
+    background-color: rgba(8, 11, 30, 0.9); /* Slightly transparent dark background */
+    border: 1px solid rgba(0, 255, 255, 0.1); /* Subtle teal border */
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(5px);
+  }
+  
+  .reason-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, transparent 100%);
+    z-index: -1;
+  }
+  
+  .reason-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.3);
+  }
+  
+  .reason-icon {
+    font-size: 2.8rem; /* Increased icon size */
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 255, 255, 0.08); /* Subtle teal background */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5),
+               0 0 45px rgba(0, 255, 255, 0.3); /* Enhanced glow effect */
+  }
+  
+  .reason-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #00FFFF; /* Neon Teal/Cyan for card titles */
+    font-weight: 600; /* Increased from 500 */
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.6),
+                 0 0 24px rgba(0, 255, 255, 0.3); /* Added glow for better visibility */
+  }
+  
+  .reason-card p {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF; /* Brighter text color */
+    line-height: 1.7;
+    font-weight: 500; /* Added explicit font weight */
+    font-size: 1.1rem; /* Slightly larger font size */
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.2); /* Subtle text enhancement */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .reasons-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .why-book-with-us h2 {
+      font-size: 2rem;
+    }
+  }
+
+  /* Add text selection color for better UX */
+  .why-book-with-us ::selection {
+    background: rgba(0, 255, 255, 0.3);
+    color: #FFFFFF;
+  }
+
+  /* Add smooth font rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.why {
+    background-image: linear-gradient(rgba(7, 9, 26, 0.92), rgba(7, 9, 26, 0.92)),
+                      url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #F0F2F8;
+    padding: 120px 2rem 4rem; /* Increased top padding to 120px */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Update the existing .why-book-with-us::before selector to .why::before */
+.why::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  background: rgba(0, 255, 255, 0.1);
+  color: #00FFFF;
+  border: 2px solid #00FFFF;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.cta-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
