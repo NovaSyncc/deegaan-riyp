@@ -20,6 +20,7 @@
   color: #00FFFF;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
   letter-spacing: 2px;
+  font-weight: 700; /* Added for better readability */
 }
 
 .hotel-grid {
@@ -29,10 +30,10 @@
 }
 
 .hotel-card {
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(0, 255, 255, 0.15); /* Slightly increased opacity for better contrast */
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Increased border opacity */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
@@ -54,7 +55,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), transparent);
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent); /* Increased opacity */
   pointer-events: none;
 }
 
@@ -93,13 +94,15 @@
   margin-bottom: 15px;
   color: #00FFFF;
   letter-spacing: 1px;
+  font-weight: 600; /* Added for better readability */
 }
 
 .hotel-location {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Increased from 0.9rem */
+  color: #FFFFFF; /* Explicitly set to ensure good contrast */
 }
 
 .location-icon {
@@ -108,17 +111,17 @@
 }
 
 .hotel-price {
-  font-weight: 600;
+  font-weight: 700; /* Increased from 600 */
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #0077FF;
+  color: #2B9CFF; /* Adjusted blue to be more visible */
 }
 
 .hotel-description {
   margin-bottom: 20px;
   line-height: 1.6;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem; /* Increased from 0.95rem */
+  color: rgba(255, 255, 255, 0.95); /* Increased opacity for better readability */
 }
 
 .hotel-amenities h4 {
@@ -126,6 +129,7 @@
   margin-bottom: 12px;
   font-size: 1.1rem;
   color: #00FFFF;
+  font-weight: 600; /* Added for better readability */
 }
 
 .amenities-list {
@@ -136,24 +140,25 @@
 }
 
 .amenity {
-  background: rgba(0, 119, 255, 0.2);
+  background: rgba(0, 119, 255, 0.25); /* Increased opacity */
   padding: 6px 12px;
   border-radius: 15px;
-  font-size: 0.8rem;
-  border: 1px solid rgba(0, 119, 255, 0.3);
+  font-size: 0.9rem; /* Increased from 0.8rem */
+  border: 1px solid rgba(0, 119, 255, 0.4); /* Increased border opacity */
+  color: #FFFFFF; /* Explicitly set color */
+  font-weight: 500; /* Added weight for better readability */
 }
 
-/* Update the whatsapp-button styles */
 .whatsapp-button {
-  display: block; /* Changed from flex to block */
+  display: block;
   width: fit-content;
-  margin: 20px auto; /* Center the button */
+  margin: 20px auto;
   background: linear-gradient(90deg, #00FFFF, #0077FF);
-  color: #080F1A;
-  padding: 14px 30px; /* Increased padding */
+  color: #000000; /* Darkened from #080F1A for better contrast */
+  padding: 14px 30px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700; /* Increased from 600 */
   transition: all 0.3s ease;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
@@ -208,15 +213,20 @@
   }
   
   .hotel-name {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* Increased from 1.3rem */
   }
   
   .hotel-description {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Increased from 0.9rem */
+    color: rgba(255, 255, 255, 1); /* Full opacity for mobile */
+  }
+  
+  .amenity {
+    font-size: 0.95rem; /* Increased size for mobile */
   }
 }
 
-/* Update media query for smaller screens */
+/* Updated media query for smaller screens */
 @media (max-width: 576px) {
   .hotel-images {
     grid-template-columns: 1fr;
@@ -233,6 +243,18 @@
   
   .whatsapp-button {
     padding: 12px 25px;
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Increased from 0.8rem */
+  }
+  
+  .hotel-location {
+    font-size: 1.05rem; /* Increased for mobile */
+  }
+  
+  .hotel-price {
+    font-size: 1.2rem; /* Increased for mobile */
+  }
+  
+  .section-title {
+    font-size: 1.8rem; /* Adjusted for very small screens */
   }
 }

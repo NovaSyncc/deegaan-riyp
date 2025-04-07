@@ -1,0 +1,65 @@
+/* Terms.css - Cyberpunk styling for Terms of Service page */
+
+.terms-content {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .terms-intro {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    border-left: 3px solid #00FFFF;
+    padding-left: 1rem;
+  }
+  
+  .terms-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .terms-subsection {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(0, 255, 255, 0.3);
+  }
+  
+  .terms-subsection h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+  }
+  
+  .terms-warning {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid #FF3C5A;
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .terms-warning h4 {
+    color: #FF3C5A;
+    margin-bottom: 0.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .terms-section h3 {
+      font-size: 1.2rem;
+    }
+    
+    .terms-subsection h4 {
+      font-size: 1rem;
+    }
+    
+    .terms-intro {
+      font-size: 1rem;
+    }
+  }

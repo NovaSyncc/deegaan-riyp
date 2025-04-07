@@ -53,8 +53,7 @@ const Location = () => {
                 <i className="info-icon location-icon"></i>
                 <div>
                   <h4>Address</h4>
-                  <p>123 Neon Boulevard, Suite 5678</p>
-                  <p>Techno City, TX 90210</p>
+                  <p>Deegaan-Riyo Head quarters at BBS mall 3rd floor</p>
                 </div>
               </div>
               
@@ -63,8 +62,8 @@ const Location = () => {
                 <div>
                   <h4>Phone</h4>
                   <p>
-                    <a href="tel:+12345678900" className="contact-link">
-                      +1 (234) 567-8900
+                    <a href="tel:+254712221079" className="contact-link">
+                      +254 712 221 079
                     </a>
                   </p>
                 </div>
@@ -75,8 +74,20 @@ const Location = () => {
                 <div>
                   <h4>Email</h4>
                   <p>
-                    <a href="mailto:info@techlabs.com" className="contact-link">
-                      info@techlabs.com
+                    <a href="mailto:deegaan@riyo.com" className="contact-link">
+                      deegaan@riyo.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="info-item">
+                <i className="info-icon website-icon"></i>
+                <div>
+                  <h4>Website</h4>
+                  <p>
+                    <a href="http://www.deegaan-riyo.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+                      www.deegaan-riyo.com
                     </a>
                   </p>
                 </div>

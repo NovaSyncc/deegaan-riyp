@@ -115,26 +115,41 @@ const ContactUs = () => {
       setIsLoading(true);
       
       try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-        
-        // Reset form after submission
-        setState({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
+        // Send data to Formspree
+        const response = await fetch('https://formspree.io/f/xblgpzay', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formData)
         });
         
-        // Reset submission message after 5 seconds
-        setTimeout(() => {
-          setSubmitted(false);
-        }, 5000);
+        const data = await response.json();
+        
+        if (data.ok) {
+          console.log('Form submitted successfully:', formData);
+          setSubmitted(true);
+          
+          // Reset form after submission
+          setState({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+          
+          // Reset submission message after 5 seconds
+          setTimeout(() => {
+            setSubmitted(false);
+          }, 5000);
+        } else {
+          console.error('Form submission error:', data);
+          setErrors({ form: 'Failed to submit form. Please try again.' });
+        }
       } catch (error) {
         console.error('Error submitting form:', error);
+        setErrors({ form: 'Failed to submit form. Please try again.' });
       } finally {
         setIsLoading(false);
       }
@@ -187,6 +202,17 @@ const ContactUs = () => {
                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
                 <span>Message sent successfully!</span>
+              </div>
+            )}
+            
+            {errors.form && (
+              <div className="error-message form-error">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5555" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>{errors.form}</span>
               </div>
             )}
             

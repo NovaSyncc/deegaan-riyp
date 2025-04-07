@@ -1,0 +1,197 @@
+/* Cookies Page Cyberpunk Styling */
+.cookies-container {
+    background-color: #050A14;
+    color: #AAEEFF;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cookies-header {
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .cookies-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #00FFFF;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    letter-spacing: 2px;
+  }
+  
+  .neon-line {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,255,255,0) 0%, rgba(0,255,255,1) 50%, rgba(0,255,255,0) 100%);
+    margin: 2rem 0;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  .cookie-section {
+    margin-bottom: 3.5rem;
+    position: relative;
+  }
+  
+  .cookie-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #00FFFF;
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cookie-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #00FFFF, transparent);
+  }
+  
+  .cookie-type {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+    background: rgba(0, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .cookie-type:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .cookie-type h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFFF;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cyber-list {
+    list-style-type: none;
+    padding-left: 1.5rem;
+  }
+  
+  .cyber-list li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .cyber-list li:before {
+    content: '>';
+    color: #00FFFF;
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    left: -1.5rem;
+  }
+  
+  .browser-instructions {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 4px;
+    border-left: 2px solid #00FFFF;
+  }
+  
+  .browser-instructions h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFFF;
+    margin-bottom: 0.8rem;
+  }
+  
+  .cookies-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 3rem 0;
+  }
+  
+  .cyber-button {
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .cyber-button.primary {
+    background: linear-gradient(45deg, #073546, #00FFFF);
+    color: #050A14;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  .cyber-button.primary:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+    transform: translateY(-2px);
+  }
+  
+  .cyber-button.secondary {
+    background: rgba(0, 255, 255, 0.1);
+    color: #00FFFF;
+    border: 1px solid #00FFFF;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  
+  .cyber-button.secondary:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+  
+  .cyber-button.outline {
+    background: transparent;
+    color: #AAEEFF;
+    border: 1px solid #AAEEFF;
+  }
+  
+  .cyber-button.outline:hover {
+    color: #00FFFF;
+    border-color: #00FFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  .cookies-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(170, 238, 255, 0.7);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .cookies-container {
+      padding: 1.5rem;
+    }
+    
+    .cookies-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .cookie-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .cookies-actions {
+      flex-direction: column;
+    }
+    
+    .cyber-button {
+      width: 100%;
+    }
+  }

@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './WhyBookUs.css';
 
-const WhyBookUs = () => {  // Changed component name to match export
+const WhyBookUs = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/eastleigh-hotels');
+  };
+
   const reasons = [
     {
       id: 1,
@@ -43,7 +50,9 @@ const WhyBookUs = () => {  // Changed component name to match export
           ))}
         </div>
         <div className="cta-container">
-          <button className="cta-button">Checkout Best Deals</button>
+          <button className="cta-button" onClick={handleButtonClick}>
+            Checkout Best Deals
+          </button>
         </div>
       </div>
     </section>

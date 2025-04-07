@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './AboutUs.css';
 import CEOImage from '../../../../assets/images/CEO.webp';
+// In AboutUs.jsx, add an id attribute to your section element
+
 
 const AboutUs = () => {
   const sectionRef = useRef(null);
@@ -31,25 +33,25 @@ const AboutUs = () => {
       id: 1,
       name: "Ahmed Mohamed",
       role: "Lead Developer",
-      image: "/api/placeholder/200/200"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     },
     {
       id: 2,
       name: "Amina Hassan",
       role: "UX Designer",
-      image: "/api/placeholder/200/200"
+      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     },
     {
       id: 3,
       name: "Omar Ali",
       role: "Marketing Specialist",
-      image: "/api/placeholder/200/200"
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     },
     {
       id: 4,
       name: "Fatima Hussein",
       role: "Customer Relations",
-      image: "/api/placeholder/200/200"
+      image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
     }
   ];
 
@@ -62,7 +64,7 @@ const AboutUs = () => {
           <div className="neon-line"></div>
           
           <p className="intro-text">
-            At its core, <span className="highlight-text">RiyO</span> is about <span className="highlight-text">innovation, empowerment, and sustainability</span>, driven by technology and entrepreneurship. As a multi-layered brand with different ventures, we share a unified <span className="highlight-text">vision of reshaping industries, creating economic opportunities, and solving real-world problems</span> through accessible technology.
+            <span className="highlight-text">RiyO</span> is the parent company of Deegaan-Riyo, built on <span className="highlight-text">innovation, empowerment, and sustainability</span>. Our business ecosystem is driven by technology and entrepreneurship with a <span className="highlight-text">vision of reshaping industries, creating economic opportunities, and solving real-world problems</span> through accessible technology solutions across multiple ventures.
           </p>
           
           <div className="core-values">
@@ -180,29 +182,6 @@ const AboutUs = () => {
                 <blockquote className="founder-quote">
                   "Deegaan-Riyo isn't just a platform—it's a community tool. By turning WhatsApp into a booking engine, we're helping small hotels compete and travelers explore with confidence. This represents RiyO's broader mission to solve real-world problems through innovative approaches."
                 </blockquote>
-              </div>
-            </div>
-          </div>
-          
-          <div className="technical-approach">
-            <h3 className="neon-text">Technical Approach</h3>
-            <div className="approach-content">
-              <div className="approach-column">
-                <h4>MVP Phase (Current)</h4>
-                <ul>
-                  <li><strong>Front-End:</strong> React.js for reusable components (hotel cards, search)</li>
-                  <li><strong>Design:</strong> Plain CSS for fast iteration; frameworks to scale later</li>
-                  <li><strong>Data:</strong> Static mockups to validate UX before backend integration</li>
-                </ul>
-              </div>
-              <div className="approach-column">
-                <h4>Future Scalability</h4>
-                <ul>
-                  <li>API integrations for real-time availability/pricing</li>
-                  <li>Expand to payment processing and booking management</li>
-                  <li>Additional language support and region expansion</li>
-                  <li>Sustainable growth model to create lasting impact</li>
-                </ul>
               </div>
             </div>
           </div>
