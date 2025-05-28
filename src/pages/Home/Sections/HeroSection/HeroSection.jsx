@@ -1,18 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
+import { FaWhatsapp, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import heroImage from '../../../../assets/images/Hero.jpg';
 import bubbleSound1 from '../../../../assets/sounds/blip.mp3';
 import bubbleSound2 from '../../../../assets/sounds/ding.mp3';
 import './HeroSection.css';
 
 const HeroSection = () => {
-  const [soundsPlayed, setSoundsPlayed] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const sound1Ref = useRef(null);
   const sound2Ref = useRef(null);
   const hasMountedRef = useRef(false);
+  const hasPlayedRef = useRef(false);
 
   // Check user's sound preference
   useEffect(() => {
@@ -50,6 +49,7 @@ const HeroSection = () => {
     setIsMuted(!isMuted);
   };
 
+  // Handle sound on scroll for first page load and page reload
   useEffect(() => {
     const options = {
       root: null,
@@ -58,9 +58,10 @@ const HeroSection = () => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        playMessageSound(sound1Ref, 1200);
-        playMessageSound(sound2Ref, 1800);
+      if (entries[0].isIntersecting && !hasPlayedRef.current) {
+        playMessageSound(sound1Ref, 800);
+        playMessageSound(sound2Ref, 1200);
+        hasPlayedRef.current = true;
       }
     }, options);
 
@@ -82,18 +83,18 @@ const HeroSection = () => {
       <div className="hero-content">
         <motion.h1 
           className="hero-title"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           Find the Best Hotels in Eastleigh, Nairobi
         </motion.h1>
         
         <motion.p 
           className="hero-subtitle"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
           Book directly with your desired hotel's reception in "ISLII" via <span className="whatsapp-text"><FaWhatsapp className="whatsapp-icon" />WhatsApp</span> – No middlemen, no hassle.
         </motion.p>
@@ -101,27 +102,29 @@ const HeroSection = () => {
         <div className="message-bubbles-container">
           <motion.div 
             className="message-bubble somali-bubble"
-            initial={{ opacity: 0, scale: 0.8, y: 15 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2, type: "spring", stiffness: 100 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8, ease: 'easeInOut', type: 'spring', stiffness: 90 }}
           >
+            <span className="flag-icon">🇸🇴</span>
             <p className="bubble-text">Ku soo dhawoow deegaan aad ka heli doonto riyo wacan.</p>
           </motion.div>
           
           <motion.div 
             className="message-bubble swahili-bubble"
-            initial={{ opacity: 0, scale: 0.8, y: 15 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.6, type: "spring", stiffness: 100 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.2, ease: 'easeInOut', type: 'spring', stiffness: 90 }}
           >
+            <span className="flag-icon">🇰🇪</span>
             <p className="bubble-text">Karibu kwenye mahali utakapopata usingizi mtulivu na ndoto za fahari.</p>
           </motion.div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
         >
           <a href="#hotel-listings" className="hero-cta-button">
             Explore Hotels

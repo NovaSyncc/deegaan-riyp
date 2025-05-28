@@ -53,7 +53,7 @@ const Location = () => {
                 <i className="info-icon location-icon"></i>
                 <div>
                   <h4>Address</h4>
-                  <p>Deegaan-Riyo Head quarters at BBS mall 3rd floor</p>
+                  <p>Deegaan-Riyo Head Quarters<br />BBS Mall, 3rd Floor<br />Eastleigh, Nairobi</p>
                 </div>
               </div>
               
@@ -75,7 +75,7 @@ const Location = () => {
                   <h4>Email</h4>
                   <p>
                     <a href="mailto:deegaan@riyo.com" className="contact-link">
-                      deegaan@riyo.com
+                      info@deeganriyo.online
                     </a>
                   </p>
                 </div>
@@ -87,7 +87,7 @@ const Location = () => {
                   <h4>Website</h4>
                   <p>
                     <a href="http://www.deegaan-riyo.com" target="_blank" rel="noopener noreferrer" className="contact-link">
-                      www.deegaan-riyo.com
+                      www.deegaanriyo.online
                     </a>
                   </p>
                 </div>
