@@ -4,16 +4,117 @@ import './BookingForm.css';
 const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
-    checkIn: '',
-    checkOut: '',
+    checkInMonth: '',
+    checkInDate: '',
+    stayDuration: 1,
     guests: 1,
     rooms: 1,
     specialRequests: ''
   });
   
   const [selectedHotelState, setSelectedHotel] = useState(null);
+  const [language, setLanguage] = useState('en'); // 'en' for English, 'so' for Somali
+  const currentYear = new Date().getFullYear();
+  
+  // Translation object
+  const translations = {
+    en: {
+      title: "Book Your Stay",
+      selectHotel: "Please select a hotel first",
+      fullName: "Full Name",
+      phone: "Phone Number",
+      checkInDate: `Check-in Date (${currentYear})`,
+      month: "Month",
+      date: "Date",
+      days: "Days",
+      dayRange: "(1-30 days)",
+      guests: "Guests",
+      rooms: "Rooms",
+      specialRequests: "Special Requests (Optional)",
+      specialRequestsPlaceholder: "Any specific requirements?",
+      bookButton: "Book via WhatsApp",
+      phonePlaceholder: "0712345678",
+      whatsappMessage: {
+        greeting: "Hello",
+        bookingDetails: "*Booking Details:*",
+        name: "Name",
+        phone: "Phone",
+        checkIn: "Check-in",
+        checkOut: "Check-out",
+        duration: "Duration",
+        day: "day",
+        days: "days",
+        guests: "Guests",
+        rooms: "Rooms",
+        specialRequests: "Special requests",
+        thankYou: "Thank you!"
+      },
+      alerts: {
+        selectHotelFirst: "Please select a hotel first before booking.",
+        noWhatsApp: "Sorry, WhatsApp contact is not available for this hotel."
+      }
+    },
+    so: {
+      title: "Dalbo Joogitaankaaga",
+      selectHotel: "Fadlan dooro hotel marka hore",
+      fullName: "Magaca Oo Buuxa",
+      phone: "Lambarka Telefoonka",
+      checkInDate: `Taariikhda Soo Galka (${currentYear})`,
+      month: "Bil",
+      date: "Taarikh",
+      days: "Maalmood",
+      dayRange: "(1-30 maalmood)",
+      guests: "Marti",
+      rooms: "Qolal",
+      specialRequests: "Codsiyada Gaarka Ah (Ikhtiyaari)",
+      specialRequestsPlaceholder: "Ma jiraan baahiyo gaar ah?",
+      bookButton: "Dalbo WhatsApp-ka",
+      phonePlaceholder: "0712345678",
+      whatsappMessage: {
+        greeting: "Salaan",
+        bookingDetails: "*Faahfaahinta Dalbashada:*",
+        name: "Magac",
+        phone: "Telefoon",
+        checkIn: "Soo gal",
+        checkOut: "Ka bax",
+        duration: "Muddada",
+        day: "maalin",
+        days: "maalmood",
+        guests: "Marti",
+        rooms: "Qolal",
+        specialRequests: "Codsiyada gaarka ah",
+        thankYou: "Mahadsanid!"
+      },
+      alerts: {
+        selectHotelFirst: "Fadlan dooro hotel marka hore intaadan dalbayn.",
+        noWhatsApp: "Waan ka xumahay, xiriirka WhatsApp-ka looma heli karo hotelkan."
+      }
+    }
+  };
+  
+  const t = translations[language];
+  
+  // Month options - showing only next 6 months for compactness
+  const getAvailableMonths = () => {
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const months = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    
+    const availableMonths = [];
+    for (let i = 0; i < 6; i++) {
+      const monthIndex = (currentMonth + i) % 12;
+      const value = (monthIndex + 1).toString().padStart(2, '0');
+      availableMonths.push({
+        value: value,
+        label: months[monthIndex]
+      });
+    }
+    return availableMonths;
+  };
   
   // Update useEffect to use the passed hotel directly
   useEffect(() => {
@@ -22,26 +123,69 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
     }
   }, [selectedHotel]);
   
+  // Get number of days in selected month
+  const getDaysInMonth = (month, year) => {
+    return new Date(year, month, 0).getDate();
+  };
+  
+  // Generate date options based on selected month
+  const getDateOptions = () => {
+    if (!formData.checkInMonth) return [];
+    
+    const daysInMonth = getDaysInMonth(parseInt(formData.checkInMonth), currentYear);
+    const today = new Date();
+    const currentMonth = today.getMonth() + 1;
+    const currentDate = today.getDate();
+    
+    const options = [];
+    
+    // If selected month is current month, start from today
+    const startDate = (parseInt(formData.checkInMonth) === currentMonth) ? currentDate : 1;
+    
+    for (let i = startDate; i <= daysInMonth; i++) {
+      options.push({
+        value: i.toString().padStart(2, '0'),
+        label: i.toString()
+      });
+    }
+    
+    return options;
+  };
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    
+    // Reset date if month changes
+    if (name === 'checkInMonth') {
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value,
+        checkInDate: '' // Reset date when month changes
+      }));
+    } else {
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+      }));
+    }
+  };
+  
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
   };
   
   const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!selectedHotelState) {
-      alert("Please select a hotel first before booking.");
+      alert(t.alerts.selectHotelFirst);
       return;
     }
 
     // Get WhatsApp number from the selected hotel
     let whatsappNumber = selectedHotelState.whatsappNumber || selectedHotelState.adminNumber;
     if (!whatsappNumber) {
-      alert("Sorry, WhatsApp contact is not available for this hotel.");
+      alert(t.alerts.noWhatsApp);
       return;
     }
 
@@ -55,9 +199,13 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
       whatsappNumber = '254' + whatsappNumber;
     }
 
+    // Calculate check-in and check-out dates
+    const checkInDate = new Date(currentYear, parseInt(formData.checkInMonth) - 1, parseInt(formData.checkInDate));
+    const checkOutDate = new Date(checkInDate);
+    checkOutDate.setDate(checkOutDate.getDate() + parseInt(formData.stayDuration));
+
     // Format dates
-    const formatDate = (dateString) => {
-      const date = new Date(dateString);
+    const formatDate = (date) => {
       return date.toLocaleDateString('en-US', { 
         weekday: 'short', 
         year: 'numeric', 
@@ -66,23 +214,23 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
       });
     };
 
-    // Create the message
+    // Create the message based on selected language
     const message = `
-Hello ${selectedHotelState.name},
+${t.whatsappMessage.greeting} ${selectedHotelState.name},
 
-I would like to make a booking:
+${language === 'so' ? 'Waxaan jeclaan lahaa inaan dalbo:' : 'I would like to make a booking:'}
 
-*Booking Details:*
-- Name: ${formData.name}
-- Email: ${formData.email}
-- Phone: ${formData.phone}
-- Check-in: ${formatDate(formData.checkIn)}
-- Check-out: ${formatDate(formData.checkOut)}
-- Guests: ${formData.guests}
-- Rooms: ${formData.rooms}
-${formData.specialRequests ? `- Special requests: ${formData.specialRequests}` : ''}
+${t.whatsappMessage.bookingDetails}
+- ${t.whatsappMessage.name}: ${formData.name}
+- ${t.whatsappMessage.phone}: ${formData.phone}
+- ${t.whatsappMessage.checkIn}: ${formatDate(checkInDate)}
+- ${t.whatsappMessage.checkOut}: ${formatDate(checkOutDate)}
+- ${t.whatsappMessage.duration}: ${formData.stayDuration} ${formData.stayDuration > 1 ? t.whatsappMessage.days : t.whatsappMessage.day}
+- ${t.whatsappMessage.guests}: ${formData.guests}
+- ${t.whatsappMessage.rooms}: ${formData.rooms}
+${formData.specialRequests ? `- ${t.whatsappMessage.specialRequests}: ${formData.specialRequests}` : ''}
 
-Thank you!`.trim();
+${t.whatsappMessage.thankYou}`.trim();
 
     // Create WhatsApp URL
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
@@ -93,10 +241,10 @@ Thank you!`.trim();
     // Reset form and close modal
     setFormData({
       name: '',
-      email: '',
       phone: '',
-      checkIn: '',
-      checkOut: '',
+      checkInMonth: '',
+      checkInDate: '',
+      stayDuration: 1,
       guests: 1,
       rooms: 1,
       specialRequests: ''
@@ -104,29 +252,29 @@ Thank you!`.trim();
     onClose();
   };
   
-  // Render the hotel info or placeholder based on selection state
+  // Compact hotel info renderer
   const renderHotelInfo = () => {
     if (selectedHotelState) {
       return (
         <div className="selected-hotel-info">
           <h3>{selectedHotelState.name}</h3>
-          <p className="hotel-location">{selectedHotelState.location}</p>
-          <p className="price-range">{selectedHotelState.priceRange}</p>
+          <div className="hotel-location">{selectedHotelState.location}</div>
+          <div className="price-range">{selectedHotelState.priceRange}</div>
           <div className="hotel-rating">
             {Array(selectedHotelState.stars).fill().map((_, i) => (
               <span key={i} className="star">★</span>
             ))}
           </div>
-          {selectedHotelState.amenities && (
+          {selectedHotelState.amenities && selectedHotelState.amenities.length > 0 && (
             <div className="hotel-amenities">
-              <small>Amenities: {selectedHotelState.amenities.slice(0, 3).join(', ')}{selectedHotelState.amenities.length > 3 ? ' +more' : ''}</small>
+              {selectedHotelState.amenities.slice(0, 2).join(', ')}{selectedHotelState.amenities.length > 2 ? ' +more' : ''}
             </div>
           )}
         </div>
       );
     }
     
-    return <div className="no-hotel-selected">Please select a hotel first</div>;
+    return <div className="no-hotel-selected">{t.selectHotel}</div>;
   };
   
   if (!isOpen) return null;
@@ -136,13 +284,33 @@ Thank you!`.trim();
       <div className="booking-form-container">
         <button className="close-button" onClick={onClose}>×</button>
         
-        <h2 className="form-title">Book Your Stay</h2>
+        {/* Language Toggle */}
+        <div className="language-toggle-container">
+          <div className="language-toggle">
+            <button
+              className={`language-button ${language === 'en' ? 'active' : ''}`}
+              onClick={() => handleLanguageChange('en')}
+              type="button"
+            >
+              English
+            </button>
+            <button
+              className={`language-button ${language === 'so' ? 'active' : ''}`}
+              onClick={() => handleLanguageChange('so')}
+              type="button"
+            >
+              Somali
+            </button>
+          </div>
+        </div>
+        
+        <h2 className="form-title">{t.title}</h2>
         
         {renderHotelInfo()}
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">FULL NAME</label>
+            <label htmlFor="name">{t.fullName}</label>
             <input
               type="text"
               id="name"
@@ -153,64 +321,82 @@ Thank you!`.trim();
             />
           </div>
           
+          <div className="form-group">
+            <label htmlFor="phone">{t.phone}</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder={t.phonePlaceholder}
+              required
+            />
+          </div>
+          
+          <div className="check-in-section">
+            <h4 className="section-title">{t.checkInDate}</h4>
+            
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="checkInMonth">{t.month}</label>
+                <select
+                  id="checkInMonth"
+                  name="checkInMonth"
+                  value={formData.checkInMonth}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">{t.month}</option>
+                  {getAvailableMonths().map(month => (
+                    <option key={month.value} value={month.value}>
+                      {month.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="checkInDate">{t.date}</label>
+                <select
+                  id="checkInDate"
+                  name="checkInDate"
+                  value={formData.checkInDate}
+                  onChange={handleChange}
+                  disabled={!formData.checkInMonth}
+                  required
+                >
+                  <option value="">{t.date}</option>
+                  {getDateOptions().map(date => (
+                    <option key={date.value} value={date.value}>
+                      {date.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+          
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="email">EMAIL</label>
+              <label htmlFor="stayDuration">
+                {t.days}
+                <span className="duration-range">{t.dayRange}</span>
+              </label>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                type="number"
+                id="stayDuration"
+                name="stayDuration"
+                min="1"
+                max="30"
+                value={formData.stayDuration}
                 onChange={handleChange}
                 required
               />
             </div>
             
             <div className="form-group">
-              <label htmlFor="phone">PHONE NUMBER</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="e.g., 0712345678"
-                required
-              />
-            </div>
-          </div>
-          
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="checkIn">CHECK-IN DATE</label>
-              <input
-                type="date"
-                id="checkIn"
-                name="checkIn"
-                value={formData.checkIn}
-                onChange={handleChange}
-                min={new Date().toISOString().split('T')[0]}
-                required
-              />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="checkOut">CHECK-OUT DATE</label>
-              <input
-                type="date"
-                id="checkOut"
-                name="checkOut"
-                value={formData.checkOut}
-                onChange={handleChange}
-                min={formData.checkIn || new Date().toISOString().split('T')[0]}
-                required
-              />
-            </div>
-          </div>
-          
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="guests">NUMBER OF GUESTS</label>
+              <label htmlFor="guests">{t.guests}</label>
               <input
                 type="number"
                 id="guests"
@@ -223,7 +409,7 @@ Thank you!`.trim();
             </div>
             
             <div className="form-group">
-              <label htmlFor="rooms">NUMBER OF ROOMS</label>
+              <label htmlFor="rooms">{t.rooms}</label>
               <input
                 type="number"
                 id="rooms"
@@ -237,14 +423,14 @@ Thank you!`.trim();
           </div>
           
           <div className="form-group">
-            <label htmlFor="specialRequests">SPECIAL REQUESTS (OPTIONAL)</label>
+            <label htmlFor="specialRequests">{t.specialRequests}</label>
             <textarea
               id="specialRequests"
               name="specialRequests"
               value={formData.specialRequests}
               onChange={handleChange}
-              rows="3"
-              placeholder="Any specific requirements for your stay?"
+              rows="2"
+              placeholder={t.specialRequestsPlaceholder}
             ></textarea>
           </div>
           
@@ -253,7 +439,7 @@ Thank you!`.trim();
             className="submit-button"
             disabled={!selectedHotelState}
           >
-            Book via WhatsApp
+            {t.bookButton}
           </button>
         </form>
       </div>
