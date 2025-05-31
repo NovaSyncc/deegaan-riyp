@@ -75,8 +75,8 @@
   
   .social-links {
     display: flex;
-    gap: 15px;
-    margin-top: 25px;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
   
   .social-icon {
@@ -88,16 +88,39 @@
     border-radius: 8px;
     background: linear-gradient(135deg, rgba(0, 119, 255, 0.2), rgba(0, 255, 255, 0.2));
     border: 1px solid rgba(0, 255, 255, 0.3);
-    color: #00FFFF;
+    color: var(--primary-cyan);
+    font-size: 1.5rem;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
   }
   
   .social-icon:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    border-color: rgba(0, 255, 255, 0.6);
-    color: #FFFFFF;
+    transform: translateY(-2px);
+    color: var(--hero-primary);
+  }
+  
+  /* Specific colors for each platform */
+  .social-icon [data-icon="whatsapp"]:hover {
+    color: #25D366;
+  }
+  
+  .social-icon [data-icon="facebook"]:hover {
+    color: #1877F2;
+  }
+  
+  .social-icon [data-icon="twitter"]:hover {
+    color: #1DA1F2;
+  }
+  
+  .social-icon [data-icon="instagram"]:hover {
+    color: #E4405F;
+  }
+  
+  .social-icon [data-icon="github"]:hover {
+    color: #ffffff;
+  }
+  
+  .social-icon [data-icon="youtube"]:hover {
+    color: #FF0000;
   }
   
   /* Links Section */
