@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-=======
-import { FaHeart, FaEnvelope } from 'react-icons/fa'
->>>>>>> 6f518f20cc0344ea72c744494d451fc5a431a5c5
 import { 
   faWhatsapp, 
   faFacebook, 
