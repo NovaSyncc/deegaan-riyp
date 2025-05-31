@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faWhatsapp, 
+  faFacebook, 
+  faTwitter, 
+  faInstagram, 
+  faGithub, 
+  faYoutube 
+} from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -44,17 +53,59 @@ const Footer = () => {
           <h2 className="footer-logo">Riyo<span className="blink-text">_</span></h2>
           <p className="tagline">Reshaping Industries Through Technology</p>
           <div className="social-links">
-            <a href="https://twitter.com/riyotech" className="social-icon" aria-label="Twitter">
-              <i className="icon-twitter"></i>
+            <a 
+              href="https://wa.link/bq4imb" 
+              className="social-icon" 
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} />
             </a>
-            <a href="https://instagram.com/riyotech" className="social-icon" aria-label="Instagram">
-              <i className="icon-instagram"></i>
+            <a 
+              href="https://facebook.com/deegaanriyo" 
+              className="social-icon" 
+              aria-label="Facebook - Deegaan Riyo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://linkedin.com/company/riyotech" className="social-icon" aria-label="LinkedIn">
-              <i className="icon-linkedin"></i>
+            <a 
+              href="https://twitter.com/DeegaanRiyo" 
+              className="social-icon" 
+              aria-label="X (Twitter) - DeegaanRiyo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="https://github.com/riyotech" className="social-icon" aria-label="GitHub">
-              <i className="icon-github"></i>
+            <a 
+              href="https://www.instagram.com/haji_al_benghazi?igsh=MWg0MjJqMDVnbDc3Yg==" 
+              className="social-icon" 
+              aria-label="Instagram - Haji Al Benghazi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a 
+              href="https://github.com/NovaSyncc" 
+              className="social-icon" 
+              aria-label="GitHub - NovaSyncc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a 
+              href="https://youtube.com/@RiyoNova" 
+              className="social-icon" 
+              aria-label="YouTube - RiyoNova"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faYoutube} />
             </a>
           </div>
         </div>
