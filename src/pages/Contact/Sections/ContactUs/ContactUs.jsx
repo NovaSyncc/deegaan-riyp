@@ -7,7 +7,9 @@ const ContactUs = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    contactType: '',
+    priority: 'normal'
   });
   
   const [errors, setErrors] = useState({});
@@ -20,6 +22,66 @@ const ContactUs = () => {
     subject: false,
     message: false
   });
+  
+  // Contact type options
+  const contactTypes = [
+    {
+      id: 'urgent',
+      label: 'Urgent Help',
+      icon: '🚨',
+      priority: 'urgent',
+      description: 'Emergency assistance needed'
+    },
+    {
+      id: 'hotel',
+      label: 'Hotel Inquiry',
+      icon: '🏨',
+      priority: 'normal',
+      description: 'Hotel booking and services'
+    },
+    {
+      id: 'booking',
+      label: 'Booking Support',
+      icon: '📅',
+      priority: 'normal',
+      description: 'Reservation assistance'
+    },
+    {
+      id: 'technical',
+      label: 'Technical Issue',
+      icon: '⚙️',
+      priority: 'high',
+      description: 'Technical problems'
+    },
+    {
+      id: 'billing',
+      label: 'Billing Question',
+      icon: '💳',
+      priority: 'normal',
+      description: 'Payment and billing'
+    },
+    {
+      id: 'feedback',
+      label: 'Feedback',
+      icon: '💬',
+      priority: 'normal',
+      description: 'Share your thoughts'
+    },
+    {
+      id: 'partnership',
+      label: 'Partnership',
+      icon: '🤝',
+      priority: 'normal',
+      description: 'Business opportunities'
+    },
+    {
+      id: 'other',
+      label: 'Other',
+      icon: '📝',
+      priority: 'normal',
+      description: 'General inquiries'
+    }
+  ];
   
   // Multilingual content
   const slideContent = [
@@ -54,6 +116,24 @@ const ContactUs = () => {
     setActiveSlide(index);
   };
   
+  // Handle contact type selection
+  const handleContactTypeSelect = (contactType) => {
+    const selectedType = contactTypes.find(type => type.id === contactType);
+    setState(prevState => ({
+      ...prevState,
+      contactType: contactType,
+      priority: selectedType ? selectedType.priority : 'normal'
+    }));
+    
+    // Clear contact type error if exists
+    if (errors.contactType) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        contactType: ''
+      }));
+    }
+  };
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState(prevState => ({
@@ -86,6 +166,10 @@ const ContactUs = () => {
   const validateForm = () => {
     const newErrors = {};
     
+    if (!formData.contactType) {
+      newErrors.contactType = 'Please select a contact type';
+    }
+    
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     }
@@ -115,6 +199,14 @@ const ContactUs = () => {
       setIsLoading(true);
       
       try {
+        // Prepare form data with contact type information
+        const selectedContactType = contactTypes.find(type => type.id === formData.contactType);
+        const submissionData = {
+          ...formData,
+          contactTypeLabel: selectedContactType ? selectedContactType.label : 'Other',
+          contactTypeDescription: selectedContactType ? selectedContactType.description : 'General inquiry'
+        };
+        
         // Send data to Formspree
         const response = await fetch('https://formspree.io/f/xblgpzay', {
           method: 'POST',
@@ -122,13 +214,13 @@ const ContactUs = () => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify(submissionData)
         });
         
         const data = await response.json();
         
         if (data.ok) {
-          console.log('Form submitted successfully:', formData);
+          console.log('Form submitted successfully:', submissionData);
           setSubmitted(true);
           
           // Reset form after submission
@@ -136,7 +228,9 @@ const ContactUs = () => {
             name: '',
             email: '',
             subject: '',
-            message: ''
+            message: '',
+            contactType: '',
+            priority: 'normal'
           });
           
           // Reset submission message after 5 seconds
@@ -195,6 +289,30 @@ const ContactUs = () => {
             <h1 className="form-title">Contact Us</h1>
             <p className="form-subtitle">Get in touch with our team</p>
             
+            {/* Contact Type Selection */}
+            <div className="contact-type-section">
+              <div className="form-group">
+                <label htmlFor="contactType">What can we help you with?</label>
+                <div className="contact-type-grid">
+                  {contactTypes.map((type) => (
+                    <div
+                      key={type.id}
+                      className={`contact-type-option ${
+                        formData.contactType === type.id ? 'selected' : ''
+                      } ${type.priority === 'urgent' ? 'urgent' : ''}`}
+                      onClick={() => handleContactTypeSelect(type.id)}
+                      title={type.description}
+                    >
+                      {type.priority === 'urgent' && <div className="urgent-indicator"></div>}
+                      <div className="contact-type-icon">{type.icon}</div>
+                      <div className="contact-type-label">{type.label}</div>
+                    </div>
+                  ))}
+                </div>
+                {errors.contactType && <span className="error-message">{errors.contactType}</span>}
+              </div>
+            </div>
+            
             {submitted && (
               <div className="success-message">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00FF88" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -225,23 +343,6 @@ const ContactUs = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-                    onChange={handleChange}
-                    onFocus={() => handleFocus('name')}
-                    onBlur={() => handleBlur('name')}
-                  />
-                  <div className="input-glow"></div>
-                </div>
-                {errors.name && <span className="error-message">{errors.name}</span>}
-              </div>
-              
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <div className={`input-container ${errors.email ? 'error' : ''} ${focused.email ? 'focused' : ''}`}>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
                     onChange={handleChange}
                     onFocus={() => handleFocus('email')}
                     onBlur={() => handleBlur('email')}

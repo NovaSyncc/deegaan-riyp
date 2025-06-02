@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-cyan: #00FFFF;
+  --secondary-blue: #0077FF;
+  --dark-bg: #080F1A;
+  --text-white: #FFFFFF;
+  --whatsapp-green: #2AE371;
+  --bubble-blue: rgba(0, 119, 255, 0.4);
+  --bubble-cyan: rgba(0, 177, 177, 0.4);
+  --body-font: 'Poppins', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1.5;
+  background: var(--dark-bg);
+  color: var(--text-white);
+  padding: 0;
+  margin: 0;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #0a1220 50%, var(--dark-bg) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 15%, var(--bubble-cyan) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, var(--bubble-blue) 0%, transparent 40%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Language Toggle */
+.language-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  color: var(--text-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.lang-btn:hover {
+  border-color: var(--primary-cyan);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--primary-cyan), var(--secondary-blue));
+  color: var(--dark-bg);
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 15px var(--primary-cyan);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-cyan);
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary-cyan);
+  text-shadow: 0 0 15px var(--primary-cyan);
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: var(--secondary-blue);
+  text-shadow: 0 0 10px var(--secondary-blue);
+  margin-bottom: 0.8rem;
+  border-left: 4px solid var(--primary-cyan);
+  padding-left: 1rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  font-weight: 400;
+}
+
+.highlight {
+  color: var(--primary-cyan);
+  font-weight: 600;
+}
+
+.prestige-box {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(42, 227, 113, 0.2) 100%);
+  border: 3px solid var(--primary-cyan);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.prestige-text {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #00FFFF, #2AE371);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.slots-remaining {
+  margin-top: 1rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #FF3366, #FF0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
+  display: block;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.slots-number {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #FF0000;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Add sparkle effect */
+.prestige-box::before,
+.prestige-box::after {
+  content: '✨';
+  position: absolute;
+  font-size: 2rem;
+  animation: sparkle 3s infinite;
+}
+
+.prestige-box::before {
+  left: 20px;
+  top: 20px;
+}
+
+.prestige-box::after {
+  right: 20px;
+  top: 20px;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--secondary-blue);
+}
+
+.step-number {
+  background: var(--primary-cyan);
+  color: var(--dark-bg);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px var(--primary-cyan);
+}
+
+.step-content h4 {
+  font-size: 1.3rem;
+  color: var(--primary-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.pricing-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+
+.pricing-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.pricing-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-cyan);
+}
+
+.pricing-left {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.pricing-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: var(--primary-cyan);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.pricing-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.pricing-description div {
+  margin: 0.3rem 0;
+}
+
+.pricing-right {
+  text-align: center;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-cyan);
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 10px var(--primary-cyan);
+}
+
+.combo-pricing {
+  background: linear-gradient(135deg, rgba(0, 119, 255, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+  border-color: var(--whatsapp-green);
+}
+
+.combo-badge {
+  background: var(--whatsapp-green);
+  color: var(--dark-bg);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.monthly-fee-box {
+  background: rgba(42, 227, 113, 0.1);
+  border: 2px solid var(--whatsapp-green);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.monthly-fee-text {
+  font-size: 1.1rem;
+  color: var(--whatsapp-green);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.risk-free-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.risk-free-text div {
+  margin: 0.3rem 0;
+}
+
+.benefits-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.benefit-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-cyan);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.benefit-item h5 {
+  font-size: 1.2rem;
+  color: var(--primary-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  font-size: 1rem;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+.contact-section {
+  background: linear-gradient(135deg, #1a2332 0%, #0f1926 100%);
+  border: 2px solid var(--whatsapp-green);
+  color: var(--text-white);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 5px 20px rgba(42, 227, 113, 0.2);
+}
+
+.contact-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--whatsapp-green);
+  text-shadow: 0 0 10px var(--whatsapp-green);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-info {
+  text-align: left;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: var(--text-white);
+}
+
+.contact-info strong {
+  color: var(--whatsapp-green);
+  font-weight: 600;
+}
+
+.next-steps {
+  text-align: left;
+  font-size: 1rem;
+}
+
+.next-steps p {
+  margin: 0.5rem 0;
+  color: var(--text-white);
+}
+
+.next-steps strong {
+  color: var(--whatsapp-green);
+}
+
+.qr-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.qr-code {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(42, 227, 113, 0.3);
+}
+
+.qr-code h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--whatsapp-green);
+  font-weight: 600;
+}
+
+.qr-code canvas {
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+}
+
+.qr-code p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--text-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Enhanced Mobile Responsive Design */
+@media (max-width: 1024px) {
+  .benefits-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .qr-container {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .page {
+    padding: 1rem;
+  }
+  
+  .language-toggle {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .lang-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+  }
+  
+  .prestige-text {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  
+  .slots-remaining {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  
+  .slots-number {
+    font-size: 2rem;
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .process-step {
+    padding: 1rem;
+  }
+  
+  .step-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  .step-content p {
+    font-size: 1rem;
+  }
+  
+  .pricing-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  
+  .pricing-left {
+    padding-right: 0;
+  }
+  
+  .pricing-title {
+    font-size: 1.2rem;
+  }
+  
+  .pricing-description {
+    font-size: 1rem;
+  }
+  
+  .pricing-right {
+    min-width: auto;
+  }
+  
+  .price {
+    font-size: 2rem;
+  }
+  
+  .benefits-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .benefit-item {
+    padding: 1rem;
+  }
+  
+  .benefit-item h5 {
+    font-size: 1.1rem;
+  }
+  
+  .benefit-item p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-section {
+    padding: 1.5rem;
+  }
+  
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
+  .next-steps {
+    text-align: center;
+  }
+  
+  .qr-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 0.5rem;
+  }
+  
+  .content {
+    padding: 0.5rem;
+  }
+  
+  .language-toggle {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .lang-btn {
+    flex: 1;
+    max-width: 120px;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .header {
+    margin-bottom: 1rem;
+  }
+  
+  .section {
+    margin-bottom: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    padding-left: 0.8rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  
+  .prestige-box {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .prestige-text {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .slots-remaining {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .slots-number {
+    font-size: 1.6rem;
+  }
+  
+  .prestige-box::before,
+  .prestige-box::after {
+    font-size: 1.5rem;
+  }
+  
+  .prestige-box::before {
+    left: 10px;
+    top: 10px;
+  }
+  
+  .prestige-box::after {
+    right: 10px;
+    top: 10px;
+  }
+  
+  .benefits-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .benefit-item {
+    padding: 0.8rem;
+  }
+  
+  .benefit-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .benefit-item h5 {
+    font-size: 1rem;
+  }
+  
+  .benefit-item p {
+    font-size: 0.85rem;
+  }
+  
+  .process-step {
+    padding: 0.8rem;
+  }
+  
+  .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+    margin-right: 0.8rem;
+  }
+  
+  .step-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .step-content p {
+    font-size: 0.95rem;
+  }
+  
+  .pricing-item {
+    padding: 1rem;
+  }
+  
+  .pricing-title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  
+  .pricing-description {
+    font-size: 0.9rem;
+  }
+  
+  .price {
+    font-size: 1.8rem;
+  }
+  
+  .combo-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .monthly-fee-box {
+    padding: 1rem;
+  }
+  
+  .monthly-fee-text {
+    font-size: 1rem;
+  }
+  
+  .risk-free-text {
+    font-size: 0.9rem;
+  }
+  
+  .contact-section {
+    padding: 1rem;
+  }
+  
+  .contact-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+  }
+  
+  .next-steps {
+    font-size: 0.9rem;
+  }
+  
+  .qr-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .qr-code {
+    padding: 0.8rem;
+    width: 100%;
+    max-width: 150px;
+  }
+  
+  .qr-code h6 {
+    font-size: 0.8rem;
+  }
+  
+  .qr-code p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+  }
+  
+  .prestige-text {
+    font-size: 1rem;
+  }
+  
+  .slots-remaining {
+    font-size: 1.1rem;
+  }
+  
+  .slots-number {
+    font-size: 1.4rem;
+  }
+  
+  .pricing-title {
+    font-size: 1rem;
+  }
+  
+  .price {
+    font-size: 1.6rem;
+  }
+}
+
+.whatsapp-text {
+  color: #25D366;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.whatsapp-text i {
+  font-size: 1.2em;
+}

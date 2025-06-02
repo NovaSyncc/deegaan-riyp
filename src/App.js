@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import EastleighHotels from './pages/EastleighHotels/EastleighHotels';
 import Layout from './components/Layout/Layout'; // ⬅️ Import layout
+import Registration from './pages/Registration/Registration';
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -33,6 +34,7 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/registration" element={<Registration />} />
             </Routes>
           </Layout>
         </Suspense>

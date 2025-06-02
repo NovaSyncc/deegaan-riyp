@@ -4,8 +4,8 @@ import logo from '../../assets/images/logo.png'; // Correct path
 import './Navbar.css';
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,16 +23,16 @@ const Navbar = () => {
     };
   }, []);
 
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-  };
-
-  const isActive = (path) => {
-    return location.pathname === path;
   };
 
   return (
@@ -44,19 +44,45 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <div className="menu-icon" onClick={toggleMobileMenu}>
-          <div className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        {/* Brand text for mobile - shows when menu is closed */}
+        <div className={`brand-text ${mobileMenuOpen ? 'hidden' : ''}`}>
+          Deegaan-Riyo
         </div>
 
-        <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
+        {/* Desktop menu - always visible on desktop */}
+        <ul className="nav-menu desktop-menu">
           <li className="nav-item">
             <Link 
               to="/" 
-              className={`nav-link ${isActive('/') ? 'active' : ''}`} 
+              className={`nav-link ${isActive('/') ? 'active' : ''}`}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/eastleigh-hotels" 
+              className={`nav-link ${isActive('/eastleigh-hotels') ? 'active' : ''}`}
+            >
+              Eastleigh-Hotels
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/contact" 
+              className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+
+        {/* Mobile menu - slides in from left */}
+        <ul className={`nav-menu mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+          <li className="nav-item">
+            <Link 
+              to="/" 
+              className={`nav-link ${isActive('/') ? 'active' : ''}`}
               onClick={closeMobileMenu}
             >
               Home
@@ -65,7 +91,7 @@ const Navbar = () => {
           <li className="nav-item">
             <Link 
               to="/eastleigh-hotels" 
-              className={`nav-link ${isActive('/eastleigh-hotels') ? 'active' : ''}`} 
+              className={`nav-link ${isActive('/eastleigh-hotels') ? 'active' : ''}`}
               onClick={closeMobileMenu}
             >
               Eastleigh-Hotels
@@ -74,13 +100,24 @@ const Navbar = () => {
           <li className="nav-item">
             <Link 
               to="/contact" 
-              className={`nav-link ${isActive('/contact') ? 'active' : ''}`} 
+              className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
               onClick={closeMobileMenu}
             >
               Contact
             </Link>
           </li>
         </ul>
+
+        {/* Mobile menu toggle button */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+        </button>
       </div>
     </nav>
   );

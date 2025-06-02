@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
 
+// Import local images with correct paths
+import SaraImage from '../../../../assets/images/Sara-J.png';
+import MichaelImage from '../../../../assets/images/Michael.png';
+import AminaImage from '../../../../assets/images/Amina.png';
+import OmarImage from '../../../../assets/images/Omar-K.png';
+
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [language, setLanguage] = useState('en'); // 'en' for English, 'so' for Somali
@@ -9,7 +15,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      image: "https://source.unsplash.com/random/128x128/?portrait,woman",
+      image: SaraImage,
       name: "Sarah J.",
       text: {
         en: "Booking with Deegaan-Riyo was the easiest experience ever. I found a great hotel and confirmed in minutes! No more wasting time on comparison sites.",
@@ -18,7 +24,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      image: "https://source.unsplash.com/random/128x128/?portrait,man",
+      image: MichaelImage,
       name: "Michael T.",
       text: {
         en: "I love how I can just chat with the hotel directly. Got all my questions answered and even negotiated a room upgrade. Best booking experience ever!",
@@ -27,7 +33,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      image: "https://source.unsplash.com/random/128x128/?portrait,woman,tech",
+      image: AminaImage,
       name: "Amina H.",
       text: {
         en: "The AI-powered recommendations truly understood my preferences. Found a perfect place that matched my style and budget constraints like it was reading my mind!",
@@ -36,7 +42,7 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      image: "https://source.unsplash.com/random/128x128/?portrait,man,digital",
+      image: OmarImage,
       name: "Omar K.",
       text: {
         en: "The virtual tour feature blew me away! I could explore my room before booking, and the real place was exactly as shown. No surprises, just perfect service.",

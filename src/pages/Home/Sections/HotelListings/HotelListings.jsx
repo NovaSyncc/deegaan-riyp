@@ -10,12 +10,12 @@ const HotelListings = () => {
   const hotels = [
     {
       id: 1,
-      name: "Hotel Bilan",
-      location: "Eastleigh, 7th Street",
+      name: "Hotel HEBEL One",
+      location: "Eastleigh, Section 1",
       priceRange: "$30 - $50 per night",
-      description: "A modern hotel offering clean, air-conditioned rooms with free Wi-Fi and breakfast. Ideal for business and leisure travelers.",
+      description: "Premier hotel offering modern amenities, spacious rooms, and exceptional service. Features include air conditioning and complimentary breakfast.",
       amenities: ["Free Wi-Fi", "Breakfast", "24/7 Security", "Conference Room"],
-      whatsappNumber: "254790958286", // Use consistent property name
+      whatsappNumber: "254790958286",
       adminNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -24,12 +24,12 @@ const HotelListings = () => {
     },
     {
       id: 2,
-      name: "Al Noor Suites",
-      location: "Eastleigh, 12th Street",
+      name: "Hotel HEBEL Two",
+      location: "Eastleigh, Section 2",
       priceRange: "$25 - $45 per night",
-      description: "Comfortable suites featuring spacious rooms, private balconies, and a quiet atmosphere for relaxation.",
+      description: "Elegant hotel with contemporary design, offering comfortable stays with excellent amenities and friendly service.",
       amenities: ["Private Balcony", "Air Conditioning", "Restaurant", "Room Service"],
-      whatsappNumber: "254790958286", // Change whatsappLink to whatsappNumber
+      whatsappNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -37,12 +37,12 @@ const HotelListings = () => {
     },
     {
       id: 3,
-      name: "Golden Star Hotel",
-      location: "Eastleigh, 1st Avenue",
+      name: "Hotel HEBEL Three",
+      location: "Eastleigh, Section 3",
       priceRange: "$35 - $60 per night",
-      description: "A premium experience with well-furnished rooms, rooftop dining, and an on-site fitness center.",
+      description: "Luxury hotel featuring premium amenities, rooftop dining, and state-of-the-art fitness facilities.",
       amenities: ["Rooftop Dining", "Fitness Center", "Free Parking", "24/7 Front Desk"],
-      whatsappNumber: "254790958286", // Change whatsappLink to whatsappNumber
+      whatsappNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -50,12 +50,12 @@ const HotelListings = () => {
     },
     {
       id: 4,
-      name: "Horizon Palace",
-      location: "Eastleigh, 5th Street",
+      name: "Hotel HEBEL Four",
+      location: "Eastleigh, Section 4",
       priceRange: "$20 - $40 per night",
-      description: "Budget-friendly accommodation with excellent service and easy access to local markets and transport.",
+      description: "Affordable comfort with excellent accessibility, perfect for both business and leisure travelers.",
       amenities: ["Free Wi-Fi", "Laundry Service", "Taxi Booking", "24-Hour Security"],
-      whatsappNumber: "254790958286", // Change whatsappLink to whatsappNumber
+      whatsappNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -63,12 +63,12 @@ const HotelListings = () => {
     },
     {
       id: 5,
-      name: "Emerald Inn",
-      location: "Eastleigh, 9th Street",
+      name: "Hotel HEBEL Five",
+      location: "Eastleigh, Section 5",
       priceRange: "$40 - $70 per night",
-      description: "A stylish hotel with luxurious suites, a rooftop terrace, and excellent customer service.",
+      description: "Upscale hotel offering premium suites with modern amenities and professional business services.",
       amenities: ["Rooftop Lounge", "Smart TV", "Fine Dining", "Business Center"],
-      whatsappNumber: "254790958286", // Change whatsappLink to whatsappNumber
+      whatsappNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -76,12 +76,12 @@ const HotelListings = () => {
     },
     {
       id: 6,
-      name: "Bluewave Residency",
-      location: "Eastleigh, 3rd Avenue",
+      name: "Hotel HEBEL Six",
+      location: "Eastleigh, Section 6",
       priceRange: "$28 - $55 per night",
-      description: "A cozy and affordable stay with modern rooms, a restaurant, and high-speed internet.",
+      description: "Modern hotel with comprehensive amenities, featuring high-speed internet and excellent dining options.",
       amenities: ["High-Speed Wi-Fi", "Restaurant", "Laundry Service", "Airport Shuttle"],
-      whatsappNumber: "254790958286", // Change whatsappLink to whatsappNumber
+      whatsappNumber: "254790958286",
       images: [
         "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"

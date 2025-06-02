@@ -86,7 +86,7 @@ const Location = () => {
                 <div>
                   <h4>Website</h4>
                   <p>
-                    <a href="http://www.deegaan-riyo.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+                    <a href="http://www.deegaanriyo.online" target="_blank" rel="noopener noreferrer" className="contact-link">
                       www.deegaanriyo.online
                     </a>
                   </p>

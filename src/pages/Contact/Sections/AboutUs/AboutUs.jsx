@@ -122,7 +122,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="about-us-section" ref={sectionRef} id="about">
+    <section className="about-us-section visible" ref={sectionRef} id="about">
       <div className="container">
         {/* About RiyO Brand First */}
         <div className="riyo-brand">

@@ -1,12 +1,12 @@
 import React from 'react';
-import Hero from './Sections/Hero/Hero';
+import HotelListings from '../Home/Sections/HotelListings/HotelListings';
 import Testimonials from './Sections/Testimonials/Testimonials';
 import './EastleighHotels.css';
 
 const EastleighHotels = () => {
   return (
     <div className="eastleigh-hotels">
-      <Hero />
+      <HotelListings />
       <Testimonials />
     </div>
   );
