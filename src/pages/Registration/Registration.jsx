@@ -31,18 +31,14 @@ const Registration = () => {
       step3Desc: "Customers connect directly with your hotel - no middleman, no commissions",
       step4Title: "Ongoing Partnership",
       step4Desc: "We provide continuous support and help grow your bookings",
-      whatYouGet: "What You Can Get",
-      listingTitle: "Listing of your Hotel in DeegaanRiyo website",
-      listingFeatures: "• Top 10 Best Hotels recognition\n• Professional photo shoot\n• WhatsApp booking integration\n• Customer support & follow-up",
-      websiteTitle: "If your Hotel currently don't have a website we build Your Own Website",
-      websiteFeatures: "• Beautiful bilingual website (Somali + English)\n• Online booking form for inquiries\n• Mobile-friendly responsive design\n• Direct WhatsApp booking button",
-      comboBadge: "SAVE KES 10,000",
-      comboTitle: "If you want your Hotel be listed in the Website and also get your OWN website Platform Listing + Website",
-      comboDesc: "Get both services together and save money!\nEverything above combined for one special price.",
-      completeSystemTitle: "Complete Digital System",
-      completeSystemFeatures: "Everything above PLUS:\n• Personal dashboard to track bookings\n• Connect your hotel management system\n• Social media content creation tools",
-      monthlySupport: "Monthly Platform Subscription: KES 2,000",
-      riskFree: "Platform subscription includes:\n• Monthly customer support\n• Ongoing listing management\n• Regular content updates",
+      whatYouGet: "Premium Onboarding Package",
+      listingTitle: "All-Inclusive Digital Presence Package",
+      listingFeatures: "• Premium listing in Top 10 Best Hotels\n• Professional photo shoot\n• Custom website development OR website revamp\n• WhatsApp booking integration\n• Bilingual content (Somali + English)\n• 1 year platform subscription\n• Dedicated customer support\n• Monthly performance reports",
+      monthlySupport: "Annual Platform Subscription Included",
+      riskFree: "Package includes:\n• Professional website development/revamp\n• Premium listing management\n• Year-round customer support\n• Regular content updates\n• Monthly performance analytics",
+      pricingNote: "Early bird slots are now taken. Current onboarding fee:",
+      price: "KES 50,000",
+      existingWebsite: "Already have a website? We'll revamp it to match our premium standards!",
       contactTitle: "Join the Top 10 Today!",
       whatsapp: "WhatsApp:",
       email: "Email:",
@@ -81,18 +77,22 @@ const Registration = () => {
       step3Desc: "Macaamiishu si toos ah ayay ula xiriirayaan hudheelkaaga - dhexdhexaadiye la'aan, kharash la'aan",
       step4Title: "Is-kaashi Joogto ah",
       step4Desc: "Waxaan bixinnaa taageero joogto ah waxaana kaa caawinnaa kobcinta dalabadaada",
-      whatYouGet: " Halkaan ka fiirso Qiimaha",
-      listingTitle: "Ku daritaanka iyo Diiwaan galinta  hudheelkaaga website-ka DeegaanRiyo",
-      listingFeatures: "• Aqoonsiga iyo ka mid noqoshaha 10ka Hudheelka ugu Fiican\n• Sawir-qaadis xirfadeed\n• Kuxariirinta Tooska ah Website iyo Hodhelkaaga sodhawayntiisa Lifaaqidda WhatsApp number ka Hotelkaaga\n• Taageerada macaamiishta iyo raad-raacista",
-      websiteTitle: "Haddii hudheelkaagu hadda uusan lahayn website waxaan u dhisaynaa Website-kaaga gaarka ah",
-      websiteFeatures: "• Website qurux badan oo laba-luuqadeed ah (Soomaali + Ingiriis)\n• Foom dalabka onlaynka ah ee weydiimaha\n• Naqshad mobile-ku u habboon\n• Badhanka dalabka WhatsApp ee tooska ah",
-      comboBadge: "KAYDI KES 10,000",
-      comboTitle: "Haddii aad rabto in hudheelkaaga lagu daro Website-ka DEEGAAN_RIYO iyo sidoo kale aad hesho website adiga gaar kuu ah",
-      comboDesc: "Hel labada adeeg wada oo lacag kaydi!\nWax walba oo kore ku xusan oo isku-dhafan qiime gaar ah.",
-      completeSystemTitle: "Ugu Dambayn Hadii aad rabto Nidaam Dijiitaal Buuxa",
-      completeSystemFeatures: "Wax walba oo kore ku xusan IYO:\n• Dashboard shakhsi ah si aad u raad-raacdo dalabka\n• Ku xidh nidaamka maaraynta hudheelkaaga\n• Qalabka abuurista nuxurka warbaahinta bulshada",
-      monthlySupport: "Biil-gareynta Platform-ka Bishiiba: KES 2,000",
-      riskFree: "Biil-gareynta waxa ku jira:\n• Taageerada macaamiisha bishiiba\n• Maaraynta liiska joogtada ah\n• Cusbooneysiinta nuxurka si joogto ah",
+      whatYouGet: "Xirmo Diiwaangelin Premium ah – Fududeysan oo La Fahmi Karo",
+      listingTitle: "Xirmo Dijital ah oo dhameystiran (Complete Digital Package)",
+      listingFeatures: "Waxaad heli doontaa adeegyo badan oo sareeya sida:\n\n" +
+        "✅ Liiska Hudheelada ugu Fiican – 10-ka hotel ee ugu wanaagsan ayaa lagu dari doonaa liiska Premium-ka si ay u helaan macaamiil badan.\n\n" +
+        "📸 Sawirro Xirfad Leh (Professional Photography) – Sawirro tayo sare leh oo loo isticmaali karo website, social media, iwm.\n\n" +
+        "🌐 Website Cusub ama Update-ka Website-ka Hore – Haddii aadan lahayn website, mid cusub ayaan kuu sameyneynaa. Haddii aad horey u lahayd, waan casriyeyn doonnaa si uu u noqdo mid casri ah (modern & premium).\n\n" +
+        "💬 WhatsApp Order Integration – Waxaan ku xiri doonnaa website-kaaga WhatsApp si macaamiishu si fudud uga dalban karaan.\n\n" +
+        "🌍 Content Laba Luuqadood ah (Somali + English) – Website-ka ama content-ka waxaa lagu qori doonaa af Soomaali iyo Ingiriis.\n\n" +
+        "🛠️ Diiwaangelinta Platform Sannadlaha – Adeeggan wuxuu kaa caawinayaa in la suuq geeyo (promote) ganacsigaaga muddo 1 sano ah.\n\n" +
+        "🤝 Taageero Macaamiil Gaar ah (Dedicated Support) – Hel taageero gaar ah mar kasta oo aad u baahato.\n\n" +
+        "📊 Warbixinnada Bishiiba (Monthly Performance Reports) – Warbixin kuu sheegaysa sida website-kaaga iyo ganacsigaagu u shaqeynayo bishiiba mar.",
+      monthlySupport: "Diiwaangelinta Platform Sannadlaha waa ka mid ah xirmada – ma jiro kharash dheeri ah.",
+      riskFree: "Xirmaddu waxay ka kooban tahay:\n• Horumarinta/casriyeynta website-ka xirfadeed\n• Maareynta liiska premium\n• Taageero macaamiil oo sanadka oo dhan ah\n• Cusbooneysiinta nuxurka joogtada ah\n• Falanqaynta waxqabadka bisha bisha",
+      pricingNote: "Boosaska qiimaha jaban hore ayaa la qaatay",
+      price: "KES 50,000",
+      existingWebsite: "Hore ma u lahayd website?\n→ Haa: Waan u casriyeeyn doonaa si uu ula jaanqaado adeegyada Premium-ka.\n→ Maya: Mid cusub ayaan kuu dhisi doonnaa!",
       contactTitle: "Ku Biir 10ka Maanta!",
       whatsapp: "WhatsApp:",
       email: "Email:",
@@ -109,7 +109,8 @@ const Registration = () => {
     }
   };
 
-  const t = translations[language];
+  // Add this before the return statement to ensure we have valid translations
+  const t = translations[language] || translations['en']; // Fallback to English if translation is missing
 
   useEffect(() => {
     // Load QR code library dynamically
@@ -185,14 +186,14 @@ const Registration = () => {
         <div className="section">
           <h2 className="section-title">{t.aboutTitle}</h2>
           <div className="about-text">
-            {t.aboutText.split('WhatsApp').map((part, index) => 
+            {t.aboutText && t.aboutText.split('WhatsApp').map((part, index) => 
               index === 0 ? part : 
-              <>
+              <React.Fragment key={index}>
                 <span className="whatsapp-text">
                   <i className="fab fa-whatsapp"></i> WhatsApp
                 </span>
                 {part}
-              </>
+              </React.Fragment>
             )}
           </div>
 
@@ -262,37 +263,25 @@ const Registration = () => {
           </div>
         </div>
 
-        {/* What You Get */}
+        {/* What You Get Section */}
         <div className="section">
           <h2 className="section-title">{t.whatYouGet}</h2>
           <div className="pricing-section">
-            {/* Platform Listing */}
-            <div className="pricing-item">
+            <div className="pricing-item premium">
               <div className="pricing-left">
-                <h3 className="pricing-title">Option 1: {t.listingTitle}</h3>
+                <h3 className="pricing-title">{t.listingTitle}</h3>
                 <div className="pricing-description">
-                  {t.listingFeatures.split('\n').map((feature, index) => (
-                    <div key={index}>{feature}</div>
+                  {t.listingFeatures && t.listingFeatures.split('\n').map((feature, index) => (
+                    <div key={index} className="feature-item">{feature}</div>
                   ))}
+                </div>
+                <div className="existing-website-note">
+                  {t.existingWebsite}
                 </div>
               </div>
               <div className="pricing-right">
-                <div className="price">Pay KES 20,000</div>
-              </div>
-            </div>
-            
-            {/* Website */}
-            <div className="pricing-item">
-              <div className="pricing-left">
-                <h3 className="pricing-title">Option 2: {t.websiteTitle}</h3>
-                <div className="pricing-description">
-                  {t.websiteFeatures.split('\n').map((feature, index) => (
-                    <div key={index}>{feature}</div>
-                  ))}
-                </div>
-              </div>
-              <div className="pricing-right">
-                <div className="price">Pay KES 30,000</div>
+                <div className="pricing-note">{t.pricingNote}</div>
+                <div className="price">{t.price}</div>
               </div>
             </div>
           </div>
@@ -300,10 +289,9 @@ const Registration = () => {
           <div className="monthly-fee-box">
             <div className="monthly-fee-text">{t.monthlySupport}</div>
             <div className="risk-free-text">
-              {t.riskFree.split('\n').map((text, index) => (
-                <div key={index}>
-                  {index === 0 ? <strong>{text.split(':')[0]}:</strong> : ''} 
-                  {text.split(':').slice(1).join(':')}
+              {t.riskFree && t.riskFree.split('\n').map((text, index) => (
+                <div key={index} className="benefit-item">
+                  {text}
                 </div>
               ))}
             </div>
@@ -316,7 +304,7 @@ const Registration = () => {
           <div className="contact-grid">
             <div className="contact-info">
               <p><strong>{t.whatsapp}</strong><br />+254 712 221 079</p>
-              <p><strong>{t.email}</strong><br />deegaan@riyo.com</p>
+              <p><strong>{t.email}</strong><br />deegaan@deegaanriyo.online</p>
               <p><strong>{t.website}</strong><br />www.deegaanriyo.online</p>
             </div>
             

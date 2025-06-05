@@ -74,8 +74,8 @@ const Location = () => {
                 <div>
                   <h4>Email</h4>
                   <p>
-                    <a href="mailto:deegaan@riyo.com" className="contact-link">
-                      info@deeganriyo.online
+                    <a href="mailto:deegaan@deegaanriyo.online" className="contact-link">
+                      deegaan@deegaanriyo.online
                     </a>
                   </p>
                 </div>
@@ -92,10 +92,6 @@ const Location = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            
-            <div className="contact-info">
-              <p>Email: deegaan@deegaanriyo.online</p>
             </div>
             
             <div className="location-cta">
