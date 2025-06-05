@@ -6,7 +6,7 @@ const Countdown = () => {
   const navigate = useNavigate();
   const [language, setLanguage] = useState('en');
   const [timeLeft, setTimeLeft] = useState({
-    days: 4,
+    days: 2,  // Changed from 4 to 2
     hours: 0,
     minutes: 0,
     seconds: 0
@@ -14,14 +14,14 @@ const Countdown = () => {
 
   // Calculate countdown
   useEffect(() => {
-    // Set target date to 4 days from now
+    // Set target date to 2 days from now instead of 4
     const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 4);
+    targetDate.setDate(targetDate.getDate() + 2); // Changed from +4 to +2
     targetDate.setHours(23, 59, 59, 999); // Set to end of day
     
     const calculateTimeLeft = () => {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
+      const now = new Date();
+      const distance = targetDate - now;
       
       if (distance <= 0) {
         // Timer has expired
@@ -33,12 +33,13 @@ const Countdown = () => {
         };
       }
 
-      return {
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      };
+      // Calculate full days first
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      return { days, hours, minutes, seconds };
     };
 
     // Initial calculation
@@ -61,7 +62,7 @@ const Countdown = () => {
 
   const content = {
     en: {
-      headline: "🔥 Only 6 Slots Left – A Website Built for Eastleigh's Top Hotels! (Launching in 4 Days)",
+      headline: "🔥 Only 6 Slots Left – A Website Built for Eastleigh's Top Hotels! (Launching in 2 Days)", // Updated to 2 days
       ctaHeadline: "Think your hotel belongs on Eastleigh's Top 10 list?",
       ctaDescription: "Register your hotel now and claim your spot among the most trusted and prestigious stays in the region.",
       registerNow: "Register Now",
@@ -77,7 +78,7 @@ const Countdown = () => {
       limitedOffer: "Limited Time Offer"
     },
     so: {
-      headline: "🔥 Kaliya 6 Boos ayaa Harsan – Website loogu talagalay Hoteellada ugu Fiican Islii (Eastleigh)! (Waxa uu Furmayaa 4 Maalmood Gudaho)",
+      headline: "🔥 Kaliya 6 Boos ayaa Harsan – Website loogu talagalay Hoteellada ugu Fiican Islii (Eastleigh)! (Waxa uu Furmayaa 2 Maalmood Gudaho)", // Updated to 2 days
       ctaHeadline: "Ma rumaysan tahay in hodhelkaagu uu u qalmo liiska 10-ka ugu wanaagsan Eastleigh?",
       ctaDescription: "Diiwaan geli hodhelkaaga si uu uga mid noqdo hoteelada ugu sumcadda badan ee la isku halayn karo.",
       registerNow: "Diiwaan geli Hadda",
