@@ -166,7 +166,7 @@ const AboutUs = () => {
             </div>
             <div className="contact-text">
               <h3>Email</h3>
-              <p>deegaan@riyo.com</p>
+              <p>deegaan@deegaanriyo.online</p>
             </div>
           </div>
           <div className="contact-item">
@@ -179,7 +179,7 @@ const AboutUs = () => {
             </div>
             <div className="contact-text">
               <h3>Website</h3>
-              <p>www.deegaan-riyo.com</p>
+              <p>deegaanriyo.online</p>
             </div>
           </div>
         </div>

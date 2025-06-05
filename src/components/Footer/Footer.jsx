@@ -182,6 +182,10 @@ const Footer = () => {
           <span className="circuit-line"></span>
         </div>
       </div>
+      
+      <div className="footer-contact">
+        <p>Email: <a href="mailto:deegaan@deegaanriyo.online">deegaan@deegaanriyo.online</a></p>
+      </div>
     </footer>
   );
 };

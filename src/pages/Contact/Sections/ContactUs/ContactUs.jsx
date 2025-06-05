@@ -250,6 +250,12 @@ const ContactUs = () => {
     }
   };
   
+  const contactInfo = {
+    email: 'deegaan@deegaanriyo.online',
+    phone: '+254 712 221 079',
+    address: 'BBS Mall, 3rd Floor, Eastleigh, Nairobi'
+  };
+  
   return (
     <div className="contact-container">
       <div className="contact-content-wrapper">

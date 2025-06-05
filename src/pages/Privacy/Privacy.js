@@ -131,13 +131,7 @@ const Privacy = () => {
       <div className="policy-section">
         <h3><span className="section-number">07.</span> Contact Us</h3>
         <div className="neon-divider"></div>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <div className="contact-box">
-          <p><span className="contact-label">Address:</span> Deegaan-Riyo Head quarters at BBS mall 3rd floor</p>
-          <p><span className="contact-label">Phone:</span> <span className="highlight-text">+254 712 221 079</span></p>
-          <p><span className="contact-label">Email:</span> <span className="highlight-text">deegaan@riyo.com</span></p>
-          <p><span className="contact-label">Website:</span> <span className="highlight-text">www.deegaan-riyo.com</span></p>
-        </div>
+        <p>If you have any questions about this Privacy Policy, please contact us at: deegaan@deegaanriyo.online</p>
       </div>
     </div>
   );

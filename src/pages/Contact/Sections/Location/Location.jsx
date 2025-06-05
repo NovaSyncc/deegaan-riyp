@@ -94,6 +94,10 @@ const Location = () => {
               </div>
             </div>
             
+            <div className="contact-info">
+              <p>Email: deegaan@deegaanriyo.online</p>
+            </div>
+            
             <div className="location-cta">
               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="directions-button">
                 Get Directions

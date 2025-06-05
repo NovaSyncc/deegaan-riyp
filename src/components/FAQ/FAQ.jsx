@@ -108,6 +108,11 @@ const FAQ = () => {
           id: 'cancellation-policy',
           question: "What is the cancellation policy?",
           answer: "Cancellation policies vary by hotel. When booking through WhatsApp, you can directly ask the hotel about their specific cancellation terms. This transparency is one of the benefits of our direct booking approach."
+        },
+        {
+          id: 'contact-support',
+          question: "How can I contact support?",
+          answer: "You can reach our support team at deegaan@deegaanriyo.online or call +254 712 221 079"
         }
       ]
     }
