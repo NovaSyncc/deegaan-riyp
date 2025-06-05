@@ -6,7 +6,6 @@ import {
   faFacebook, 
   faTwitter, 
   faInstagram, 
-  faGithub, 
   faYoutube 
 } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
@@ -88,15 +87,6 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a 
-              href="https://github.com/NovaSyncc" 
-              className="social-icon" 
-              aria-label="GitHub - NovaSyncc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a 
               href="https://youtube.com/@RiyoNova" 
