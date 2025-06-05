@@ -266,25 +266,41 @@
 
   .mobile-menu {
     display: flex;
-    position: absolute;
-    left: 80px; /* Start after logo */
-    right: 60px; /* End before toggle button */
-    top: 0;
-    height: 100%;
-    background: rgba(8, 15, 26, 0.95);
+    flex-direction: column; /* Change to column layout */
+    position: fixed; /* Change from absolute to fixed */
+    top: 70px; /* Start below navbar */
+    left: 0;
+    right: 0;
+    height: auto; /* Remove fixed height */
+    max-height: calc(100vh - 70px); /* Limit height to viewport */
+    background: rgba(8, 15, 26, 0.98); /* Darker background */
     backdrop-filter: blur(10px);
-    border-radius: 4px;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     z-index: 1000;
+    padding: 1rem 0;
+    overflow-y: auto; /* Enable scrolling if needed */
   }
 
   .mobile-menu.open {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   .mobile-menu-toggle {
@@ -392,22 +408,31 @@
 }
 
 @media screen and (max-width: 380px) {
-  .brand-text {
-    font-size: 0.9rem;
+  .navbar {
+    height: 60px; /* Reduce navbar height */
   }
 
   .mobile-menu {
-    left: 50px;
-    right: 35px;
+    top: 60px; /* Adjust top position */
+    max-height: calc(100vh - 60px);
   }
 
   .nav-link {
-    padding: 0 0.3rem;
-    font-size: 0.7rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
   }
 
-  .mobile-menu-toggle {
-    width: 24px;
-    height: 18px;
+  .brand-text {
+    font-size: 0.85rem;
+    max-width: 160px; /* Limit width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hexagon-logo {
+    width: 35px;
+    height: 40px;
   }
 }
