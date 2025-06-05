@@ -104,7 +104,7 @@ const Footer = () => {
           <div className="link-column">
             <h3 className="column-title">RiyO</h3>
             <ul className="footer-nav">
-              <li><Link to="/AboutUs">About Us</Link></li>
+              <li><Link to="/about">About Us</Link></li>
               <li><Link to="/">Our Ventures</Link></li>
               <li><Link to="/contact">Team</Link></li>
               <li><Link to="/contact">Careers</Link></li>
@@ -171,10 +171,6 @@ const Footer = () => {
           <span className="digital-text">RiyO-{currentYear}-NE0N</span>
           <span className="circuit-line"></span>
         </div>
-      </div>
-      
-      <div className="footer-contact">
-        <p>Email: <a href="mailto:deegaan@deegaanriyo.online">deegaan@deegaanriyo.online</a></p>
       </div>
     </footer>
   );

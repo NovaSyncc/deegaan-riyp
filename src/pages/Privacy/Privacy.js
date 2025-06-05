@@ -7,33 +7,25 @@ const Privacy = () => {
       <h2>Privacy <span className="accent-text">Policy</span></h2>
       
       <div className="last-updated">
-        <span className="neon-badge">Last Updated: April 7, 2025</span>
+        <span className="neon-badge">Last Updated: June 5, 2025</span>
       </div>
       
       <div className="policy-intro">
-        <p>At Deegaan-Riyo, we value and respect your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use our WhatsApp-based hotel booking platform serving Eastleigh, Kenya.</p>
+        <p>At Deegaan-Riyo, we value and respect your privacy. This Privacy Policy explains how we handle your information when you use our premium digital hotel showcase platform featuring the Top 10 Best Hotels across major East African cities serving Somali communities, including Nairobi Eastleigh (Kenya), Mogadishu (Somalia), Addis Ababa (Ethiopia), Djibouti (Djibouti), and Hargeisa (Somaliland).</p>
       </div>
       
       <div className="policy-section">
         <h3><span className="section-number">01.</span> Information We Collect</h3>
         <div className="neon-divider"></div>
-        <p>When you use Deegaan-Riyo, we collect the following types of information:</p>
+        <p>When you use Deegaan-Riyo, we collect minimal information necessary to facilitate your hotel connections:</p>
         <ul className="cyber-list">
           <li>
             <span className="list-icon">⟡</span>
-            <strong>Contact Information:</strong> Name, phone number, email address
+            <strong>Booking Form Information:</strong> Name, travel dates, number of guests, and any special requirements you choose to share
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            <strong>Booking Details:</strong> Check-in/check-out dates, number of guests, room preferences
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            <strong>WhatsApp Communication:</strong> Messages exchanged with hotels through our platform
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            <strong>Technical Data:</strong> IP address, browser type, device information, cookies
+            <strong>Technical Data:</strong> Basic device information and cookies necessary for platform functionality
           </li>
         </ul>
       </div>
@@ -41,56 +33,51 @@ const Privacy = () => {
       <div className="policy-section">
         <h3><span className="section-number">02.</span> How We Use Your Information</h3>
         <div className="neon-divider"></div>
-        <p>We use your personal information to:</p>
+        <p>We use your information solely to:</p>
         <ul className="cyber-list">
           <li>
             <span className="list-icon">⟡</span>
-            Facilitate hotel bookings through WhatsApp
+            Generate your pre-filled WhatsApp message to your chosen hotel
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            Communicate with you about your reservation
+            Improve our platform's functionality and user experience
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            Improve our services and user experience
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            Send you important updates about our platform
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            Comply with legal obligations
+            Maintain platform security and prevent fraud
           </li>
         </ul>
       </div>
       
       <div className="policy-section">
-        <h3><span className="section-number">03.</span> Information Sharing</h3>
+        <h3><span className="section-number">03.</span> Information Handling</h3>
         <div className="neon-divider"></div>
-        <p>We share your information with:</p>
+        <p>Important points about how we handle your data:</p>
         <ul className="cyber-list">
           <li>
             <span className="list-icon">⟡</span>
-            <strong>Hotels:</strong> To process your booking request
+            We do not store your booking information after generating your WhatsApp message
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            <strong>Service Providers:</strong> Who help us operate our platform
+            Direct communication happens between you and the hotel via WhatsApp
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            <strong>Legal Authorities:</strong> When required by law
+            We do not have access to your WhatsApp conversations with hotels
+          </li>
+          <li>
+            <span className="list-icon">⟡</span>
+            We never sell or share your information with third parties
           </li>
         </ul>
-        <p>We do not sell your personal information to third parties.</p>
       </div>
       
       <div className="policy-section">
         <h3><span className="section-number">04.</span> Data Security</h3>
         <div className="neon-divider"></div>
-        <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the internet is completely secure. While we strive to protect your data, we cannot guarantee its absolute security.</p>
+        <p>We implement industry-standard security measures to protect any temporary data processed through our platform. Since we operate primarily as a connection facilitator to WhatsApp, most of your sensitive communication occurs directly through WhatsApp's encrypted platform.</p>
       </div>
       
       <div className="policy-section">
@@ -100,32 +87,23 @@ const Privacy = () => {
         <ul className="cyber-list">
           <li>
             <span className="list-icon">⟡</span>
-            Access your personal information
+            Know how your information is being used
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            Correct inaccurate data
+            Choose not to provide certain information
           </li>
           <li>
             <span className="list-icon">⟡</span>
-            Delete your information (with certain limitations)
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            Object to processing of your data
-          </li>
-          <li>
-            <span className="list-icon">⟡</span>
-            Withdraw consent at any time
+            Request information about our data practices
           </li>
         </ul>
-        <p>To exercise these rights, please contact us at <span className="highlight-text">deegaan@riyo.com</span></p>
       </div>
       
       <div className="policy-section">
         <h3><span className="section-number">06.</span> Changes to This Policy</h3>
         <div className="neon-divider"></div>
-        <p>We may update this Privacy Policy from time to time. The latest version will always be posted on our website with the effective date.</p>
+        <p>We may update this Privacy Policy to reflect changes in our practices or for legal compliance. The latest version will always be posted on our website with the effective date.</p>
       </div>
       
       <div className="policy-section">

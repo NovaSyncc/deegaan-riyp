@@ -64,7 +64,15 @@ const Navbar = () => {
               to="/eastleigh-hotels" 
               className={`nav-link ${isActive('/eastleigh-hotels') ? 'active' : ''}`}
             >
-              Eastleigh-Hotels
+              Hotels
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/about" 
+              className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+            >
+              About
             </Link>
           </li>
           <li className="nav-item">
@@ -94,7 +102,16 @@ const Navbar = () => {
               className={`nav-link ${isActive('/eastleigh-hotels') ? 'active' : ''}`}
               onClick={closeMobileMenu}
             >
-              Eastleigh-Hotels
+              Hotels
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/about" 
+              className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              About
             </Link>
           </li>
           <li className="nav-item">

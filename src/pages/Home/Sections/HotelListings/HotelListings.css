@@ -1,39 +1,153 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-.hotel-listings-section {
+/* Main section styling with namespaced classes */
+.deegaan-hotel-listings-section {
   background-color: #080F1A;
   padding: 60px 20px;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
+  position: relative;
+  min-height: 100vh;
 }
 
-.container {
+.deegaan-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
-.section-title {
+/* Language Toggle Styles */
+.deegaan-language-toggle {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  display: flex;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 25px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.deegaan-lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.deegaan-lang-btn:hover {
+  color: #00FFFF;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.deegaan-lang-btn.active {
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Section Title and Subtitle */
+.deegaan-section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   color: #00FFFF;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
   letter-spacing: 2px;
-  font-weight: 700; /* Added for better readability */
+  font-weight: 700;
+  margin-top: 40px;
 }
 
-.hotel-grid {
+.deegaan-section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Filters Section */
+.deegaan-filters {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.deegaan-filter-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.deegaan-filter-icon {
+  position: absolute;
+  left: 15px;
+  color: #00FFFF;
+  font-size: 1.1rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.deegaan-filter-select {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  padding: 12px 20px 12px 45px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2300FFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.deegaan-filter-select:focus {
+  box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.3);
+}
+
+.deegaan-filter-select option {
+  background: #0A1525;
+  color: #FFFFFF;
+  padding: 10px;
+  border: none;
+}
+
+/* Hotel Grid */
+.deegaan-hotel-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 40px;
 }
 
-.hotel-card {
-  background: rgba(0, 255, 255, 0.15); /* Slightly increased opacity for better contrast */
+.deegaan-hotel-card {
+  background: rgba(0, 255, 255, 0.15);
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid rgba(0, 255, 255, 0.3); /* Increased border opacity */
+  border: 1px solid rgba(0, 255, 255, 0.3);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   backdrop-filter: blur(5px);
@@ -42,123 +156,127 @@
   flex-direction: column;
 }
 
-.hotel-card:hover {
+.deegaan-hotel-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 119, 255, 0.3);
   border-color: #00FFFF;
 }
 
-.hotel-card:before {
+.deegaan-hotel-card:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent); /* Increased opacity */
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent);
   pointer-events: none;
 }
 
-.hotel-images {
+/* Hotel Images */
+.deegaan-hotel-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   height: 250px;
 }
 
-.hotel-image {
+.deegaan-hotel-image {
   overflow: hidden;
   position: relative;
 }
 
-.hotel-image img {
+.deegaan-hotel-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.hotel-image:hover img {
+.deegaan-hotel-image:hover img {
   transform: scale(1.05);
 }
 
-.hotel-content {
+/* Hotel Content */
+.deegaan-hotel-content {
   padding: 25px;
   position: relative;
   z-index: 2;
 }
 
-.hotel-name {
+.deegaan-hotel-name {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #00FFFF;
   letter-spacing: 1px;
-  font-weight: 600; /* Added for better readability */
+  font-weight: 600;
 }
 
-.hotel-location {
+.deegaan-hotel-location {
   display: flex;
   align-items: center;
   margin-bottom: 12px;
-  font-size: 1rem; /* Increased from 0.9rem */
-  color: #FFFFFF; /* Explicitly set to ensure good contrast */
+  font-size: 1rem;
+  color: #FFFFFF;
 }
 
-.location-icon {
+.deegaan-location-icon {
   margin-right: 8px;
   font-size: 1.1rem;
 }
 
-.hotel-price {
-  font-weight: 700; /* Increased from 600 */
+.deegaan-hotel-price {
+  font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 15px;
-  color: #2B9CFF; /* Adjusted blue to be more visible */
+  color: #2B9CFF;
 }
 
-.hotel-description {
+.deegaan-hotel-description {
   margin-bottom: 20px;
   line-height: 1.6;
-  font-size: 1rem; /* Increased from 0.95rem */
-  color: rgba(255, 255, 255, 0.95); /* Increased opacity for better readability */
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-.hotel-amenities h4 {
+/* Amenities */
+.deegaan-hotel-amenities h4 {
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 12px;
   font-size: 1.1rem;
   color: #00FFFF;
-  font-weight: 600; /* Added for better readability */
+  font-weight: 600;
 }
 
-.amenities-list {
+.deegaan-amenities-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 25px;
 }
 
-.amenity {
-  background: rgba(0, 119, 255, 0.25); /* Increased opacity */
+.deegaan-amenity {
+  background: rgba(0, 119, 255, 0.25);
   padding: 6px 12px;
   border-radius: 15px;
-  font-size: 0.9rem; /* Increased from 0.8rem */
-  border: 1px solid rgba(0, 119, 255, 0.4); /* Increased border opacity */
-  color: #FFFFFF; /* Explicitly set color */
-  font-weight: 500; /* Added weight for better readability */
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 119, 255, 0.4);
+  color: #FFFFFF;
+  font-weight: 500;
 }
 
-.whatsapp-button {
+/* WhatsApp Button */
+.deegaan-whatsapp-button {
   display: block;
   width: fit-content;
   margin: 20px auto;
   background: linear-gradient(90deg, #00FFFF, #0077FF);
-  color: #000000; /* Darkened from #080F1A for better contrast */
+  color: #000000;
   padding: 14px 30px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 700; /* Increased from 600 */
+  font-weight: 700;
   transition: all 0.3s ease;
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
@@ -166,15 +284,19 @@
   font-size: 0.9rem;
   border: 2px solid transparent;
   cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.whatsapp-icon {
+.deegaan-whatsapp-icon {
   margin-right: 10px;
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
 
-.whatsapp-button:hover {
+.deegaan-whatsapp-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
   background: transparent;
@@ -182,79 +304,261 @@
   color: #00FFFF;
 }
 
-.whatsapp-button:hover .whatsapp-icon {
+.deegaan-whatsapp-button:hover .deegaan-whatsapp-icon {
   transform: scale(1.1);
 }
 
-/* Media Queries for responsive design */
+/* Responsive Design */
+@media (max-width: 576px) {
+  .deegaan-hotel-listings-section {
+    padding: 40px 15px;
+  }
+  
+  .deegaan-hotel-images {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .deegaan-hotel-image {
+    height: 200px;
+  }
+  
+  .deegaan-hotel-content {
+    padding: 20px;
+  }
+  
+  .deegaan-whatsapp-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .deegaan-hotel-location {
+    font-size: 1.05rem;
+  }
+  
+  .deegaan-hotel-price {
+    font-size: 1.2rem;
+  }
+  
+  .deegaan-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .deegaan-section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .deegaan-filters {
+    gap: 15px;
+  }
+  
+  .deegaan-filter-select {
+    min-width: 180px;
+    font-size: 0.9rem;
+  }
+  
+  .deegaan-lang-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* RTL Support for Arabic/Somali text */
+.deegaan-hotel-listings-section[dir="rtl"] {
+  direction: rtl;
+}
+
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-hotel-location {
+  flex-direction: row-reverse;
+}
+
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-location-icon {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-whatsapp-icon {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-filter-icon {
+  left: auto;
+  right: 15px;
+}
+
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-filter-select {
+  padding: 12px 45px 12px 20px;
+  background-position: left 12px center;
+}
+
+/* Loading States */
+.deegaan-hotel-card.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.deegaan-hotel-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  border-top: 3px solid #00FFFF;
+  border-radius: 50%;
+  animation: deegaan-spin 1s linear infinite;
+}
+
+@keyframes deegaan-spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Accessibility Improvements */
+.deegaan-filter-select:focus,
+.deegaan-lang-btn:focus,
+.deegaan-whatsapp-button:focus {
+  outline: 2px solid #00FFFF;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .deegaan-hotel-card {
+    border-width: 2px;
+    border-color: #00FFFF;
+  }
+  
+  .deegaan-hotel-name,
+  .deegaan-section-title {
+    text-shadow: none;
+    font-weight: 800;
+  }
+  
+  .deegaan-amenity {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .deegaan-hotel-card,
+  .deegaan-hotel-image img,
+  .deegaan-whatsapp-button,
+  .deegaan-lang-btn {
+    transition: none;
+  }
+  
+  .deegaan-hotel-card:hover {
+    transform: none;
+  }
+  
+  .deegaan-hotel-image:hover img {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .deegaan-hotel-listings-section {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .deegaan-language-toggle,
+  .deegaan-whatsapp-button {
+    display: none !important;
+  }
+  
+  .deegaan-hotel-card {
+    border: 1px solid #ccc !important;
+    background: white !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}
+
 @media (min-width: 992px) {
-  .hotel-grid {
+  .deegaan-hotel-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .hotel-card {
+  .deegaan-hotel-card {
     height: 100%;
   }
 }
 
 @media (max-width: 991px) {
-  .hotel-grid {
+  .deegaan-hotel-grid {
     grid-template-columns: 1fr;
   }
   
-  .section-title {
+  .deegaan-section-title {
     font-size: 2rem;
+  }
+  
+  .deegaan-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .deegaan-filter-select {
+    min-width: 250px;
   }
 }
 
 @media (max-width: 768px) {
-  .hotel-images {
+  .deegaan-language-toggle {
+    position: relative;
+    top: 0;
+    right: auto;
+    margin: 0 auto 20px;
+    width: fit-content;
+  }
+  
+  .deegaan-section-title {
+    margin-top: 20px;
+  }
+  
+  .deegaan-hotel-images {
     height: 200px;
   }
   
-  .hotel-name {
-    font-size: 1.4rem; /* Increased from 1.3rem */
+  .deegaan-hotel-name {
+    font-size: 1.4rem;
   }
   
-  .hotel-description {
-    font-size: 1rem; /* Increased from 0.9rem */
-    color: rgba(255, 255, 255, 1); /* Full opacity for mobile */
+  .deegaan-hotel-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
   }
   
-  .amenity {
-    font-size: 0.95rem; /* Increased size for mobile */
+  .deegaan-amenity {
+    font-size: 0.95rem;
+  }
+  
+  .deegaan-filter-select {
+    min-width: 200px;
   }
 }
 
-/* Updated media query for smaller screens */
 @media (max-width: 576px) {
-  .hotel-images {
-    grid-template-columns: 1fr;
-    height: auto;
+  .deegaan-hotel-name {
+    font-size: 1.2rem;
   }
   
-  .hotel-image {
-    height: 200px;
+  .deegaan-hotel-description {
+    font-size: 0.9rem;
   }
   
-  .hotel-content {
-    padding: 20px;
+  .deegaan-amenity {
+    font-size: 0.85rem;
   }
   
-  .whatsapp-button {
-    padding: 12px 25px;
-    font-size: 0.9rem; /* Increased from 0.8rem */
-  }
-  
-  .hotel-location {
-    font-size: 1.05rem; /* Increased for mobile */
-  }
-  
-  .hotel-price {
-    font-size: 1.2rem; /* Increased for mobile */
-  }
-  
-  .section-title {
-    font-size: 1.8rem; /* Adjusted for very small screens */
+  .deegaan-filter-select {
+    min-width: 150px;
   }
 }

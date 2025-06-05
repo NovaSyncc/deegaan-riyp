@@ -158,23 +158,23 @@ const AboutUs = () => {
           <div className="neon-line"></div>
           
           <p className="intro-text">
-            Deegaan-Riyo, a subsidiary of <span className="highlight-text">RiyO</span>, is an innovative direct-to-consumer hotel booking platform designed specifically for Eastleigh, Kenya. Founded by{' '}
-            <span className="highlight-text">Abdifatah Hajifarah</span>, a visionary young entrepreneur, our platform simplifies reservations by connecting guests directly with hotels via{' '}
-            <span className="highlight-text">WhatsApp</span>, eliminating complexity and reducing costs for everyone involved.
+            Deegaan-Riyo, a subsidiary of <span className="highlight-text">RiyO</span>, is a premium digital hotel showcase platform featuring the Top 10 Best Hotels across major East African cities serving Somali communities. Operating in{' '}
+            <span className="highlight-text">Nairobi Eastleigh (Kenya), Mogadishu (Somalia), Addis Ababa (Ethiopia), Djibouti (Djibouti), and Hargeisa (Somaliland)</span>, our platform connects travelers directly with elite hotels via{' '}
+            <span className="highlight-text">WhatsApp</span> in a commission-free environment.
           </p>
           
           <div className="vision-mission">
             <div className="vision">
               <h3 className="neon-text">🎯 Our Vision</h3>
               <p>
-                To leverage everyday tools like WhatsApp to bridge gaps between small hotels and guests, fostering economic growth in Eastleigh's hospitality sector while reshaping the industry through accessible, innovative technology solutions that everyone can use.
+                To be the premier digital showcase platform for elite hotels across East Africa's Somali communities, setting new standards in hospitality digitization through innovative, accessible technology solutions.
               </p>
             </div>
             
             <div className="mission">
               <h3 className="neon-text">🚀 Our Mission</h3>
               <p>
-                To empower local hotels and offer travelers a seamless, culturally tailored booking experience by cutting out intermediaries and creating direct connections, solving real-world problems through innovation while building stronger community ties.
+                To digitally elevate top-performing hotels with professional content, seamless direct booking tools, and exclusive exposure. We maintain strict quality standards, focusing only on hotels that meet our rigorous service, pricing, and guest satisfaction criteria.
               </p>
             </div>
           </div>
