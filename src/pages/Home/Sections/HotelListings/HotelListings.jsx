@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { FaWhatsapp, FaGlobe, FaMapMarkerAlt } from 'react-icons/fa';
 import './HotelListings.css';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import yareRoom from '../../../../assets/images/yareroom.jpg';
+import yarePool from '../../../../assets/images/yarepool.jpg';
 
 const HotelListings = () => {
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
@@ -102,45 +104,124 @@ const HotelListings = () => {
     // Nairobi Hotels
     {
       id: 1,
-      name: "Hotel HEBEL One",
+      name: "Yare Towers Hotel",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: "$30 - $50",
+      priceRange: "Ksh 7,000 - Ksh 9,000",
       description: language === 'en' 
-        ? "Premier hotel offering modern amenities, spacious rooms, and exceptional service. Features include air conditioning and complimentary breakfast."
-        : "Huteel heer-sare ah oo bixiya adeegyo casri ah, qolal ballaaran, iyo adeeg aad u fiican. Waxaa ka mid ah qaboojiye iyo quraac bilaash ah.",
+        ? "Luxury hotel featuring spacious rooms with daily, weekly, and monthly rates. Choose from 1 bedroom to 2-bedroom executive suites. Enjoy premium amenities including a swimming pool and rooftop area."
+        : "Huteel raaxo leh oo leh qolal ballaaran oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Dooro qolal 1 ilaa 2 qol. Ku raaxayso adeegyada heer sare ah oo ay ku jiraan berkadda dabaasha iyo aagga saqafka.",
       amenities: language === 'en' 
-        ? ["Free Wi-Fi", "Breakfast", "24/7 Security", "Conference Room"]
-        : ["Wi-Fi Bilaash", "Quraac", "Ilaalinta 24/7", "Qolka Shirarka"],
-      whatsappNumber: "254790958286",
+        ? ["Swimming Pool", "Rooftop Area", "Restaurants", "Free Wi-Fi", "Conference Room"]
+        : ["Berkadda Dabaasha", "Aagga Saqafka", "Makhaayadaha", "Wi-Fi Bilaash", "Qolka Shirarka"],
+      roomTypes: [
+        {
+          type: "1 Bedroom",
+          daily: "Ksh 7,000",
+          weekly: "Ksh 35,000",
+          monthly: "Ksh 130,000"
+        },
+        {
+          type: "2-Bedroom Standard",
+          daily: "Ksh 8,000",
+          weekly: "Ksh 40,000",
+          monthly: "Ksh 140,000"
+        },
+        {
+          type: "2-Bedroom Executive",
+          daily: "Ksh 9,000",
+          weekly: "Ksh 43,000",
+          monthly: "Ksh 150,000"
+        }
+      ],
+      whatsappNumber: "254703422456", // Updated WhatsApp number
       images: [
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        yareRoom,
+        yarePool
       ]
     },
     {
       id: 2,
-      name: "Hotel HEBEL Two", 
+      name: "Eastleigh Lights Hotel",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: "$25 - $45",
-      description: language === 'en'
-        ? "Elegant hotel with contemporary design, offering comfortable stays with excellent amenities and friendly service."
-        : "Huteel qurux badan oo leh naqshad casri ah, oo bixiya deggan raaxo leh oo leh adeegyo fiican iyo adeeg saaxiibtinimada ah.",
-      amenities: language === 'en'
-        ? ["Private Balcony", "Air Conditioning", "Restaurant", "Room Service"]
-        : ["Balcony Gaar ah", "Qaboojiye", "Makhaayadda", "Adeegga Qolka"],
-      whatsappNumber: "254790958286",
+      priceRange: "Ksh 5,000 - Ksh 8,000",
+      description: language === 'en' 
+        ? "Modern hotel in the heart of Eastleigh featuring comfortable rooms with daily, weekly, and monthly rates. Experience warm hospitality and convenient amenities."
+        : "Huteel casri ah oo ku yaal wadnaha Eastleigh oo leh qolal raaxo leh oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Ku raaxayso martiqaad diiran iyo adeegyo habboon.",
+      amenities: language === 'en' 
+        ? ["24/7 Reception", "Restaurant", "Free Wi-Fi", "Conference Room", "Secure Parking"]
+        : ["Soo dhaweyn 24/7", "Makhaayadda", "Wi-Fi Bilaash", "Qolka Shirarka", "Baaking Ammaan ah"],
+      roomTypes: [
+        {
+          type: "Standard Room",
+          daily: "Ksh 5,000",
+          weekly: "Ksh 30,000",
+          monthly: "Ksh 100,000"
+        },
+        {
+          type: "Deluxe Room",
+          daily: "Ksh 6,500",
+          weekly: "Ksh 35,000",
+          monthly: "Ksh 120,000"
+        },
+        {
+          type: "Suite",
+          daily: "Ksh 8,000",
+          weekly: "Ksh 40,000",
+          monthly: "Ksh 150,000"
+        }
+      ],
+      whatsappNumber: "254700000000", // Replace with actual WhatsApp number
       images: [
         "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
       ]
     },
-    // Mogadishu Hotels
     {
       id: 3,
+      name: "Star Light Hotel",
+      location: t.cities.nairobi,
+      city: "nairobi",
+      country: "kenya",
+      priceRange: "Ksh 4,000 - Ksh 7,000",
+      description: language === 'en' 
+        ? "Comfortable hotel in Eastleigh offering affordable accommodation with excellent amenities. Perfect for both business and leisure travelers."
+        : "Huteel raaxo leh oo ku yaal Eastleigh oo leh hoy macquul ah oo leh adeegyo wanaagsan. Waa ku haboon yahay labada ganacsiga iyo dalxiisayaasha.",
+      amenities: language === 'en' 
+        ? ["24/7 Security", "Restaurant", "Free Wi-Fi", "Meeting Room", "Airport Shuttle"]
+        : ["Amni 24/7", "Makhaayadda", "Wi-Fi Bilaash", "Qolka Shirarka", "Gaadiidka Garoonka"],
+      roomTypes: [
+        {
+          type: "Standard Single",
+          daily: "Ksh 4,000",
+          weekly: "Ksh 25,000",
+          monthly: "Ksh 90,000"
+        },
+        {
+          type: "Standard Double",
+          daily: "Ksh 5,500",
+          weekly: "Ksh 33,000",
+          monthly: "Ksh 110,000"
+        },
+        {
+          type: "Deluxe Room",
+          daily: "Ksh 7,000",
+          weekly: "Ksh 40,000",
+          monthly: "Ksh 130,000"
+        }
+      ],
+      whatsappNumber: "254700000000", // Replace with actual WhatsApp number
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    // Mogadishu Hotels
+    {
+      id: 4,
       name: "Hotel RIYO Mogadishu",
       location: t.cities.mogadishu,
       city: "mogadishu", 
@@ -160,7 +241,7 @@ const HotelListings = () => {
     },
     // Addis Ababa Hotels
     {
-      id: 4,
+      id: 5,
       name: "Hotel RIYO Addis",
       location: t.cities.addisAbaba,
       city: "addisAbaba",
@@ -180,7 +261,7 @@ const HotelListings = () => {
     },
     // Djibouti Hotels
     {
-      id: 5,
+      id: 6,
       name: "Hotel RIYO Djibouti",
       location: t.cities.djibouti,
       city: "djibouti",
@@ -200,7 +281,7 @@ const HotelListings = () => {
     },
     // Hargeisa Hotels
     {
-      id: 6,
+      id: 7,
       name: "Hotel RIYO Hargeisa",
       location: t.cities.hargeisa,
       city: "hargeisa",
@@ -310,7 +391,16 @@ const HotelListings = () => {
                 ))}
               </div>
               <div className="deegaan-hotel-content">
-                <h3 className="deegaan-hotel-name">{hotel.name}</h3>
+                <h3 
+                  className="deegaan-hotel-name" 
+                  data-hotel={
+                    hotel.name === "Yare Towers Hotel" ? "yare-towers" :
+                    hotel.name === "Eastleigh Lights Hotel" ? "eastleigh-lights" :
+                    hotel.name === "Star Light Hotel" ? "star-light" : "riyo"
+                  }
+                >
+                  {hotel.name}
+                </h3>
                 <div className="deegaan-hotel-location">
                   <i className="deegaan-location-icon">📍</i>
                   <span>{hotel.location}</span>

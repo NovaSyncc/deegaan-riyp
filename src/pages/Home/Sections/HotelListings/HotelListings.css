@@ -215,9 +215,25 @@
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #00FFFF;
+  color: #00FFFF; /* Restore original cyan color */
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+/* Remove these color overrides */
+/* 
+.deegaan-hotel-name[data-hotel="yare-towers"],
+.deegaan-hotel-name[data-hotel="eastleigh-lights"],
+.deegaan-hotel-name[data-hotel="star-light"],
+.deegaan-hotel-name[data-hotel="riyo"] {
+  // Remove these rules
+}
+*/
+
+/* Keep the hover effect if desired */
+.deegaan-hotel-name:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .deegaan-hotel-location {

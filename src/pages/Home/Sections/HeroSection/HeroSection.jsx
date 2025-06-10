@@ -87,7 +87,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          Find the Best Hotels in Eastleigh, Nairobi
+          Find the Best Hotels Across East Africa's Premier Somali Communities
         </motion.h1>
         
         <motion.p 
@@ -96,7 +96,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
-          Book directly with your desired hotel's reception in "ISLII" via <span className="whatsapp-text"><FaWhatsapp className="whatsapp-icon" />WhatsApp</span> – No middlemen, no hassle.
+          Book directly with top-rated hotels in Nairobi Eastleigh, Mogadishu, Addis Ababa, Djibouti, and Hargeisa via <span className="whatsapp-text"><FaWhatsapp className="whatsapp-icon" />WhatsApp</span> – No middlemen, no hassle.
         </motion.p>
         
         <div className="message-bubbles-container">
