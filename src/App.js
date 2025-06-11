@@ -6,6 +6,7 @@ import Contact from './pages/Contact/Contact';
 import EastleighHotels from './pages/EastleighHotels/EastleighHotels';
 import Layout from './components/Layout/Layout'; // ⬅️ Import layout
 import Registration from './pages/Registration/Registration';
+import Yare from './pages/Home/Sections/Yare/Yare'; // Import Yare component
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -35,6 +36,7 @@ function App() {
               <Route path="/blog" element={<BlogSystem />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/registration" element={<Registration />} />
+              <Route path="/yare" element={<Yare />} /> {/* Add Yare route */}
             </Routes>
           </Layout>
         </Suspense>
