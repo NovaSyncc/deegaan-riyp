@@ -418,6 +418,7 @@
 @media (max-width: 991px) and (min-width: 769px) {
   .yare-title {
     font-size: 2.5rem;
+    color: #00FFFF; /* Ensures consistent color with desktop */
   }
   
   .yare-contact-grid {
@@ -426,6 +427,25 @@
   
   .yare-amenities-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Add these to maintain consistent colors */
+  .yare-hotel-section {
+    background-color: #080F1A;
+  }
+
+  .yare-section {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+
+  .yare-section-title {
+    color: #00FFFF;
+  }
+
+  .yare-description {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
   }
 }
 
