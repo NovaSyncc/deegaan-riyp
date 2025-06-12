@@ -35,8 +35,8 @@ const HotelListings = () => {
       bookNow: "Book Now",
       amenities: "Amenities",
       perNight: "per night",
-      comingSoon: "Coming Soon",
-      comingSoonMessage: "We are excited to announce that we will be expanding to this beautiful location soon! Stay tuned for updates on our new hotel opening.",
+      comingSoon: "Coming to Platform",
+      comingSoonMessage: "We are excited to announce that this hotel will be joining our booking platform soon! Stay tuned for updates when booking becomes available.",
       closePopup: "Got it!",
       placeholderHotelName: "Deegaan-Riyo Hotel",
       placeholderDescription: "We're bringing premium hospitality to this amazing destination. Our new hotel will feature world-class amenities and exceptional service. Opening soon!",
@@ -65,8 +65,8 @@ const HotelListings = () => {
       bookNow: "Buug Hadda",
       amenities: "Adeegyada",
       perNight: "habeenkii",
-      comingSoon: "Waa Imanaya",
-      comingSoonMessage: "Waxaan ku faraxsan nahay inaan ku dhawaaqayno inaan dhowaan ballaarin doonno meeshan quruxda badan! Sug warbixinnada cusub ee furashada huteelkayaga cusub.",
+      comingSoon: "Waa ku biiri Platform-ka",
+      comingSoonMessage: "Waxaan ku faraxsanahay inaan ku dhawaaqno in huteelkani uu dhowaan ku biiri doono boggeena bukashada! Sug warbixinnada marka bukashada la heli karo.",
       closePopup: "Waan Fahmay!",
       placeholderHotelName: "Huteelka Deegaan-Riyo",
       placeholderDescription: "Waxaan keenayaa martiqaad heer sare ah meeshan cajiibka ah. Huteelkayagu cusub wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg aad u fiican. Dhowaan waa furaysaa!",
@@ -183,15 +183,15 @@ const HotelListings = () => {
       country: "kenya",
       priceRange: t.comingSoon,
       description: language === 'en'
-        ? "A modern urban hotel coming soon to Eastleigh. Stay tuned for updates on our premium accommodation and facilities."
-        : "Huteel casri ah oo magaalada ah oo imanaya Eastleigh. Sug warbixinnada cusub ee hoyga iyo xarumaha heer sare ah.",
+        ? "A modern urban hotel in Eastleigh, featuring contemporary design and exceptional amenities. Coming soon to our booking platform."
+        : "Huteel casri ah oo ku yaala Eastleigh, oo leh naqshad casri ah iyo adeegyo gaar ah. Dhowaan waxay ku biiri doontaa boggeena bukashada.",
       amenities: language === 'en'
-        ? ["Modern Design", "Premium Location", "Coming Soon"]
-        : ["Naqshad Casri ah", "Meel Heer-sare ah", "Waa Imanaya"],
+        ? ["Restaurant", "Conference Facilities", "24/7 Security", "Coming to Platform"]
+        : ["Makhaayadda", "Xarumaha Shirarka", "Ammaanka 24/7", "Waa ku biiri Platform-ka"],
       whatsappNumber: "254700000000",
       images: [
         urbanImage,
-        urbanImage // Duplicate for slideshow consistency
+        urbanImage
       ],
       isComingSoon: true
     },
@@ -203,15 +203,15 @@ const HotelListings = () => {
       country: "kenya",
       priceRange: t.comingSoon,
       description: language === 'en'
-        ? "Experience exceptional hospitality at Baraka Hotel, coming soon to serve you with world-class amenities and comfort."
-        : "Ku raaxayso martiqaad aan caadi ahayn Baraka Hotel, waa imanaysaa si aad ugu adeegno adeegyo heer caalami ah iyo raaxo.",
+        ? "An established hotel in Eastleigh offering exceptional hospitality and comfort. Soon to be available for booking through our platform."
+        : "Huteel la aasaasay oo ku yaala Eastleigh oo bixiya martiqaad iyo raaxo gaar ah. Dhowaan waxaa laga heli doonaa boggeena bukashada.",
       amenities: language === 'en'
-        ? ["Exceptional Service", "World-Class Amenities", "Coming Soon"]
-        : ["Adeeg Aad u Fiican", "Adeegyo Heer Caalami ah", "Waa Imanaya"],
+        ? ["Comfortable Rooms", "Restaurant", "Meeting Rooms", "Coming to Platform"]
+        : ["Qolal Raaxo leh", "Makhaayadda", "Qolalka Kulanka", "Waa ku biiri Platform-ka"],
       whatsappNumber: "254700000000",
       images: [
         barakaImage,
-        barakaImage // Duplicate for slideshow consistency
+        barakaImage
       ],
       isComingSoon: true
     },
@@ -223,15 +223,15 @@ const HotelListings = () => {
       country: "kenya",
       priceRange: t.comingSoon,
       description: language === 'en'
-        ? "Bushra Hotel is preparing to offer you an unforgettable stay experience. Opening soon with luxury accommodations and services."
-        : "Bushra Hotel waxay diyaarinaysaa inay ku sii martiqaaddo khibrad aan la ilaawin karin. Waxay furaysaa dhowaan adeegyo raaxo iyo hoy heer sare ah.",
+        ? "Experience the comfort of Bushra Hotel, a well-established property in Eastleigh. Soon joining our booking platform for your convenience."
+        : "Ku raaxayso raaxada Bushra Hotel, hoy la aasaasay oo ku yaala Eastleigh. Dhowaan waxay ku biiri doontaa boggeena bukashada si ay kuu fududayso.",
       amenities: language === 'en'
-        ? ["Luxury Accommodations", "Premium Services", "Coming Soon"]
-        : ["Hoy Raaxo ah", "Adeegyo Heer-sare ah", "Waa Imanaya"],
+        ? ["Spacious Rooms", "Dining Options", "Business Center", "Coming to Platform"]
+        : ["Qolal Ballaaran", "Doorashooyin Cunto", "Xarunta Ganacsiga", "Waa ku biiri Platform-ka"],
       whatsappNumber: "254700000000",
       images: [
         bushraImage,
-        bushraImage // Duplicate for slideshow consistency
+        bushraImage
       ],
       isComingSoon: true
     }
