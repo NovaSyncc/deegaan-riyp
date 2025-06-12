@@ -8,9 +8,6 @@ import yarePool from '../../../../assets/images/yarepool.jpg';
 import yareRoom from '../../../../assets/images/yareroom.jpg';
 import yareRoom2 from '../../../../assets/images/yareroom2.jpg';
 import yareSeats from '../../../../assets/images/yareseats.jpg';
-import urbanImage from '../../../../assets/images/urban.png';
-import barakaImage from '../../../../assets/images/baraka.png';
-import bushraImage from '../../../../assets/images/bushra.png';
 import { useNavigate } from 'react-router-dom';
 
 const HotelListings = () => {
@@ -21,8 +18,6 @@ const HotelListings = () => {
   const [language, setLanguage] = useState('en');
   const [expandedHotels, setExpandedHotels] = useState({});
   const [currentSlides, setCurrentSlides] = useState({});
-  const [showComingSoonPopup, setShowComingSoonPopup] = useState(false);
-  const [selectedCountryName, setSelectedCountryName] = useState('');
   const navigate = useNavigate();
 
   const translations = {
@@ -35,12 +30,6 @@ const HotelListings = () => {
       bookNow: "Book Now",
       amenities: "Amenities",
       perNight: "per night",
-      comingSoon: "Coming Soon",
-      comingSoonMessage: "We are excited to announce that we will be expanding to this beautiful location soon! Stay tuned for updates on our new hotel opening.",
-      closePopup: "Got it!",
-      placeholderHotelName: "Deegaan-Riyo Hotel",
-      placeholderDescription: "We're bringing premium hospitality to this amazing destination. Our new hotel will feature world-class amenities and exceptional service. Opening soon!",
-      learnMore: "Learn More",
       countries: {
         kenya: "Kenya",
         somalia: "Somalia",
@@ -65,12 +54,6 @@ const HotelListings = () => {
       bookNow: "Buug Hadda",
       amenities: "Adeegyada",
       perNight: "habeenkii",
-      comingSoon: "Waa Imanaya",
-      comingSoonMessage: "Waxaan ku faraxsan nahay inaan ku dhawaaqayno inaan dhowaan ballaarin doonno meeshan quruxda badan! Sug warbixinnada cusub ee furashada huteelkayaga cusub.",
-      closePopup: "Waan Fahmay!",
-      placeholderHotelName: "Huteelka Deegaan-Riyo",
-      placeholderDescription: "Waxaan keenayaa martiqaad heer sare ah meeshan cajiibka ah. Huteelkayagu cusub wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg aad u fiican. Dhowaan waa furaysaa!",
-      learnMore: "Wax Badan Ogow",
       countries: {
         kenya: "Kiinya",
         somalia: "Soomaaliya",
@@ -123,13 +106,7 @@ const HotelListings = () => {
     }
   };
 
-  // Create placeholder image (you can replace this with actual placeholder images)
-  const createPlaceholderImage = () => {
-    return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23080F1A'/%3E%3Cg opacity='0.1'%3E%3Cpath d='M100 100h200v100H100z' fill='%2300FFFF'/%3E%3Cpath d='M150 120h100v20H150z' fill='%2300FFFF'/%3E%3Cpath d='M150 150h60v10H150z' fill='%2300FFFF'/%3E%3C/g%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%2300FFFF' font-family='Arial' font-size='20' font-weight='bold'%3EComming Soon%3C/text%3E%3C/svg%3E";
-  };
-
   const hotels = [
-    // Real hotel - unchanged
     {
       id: 1,
       name: "Yare Towers Hotel",
@@ -171,105 +148,165 @@ const HotelListings = () => {
         yareRoom2,
         yareConf,
         yareSeats
-      ],
-      isComingSoon: false
+      ]
     },
-    // Coming Soon hotels in Kenya
     {
       id: 2,
-      name: "Urban Point Hotel",
+      name: "Eastleigh Lights Hotel",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: t.comingSoon,
+      priceRange: "Ksh 5,000 - Ksh 8,000",
       description: language === 'en'
-        ? "A modern urban hotel coming soon to Eastleigh. Stay tuned for updates on our premium accommodation and facilities."
-        : "Huteel casri ah oo magaalada ah oo imanaya Eastleigh. Sug warbixinnada cusub ee hoyga iyo xarumaha heer sare ah.",
+        ? "Modern hotel in the heart of Eastleigh featuring comfortable rooms with daily, weekly, and monthly rates. Experience warm hospitality and convenient amenities."
+        : "Huteel casri ah oo ku yaal wadnaha Eastleigh oo leh qolal raaxo leh oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Ku raaxayso martiqaad diiran iyo adeegyo habboon.",
       amenities: language === 'en'
-        ? ["Modern Design", "Premium Location", "Coming Soon"]
-        : ["Naqshad Casri ah", "Meel Heer-sare ah", "Waa Imanaya"],
+        ? ["24/7 Reception", "Restaurant", "Free Wi-Fi", "Conference Room", "Secure Parking"]
+        : ["Soo dhaweyn 24/7", "Makhaayadda", "Wi-Fi Bilaash", "Qolka Shirarka", "Baaking Ammaan ah"],
+      roomTypes: [
+        {
+          type: "Standard Room",
+          daily: "Ksh 5,000",
+          weekly: "Ksh 30,000",
+          monthly: "Ksh 100,000"
+        },
+        {
+          type: "Deluxe Room",
+          daily: "Ksh 6,500",
+          weekly: "Ksh 35,000",
+          monthly: "Ksh 120,000"
+        },
+        {
+          type: "Suite",
+          daily: "Ksh 8,000",
+          weekly: "Ksh 40,000",
+          monthly: "Ksh 150,000"
+        }
+      ],
       whatsappNumber: "254700000000",
       images: [
-        urbanImage,
-        urbanImage // Duplicate for slideshow consistency
-      ],
-      isComingSoon: true
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ]
     },
     {
       id: 3,
-      name: "Baraka Hotel",
+      name: "Star Light Hotel",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: t.comingSoon,
+      priceRange: "Ksh 4,000 - Ksh 7,000",
       description: language === 'en'
-        ? "Experience exceptional hospitality at Baraka Hotel, coming soon to serve you with world-class amenities and comfort."
-        : "Ku raaxayso martiqaad aan caadi ahayn Baraka Hotel, waa imanaysaa si aad ugu adeegno adeegyo heer caalami ah iyo raaxo.",
+        ? "Comfortable hotel in Eastleigh offering affordable accommodation with excellent amenities. Perfect for both business and leisure travelers."
+        : "Huteel raaxo leh oo ku yaal Eastleigh oo leh hoy macquul ah oo leh adeegyo wanaagsan. Waa ku haboon yahay labada ganacsiga iyo dalxiisayaasha.",
       amenities: language === 'en'
-        ? ["Exceptional Service", "World-Class Amenities", "Coming Soon"]
-        : ["Adeeg Aad u Fiican", "Adeegyo Heer Caalami ah", "Waa Imanaya"],
+        ? ["24/7 Security", "Restaurant", "Free Wi-Fi", "Meeting Room", "Airport Shuttle"]
+        : ["Amni 24/7", "Makhaayadda", "Wi-Fi Bilaash", "Qolka Shirarka", "Gaadiidka Garoonka"],
+      roomTypes: [
+        {
+          type: "Standard Single",
+          daily: "Ksh 4,000",
+          weekly: "Ksh 25,000",
+          monthly: "Ksh 90,000"
+        },
+        {
+          type: "Standard Double",
+          daily: "Ksh 5,500",
+          weekly: "Ksh 33,000",
+          monthly: "Ksh 110,000"
+        },
+        {
+          type: "Deluxe Room",
+          daily: "Ksh 7,000",
+          weekly: "Ksh 40,000",
+          monthly: "Ksh 130,000"
+        }
+      ],
       whatsappNumber: "254700000000",
       images: [
-        barakaImage,
-        barakaImage // Duplicate for slideshow consistency
-      ],
-      isComingSoon: true
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ]
     },
     {
       id: 4,
-      name: "Bushra Hotel",
-      location: t.cities.nairobi,
-      city: "nairobi",
-      country: "kenya",
-      priceRange: t.comingSoon,
+      name: "Hotel RIYO Mogadishu",
+      location: t.cities.mogadishu,
+      city: "mogadishu",
+      country: "somalia",
+      priceRange: "$40 - $65",
       description: language === 'en'
-        ? "Bushra Hotel is preparing to offer you an unforgettable stay experience. Opening soon with luxury accommodations and services."
-        : "Bushra Hotel waxay diyaarinaysaa inay ku sii martiqaaddo khibrad aan la ilaawin karin. Waxay furaysaa dhowaan adeegyo raaxo iyo hoy heer sare ah.",
+        ? "Luxury hotel in the heart of Mogadishu featuring premium amenities, rooftop dining, and state-of-the-art facilities."
+        : "Huteel raaxo ah oo ku yaal wadnaha Muqdisho oo leh adeegyo heer-sare ah, cunno saqafka sare, iyo xarumaha casriga ah.",
       amenities: language === 'en'
-        ? ["Luxury Accommodations", "Premium Services", "Coming Soon"]
-        : ["Hoy Raaxo ah", "Adeegyo Heer-sare ah", "Waa Imanaya"],
-      whatsappNumber: "254700000000",
+        ? ["Rooftop Dining", "Fitness Center", "Free Parking", "24/7 Front Desk"]
+        : ["Cunno Saqafka Sare", "Xarunta Jimicsiga", "Baarkinka Bilaash", "Aqbalaha 24/7"],
+      whatsappNumber: "252611234567",
       images: [
-        bushraImage,
-        bushraImage // Duplicate for slideshow consistency
-      ],
-      isComingSoon: true
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      id: 5,
+      name: "Hotel RIYO Addis",
+      location: t.cities.addisAbaba,
+      city: "addisAbaba",
+      country: "ethiopia",
+      priceRange: "$35 - $55",
+      description: language === 'en'
+        ? "Modern hotel in Addis Ababa offering comfortable accommodation with excellent accessibility for business and leisure travelers."
+        : "Huteel casri ah oo ku yaal Addis Ababa oo bixiya deggan raaxo leh oo leh heli karo fiican ganacsi iyo dalxiisayaasha.",
+      amenities: language === 'en'
+        ? ["Free Wi-Fi", "Business Center", "Restaurant", "Airport Shuttle"]
+        : ["Wi-Fi Bilaash", "Xarunta Ganacsiga", "Makhaayadda", "Baabuurka Dayuuradaha"],
+      whatsappNumber: "251911234567",
+      images: [
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      id: 6,
+      name: "Hotel RIYO Djibouti",
+      location: t.cities.djibouti,
+      city: "djibouti",
+      country: "djibouti",
+      priceRange: "$45 - $70",
+      description: language === 'en'
+        ? "Premium hotel offering exceptional service and modern amenities in the strategic location of Djibouti City."
+        : "Huteel heer-sare ah oo bixiya adeeg aad u fiican iyo adeegyo casri ah meel istiraatiiji ah oo ku taal Magaalada Jabuuti.",
+      amenities: language === 'en'
+        ? ["Ocean View", "Fine Dining", "Spa Services", "Conference Facilities"]
+        : ["Muuqaalka Badda", "Cunno Heer-sare", "Adeegyada Spa", "Xarumaha Shirarka"],
+      whatsappNumber: "25377123456",
+      images: [
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ]
+    },
+    {
+      id: 7,
+      name: "Hotel RIYO Hargeisa",
+      location: t.cities.hargeisa,
+      city: "hargeisa",
+      country: "somaliland",
+      priceRange: "$30 - $50",
+      description: language === 'en'
+        ? "Contemporary hotel in Hargeisa featuring modern amenities, high-speed internet and excellent hospitality services."
+        : "Huteel casri ah oo ku yaal Hargeysa oo leh adeegyo casri ah, internet dhaqso badan iyo adeegyo marti-qaad oo fiican.",
+      amenities: language === 'en'
+        ? ["High-Speed Wi-Fi", "Restaurant", "Laundry Service", "Car Rental"]
+        : ["Wi-Fi Dhaqso Badan", "Makhaayadda", "Adeegga Dhaqida", "Kirayska Baabuurta"],
+      whatsappNumber: "252634123456",
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      ]
     }
   ];
 
-  // Function to create placeholder hotel for countries without real hotels
-  const createPlaceholderHotel = (country, city) => {
-    const countryName = countryData[country]?.name || country;
-    const cityName = city ? countryData[country]?.cities.find(c => c.id === city)?.name : 
-                     countryData[country]?.cities[0]?.name || countryName;
-    
-    return {
-      id: `placeholder-${country}-${city || 'main'}`,
-      name: t.placeholderHotelName,
-      location: cityName,
-      city: city || countryData[country]?.cities[0]?.id,
-      country: country,
-      priceRange: t.comingSoon,
-      description: t.placeholderDescription,
-      amenities: language === 'en'
-        ? ["Premium Location", "World-Class Service", "Modern Facilities", "Coming Soon"]
-        : ["Meel Heer-sare ah", "Adeeg Heer Caalami ah", "Xarumo Casri ah", "Waa Imanaya"],
-      whatsappNumber: "254700000000",
-      images: [
-        createPlaceholderImage(),
-        createPlaceholderImage()
-      ],
-      isComingSoon: true,
-      isPlaceholder: true
-    };
-  };
-
   const handleBookNowClick = (hotel) => {
-    if (hotel.isComingSoon) {
-      setSelectedCountryName(countryData[hotel.country]?.name || hotel.country);
-      setShowComingSoonPopup(true);
-      return;
-    }
     setSelectedHotel(hotel);
     setIsBookingFormOpen(true);
   };
@@ -279,25 +316,11 @@ const HotelListings = () => {
     setSelectedHotel(null);
   };
 
-  const closeComingSoonPopup = () => {
-    setShowComingSoonPopup(false);
-    setSelectedCountryName('');
-  };
-
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'so' : 'en');
   };
 
-  const toggleHotelExpansion = (hotelId, hotelName, isComingSoon) => {
-    if (isComingSoon) {
-      const hotel = filteredHotels.find(h => h.id === hotelId);
-      if (hotel) {
-        setSelectedCountryName(countryData[hotel.country]?.name || hotel.country);
-      }
-      setShowComingSoonPopup(true);
-      return;
-    }
-    
+  const toggleHotelExpansion = (hotelId, hotelName) => {
     if (hotelName === "Yare Towers Hotel") {
       navigate('/yare');
     } else {
@@ -332,31 +355,18 @@ const HotelListings = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Get filtered hotels with placeholders for countries without hotels
-  const getFilteredHotels = () => {
-    let filtered = hotels.filter(hotel => {
-      if (!selectedCountry) return true;
-      if (selectedCountry && !selectedCity) return hotel.country === selectedCountry;
-      return hotel.country === selectedCountry && hotel.city === selectedCity;
-    });
-
-    // If a country is selected but has no hotels, show placeholder
-    if (selectedCountry && filtered.length === 0) {
-      const placeholderHotel = createPlaceholderHotel(selectedCountry, selectedCity);
-      filtered = [placeholderHotel];
-    }
-
-    return filtered;
-  };
-
-  const filteredHotels = getFilteredHotels();
+  const filteredHotels = hotels.filter(hotel => {
+    if (!selectedCountry) return true;
+    if (selectedCountry && !selectedCity) return hotel.country === selectedCountry;
+    return hotel.country === selectedCountry && hotel.city === selectedCity;
+  });
 
   // Helper function to get hotel images
   const getHotelImages = (hotel) => {
     if (hotel.name === "Yare Towers Hotel") {
       return [yareRoom, yarePool, yareL, yareRoom2, yareConf, yareSeats];
     }
-    return hotel.images.length > 0 ? hotel.images : [createPlaceholderImage()];
+    return hotel.images.length > 0 ? hotel.images : [];
   };
 
   return (
@@ -420,7 +430,7 @@ const HotelListings = () => {
             const hotelImages = getHotelImages(hotel);
             
             return (
-              <div className={`deegaan-hotel-card ${hotel.isComingSoon ? 'coming-soon' : ''}`} key={hotel.id}>
+              <div className="deegaan-hotel-card" key={hotel.id}>
                 <div className="deegaan-hotel-images">
                   {window.innerWidth <= 768 ? (
                     <div className="deegaan-hotel-images-slideshow">
@@ -432,13 +442,6 @@ const HotelListings = () => {
                           <img src={image} alt={`${hotel.name} - view ${i+1}`} />
                         </div>
                       ))}
-                      {hotel.isComingSoon && (
-                        <div className="deegaan-coming-soon-overlay">
-                          <div className="deegaan-coming-soon-badge">
-                            {t.comingSoon}
-                          </div>
-                        </div>
-                      )}
                       <div className="deegaan-slideshow-controls">
                         {hotelImages.map((_, i) => (
                           <div
@@ -451,20 +454,11 @@ const HotelListings = () => {
                     </div>
                   ) : (
                     // Desktop view - show first two images
-                    <>
-                      {hotelImages.slice(0, 2).map((image, i) => (
-                        <div className="deegaan-hotel-image" key={i}>
-                          <img src={image} alt={`${hotel.name} - view ${i+1}`} />
-                        </div>
-                      ))}
-                      {hotel.isComingSoon && (
-                        <div className="deegaan-coming-soon-overlay">
-                          <div className="deegaan-coming-soon-badge">
-                            {t.comingSoon}
-                          </div>
-                        </div>
-                      )}
-                    </>
+                    hotelImages.slice(0, 2).map((image, i) => (
+                      <div className="deegaan-hotel-image" key={i}>
+                        <img src={image} alt={`${hotel.name} - view ${i+1}`} />
+                      </div>
+                    ))
                   )}
                 </div>
                 <div className="deegaan-hotel-content">
@@ -472,10 +466,8 @@ const HotelListings = () => {
                     className="deegaan-hotel-name"
                     data-hotel={
                       hotel.name === "Yare Towers Hotel" ? "yare-towers" :
-                      hotel.name === "Urban Point Hotel" ? "urban-point" :
-                      hotel.name === "Baraka Hotel" ? "baraka" :
-                      hotel.name === "Bushra Hotel" ? "bushra" :
-                      hotel.isPlaceholder ? "placeholder" : "riyo"
+                      hotel.name === "Eastleigh Lights Hotel" ? "eastleigh-lights" :
+                      hotel.name === "Star Light Hotel" ? "star-light" : "riyo"
                     }
                   >
                     {hotel.name}
@@ -484,9 +476,7 @@ const HotelListings = () => {
                     <i className="deegaan-location-icon">📍</i>
                     <span>{hotel.location}</span>
                   </div>
-                  <div className="deegaan-hotel-price">
-                    {hotel.isComingSoon ? hotel.priceRange : `${hotel.priceRange} ${t.perNight}`}
-                  </div>
+                  <div className="deegaan-hotel-price">{hotel.priceRange} {t.perNight}</div>
                   <p
                     className="deegaan-hotel-description"
                     style={{
@@ -499,16 +489,14 @@ const HotelListings = () => {
                   </p>
                   <button
                     className="deegaan-read-more-btn"
-                    onClick={() => toggleHotelExpansion(hotel.id, hotel.name, hotel.isComingSoon)}
+                    onClick={() => toggleHotelExpansion(hotel.id, hotel.name)}
                   >
                     {hotel.name === "Yare Towers Hotel" ?
                       (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
-                      hotel.isComingSoon ?
-                        t.learnMore :
-                        (expandedHotels[hotel.id] ?
-                          (language === 'en' ? 'Show Less' : 'Itus Yar') :
-                          (language === 'en' ? 'Read More' : 'Sii Akhri')
-                        )
+                      (expandedHotels[hotel.id] ?
+                        (language === 'en' ? 'Show Less' : 'Itus Yar') :
+                        (language === 'en' ? 'Read More' : 'Sii Akhri')
+                      )
                     }
                   </button>
                   <div className="deegaan-hotel-amenities">
@@ -531,26 +519,6 @@ const HotelListings = () => {
           })}
         </div>
       </div>
-
-      {/* Enhanced Coming Soon Popup */}
-      {showComingSoonPopup && (
-        <div className="deegaan-coming-soon-popup" onClick={closeComingSoonPopup}>
-          <div className="deegaan-coming-soon-popup-content" onClick={(e) => e.stopPropagation()}>
-            <div className="deegaan-popup-icon">
-              🏨
-            </div>
-            <h3 className="deegaan-popup-title">
-              {t.comingSoon} {selectedCountryName && `to ${selectedCountryName}`}
-            </h3>
-            <p className="deegaan-popup-message">
-              {t.comingSoonMessage}
-            </p>
-            <button className="deegaan-popup-close-btn" onClick={closeComingSoonPopup}>
-              {t.closePopup}
-            </button>
-          </div>
-        </div>
-      )}
 
       {isBookingFormOpen && selectedHotel && (
         <BookingForm
