@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Location - Deegaan-Riyo Office in Eastleigh, Nairobi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Visit Deegaan-Riyo's headquarters in Eastleigh, Nairobi at BBS Mall, 3rd Floor. Contact us for the best WhatsApp-based hotel booking experience in East Africa.">
+    <meta name="keywords" content="Deegaan-Riyo office Nairobi, Eastleigh hotel booking, Deegaan-Riyo contact, WhatsApp hotel booking, Somali travelers East Africa">
+    <meta name="author" content="RiyO - Deegaan-Riyo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Location - Deegaan-Riyo Office in Eastleigh, Nairobi">
+    <meta property="og:description" content="Find Deegaan-Riyo's office at BBS Mall, 3rd Floor, Eastleigh, Nairobi. Connect with us for seamless hotel bookings via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deegaan-riyo.com/location">
+    <meta property="og:image" content="https://deegaan-riyo.com/images/office-location.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Location - Deegaan-Riyo Office in Eastleigh, Nairobi">
+    <meta name="twitter:description" content="Locate Deegaan-Riyo's headquarters in Eastleigh, Nairobi and contact us for premium hotel bookings.">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Our Location - Deegaan-Riyo",
+      "description": "Find Deegaan-Riyo's headquarters at BBS Mall, 3rd Floor, Eastleigh, Nairobi, Kenya. Contact us for WhatsApp-based hotel bookings across East Africa.",
+      "url": "https://deegaan-riyo.com/location",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RiyO",
+        "alternateName": "Deegaan-Riyo",
+        "url": "https://deegaan-riyo.com",
+        "logo": "https://deegaan-riyo.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254712221079",
+          "contactType": "Customer Service",
+          "email": "deegaan@deegaanriyo.online",
+          "url": "https://www.deegaanriyo.online"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "BBS Mall, 3rd Floor",
+          "addressLocality": "Eastleigh, Nairobi",
+          "addressCountry": "KE"
+        }
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Scoped CSS for Location Page */
+        .location-page-container * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .location-page-container {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Location Section Styles */
+        .location-page-container .location-container {
+            padding: 5rem 2rem;
+            background-color: #080F1A;
+            color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+
+        .location-page-container .location-container.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .location-page-container .location-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            color: #00FFFF;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        .location-page-container .location-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Map Styles */
+        .location-page-container .map-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 119, 255, 0.5);
+        }
+
+        .location-page-container .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .location-page-container .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00FFFF, #0077FF);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+            z-index: 10;
+        }
+
+        /* Contact Card Styles */
+        .location-page-container .contact-card {
+            background: rgba(0, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .location-page-container .contact-card:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .location-page-container .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .location-page-container .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, #00FFFF, transparent);
+        }
+
+        /* Contact Information Styles */
+        .location-page-container .address-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .location-page-container .info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .location-page-container .info-icon {
+            width: 24px;
+            height: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-top: 3px;
+        }
+
+        .location-page-container .location-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300FFFF' viewBox='0 0 384 512'%3E%3Cpath d='M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z'/%3E%3C/svg%3E");
+        }
+
+        .location-page-container .phone-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300FFFF' viewBox='0 0 384 512'%3E%3Cpath d='M80 0C44.7 0 16 28.7 16 64V448c0 35.3 28.7 64 64 64H304c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H80zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H160c-8.8 0-16-7.2-16-16s7.2-16 16-16z'/%3E%3C/svg%3E");
+        }
+
+        .location-page-container .email-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300FFFF' viewBox='0 0 512 512'%3E%3Cpath d='M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z'/%3E%3C/svg%3E");
+        }
+
+        .location-page-container .website-icon {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2300FFFF' viewBox='0 0 512 512'%3E%3Cpath d='M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-2.1-20.6-3.2-42-3.2-64s1.1-43.4 3.2-64H493.3c5.2 20.5 7.8 41.9 7.8 64s-2.6 43.5-7.8 64zM150.2 416H19.5c-5.2-20.5-7.8-41.9-7.8-64s2.6-43.5 7.8-64H150.3c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64zm-14.1-64H15.5c-5.3-20.5-8.1-41.9-8.1-64s2.8-43.5 8.1-64H136.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64zm-3.4-128H19.3c-5.2-20.5-7.8-41.9-7.8-64s2.6-43.5 7.8-64H132.9c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64z'/%3E%3C/svg%3E");
+        }
+
+        .location-page-container .info-item h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            margin: 0 0 0.5rem;
+            color: #0077FF;
+        }
+
+        .location-page-container .info-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .location-page-container .contact-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .location-page-container .contact-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #00FFFF;
+            transition: width 0.3s ease;
+        }
+
+        .location-page-container .contact-link:hover {
+            color: #00FFFF;
+        }
+
+        .location-page-container .contact-link:hover::after {
+            width: 100%;
+        }
+
+        /* CTA Button */
+        .location-page-container .location-cta {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .location-page-container .directions-button {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 119, 255, 0.2));
+            color: #00FFFF;
+            border: 1px solid #00FFFF;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .location-page-container .directions-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .location-page-container .directions-button:hover {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(0, 119, 255, 0.3));
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .location-page-container .directions-button:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .location-page-container .location-content {
+                flex-direction: row;
+            }
+            
+            .location-page-container .map-container {
+                flex: 1.5;
+            }
+            
+            .location-page-container .contact-card {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .location-page-container .location-title {
+                font-size: 2rem;
+            }
+
+            .location-page-container .map-container {
+                height: 300px;
+            }
+            
+            .location-page-container .info-item {
+                gap: 0.7rem;
+            }
+        }
+
+        /* Text Selection */
+        .location-page-container ::selection {
+            background: rgba(0, 255, 255, 0.3);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="location-page-container">
+        <section id="location-section" class="location-container">
+            <h2 class="location-title">Our Location</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <iframe 
+                        title="Deegaan-Riyo Office Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.816723987234!2d36.84988461475479!3d-1.283353999054665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1733b3b7d5b1%3A0x4b7c6b7b0f7c6b7b!2sBBS%20Mall!5e0!3m2!1sen!2ske!4v1697671234567!5m2!1sen!2ske" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="contact-card">
+                    <div class="card-content">
+                        <h3 class="card-title">Contact Information</h3>
+                        <div class="address-info">
+                            <div class="info-item">
+                                <i class="info-icon location-icon"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>Deegaan-Riyo Head Quarters<br />BBS Mall, 3rd Floor<br />Eastleigh, Nairobi</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="info-icon phone-icon"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>
+                                        <a href="tel:+254712221079" class="contact-link">+254 712 221 079</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="info-icon email-icon"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>
+                                        <a href="mailto:deegaan@deegaanriyo.online" class="contact-link">deegaan@deegaanriyo.online</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="info-icon website-icon"></i>
+                                <div>
+                                    <h4>Website</h4>
+                                    <p>
+                                        <a href="https://www.deegaanriyo.online" target="_blank" rel="noopener noreferrer" class="contact-link">www.deegaanriyo.online</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-cta">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=BBS+Mall,+Eastleigh,+Nairobi" target="_blank" rel="noopener noreferrer" class="directions-button">
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to add 'fade-in' class for animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const handleScroll = () => {
+                const element = document.getElementById('location-section');
+                if (element) {
+                    const position = element.getBoundingClientRect();
+                    if (position.top < window.innerHeight && position.bottom >= 0) {
+                        element.classList.add('fade-in');
+                    }
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check on load
+
+            // Cleanup on page unload
+            window.addEventListener('unload', () => {
+                window.removeEventListener('scroll', handleScroll);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Book with Deegaan-Riyo - Best Hotel Booking Platform</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover why Deegaan-Riyo is the best hotel booking platform for Somali travelers in East Africa. Enjoy no booking fees, direct WhatsApp communication, best price guarantees, and instant confirmations.">
+    <meta name="keywords" content="why book with Deegaan-Riyo, WhatsApp hotel booking, best hotel booking platform, no booking fees, East Africa hotels, Somali travelers">
+    <meta name="author" content="RiyO - Deegaan-Riyo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Why Book with Deegaan-Riyo - Best Hotel Booking Platform">
+    <meta property="og:description" content="Learn why Deegaan-Riyo offers the ultimate hotel booking experience with no fees, direct communication, and instant confirmations via WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deegaan-riyo.com/why-book-with-us">
+    <meta property="og:image" content="https://deegaan-riyo.com/images/why-book.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Book with Deegaan-Riyo">
+    <meta name="twitter:description" content="Book hotels effortlessly with Deegaan-Riyo’s WhatsApp platform, offering no fees, best prices, and instant confirmations.">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Why Book with Deegaan-Riyo",
+      "description": "Learn about the benefits of booking hotels with Deegaan-Riyo, including no booking fees, direct WhatsApp communication, best price guarantees, and instant confirmations.",
+      "url": "https://deegaan-riyo.com/why-book-with-us",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RiyO",
+        "alternateName": "Deegaan-Riyo",
+        "url": "https://deegaan-riyo.com",
+        "logo": "https://deegaan-riyo.com/logo.png"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "No Booking Fees",
+            "description": "Book directly with hotels and avoid unnecessary platform fees and commissions."
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Direct Communication",
+            "description": "Chat directly with hotel staff via WhatsApp to get immediate answers to your questions."
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Best Price Guarantee",
+            "description": "Get the best rates directly from hotels without any middleman markup."
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Instant Confirmation",
+            "description": "Receive booking confirmations immediately through WhatsApp."
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Import fonts (already included via link, but retained for context) */
+        /* Scoped CSS for Why Book With Us Page */
+        .why-book-page-container * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .why-book-page-container {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Why Book Section */
+        .why-book-page-container .why {
+            background-image: linear-gradient(rgba(7, 9, 26, 0.92), rgba(7, 9, 26, 0.92)),
+                              url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #F0F2F8;
+            padding: 120px 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .why-book-page-container .why.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .why-book-page-container .why::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 1;
+        }
+
+        .why-book-page-container .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-book-page-container h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #FFFFFF;
+            position: relative;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                         0 0 40px rgba(0, 255, 255, 0.4);
+        }
+
+        .why-book-page-container h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(0,255,255,0.2), #00FFFF, rgba(0,255,255,0.2));
+            box-shadow: 0 0 8px #00FFFF;
+        }
+
+        .why-book-page-container .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-book-page-container .reason-card {
+            background-color: rgba(8, 11, 30, 0.9);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .why-book-page-container .reason-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        .why-book-page-container .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 0.3);
+        }
+
+        .why-book-page-container .reason-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background-color: rgba(0, 255, 255, 0.08);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.5),
+                        0 0 45px rgba(0, 255, 255, 0.3);
+        }
+
+        .why-book-page-container .reason-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #00FFFF;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(0, 255, 255, 0.6),
+                         0 0 24px rgba(0, 255, 255, 0.3);
+        }
+
+        .why-book-page-container .reason-card p {
+            font-family: 'Inter', sans-serif;
+            color: #FFFFFF;
+            line-height: 1.7;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+        }
+
+        .why-book-page-container .cta-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .why-book-page-container .cta-button {
+            background: rgba(0, 255, 255, 0.1);
+            color: #00FFFF;
+            border: 2px solid #00FFFF;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .why-book-page-container .cta-button:hover {
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .why-book-page-container .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-book-page-container h2 {
+                font-size: 2rem;
+            }
+
+            .why-book-page-container .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Text Selection */
+        .why-book-page-container ::selection {
+            background: rgba(0, 255, 255, 0.3);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="why-book-page-container">
+        <section class="why">
+            <div class="container">
+                <h2>Why Book With Deegaan-Riyo?</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <div class="reason-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3>No Booking Fees</h3>
+                        <p>Book directly with hotels and avoid unnecessary platform fees and commissions, saving you money on every stay.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h3>Direct Communication</h3>
+                        <p>Chat directly with hotel staff via WhatsApp to get immediate answers to your questions, ensuring a personalized experience.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Best Price Guarantee</h3>
+                        <p>Get the best rates directly from hotels without any middleman markup, ensuring you always get the best deal.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3>Instant Confirmation</h3>
+                        <p>Receive booking confirmations immediately through WhatsApp, giving you peace of mind for your travel plans.</p>
+                    </div>
+                </div>
+                <div class="cta-container">
+                    <a href="https://deegaan-riyo.com/eastleigh-hotels" class="cta-button">
+                        <i class="fas fa-hotel"></i> Checkout Best Deals
+                    </a>
+                    <a href="https://deegaan-riyo.com/partner-with-us" class="cta-button">
+                        <i class="fas fa-handshake"></i> List Your Hotel
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to add 'visible' class for animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.querySelector('.why');
+            setTimeout(() => {
+                section.classList.add('visible');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,23 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Explicitly allow static HTML pages for SEO
+Allow: /about.html
+Allow: /contact.html
+Allow: /eastleigh-hotels.html
+Allow: /why-book-with-us.html
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /logo.png
+Allow: /manifest.json
+
+# Disallow source code and development files
+Disallow: /src/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://www.deegaanriyo.online/sitemap.xml

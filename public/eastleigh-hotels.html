@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Hotels in Eastleigh, Nairobi - Deegaan-Riyo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover the best hotels in Eastleigh, Nairobi with Deegaan-Riyo. Book premium accommodations via WhatsApp for a seamless, culturally resonant experience tailored for Somali travelers.">
+    <meta name="keywords" content="best hotels Eastleigh Nairobi, luxury hotels Nairobi, Eastleigh accommodation, Somali hotels Nairobi, Deegaan-Riyo, WhatsApp hotel booking">
+    <meta name="author" content="RiyO - Deegaan-Riyo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Best Hotels in Eastleigh, Nairobi - Deegaan-Riyo">
+    <meta property="og:description" content="Explore top hotels in Eastleigh, Nairobi with Deegaan-Riyo's innovative WhatsApp booking platform, designed for Somali travelers seeking premium stays.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deegaan-riyo.com/hotels/eastleigh-nairobi">
+    <meta property="og:image" content="https://deegaan-riyo.com/images/eastleigh-hotels.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best Hotels in Eastleigh, Nairobi - Deegaan-Riyo">
+    <meta name="twitter:description" content="Book the best hotels in Eastleigh, Nairobi via WhatsApp with Deegaan-Riyo, tailored for Somali travelers.">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Best Hotels in Eastleigh, Nairobi",
+      "description": "Discover the best hotels in Eastleigh, Nairobi with Deegaan-Riyo's WhatsApp-based booking platform, offering premium accommodations for Somali travelers.",
+      "url": "https://deegaan-riyo.com/hotels/eastleigh-nairobi",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RiyO",
+        "alternateName": "Deegaan-Riyo",
+        "url": "https://deegaan-riyo.com",
+        "logo": "https://deegaan-riyo.com/logo.png"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Hotel",
+            "name": "Eastleigh Star Hotel",
+            "description": "A luxurious hotel in the heart of Eastleigh, offering modern amenities and cultural resonance for Somali travelers.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Eastleigh, Nairobi",
+              "addressCountry": "KE"
+            },
+            "starRating": {
+              "@type": "Rating",
+              "ratingValue": "4.5"
+            },
+            "image": "https://deegaan-riyo.com/images/eastleigh-star.jpg"
+          },
+          {
+            "@type": "Hotel",
+            "name": "Nairobi Oasis Inn",
+            "description": "A premium hotel with top-tier facilities, perfect for business and leisure travelers in Eastleigh.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Eastleigh, Nairobi",
+              "addressCountry": "KE"
+            },
+            "starRating": {
+              "@type": "Rating",
+              "ratingValue": "4.2"
+            },
+            "image": "https://deegaan-riyo.com/images/nairobi-oasis.jpg"
+          },
+          {
+            "@type": "Hotel",
+            "name": "Somali Heritage Hotel",
+            "description": "A culturally rich hotel offering a unique experience for Somali travelers in Eastleigh, Nairobi.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Eastleigh, Nairobi",
+              "addressCountry": "KE"
+            },
+            "starRating": {
+              "@type": "Rating",
+              "ratingValue": "4.0"
+            },
+            "image": "https://deegaan-riyo.com/images/somali-heritage.jpg"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Scoped CSS for City Page */
+        .city-page-container * {
+            box-sizing: border-box;
+        }
+        
+        .city-page-container {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main Section Styles */
+        .city-page-container .hotels-section {
+            background-color: #080F1A;
+            color: #fff;
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+            overflow: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .city-page-container .hotels-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 162, 255, 0.1), transparent 70%);
+            z-index: 0;
+        }
+
+        .city-page-container .hotels-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .city-page-container .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Typography Styles */
+        .city-page-container .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+            text-align: center;
+            color: #FFFFFF;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            letter-spacing: 2px;
+            font-weight: 700;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 15px rgba(0, 255, 255, 0.7); }
+            to { text-shadow: 0 0 25px rgba(0, 255, 255, 0.9), 0 0 35px rgba(0, 255, 255, 0.6); }
+        }
+
+        .city-page-container .neon-text {
+            color: #00FFFF;
+            text-shadow: 0 0 8px rgba(0, 195, 255, 0.7);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .city-page-container .neon-text:hover {
+            text-shadow: 0 0 15px rgba(0, 195, 255, 0.9);
+        }
+
+        .city-page-container .neon-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00FFFF, transparent);
+            margin: 0 auto 40px;
+            width: min(60%, 300px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        .city-page-container .highlight-text {
+            color: #00FFFF;
+            font-weight: 600;
+            text-shadow: 0 0 5px rgba(0, 195, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .city-page-container .highlight-text:hover {
+            text-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+        }
+
+        /* Intro Section */
+        .city-page-container .intro-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .city-page-container .intro-text {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* Hotels Grid */
+        .city-page-container .hotels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .city-page-container .hotel-card {
+            background: rgba(0, 255, 255, 0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .city-page-container .hotel-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0066ff, #00c3ff, #00ffff);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .city-page-container .hotel-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .city-page-container .hotel-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+            border-color: rgba(0, 255, 255, 0.6);
+            background: rgba(0, 255, 255, 0.12);
+        }
+
+        .city-page-container .hotel-image {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .city-page-container .hotel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.4s ease;
+        }
+
+        .city-page-container .hotel-card:hover .hotel-image img {
+            transform: scale(1.1);
+        }
+
+        .city-page-container .hotel-info {
+            padding: 20px;
+        }
+
+        .city-page-container .hotel-info h3 {
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .city-page-container .hotel-rating {
+            color: #00FFFF;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .city-page-container .hotel-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .city-page-container .hotel-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .city-page-container .amenity-tag {
+            background: rgba(0, 255, 255, 0.15);
+            color: #00FFFF;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .city-page-container .book-now-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #0066ff, #00c3ff);
+            color: white;
+            border: 2px solid #00c3ff;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .city-page-container .book-now-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 195, 255, 0.6);
+            background: linear-gradient(135deg, #0080ff, #00ffff);
+        }
+
+        /* Why Book Section */
+        .city-page-container .why-book-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .city-page-container .why-book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .city-page-container .benefit-card {
+            background: rgba(0, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .city-page-container .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .city-page-container .benefit-icon {
+            font-size: 2.5rem;
+            color: #00c3ff;
+            margin-bottom: 15px;
+        }
+
+        .city-page-container .benefit-card h4 {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: #fff;
+            font-weight: 600;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        /* CTA Section */
+        .city-page-container .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(0, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .city-page-container .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent 70%);
+            z-index: 0;
+        }
+
+        .city-page-container .cta-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .city-page-container .cta-text {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .city-page-container .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .city-page-container .cta-primary {
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid #00c3ff;
+            background: linear-gradient(135deg, #0066ff, #00c3ff);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .city-page-container .cta-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 195, 255, 0.6);
+            background: linear-gradient(135deg, #0080ff, #00ffff);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .city-page-container .container {
+                padding: 0 30px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .city-page-container .hotels-section {
+                padding: 60px 0;
+            }
+            
+            .city-page-container .hotels-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .city-page-container .hotels-section {
+                padding: 40px 0;
+            }
+            
+            .city-page-container .container {
+                padding: 0 20px;
+            }
+            
+            .city-page-container .hotels-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .city-page-container .why-book-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="city-page-container">
+        <section class="hotels-section">
+            <div class="container">
+                <!-- Intro Section -->
+                <div class="intro-section">
+                    <h1 class="section-title">Best Hotels in Eastleigh, Nairobi</h1>
+                    <div class="neon-line"></div>
+                    <p class="intro-text">
+                        Discover the <span class="highlight-text">best hotels in Eastleigh, Nairobi</span> with <span class="highlight-text">Deegaan-Riyo</span>. Our WhatsApp-based platform offers a seamless booking experience, connecting Somali travelers with premium accommodations that blend modern luxury with cultural resonance. Whether you're visiting for business or leisure, find your perfect stay in the heart of Nairobi's vibrant Eastleigh district.
+                    </p>
+                </div>
+
+                <!-- Hotels Grid -->
+                <div class="hotels-grid">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                        <img src="https://deegaan-riyo.com/images/eastleigh-star.jpg" alt="Eastleigh Star Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Eastleigh Star Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.5/5
+                            </div>
+                            <p class="hotel-description">
+                                A luxurious retreat in Eastleigh, offering modern amenities, spacious rooms, and a welcoming atmosphere tailored for Somali travelers.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Free Wi-Fi</span>
+                                <span class="amenity-tag">Breakfast Included</span>
+                                <span class="amenity-tag">24/7 Security</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Eastleigh%20Star%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                        <img src="https://deegaan-riyo.com/images/nairobi-oasis.jpg" alt="Nairobi Oasis Inn">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Nairobi Oasis Inn</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.2/5
+                            </div>
+                            <p class="hotel-description">
+                                A premium hotel with top-tier facilities, ideal for business travelers and families seeking comfort in Eastleigh.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Conference Rooms</span>
+                                <span class="amenity-tag">Gym</span>
+                                <span class="amenity-tag">Free Parking</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Nairobi%20Oasis%20Inn" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                        <img src="https://deegaan-riyo.com/images/somali-heritage.jpg" alt="Somali Heritage Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Somali Heritage Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.0/5
+                            </div>
+                            <p class="hotel-description">
+                                Experience cultural richness with modern comforts at this unique hotel, designed for Somali travelers in Eastleigh.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Cultural Events</span>
+                                <span class="amenity-tag">Restaurant</span>
+                                <span class="amenity-tag">Spa</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Somali%20Heritage%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/yare-towers.jpg" alt="Yare Towers Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Yare Towers Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.5/5
+                            </div>
+                            <p class="hotel-description">
+                                Modern comfort and Somali hospitality in the heart of Eastleigh. Spacious rooms and excellent amenities.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Free Wi-Fi</span>
+                                <span class="amenity-tag">Breakfast Included</span>
+                                <span class="amenity-tag">24/7 Security</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Yare%20Towers%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/urban-point.jpg" alt="Urban Point Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Urban Point Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.2/5
+                            </div>
+                            <p class="hotel-description">
+                                Stylish and affordable, perfect for business and leisure travelers seeking comfort in Eastleigh.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Conference Rooms</span>
+                                <span class="amenity-tag">Gym</span>
+                                <span class="amenity-tag">Free Parking</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Urban%20Point%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/baraka-hotel.jpg" alt="Baraka Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Baraka Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.0/5
+                            </div>
+                            <p class="hotel-description">
+                                Experience cultural richness and modern amenities at Baraka Hotel, a favorite among Somali travelers.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Cultural Events</span>
+                                <span class="amenity-tag">Restaurant</span>
+                                <span class="amenity-tag">Spa</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Baraka%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/nomad-paradise.jpg" alt="Nomad Paradise Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Nomad Paradise Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.5/5
+                            </div>
+                            <p class="hotel-description">
+                                A luxurious retreat in Eastleigh, offering modern amenities, spacious rooms, and a welcoming atmosphere tailored for Somali travelers.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Free Wi-Fi</span>
+                                <span class="amenity-tag">Breakfast Included</span>
+                                <span class="amenity-tag">24/7 Security</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Nomad%20Paradise%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/atis-hotel.jpg" alt="Atis Hotel">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Atis Hotel</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.2/5
+                            </div>
+                            <p class="hotel-description">
+                                A premium hotel with top-tier facilities, ideal for business travelers and families seeking comfort in Eastleigh.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Conference Rooms</span>
+                                <span class="amenity-tag">Gym</span>
+                                <span class="amenity-tag">Free Parking</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Atis%20Hotel" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="https://deegaan-riyo.com/images/bushra-hotels.jpg" alt="Bushra Hotels">
+                        </div>
+                        <div class="hotel-info">
+                            <h3>Bushra Hotels</h3>
+                            <div class="hotel-rating">
+                                <i class="fas fa-star"></i> 4.0/5
+                            </div>
+                            <p class="hotel-description">
+                                Experience cultural richness with modern comforts at this unique hotel, designed for Somali travelers in Eastleigh.
+                            </p>
+                            <div class="hotel-amenities">
+                                <span class="amenity-tag">Cultural Events</span>
+                                <span class="amenity-tag">Restaurant</span>
+                                <span class="amenity-tag">Spa</span>
+                            </div>
+                            <a href="https://wa.me/1234567890?text=Book%20Bushra%20Hotels" class="book-now-btn">
+                                <i class="fab fa-whatsapp"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Book With Us Section -->
+                <div class="why-book-section">
+                    <h2 class="neon-text">Why Book With Deegaan-Riyo?</h2>
+                    <div class="neon-line"></div>
+                    <div class="why-book-grid">
+                        <div class="benefit-card">
+                            <i class="fas fa-mobile-alt benefit-icon"></i>
+                            <h4>WhatsApp Convenience</h4>
+                            <p>Book instantly via WhatsApp with real-time support and personalized recommendations.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-hotel benefit-icon"></i>
+                            <h4>Curated Selection</h4>
+                            <p>Access handpicked hotels in Eastleigh that cater to Somali travelers' needs.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="fas fa-shield-alt benefit-icon"></i>
+                            <p>Secure and transparent booking process with dedicated customer support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Section -->
+                <div class="cta-section">
+                    <h2 class="neon-text">Book Your Stay in Eastleigh Today</h2>
+                    <div class="neon-line"></div>
+                    <p class="cta-text">Find the perfect hotel in Eastleigh, Nairobi with Deegaan-Riyo. Connect with us on WhatsApp to secure your booking and experience a seamless stay!</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/1234567890" class="cta-primary"><i class="fab fa-whatsapp"></i> Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript to add 'visible' class for animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const section = document.querySelector('.hotels-section');
+            setTimeout(() => {
+                section.classList.add('visible');
+            }, 100);
+        });
+    </script>
+</body>
+</html>

@@ -9,6 +9,10 @@ const WhyBookUs = () => {
     navigate('/eastleigh-hotels');
   };
 
+  const handleHotelOnboardingClick = () => {
+    navigate('/partner-with-us'); // Changed from '/hotel-onboarding'
+  };
+
   const reasons = [
     {
       id: 1,
@@ -37,25 +41,31 @@ const WhyBookUs = () => {
   ];
 
   return (
-    <section className="why">
-      <div className="container">
-        <h2>Why Book With Us?</h2>
-        <div className="reasons-grid">
-          {reasons.map(reason => (
-            <div key={reason.id} className="reason-card">
-              <div className="reason-icon">{reason.icon}</div>
-              <h3>{reason.title}</h3>
-              <p>{reason.description}</p>
-            </div>
-          ))}
+    <>
+      <section className="why">
+        <div className="container">
+          <h2>Why Book With Us?</h2>
+          <div className="reasons-grid">
+            {reasons.map(reason => (
+              <div key={reason.id} className="reason-card">
+                <div className="reason-icon">{reason.icon}</div>
+                <h3>{reason.title}</h3>
+                <p>{reason.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="cta-container">
+            <button className="cta-button" onClick={handleButtonClick}>
+              Checkout Best Deals
+            </button>
+            {/* <button className="cta-button onboarding" onClick={handleHotelOnboardingClick}>
+              List Your Hotel
+            </button> */}
+          </div>
         </div>
-        <div className="cta-container">
-          <button className="cta-button" onClick={handleButtonClick}>
-            Checkout Best Deals
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+      {/* <HotelPartnership /> */}
+    </>
   );
 };
 
