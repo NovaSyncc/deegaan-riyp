@@ -48,7 +48,8 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
         guests: "Guests",
         rooms: "Rooms",
         specialRequests: "Special requests",
-        thankYou: "Thank you!"
+        thankYou: "Thank you!",
+        platformAttribution: "I am making this booking through DeegaanRiyo platform."
       },
       alerts: {
         selectHotelFirst: "Please select a hotel first before booking.",
@@ -84,7 +85,8 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
         guests: "Marti",
         rooms: "Qolal",
         specialRequests: "Codsiyada gaarka ah",
-        thankYou: "Mahadsanid!"
+        thankYou: "Mahadsanid!",
+        platformAttribution: "Waxaan idinka soo dalbaday DeegaanRiyo website-ka."
       },
       alerts: {
         selectHotelFirst: "Fadlan dooro hotel marka hore intaadan dalbayn.",
@@ -230,7 +232,10 @@ ${t.whatsappMessage.bookingDetails}
 - ${t.whatsappMessage.rooms}: ${formData.rooms}
 ${formData.specialRequests ? `- ${t.whatsappMessage.specialRequests}: ${formData.specialRequests}` : ''}
 
-${t.whatsappMessage.thankYou}`.trim();
+${t.whatsappMessage.thankYou}
+
+---
+${t.whatsappMessage.platformAttribution}`.trim();
 
     // Create WhatsApp URL
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
