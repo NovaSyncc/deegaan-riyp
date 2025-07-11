@@ -22,10 +22,10 @@ import bushraTwin1 from '../../../../assets/images/bushra/Twin1.png';
 import bushraView from '../../../../assets/images/bushra/view.jpg';
 // Import Urban hotel images for slideshow
 import urbanImage1 from '../../../../assets/images/urban/11.jpg';
-import urbanImage2 from '../../../../assets/images/urban/12.jpg';
+import urbanImage2 from '../../../../assets/images/urban/12.jpg'; // This is 12.jpg
 import urbanImage3 from '../../../../assets/images/urban/33.png';
 import urbanBed1 from '../../../../assets/images/urban/bed1.jpg';
-import urbanBed2 from '../../../../assets/images/urban/bed2.jpg';
+import urbanBed2 from '../../../../assets/images/urban/bed2.jpg'; // This is bed2.jpg
 import urbanBed3 from '../../../../assets/images/urban/bed3.jpg';
 import urbanDouble from '../../../../assets/images/urban/double.jpg';
 import urbanFood from '../../../../assets/images/urban/food.png';
@@ -427,7 +427,7 @@ const HotelListings = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Get filtered hotels with placeholders for countries without hotels
+  // Get filtered hotels with placeholders for countries without real hotels
   const getFilteredHotels = () => {
     let filtered = hotels.filter(hotel => {
       if (!selectedCountry) return true;
@@ -451,7 +451,8 @@ const HotelListings = () => {
     if (hotel.name === "Yare Towers Hotel") {
       return [yareRoom, yarePool, yareL, yareRoom2, yareConf, yareSeats];
     } else if (hotel.name === "Urban Point Hotel") {
-      return [urbanBed1, urbanBed2, urbanView1, urbanImage1, urbanDouble, urbanBed3, urbanSofa, urbanFood, urbanView];
+      // Changed to display urbanBed2 and urbanImage2 (12.jpg) first for desktop
+      return [urbanBed2, urbanImage2, urbanBed1, urbanView1, urbanImage1, urbanDouble, urbanBed3, urbanSofa, urbanFood, urbanView];
     } else if (hotel.name === "Bushra Hotel") {
       return [bushraSingle1, bushraDeluxe1, bushraView, bushraImage1, bushraReception, bushraTwin1, bushraDouble, bushraCafe, bushraImage3];
     }
