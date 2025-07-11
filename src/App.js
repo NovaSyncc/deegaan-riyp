@@ -7,6 +7,8 @@ import EastleighHotels from './pages/EastleighHotels/EastleighHotels';
 import Layout from './components/Layout/Layout'; // ⬅️ Import layout
 import Registration from './pages/Registration/Registration';
 import Yare from './pages/Home/Sections/Yare/Yare'; // Import Yare component
+import Urban from './pages/Home/Sections/Urban/Urban'; // Import Urban component
+import Bushra from './pages/Home/Sections/Bushra/Bushra'; // Import Bushra component
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -36,7 +38,9 @@ function App() {
               <Route path="/blog" element={<BlogSystem />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/registration" element={<Registration />} />
-              <Route path="/yare" element={<Yare />} /> {/* Add Yare route */}
+              <Route path="/yare" element={<Yare />} /> {/* Yare hotel detail page */}
+              <Route path="/urban" element={<Urban />} /> {/* Urban hotel detail page */}
+              <Route path="/bushra" element={<Bushra />} /> {/* Bushra hotel detail page */}
             </Routes>
           </Layout>
         </Suspense>

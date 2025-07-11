@@ -8,9 +8,30 @@ import yarePool from '../../../../assets/images/yarepool.jpg';
 import yareRoom from '../../../../assets/images/yareroom.jpg';
 import yareRoom2 from '../../../../assets/images/yareroom2.jpg';
 import yareSeats from '../../../../assets/images/yareseats.jpg';
-import urbanImage from '../../../../assets/images/urban.png';
 import barakaImage from '../../../../assets/images/baraka.png';
 import bushraImage from '../../../../assets/images/bushra.png';
+// Import Bushra hotel images for slideshow
+import bushraImage1 from '../../../../assets/images/bushra/1.jpg';
+import bushraImage3 from '../../../../assets/images/bushra/3.jpg';
+import bushraCafe from '../../../../assets/images/bushra/cafe.jpg';
+import bushraDeluxe1 from '../../../../assets/images/bushra/Deluxe1.jpg';
+import bushraDouble from '../../../../assets/images/bushra/Double.png';
+import bushraReception from '../../../../assets/images/bushra/reception.jpg';
+import bushraSingle1 from '../../../../assets/images/bushra/Single1.jpg';
+import bushraTwin1 from '../../../../assets/images/bushra/Twin1.png';
+import bushraView from '../../../../assets/images/bushra/view.jpg';
+// Import Urban hotel images for slideshow
+import urbanImage1 from '../../../../assets/images/urban/11.jpg';
+import urbanImage2 from '../../../../assets/images/urban/12.jpg';
+import urbanImage3 from '../../../../assets/images/urban/33.png';
+import urbanBed1 from '../../../../assets/images/urban/bed1.jpg';
+import urbanBed2 from '../../../../assets/images/urban/bed2.jpg';
+import urbanBed3 from '../../../../assets/images/urban/bed3.jpg';
+import urbanDouble from '../../../../assets/images/urban/double.jpg';
+import urbanFood from '../../../../assets/images/urban/food.png';
+import urbanSofa from '../../../../assets/images/urban/sofa.jpg';
+import urbanView1 from '../../../../assets/images/urban/veiw1.jpg';
+import urbanView from '../../../../assets/images/urban/view.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HotelListings = () => {
@@ -123,13 +144,13 @@ const HotelListings = () => {
     }
   };
 
-  // Create placeholder image (you can replace this with actual placeholder images)
+  // Create placeholder image
   const createPlaceholderImage = () => {
     return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23080F1A'/%3E%3Cg opacity='0.1'%3E%3Cpath d='M100 100h200v100H100z' fill='%2300FFFF'/%3E%3Cpath d='M150 120h100v20H150z' fill='%2300FFFF'/%3E%3Cpath d='M150 150h60v10H150z' fill='%2300FFFF'/%3E%3C/g%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%2300FFFF' font-family='Arial' font-size='20' font-weight='bold'%3EComming Soon%3C/text%3E%3C/svg%3E";
   };
 
   const hotels = [
-    // Real hotel - unchanged
+    // Real hotel #1 - Yare Towers
     {
       id: 1,
       name: "Yare Towers Hotel",
@@ -165,8 +186,8 @@ const HotelListings = () => {
       ],
       whatsappNumber: "254703422456",
       images: [
-        yareRoom,    // First default image
-        yarePool,    // Second default image
+        yareRoom,
+        yarePool,
         yareL,
         yareRoom2,
         yareConf,
@@ -174,27 +195,121 @@ const HotelListings = () => {
       ],
       isComingSoon: false
     },
-    // Coming Soon hotels in Kenya
+    // Real hotel #2 - Urban Point Hotel
     {
       id: 2,
       name: "Urban Point Hotel",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: t.comingSoon,
+      priceRange: "Ksh 5,000 - Ksh 8,500",
       description: language === 'en'
-        ? "A modern urban hotel in Eastleigh, featuring contemporary design and exceptional amenities. Coming soon to our booking platform."
-        : "Huteel casri ah oo ku yaala Eastleigh, oo leh naqshad casri ah iyo adeegyo gaar ah. Dhowaan waxay ku biiri doontaa boggeena bukashada.",
+        ? "Nestled in the vibrant heart of Eastleigh, Urban Point Hotel is where quality Kenyan hospitality meets unparalleled luxury and comfort. 99 spacious contemporary rooms and suites designed to exceed the highest standards of comfort."
+        : "Ku dhex yaal wadnaha firfircoon ee Eastleigh, Huteel Urban Point waa meesha ay martiqaadka Kiinya ee tayada leh uu la kulmo raaxada aan la barbar dhigi karin. 99 qolal ballaaran oo casri ah.",
       amenities: language === 'en'
-        ? ["Restaurant", "Conference Facilities", "24/7 Security", "Coming to Platform"]
-        : ["Makhaayadda", "Xarumaha Shirarka", "Ammaanka 24/7", "Waa ku biiri Platform-ka"],
-      whatsappNumber: "254700000000",
-      images: [
-        urbanImage,
-        urbanImage
+        ? ["99 Contemporary Rooms", "Global Cuisine", "Prime Eastleigh Location", "Business Facilities", "24/7 Concierge", "Free Wi-Fi"]
+        : ["99 Qolal Casri ah", "Cunto Heer Caalami ah", "Goobta Muhiimka ah", "Xarumaha Ganacsiga", "Adeegga 24/7", "Wi-Fi Bilaash"],
+      roomTypes: [
+        {
+          type: "Standard Suite",
+          daily: "Ksh 5,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Standard Double Suite",
+          daily: "Ksh 6,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Deluxe Twin Bed",
+          daily: "Ksh 7,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "VIP Suite",
+          daily: "Ksh 7,500",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Deluxe Triple Bed",
+          daily: "Ksh 8,500",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        }
       ],
-      isComingSoon: true
+      whatsappNumber: "254742555222",
+      images: [
+        urbanBed1,
+        urbanBed2,
+        urbanView1,
+        urbanImage1,
+        urbanDouble,
+        urbanBed3,
+        urbanSofa,
+        urbanFood,
+        urbanView
+      ],
+      isComingSoon: false
     },
+    // Real hotel #3 - Bushra Hotel
+    {
+      id: 4,
+      name: "Bushra Hotel",
+      location: t.cities.nairobi,
+      city: "nairobi",
+      country: "kenya",
+      priceRange: "Ksh 2,500 - Ksh 4,000",
+      description: language === 'en'
+        ? "Experience exceptional quality and value at Bushra Hotel, perfectly located in the prime area of Eastleigh. What sets us apart is our unmatched quality-to-price ratio, prime location, and on-site Masjid for our Muslim guests."
+        : "Ku raaxayso tayada iyo qiimaha gaar ah ee Huteel Bushra, oo si fiican ugu dhex yaal aagga muhiimka ah ee Eastleigh. Waxa naga kala saara saamiga tayada iyo qiimaha, goobta muhiimka ah, iyo masjidka gudaha huteelka.",
+      amenities: language === 'en'
+        ? ["Prime Location in Eastleigh", "Exceptional Quality for Price", "On-site Masjid", "Restaurant & Cafe", "24/7 Reception", "Free Wi-Fi"]
+        : ["Meel Heer-sare ah Eastleigh", "Tayada Fiican ee Qiimaha", "Masjid Gudaha Huteelka", "Makhaayadda & Cafe", "Soo dhaweyn 24/7", "Wi-Fi Bilaash"],
+      roomTypes: [
+        {
+          type: "Standard Double Room",
+          daily: "Ksh 2,500",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Standard Room",
+          daily: "Ksh 3,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Deluxe Twin Bed",
+          daily: "Ksh 3,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "VIP Room",
+          daily: "Ksh 4,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        }
+      ],
+      whatsappNumber: "254720972757",
+      images: [
+        bushraSingle1,
+        bushraDeluxe1,
+        bushraView,
+        bushraImage1,
+        bushraReception,
+        bushraTwin1,
+        bushraDouble,
+        bushraCafe,
+        bushraImage3
+      ],
+      isComingSoon: false
+    },
+    // Coming Soon hotel - Baraka Hotel
     {
       id: 3,
       name: "Baraka Hotel",
@@ -212,26 +327,6 @@ const HotelListings = () => {
       images: [
         barakaImage,
         barakaImage
-      ],
-      isComingSoon: true
-    },
-    {
-      id: 4,
-      name: "Bushra Hotel",
-      location: t.cities.nairobi,
-      city: "nairobi",
-      country: "kenya",
-      priceRange: t.comingSoon,
-      description: language === 'en'
-        ? "Experience the comfort of Bushra Hotel, a well-established property in Eastleigh. Soon joining our booking platform for your convenience."
-        : "Ku raaxayso raaxada Bushra Hotel, hoy la aasaasay oo ku yaala Eastleigh. Dhowaan waxay ku biiri doontaa boggeena bukashada si ay kuu fududayso.",
-      amenities: language === 'en'
-        ? ["Spacious Rooms", "Dining Options", "Business Center", "Coming to Platform"]
-        : ["Qolal Ballaaran", "Doorashooyin Cunto", "Xarunta Ganacsiga", "Waa ku biiri Platform-ka"],
-      whatsappNumber: "254700000000",
-      images: [
-        bushraImage,
-        bushraImage
       ],
       isComingSoon: true
     }
@@ -284,10 +379,6 @@ const HotelListings = () => {
     setSelectedCountryName('');
   };
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'so' : 'en');
-  };
-
   const toggleHotelExpansion = (hotelId, hotelName, isComingSoon) => {
     if (isComingSoon) {
       const hotel = filteredHotels.find(h => h.id === hotelId);
@@ -300,6 +391,10 @@ const HotelListings = () => {
     
     if (hotelName === "Yare Towers Hotel") {
       navigate('/yare');
+    } else if (hotelName === "Urban Point Hotel") {
+      navigate('/urban');
+    } else if (hotelName === "Bushra Hotel") {
+      navigate('/bushra');
     } else {
       setExpandedHotels(prev => ({
         ...prev,
@@ -355,6 +450,10 @@ const HotelListings = () => {
   const getHotelImages = (hotel) => {
     if (hotel.name === "Yare Towers Hotel") {
       return [yareRoom, yarePool, yareL, yareRoom2, yareConf, yareSeats];
+    } else if (hotel.name === "Urban Point Hotel") {
+      return [urbanBed1, urbanBed2, urbanView1, urbanImage1, urbanDouble, urbanBed3, urbanSofa, urbanFood, urbanView];
+    } else if (hotel.name === "Bushra Hotel") {
+      return [bushraSingle1, bushraDeluxe1, bushraView, bushraImage1, bushraReception, bushraTwin1, bushraDouble, bushraCafe, bushraImage3];
     }
     return hotel.images.length > 0 ? hotel.images : [createPlaceholderImage()];
   };
@@ -503,12 +602,16 @@ const HotelListings = () => {
                   >
                     {hotel.name === "Yare Towers Hotel" ?
                       (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
-                      hotel.isComingSoon ?
-                        t.learnMore :
-                        (expandedHotels[hotel.id] ?
-                          (language === 'en' ? 'Show Less' : 'Itus Yar') :
-                          (language === 'en' ? 'Read More' : 'Sii Akhri')
-                        )
+                      hotel.name === "Urban Point Hotel" ?
+                        (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
+                        hotel.name === "Bushra Hotel" ?
+                          (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
+                          hotel.isComingSoon ?
+                            t.learnMore :
+                            (expandedHotels[hotel.id] ?
+                              (language === 'en' ? 'Show Less' : 'Itus Yar') :
+                              (language === 'en' ? 'Read More' : 'Sii Akhri')
+                            )
                     }
                   </button>
                   <div className="deegaan-hotel-amenities">

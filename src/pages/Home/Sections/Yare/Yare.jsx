@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaSwimmingPool, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
 import './Yare.css';
@@ -12,6 +12,23 @@ import yareSeats from '../../../../assets/images/yareseats.jpg';
 const Yare = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Auto-advance slideshow for mobile
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (window.innerWidth <= 768) {
+        setCurrentSlide(prev => (prev + 1) % hotelImages.length);
+      }
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Handle manual slide change
+  const changeSlide = (index) => {
+    setCurrentSlide(index);
+  };
   
   // Updated hotel data to match HotelListings format
   const selectedHotel = {
@@ -143,7 +160,7 @@ const Yare = ({ onBack }) => {
 
   const t = translations[language];
 
-  // Hotel images from Unsplash
+  // Hotel images - 6 images in order
   const hotelImages = [
     {
       src: yareL,
@@ -246,18 +263,47 @@ const Yare = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Hotel Images */}
+        {/* Hotel Images - Desktop Grid / Mobile Slideshow */}
         <div className="yare-images-grid">
-          {hotelImages.map((image, index) => (
-            <div key={index} className="yare-image-container">
-              <img 
-                src={image.src} 
-                alt={image.alt}
-                className="yare-image"
-                loading="lazy"
-              />
-            </div>
-          ))}
+          {window.innerWidth <= 768 ? (
+            // Mobile Slideshow
+            <>
+              {hotelImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`yare-image-container ${index === currentSlide ? 'active' : ''}`}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="yare-image"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+              <div className="yare-slideshow-controls">
+                {hotelImages.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`yare-slideshow-dot ${index === currentSlide ? 'active' : ''}`}
+                    onClick={() => changeSlide(index)}
+                  />
+                ))}
+              </div>
+            </>
+          ) : (
+            // Desktop Grid
+            hotelImages.map((image, index) => (
+              <div key={index} className="yare-image-container">
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="yare-image"
+                  loading="lazy"
+                />
+              </div>
+            ))
+          )}
         </div>
 
         {/* Description */}
@@ -281,7 +327,7 @@ const Yare = ({ onBack }) => {
               <tbody>
                 {roomRates.map((rate, index) => (
                   <tr key={index}>
-                    <td>{rate.type}</td>
+                    <td className="yare-room-type">{rate.type}</td>
                     <td data-label="Daily Rate">{rate.daily}</td>
                     <td data-label="Weekly Rate">{rate.weekly}</td>
                     <td data-label="Monthly Rate">{rate.monthly}</td>

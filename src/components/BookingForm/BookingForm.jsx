@@ -97,6 +97,57 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
   
   const t = translations[language];
   
+  // Device detection function
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+
+  // Enhanced WhatsApp URL generation function
+  const generateWhatsAppURL = (phoneNumber, message) => {
+    // Clean phone number format
+    let cleanNumber = phoneNumber.replace(/[\s\-()]/g, '');
+    
+    // Ensure number starts with country code
+    if (cleanNumber.startsWith('0')) {
+      cleanNumber = '254' + cleanNumber.substring(1);
+    } else if (!cleanNumber.startsWith('254')) {
+      cleanNumber = '254' + cleanNumber;
+    }
+
+    // Encode the message properly
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Use different URLs based on device type
+    if (isMobileDevice()) {
+      // Mobile - use api.whatsapp.com
+      return `https://api.whatsapp.com/send?phone=${cleanNumber}&text=${encodedMessage}`;
+    } else {
+      // Desktop - use wa.me which works better with WhatsApp Web
+      return `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+    }
+  };
+
+  // Alternative method for better desktop compatibility
+  const openWhatsAppWithFallback = (phoneNumber, message) => {
+    const whatsappURL = generateWhatsAppURL(phoneNumber, message);
+    
+    // Try to open WhatsApp
+    const newWindow = window.open(whatsappURL, '_blank');
+    
+    // Fallback for desktop if WhatsApp doesn't open properly
+    if (!isMobileDevice()) {
+      setTimeout(() => {
+        // Check if the window is still open after 2 seconds
+        if (newWindow && !newWindow.closed) {
+          // If window is still open, it might mean WhatsApp Web didn't load properly
+          // Try the alternative URL
+          const alternativeURL = `https://web.whatsapp.com/send?phone=${phoneNumber.replace(/[\s\-()]/g, '').replace(/^0/, '254')}&text=${encodeURIComponent(message)}`;
+          newWindow.location.href = alternativeURL;
+        }
+      }, 2000);
+    }
+  };
+  
   // Month options - showing only next 6 months for compactness
   const getAvailableMonths = () => {
     const today = new Date();
@@ -178,7 +229,7 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!selectedHotelState) {
       alert(t.alerts.selectHotelFirst);
       return;
@@ -189,16 +240,6 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
     if (!whatsappNumber) {
       alert(t.alerts.noWhatsApp);
       return;
-    }
-
-    // Clean phone number format
-    whatsappNumber = whatsappNumber.replace(/[\s\-()]/g, '');
-    
-    // Ensure number starts with country code
-    if (whatsappNumber.startsWith('0')) {
-      whatsappNumber = '254' + whatsappNumber.substring(1);
-    } else if (!whatsappNumber.startsWith('254')) {
-      whatsappNumber = '254' + whatsappNumber;
     }
 
     // Calculate check-in and check-out dates
@@ -216,33 +257,31 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
       });
     };
 
-    // Create the message based on selected language
-    const message = `
-${t.whatsappMessage.greeting} ${selectedHotelState.name},
+    // Build the message WITHOUT leading/trailing newlines
+    const message = [
+      `${t.whatsappMessage.greeting} ${selectedHotelState.name},`,
+      '',
+      language === 'so' ? 'Waxaan jeclaan lahaa inaan dalbo:' : 'I would like to make a booking:',
+      '',
+      t.whatsappMessage.bookingDetails,
+      `- ${t.whatsappMessage.name}: ${formData.name}`,
+      `- ${t.whatsappMessage.phone}: ${formData.phone}`,
+      `- ${t.whatsappMessage.checkIn}: ${formatDate(checkInDate)}`,
+      `- ${t.whatsappMessage.checkOut}: ${formatDate(checkOutDate)}`,
+      `- ${t.whatsappMessage.duration}: ${formData.stayDuration} ${formData.stayDuration > 1 ? t.whatsappMessage.days : t.whatsappMessage.day}`,
+      `- ${t.whatsappMessage.guests}: ${formData.guests}`,
+      `- ${t.whatsappMessage.rooms}: ${formData.rooms}`,
+      formData.specialRequests ? `- ${t.whatsappMessage.specialRequests}: ${formData.specialRequests}` : '',
+      '',
+      t.whatsappMessage.thankYou,
+      '',
+      '---',
+      t.whatsappMessage.platformAttribution
+    ].filter(Boolean).join('\n');
 
-${language === 'so' ? 'Waxaan jeclaan lahaa inaan dalbo:' : 'I would like to make a booking:'}
+    // Use the enhanced WhatsApp opening function
+    openWhatsAppWithFallback(whatsappNumber, message);
 
-${t.whatsappMessage.bookingDetails}
-- ${t.whatsappMessage.name}: ${formData.name}
-- ${t.whatsappMessage.phone}: ${formData.phone}
-- ${t.whatsappMessage.checkIn}: ${formatDate(checkInDate)}
-- ${t.whatsappMessage.checkOut}: ${formatDate(checkOutDate)}
-- ${t.whatsappMessage.duration}: ${formData.stayDuration} ${formData.stayDuration > 1 ? t.whatsappMessage.days : t.whatsappMessage.day}
-- ${t.whatsappMessage.guests}: ${formData.guests}
-- ${t.whatsappMessage.rooms}: ${formData.rooms}
-${formData.specialRequests ? `- ${t.whatsappMessage.specialRequests}: ${formData.specialRequests}` : ''}
-
-${t.whatsappMessage.thankYou}
-
----
-${t.whatsappMessage.platformAttribution}`.trim();
-
-    // Create WhatsApp URL
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
-    
     // Reset form and close modal
     setFormData({
       name: '',
