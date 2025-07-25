@@ -1,0 +1,935 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Main section styling */
+.baraka-hotel-section {
+  background-color: #080F1A;
+  padding: 60px 20px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+.baraka-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Language Toggle */
+.baraka-language-toggle {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  display: flex;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 25px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.baraka-lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.baraka-lang-btn:hover {
+  color: #00FFFF;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.baraka-lang-btn.active {
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Back Button */
+.baraka-back-btn {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #00FFFF;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.baraka-back-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+.baraka-back-icon {
+  margin-right: 8px;
+}
+
+/* Header */
+.baraka-header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.baraka-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #00FFFF;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.baraka-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Ranking Badge */
+.baraka-ranking-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #FFD700;
+  font-weight: 500;
+}
+
+.baraka-star-icon {
+  margin-right: 8px;
+  color: #FFD700;
+}
+
+/* Image Grid Layout - Professional 4x3 for Desktop, Slideshow for Mobile */
+.baraka-images-grid {
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* Desktop Grid - 4 columns, 3 rows with creative shapes */
+@media (min-width: 769px) {
+  .baraka-images-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 12px;
+  }
+
+  .baraka-image-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 119, 255, 0.1));
+  }
+
+  /* Creative shapes and layouts */
+  .baraka-image-container:nth-child(1) {
+    border-radius: 20px 5px 20px 5px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .baraka-image-container:nth-child(2) {
+    border-radius: 5px 20px 5px 20px;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .baraka-image-container:nth-child(3) {
+    border-radius: 15px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .baraka-image-container:nth-child(4) {
+    border-radius: 25px 5px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .baraka-image-container:nth-child(5) {
+    border-radius: 5px 25px;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .baraka-image-container:nth-child(6) {
+    border-radius: 15px;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .baraka-image-container:nth-child(7) {
+    border-radius: 30px 10px 30px 10px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .baraka-image-container:nth-child(8) {
+    border-radius: 10px 30px 10px 30px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .baraka-image-container:nth-child(9) {
+    border-radius: 20px;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
+  .baraka-image-container:nth-child(10) {
+    border-radius: 15px 25px;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+  }
+
+  .baraka-image-container:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.25);
+    z-index: 2;
+  }
+
+  .baraka-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .baraka-image-container:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Mobile Slideshow - Keep original slideshow functionality */
+@media (max-width: 768px) {
+  .baraka-images-grid {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .baraka-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .baraka-image-container.active {
+    opacity: 1;
+  }
+
+  .baraka-image-container:first-child {
+    opacity: 1;
+  }
+}
+
+.baraka-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.baraka-image:hover {
+  transform: scale(1.05);
+}
+
+/* Slideshow controls for mobile */
+@media (max-width: 768px) {
+  .baraka-slideshow-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+  }
+
+  .baraka-slideshow-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .baraka-slideshow-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+  }
+
+  .baraka-slideshow-dot.active {
+    background: #00FFFF;
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+  }
+}
+
+/* Description */
+.baraka-description {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.baraka-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* Section Styling */
+.baraka-section {
+  margin-bottom: 50px;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(5px);
+}
+
+.baraka-section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00FFFF;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Room Rates Table */
+.baraka-table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.baraka-rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.baraka-rates-table th {
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  color: #000000;
+  padding: 15px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.baraka-rates-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.baraka-room-type {
+  font-family: 'Orbitron', sans-serif;
+  color: #00FFFF;
+  font-weight: 600;
+}
+
+.baraka-rates-table tbody tr:hover {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.baraka-rates-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Amenities Grid */
+.baraka-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.baraka-amenity-item {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 119, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 119, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.baraka-amenity-item:hover {
+  background: rgba(0, 119, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.baraka-amenity-icon {
+  color: #00FFFF;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.baraka-amenity-item span {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Additional Information List */
+.baraka-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.baraka-info-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+}
+
+.baraka-info-list li:before {
+  content: "•";
+  color: #00FFFF;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.baraka-info-list li:last-child {
+  border-bottom: none;
+}
+
+/* Contact Grid */
+.baraka-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.baraka-contact-btn {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.baraka-contact-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+.baraka-contact-icon {
+  font-size: 2rem;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.baraka-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.baraka-contact-label {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #00FFFF;
+  margin-bottom: 5px;
+}
+
+.baraka-contact-value {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact button specific colors */
+.call-btn:hover .baraka-contact-icon {
+  color: #4CAF50;
+  transform: scale(1.1);
+}
+
+.whatsapp-btn:hover .baraka-contact-icon {
+  color: #25D366;
+  transform: scale(1.1);
+}
+
+.website-btn:hover .baraka-contact-icon {
+  color: #2196F3;
+  transform: scale(1.1);
+}
+
+.maps-btn:hover .baraka-contact-icon {
+  color: #FF5722;
+  transform: scale(1.1);
+}
+
+/* Enhanced Book Now Button */
+.baraka-book-now-container {
+  position: sticky;
+  bottom: 20px;
+  z-index: 100;
+  padding: 0 20px;
+  margin-top: 30px;
+  text-align: center;
+  background: linear-gradient(to top, rgba(8, 15, 26, 0.95), transparent);
+}
+
+.baraka-book-now-btn {
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  color: #000000;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.baraka-book-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+  background: linear-gradient(90deg, #0077FF, #00FFFF);
+}
+
+.baraka-whatsapp-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Tablet Responsive */
+@media (max-width: 991px) and (min-width: 769px) {
+  .baraka-title {
+    font-size: 2.5rem;
+    color: #00FFFF;
+  }
+  
+  .baraka-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .baraka-amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .baraka-hotel-section {
+    background-color: #080F1A;
+  }
+
+  .baraka-section {
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+  }
+
+  .baraka-section-title {
+    color: #00FFFF;
+  }
+
+  .baraka-description {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .baraka-hotel-section {
+    padding: 40px 15px;
+  }
+  
+  .baraka-language-toggle {
+    position: relative;
+    top: 0;
+    right: auto;
+    margin: 0 auto 20px;
+    width: fit-content;
+  }
+  
+  .baraka-header {
+    margin-top: 20px;
+  }
+  
+  .baraka-title {
+    font-size: 2.2rem;
+  }
+  
+  .baraka-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .baraka-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .baraka-section {
+    padding: 20px;
+  }
+  
+  .baraka-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .baraka-rates-table th,
+  .baraka-rates-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .baraka-amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .baraka-amenity-item {
+    padding: 15px;
+  }
+  
+  .baraka-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .baraka-contact-btn {
+    padding: 15px;
+  }
+  
+  .baraka-contact-icon {
+    font-size: 1.5rem;
+  }
+  
+  .baraka-back-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .baraka-description {
+    padding: 25px;
+  }
+  
+  .baraka-description p {
+    font-size: 1rem;
+  }
+  
+  .baraka-book-now-container {
+    bottom: 15px;
+    padding: 0 15px;
+  }
+
+  .baraka-book-now-btn {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .baraka-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .baraka-book-now-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .baraka-whatsapp-icon {
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .baraka-hotel-section {
+    padding: 30px 10px;
+  }
+  
+  .baraka-title {
+    font-size: 1.8rem;
+  }
+  
+  .baraka-subtitle {
+    font-size: 1rem;
+  }
+  
+  .baraka-section {
+    padding: 15px;
+  }
+  
+  .baraka-section-title {
+    font-size: 1.3rem;
+  }
+  
+  .baraka-table-container {
+    font-size: 0.85rem;
+  }
+  
+  .baraka-rates-table th,
+  .baraka-rates-table td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+  
+  .baraka-amenity-item {
+    padding: 12px;
+  }
+  
+  .baraka-amenity-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+  
+  .baraka-contact-btn {
+    padding: 12px;
+  }
+  
+  .baraka-contact-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+  
+  .baraka-contact-label {
+    font-size: 0.9rem;
+  }
+  
+  .baraka-contact-value {
+    font-size: 0.85rem;
+  }
+  
+  .baraka-description {
+    padding: 20px;
+  }
+  
+  .baraka-description p {
+    font-size: 0.95rem;
+  }
+  
+  .baraka-lang-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* RTL Support */
+.baraka-hotel-section[dir="rtl"] {
+  direction: rtl;
+}
+
+.baraka-hotel-section[dir="rtl"] .baraka-back-icon {
+  margin-right: 0;
+  margin-left: 8px;
+  transform: scaleX(-1);
+}
+
+.baraka-hotel-section[dir="rtl"] .baraka-amenity-icon {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.baraka-hotel-section[dir="rtl"] .baraka-contact-icon {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+/* Accessibility */
+.baraka-lang-btn:focus,
+.baraka-back-btn:focus,
+.baraka-contact-btn:focus {
+  outline: 2px solid #00FFFF;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .baraka-title {
+    color: #FFFFFF;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1);
+  }
+  
+  .baraka-section {
+    border: 2px solid #00FFFF;
+    background: rgba(0, 255, 255, 0.2);
+  }
+  
+  .baraka-contact-btn {
+    border: 2px solid #00FFFF;
+    background: rgba(0, 255, 255, 0.3);
+  }
+}
+
+/* Print styles */
+@media print {
+  .baraka-hotel-section {
+    background: white;
+    color: black;
+  }
+  
+  .baraka-back-btn,
+  .baraka-language-toggle,
+  .baraka-contact-btn {
+    display: none;
+  }
+  
+  .baraka-images-grid {
+    display: none;
+  }
+  
+  .baraka-title,
+  .baraka-section-title {
+    color: black;
+    text-shadow: none;
+  }
+  
+  .baraka-section {
+    border: 1px solid black;
+    background: white;
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .baraka-image {
+    transition: none;
+  }
+  
+  .baraka-amenity-item:hover,
+  .baraka-contact-btn:hover {
+    transform: none;
+  }
+}
+
+/* Loading states */
+.baraka-image {
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 255, 0.2) 50%, rgba(0, 255, 255, 0.1) 100%);
+  background-size: 200% 100%;
+}
+
+.baraka-image:not([src]) {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Focus visible for better keyboard navigation */
+.baraka-lang-btn:focus-visible,
+.baraka-back-btn:focus-visible,
+.baraka-contact-btn:focus-visible {
+  outline: 3px solid #00FFFF;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(0, 255, 255, 0.2);
+}
+
+/* Hover effects for touch devices */
+@media (hover: none) {
+  .baraka-contact-btn:hover,
+  .baraka-amenity-item:hover,
+  .baraka-back-btn:hover {
+    transform: none;
+    background: rgba(0, 255, 255, 0.15);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: #FFFFFF;
+}

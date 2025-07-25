@@ -266,6 +266,27 @@
   border-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Furnished Apartment Patch - NEW */
+.deegaan-furnished-apartment-patch {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 3;
+}
+
+.deegaan-furnished-badge {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000000;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 8px rgba(255, 215, 0, 0.4);
+  border: 1px solid rgba(255, 215, 0, 0.6);
+}
+
 /* Hotel Content - Improved spacing */
 .deegaan-hotel-content {
   position: relative;
@@ -547,6 +568,16 @@
     padding: 8px 20px;
     font-size: 0.85rem;
   }
+
+  .deegaan-furnished-badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .deegaan-furnished-apartment-patch {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 /* Tablet responsive design */
@@ -734,6 +765,11 @@
   background-position: left 12px center;
 }
 
+.deegaan-hotel-listings-section[dir="rtl"] .deegaan-furnished-apartment-patch {
+  right: auto;
+  left: 15px;
+}
+
 /* Loading States */
 .deegaan-hotel-card.loading {
   opacity: 0.6;
@@ -783,6 +819,12 @@
   .deegaan-amenity {
     border-width: 2px;
   }
+  
+  .deegaan-furnished-badge {
+    background: #FFD700;
+    color: #000000;
+    border: 2px solid #FFA500;
+  }
 }
 
 /* Reduced motion support */
@@ -821,5 +863,11 @@
     background: white !important;
     box-shadow: none !important;
     page-break-inside: avoid;
+  }
+  
+  .deegaan-furnished-badge {
+    background: #FFD700 !important;
+    color: #000000 !important;
+    border: 1px solid #FFA500 !important;
   }
 }

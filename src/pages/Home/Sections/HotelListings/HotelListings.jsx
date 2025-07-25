@@ -8,7 +8,6 @@ import yarePool from '../../../../assets/images/yarepool.jpg';
 import yareRoom from '../../../../assets/images/yareroom.jpg';
 import yareRoom2 from '../../../../assets/images/yareroom2.jpg';
 import yareSeats from '../../../../assets/images/yareseats.jpg';
-import barakaImage from '../../../../assets/images/baraka.png';
 import bushraImage from '../../../../assets/images/bushra.png';
 // Import Bushra hotel images for slideshow
 import bushraImage1 from '../../../../assets/images/bushra/1.jpg';
@@ -22,10 +21,10 @@ import bushraTwin1 from '../../../../assets/images/bushra/Twin1.png';
 import bushraView from '../../../../assets/images/bushra/view.jpg';
 // Import Urban hotel images for slideshow
 import urbanImage1 from '../../../../assets/images/urban/11.jpg';
-import urbanImage2 from '../../../../assets/images/urban/12.jpg'; // This is 12.jpg
+import urbanImage2 from '../../../../assets/images/urban/12.jpg';
 import urbanImage3 from '../../../../assets/images/urban/33.png';
 import urbanBed1 from '../../../../assets/images/urban/bed1.jpg';
-import urbanBed2 from '../../../../assets/images/urban/bed2.jpg'; // This is bed2.jpg
+import urbanBed2 from '../../../../assets/images/urban/bed2.jpg';
 import urbanBed3 from '../../../../assets/images/urban/bed3.jpg';
 import urbanDouble from '../../../../assets/images/urban/double.jpg';
 import urbanFood from '../../../../assets/images/urban/food.png';
@@ -33,6 +32,17 @@ import urbanSofa from '../../../../assets/images/urban/sofa.jpg';
 import urbanView1 from '../../../../assets/images/urban/veiw1.jpg';
 import urbanView from '../../../../assets/images/urban/view.jpg';
 import { useNavigate } from 'react-router-dom';
+// Import Baraka hotel images
+import facility16 from '../../../../assets/images/baraka/facility-16.jpg';
+import facility17 from '../../../../assets/images/baraka/facility-17.jpg';
+import room2 from '../../../../assets/images/baraka/room2.jpg';
+import room3 from '../../../../assets/images/baraka/room3.jpg';
+import room4_1 from '../../../../assets/images/baraka/room4 (1).jpg';
+import room4 from '../../../../assets/images/baraka/room4.jpg';
+import room20 from '../../../../assets/images/baraka/room-20.jpg';
+import room21 from '../../../../assets/images/baraka/room-21.jpg';
+import room26 from '../../../../assets/images/baraka/room-26.jpg';
+import room27 from '../../../../assets/images/baraka/room-27.jpg';
 
 const HotelListings = () => {
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
@@ -62,6 +72,7 @@ const HotelListings = () => {
       placeholderHotelName: "Deegaan-Riyo Hotel",
       placeholderDescription: "We're bringing premium hospitality to this amazing destination. Our new hotel will feature world-class amenities and exceptional service. Opening soon!",
       learnMore: "Learn More",
+      furnished: "Furnished Apartment",
       countries: {
         kenya: "Kenya",
         somalia: "Somalia",
@@ -92,6 +103,7 @@ const HotelListings = () => {
       placeholderHotelName: "Huteelka Deegaan-Riyo",
       placeholderDescription: "Waxaan keenayaa martiqaad heer sare ah meeshan cajiibka ah. Huteelkayagu cusub wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg aad u fiican. Dhowaan waa furaysaa!",
       learnMore: "Wax Badan Ogow",
+      furnished: "Guriga la Qalabeeyey",
       countries: {
         kenya: "Kiinya",
         somalia: "Soomaaliya",
@@ -150,7 +162,7 @@ const HotelListings = () => {
   };
 
   const hotels = [
-    // Real hotel #1 - Yare Towers
+    // Real hotel #1 - Yare Towers (with Furnished Apartment patch)
     {
       id: 1,
       name: "Yare Towers Hotel",
@@ -159,11 +171,11 @@ const HotelListings = () => {
       country: "kenya",
       priceRange: "Ksh 7,000 - Ksh 9,000",
       description: language === 'en'
-        ? "Luxury hotel featuring spacious rooms with daily, weekly, and monthly rates. Choose from 1 bedroom to 2-bedroom executive suites. Enjoy premium amenities including a swimming pool and rooftop area."
-        : "Huteel raaxo leh oo leh qolal ballaaran oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Dooro qolal 1 ilaa 2 qol. Ku raaxayso adeegyada heer sare ah oo ay ku jiraan berkadda dabaasha iyo aagga saqafka.",
+        ? "Luxury furnished apartments featuring spacious rooms with daily, weekly, and monthly rates. Choose from 1 bedroom to 2-bedroom executive suites. Enjoy premium amenities including a swimming pool and rooftop area."
+        : "Guryaha la qalabeeyey ee raaxada leh oo leh qolal ballaaran oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Dooro qolal 1 ilaa 2 qol. Ku raaxayso adeegyada heer sare ah oo ay ku jiraan berkadda dabaasha iyo aagga saqafka.",
       amenities: language === 'en'
-        ? ["24/7 Reception", "Swimming Pool", "Rooftop Area", "Restaurants", "Free Wi-Fi", "Conference Room"]
-        : ["Soo dhaweyn 24/7", "Berkadda Dabaasha", "Aagga Saqafka", "Makhaayadaha", "Wi-Fi Bilaash", "Qolka Shirarka"],
+        ? ["Furnished Apartments", "24/7 Reception", "Swimming Pool", "Rooftop Area", "Restaurants", "Free Wi-Fi", "Conference Room"]
+        : ["Guryaha la Qalabeeyey", "Soo dhaweyn 24/7", "Berkadda Dabaasha", "Aagga Saqafka", "Makhaayadaha", "Wi-Fi Bilaash", "Qolka Shirarka"],
       roomTypes: [
         {
           type: "1 Bedroom",
@@ -193,7 +205,8 @@ const HotelListings = () => {
         yareConf,
         yareSeats
       ],
-      isComingSoon: false
+      isComingSoon: false,
+      isFurnishedApartment: true
     },
     // Real hotel #2 - Urban Point Hotel
     {
@@ -255,7 +268,60 @@ const HotelListings = () => {
       ],
       isComingSoon: false
     },
-    // Real hotel #3 - Bushra Hotel
+    // Real hotel #3 - Baraka Tower Hotel (moved to slot 3)
+    {
+      id: 3,
+      name: "Baraka Tower Hotel",
+      location: t.cities.nairobi,
+      city: "nairobi",
+      country: "kenya",
+      priceRange: "Ksh 4,000 - Ksh 9,000",
+      description: language === 'en'
+        ? "Welcome to Baraka Tower Hotel, Eastleigh's premier luxury destination. We offer discerning business travelers a serene environment for work and relaxation. Indulge in exquisite culinary delights at our all-day dining restaurant."
+        : "Ku soo dhowow Baraka Tower Hotel, oo ah goobta ugu qaalisan ee raaxada ee Eastleigh. Waxaan u soo bandhignaa socdaalayaasha ganacsiga jawi degan oo ay ku shaqeeyaan oo ay ku nastaan.",
+      amenities: language === 'en'
+        ? ["Premier Luxury Location", "All-Day Dining Restaurant", "Business & Meeting Facilities", "Free Wi-Fi Throughout", "24/7 Reception Service", "Safe & Secure Environment"]
+        : ["Goob Raaxo ah oo Heer Sare ah", "Makhaayadda Maalinta oo dhan", "Goobaha Shaqada & Kulamada", "Wi-Fi Bilaash ah Meel kasta", "Adeegga Soo dhaweynta 24/7", "Deegaan Ammaan ah"],
+      roomTypes: [
+        {
+          type: "Standard Room",
+          singleRate: "Ksh 4,000",
+          doubleRate: "Ksh 5,000"
+        },
+        {
+          type: "Deluxe Room",
+          singleRate: "Ksh 6,500",
+          doubleRate: "Ksh 7,500"
+        },
+        {
+          type: "Executive Room",
+          singleRate: "Ksh 7,000",
+          doubleRate: "Ksh 8,000"
+        },
+        {
+          type: "The Suite",
+          singleRate: "Ksh 8,000",
+          doubleRate: "Ksh 9,000"
+        }
+      ],
+      whatsappNumber: "254712511311",
+      website: "https://barakatowerhotel.com/",
+      googleMaps: "https://maps.app.goo.gl/Tf1TGHZDfgTbyTcKA",
+      images: [
+        room2,
+        room3,
+        room4,
+        room4_1,
+        room20,
+        room21,
+        room26,
+        room27,
+        facility16,
+        facility17
+      ],
+      isComingSoon: false
+    },
+    // Real hotel #4 - Bushra Hotel (moved to slot 4)
     {
       id: 4,
       name: "Bushra Hotel",
@@ -308,27 +374,6 @@ const HotelListings = () => {
         bushraImage3
       ],
       isComingSoon: false
-    },
-    // Coming Soon hotel - Baraka Hotel
-    {
-      id: 3,
-      name: "Baraka Hotel",
-      location: t.cities.nairobi,
-      city: "nairobi",
-      country: "kenya",
-      priceRange: t.comingSoon,
-      description: language === 'en'
-        ? "An established hotel in Eastleigh offering exceptional hospitality and comfort. Soon to be available for booking through our platform."
-        : "Huteel la aasaasay oo ku yaala Eastleigh oo bixiya martiqaad iyo raaxo gaar ah. Dhowaan waxaa laga heli doonaa boggeena bukashada.",
-      amenities: language === 'en'
-        ? ["Comfortable Rooms", "Restaurant", "Meeting Rooms", "Coming to Platform"]
-        : ["Qolal Raaxo leh", "Makhaayadda", "Qolalka Kulanka", "Waa ku biiri Platform-ka"],
-      whatsappNumber: "254700000000",
-      images: [
-        barakaImage,
-        barakaImage
-      ],
-      isComingSoon: true
     }
   ];
 
@@ -393,6 +438,8 @@ const HotelListings = () => {
       navigate('/yare');
     } else if (hotelName === "Urban Point Hotel") {
       navigate('/urban');
+    } else if (hotelName === "Baraka Tower Hotel") {
+      navigate('/baraka');
     } else if (hotelName === "Bushra Hotel") {
       navigate('/bushra');
     } else {
@@ -451,8 +498,9 @@ const HotelListings = () => {
     if (hotel.name === "Yare Towers Hotel") {
       return [yareRoom, yarePool, yareL, yareRoom2, yareConf, yareSeats];
     } else if (hotel.name === "Urban Point Hotel") {
-      // Changed to display urbanBed2 and urbanImage2 (12.jpg) first for desktop
       return [urbanBed2, urbanImage2, urbanBed1, urbanView1, urbanImage1, urbanDouble, urbanBed3, urbanSofa, urbanFood, urbanView];
+    } else if (hotel.name === "Baraka Tower Hotel") {
+      return [room2, room3, room4, room4_1, room20, room21, room26, room27, facility16, facility17];
     } else if (hotel.name === "Bushra Hotel") {
       return [bushraSingle1, bushraDeluxe1, bushraView, bushraImage1, bushraReception, bushraTwin1, bushraDouble, bushraCafe, bushraImage3];
     }
@@ -539,6 +587,13 @@ const HotelListings = () => {
                           </div>
                         </div>
                       )}
+                      {hotel.isFurnishedApartment && (
+                        <div className="deegaan-furnished-apartment-patch">
+                          <div className="deegaan-furnished-badge">
+                            {t.furnished}
+                          </div>
+                        </div>
+                      )}
                       <div className="deegaan-slideshow-controls">
                         {hotelImages.map((_, i) => (
                           <div
@@ -564,6 +619,13 @@ const HotelListings = () => {
                           </div>
                         </div>
                       )}
+                      {hotel.isFurnishedApartment && (
+                        <div className="deegaan-furnished-apartment-patch">
+                          <div className="deegaan-furnished-badge">
+                            {t.furnished}
+                          </div>
+                        </div>
+                      )}
                     </>
                   )}
                 </div>
@@ -573,7 +635,7 @@ const HotelListings = () => {
                     data-hotel={
                       hotel.name === "Yare Towers Hotel" ? "yare-towers" :
                       hotel.name === "Urban Point Hotel" ? "urban-point" :
-                      hotel.name === "Baraka Hotel" ? "baraka" :
+                      hotel.name === "Baraka Tower Hotel" ? "baraka-tower" :
                       hotel.name === "Bushra Hotel" ? "bushra" :
                       hotel.isPlaceholder ? "placeholder" : "riyo"
                     }
@@ -605,6 +667,8 @@ const HotelListings = () => {
                       (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
                       hotel.name === "Urban Point Hotel" ?
                         (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
+                        hotel.name === "Baraka Tower Hotel" ?
+                          (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
                         hotel.name === "Bushra Hotel" ?
                           (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
                           hotel.isComingSoon ?
