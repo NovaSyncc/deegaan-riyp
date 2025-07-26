@@ -1,14 +1,16 @@
+// src/App.js
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import EastleighHotels from './pages/EastleighHotels/EastleighHotels';
-import Layout from './components/Layout/Layout'; // ⬅️ Import layout
+import Layout from './components/Layout/Layout';
 import Registration from './pages/Registration/Registration';
-import Yare from './pages/Home/Sections/Yare/Yare'; // Import Yare component
-import Urban from './pages/Home/Sections/Urban/Urban'; // Import Urban component
-import Bushra from './pages/Home/Sections/Bushra/Bushra'; // Import Bushra component
+import Yare from './pages/Home/Sections/Yare/Yare';
+import Urban from './pages/Home/Sections/Urban/Urban';
+import Bushra from './pages/Home/Sections/Bushra/Bushra';
+import Baraka from './pages/Home/Sections/Baraka/Baraka'; // ⬅️ Import Baraka component
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -38,9 +40,10 @@ function App() {
               <Route path="/blog" element={<BlogSystem />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/registration" element={<Registration />} />
-              <Route path="/yare" element={<Yare />} /> {/* Yare hotel detail page */}
-              <Route path="/urban" element={<Urban />} /> {/* Urban hotel detail page */}
-              <Route path="/bushra" element={<Bushra />} /> {/* Bushra hotel detail page */}
+              <Route path="/yare" element={<Yare />} />
+              <Route path="/urban" element={<Urban />} />
+              <Route path="/bushra" element={<Bushra />} />
+              <Route path="/baraka" element={<Baraka />} /> {/* ⬅️ Baraka hotel detail page */}
             </Routes>
           </Layout>
         </Suspense>
