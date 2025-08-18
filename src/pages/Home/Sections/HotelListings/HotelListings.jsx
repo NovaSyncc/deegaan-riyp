@@ -43,6 +43,18 @@ import room20 from '../../../../assets/images/baraka/room-20.jpg';
 import room21 from '../../../../assets/images/baraka/room-21.jpg';
 import room26 from '../../../../assets/images/baraka/room-26.jpg';
 import room27 from '../../../../assets/images/baraka/room-27.jpg';
+// Import HYYAT GOLDEN HOTEL images
+import hyyatBed1 from '../../../../assets/images/hyyat/bed1.jpg';
+import hyyatDeluxeKing from '../../../../assets/images/hyyat/deluxeking.jpg';
+import hyyatGoldenHotelEntrance from '../../../../assets/images/hyyat/hyyatgoldenhotelentrance.jpg';
+import hyyatGoldenReception from '../../../../assets/images/hyyat/hyyatgoldenreception.jpg';
+import hyyatPreview from '../../../../assets/images/hyyat/hyyatpreview.jpg';
+import hyyatMasjid from '../../../../assets/images/hyyat/masjid.jpg';
+import hyyatNic from '../../../../assets/images/hyyat/nic.jpg';
+import hyyatResta from '../../../../assets/images/hyyat/resta.jpg';
+import hyyatResta1 from '../../../../assets/images/hyyat/resta1.jpg';
+import hyyatSuperiorSingle from '../../../../assets/images/hyyat/superiorsingle.jpg';
+import hyyatTwin from '../../../../assets/images/hyyat/twin.jpg';
 
 const HotelListings = () => {
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
@@ -268,7 +280,7 @@ const HotelListings = () => {
       ],
       isComingSoon: false
     },
-    // Real hotel #3 - Baraka Tower Hotel (moved to slot 3)
+    // Real hotel #3 - Baraka Tower Hotel
     {
       id: 3,
       name: "Baraka Tower Hotel",
@@ -321,7 +333,7 @@ const HotelListings = () => {
       ],
       isComingSoon: false
     },
-    // Real hotel #4 - Bushra Hotel (moved to slot 4)
+    // Real hotel #4 - Bushra Hotel
     {
       id: 4,
       name: "Bushra Hotel",
@@ -374,35 +386,85 @@ const HotelListings = () => {
         bushraImage3
       ],
       isComingSoon: false
-    }
-  ];
-
-  // Function to create placeholder hotel for countries without real hotels
-  const createPlaceholderHotel = (country, city) => {
-    const countryName = countryData[country]?.name || country;
-    const cityName = city ? countryData[country]?.cities.find(c => c.id === city)?.name : 
-                     countryData[country]?.cities[0]?.name || countryName;
-    
-    return {
-      id: `placeholder-${country}-${city || 'main'}`,
-      name: t.placeholderHotelName,
-      location: cityName,
-      city: city || countryData[country]?.cities[0]?.id,
-      country: country,
-      priceRange: t.comingSoon,
-      description: t.placeholderDescription,
+    },
+    // NEW - HYYAT GOLDEN HOTEL (Real hotel #5)
+    {
+      id: 5,
+      name: "HYYAT GOLDEN HOTEL",
+      location: t.cities.nairobi,
+      city: "nairobi",
+      country: "kenya",
+      priceRange: "KES 1,800 - KES 4,000",
+      description: language === 'en'
+        ? "Experience exceptional hospitality at HYYAT Golden Hotel in the heart of Eastleigh, Nairobi. Our 9-floor establishment offers premium rooms with modern amenities, halal dining, masjid facilities, and secure underground parking for business and leisure travelers."
+        : "La kulaan martiqaad cajiib ah HYYAT Golden Hotel ee wadnaha Eastleigh, Nairobi. Dhismahayaga 9 dabaqad ah wuxuu bixiyaa qolal heer sare ah oo leh adeegyo casri ah, cunto xalaal, adeegyada masjidka, iyo gaadhi ammaan ah hoosta dhulka.",
       amenities: language === 'en'
-        ? ["Premium Location", "World-Class Service", "Modern Facilities", "Coming Soon"]
-        : ["Meel Heer-sare ah", "Adeeg Heer Caalami ah", "Xarumo Casri ah", "Waa Imanaya"],
-      whatsappNumber: "254700000000",
+        ? ["9-Floor Hotel Building", "Premium Room Types", "On-site Masjid", "Halal Restaurant & Dining", "Underground Parking", "24/7 Reception", "Free Wi-Fi", "Conference Rooms", "Room Service"]
+        : ["Dhisme Huteel 9 Dabaqad", "Noocyada Qolalka Heer-sare", "Masjidka Gudaha", "Maqaayad Xalaal", "Gaadhi Hoosta Dhulka", "Soo dhaweyn 24/7", "Wi-Fi Bilaash", "Qolalka Shirarka", "Adeegga Qolka"],
+      roomTypes: [
+        {
+          type: "Classic King Suite",
+          daily: "KES 1,800",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Superior King Suite",
+          daily: "KES 2,300",
+          weekly: "Contact for rates", 
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Deluxe King Suite",
+          daily: "KES 2,500",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Twin Comfort Room",
+          daily: "KES 2,500",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        },
+        {
+          type: "Family Executive Suite",
+          daily: "KES 4,000",
+          weekly: "Contact for rates",
+          monthly: "Contact for rates"
+        }
+      ],
+      whatsappNumber: "254712345678", // From hotelConfig.js
+      images: [
+        // Using placeholder images since no images were provided
+        createPlaceholderImage(),
+        createPlaceholderImage()
+      ],
+      isComingSoon: false,
+      location_details: "Centre of Eastleigh Nairobi, 11th Street Second Avenue"
+    },
+    // NEW - Crown Point Hotel (Coming Soon)
+    {
+      id: 6,
+      name: "Crown Point Hotel",
+      location: t.cities.nairobi,
+      city: "nairobi", 
+      country: "kenya",
+      priceRange: t.comingSoon,
+      description: language === 'en'
+        ? "Crown Point Hotel is coming soon to the Deegaan-Riyo platform! This premium hotel will feature world-class amenities and exceptional service in the heart of Eastleigh. Stay tuned for booking availability and special opening rates."
+        : "Crown Point Hotel ayaa dhowaan ku iman doona platform-ka Deegaan-Riyo! Huteelkani heer sare ah wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg gaar ah ee wadnaha Eastleigh. Sug heli karista bukashada iyo qiimayaalka furitaanka gaarka ah.",
+      amenities: language === 'en'
+        ? ["Premium Location", "Modern Facilities", "World-Class Service", "Business Center", "Restaurant & Dining", "Coming Soon"]
+        : ["Meel Heer-sare ah", "Xarumo Casri ah", "Adeeg Heer Caalami ah", "Xarunta Ganacsiga", "Maqaayad & Cunto", "Waa Imanaya"],
+      whatsappNumber: "254700000000", // Placeholder
       images: [
         createPlaceholderImage(),
         createPlaceholderImage()
       ],
       isComingSoon: true,
-      isPlaceholder: true
-    };
-  };
+      isPlaceholder: false
+    }
+  ];
 
   const handleBookNowClick = (hotel) => {
     if (hotel.isComingSoon) {
@@ -442,6 +504,9 @@ const HotelListings = () => {
       navigate('/baraka');
     } else if (hotelName === "Bushra Hotel") {
       navigate('/bushra');
+    } else if (hotelName === "HYYAT GOLDEN HOTEL") {
+      // Navigate to HYYAT page when implemented
+      navigate('/hyyat');
     } else {
       setExpandedHotels(prev => ({
         ...prev,
@@ -474,6 +539,33 @@ const HotelListings = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Function to create placeholder hotel for countries without real hotels
+  const createPlaceholderHotel = (country, city) => {
+    const countryName = countryData[country]?.name || country;
+    const cityName = city ? countryData[country]?.cities.find(c => c.id === city)?.name : 
+                     countryData[country]?.cities[0]?.name || countryName;
+    
+    return {
+      id: `placeholder-${country}-${city || 'main'}`,
+      name: t.placeholderHotelName,
+      location: cityName,
+      city: city || countryData[country]?.cities[0]?.id,
+      country: country,
+      priceRange: t.comingSoon,
+      description: t.placeholderDescription,
+      amenities: language === 'en'
+        ? ["Premium Location", "World-Class Service", "Modern Facilities", "Coming Soon"]
+        : ["Meel Heer-sare ah", "Adeeg Heer Caalami ah", "Xarumo Casri ah", "Waa Imanaya"],
+      whatsappNumber: "254700000000",
+      images: [
+        createPlaceholderImage(),
+        createPlaceholderImage()
+      ],
+      isComingSoon: true,
+      isPlaceholder: true
+    };
+  };
+
   // Get filtered hotels with placeholders for countries without real hotels
   const getFilteredHotels = () => {
     let filtered = hotels.filter(hotel => {
@@ -503,6 +595,22 @@ const HotelListings = () => {
       return [room2, room3, room4, room4_1, room20, room21, room26, room27, facility16, facility17];
     } else if (hotel.name === "Bushra Hotel") {
       return [bushraSingle1, bushraDeluxe1, bushraView, bushraImage1, bushraReception, bushraTwin1, bushraDouble, bushraCafe, bushraImage3];
+    } else if (hotel.name === "HYYAT GOLDEN HOTEL") {
+      return [
+        hyyatNic, // First image - bed room (you mentioned this is a bed)
+        hyyatBed1, // Second image - another bed room
+        hyyatDeluxeKing, // Third image - deluxe room
+        hyyatGoldenHotelEntrance, // Hotel entrance
+        hyyatGoldenReception, // Reception area
+        hyyatSuperiorSingle, // Superior room
+        hyyatTwin, // Twin room
+        hyyatMasjid, // Masjid
+        hyyatResta, // Restaurant
+        hyyatResta1, // Dining area
+        hyyatPreview // Hotel preview
+      ];
+    } else if (hotel.name === "Crown Point Hotel") {
+      return [createPlaceholderImage(), createPlaceholderImage()];
     }
     return hotel.images.length > 0 ? hotel.images : [createPlaceholderImage()];
   };
@@ -637,6 +745,8 @@ const HotelListings = () => {
                       hotel.name === "Urban Point Hotel" ? "urban-point" :
                       hotel.name === "Baraka Tower Hotel" ? "baraka-tower" :
                       hotel.name === "Bushra Hotel" ? "bushra" :
+                      hotel.name === "HYYAT GOLDEN HOTEL" ? "hyyat-golden" :
+                      hotel.name === "Crown Point Hotel" ? "crown-point" :
                       hotel.isPlaceholder ? "placeholder" : "riyo"
                     }
                   >
@@ -671,6 +781,10 @@ const HotelListings = () => {
                           (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
                         hotel.name === "Bushra Hotel" ?
                           (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
+                        hotel.name === "HYYAT GOLDEN HOTEL" ?
+                          (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
+                        hotel.name === "Crown Point Hotel" ?
+                          t.learnMore :
                           hotel.isComingSoon ?
                             t.learnMore :
                             (expandedHotels[hotel.id] ?

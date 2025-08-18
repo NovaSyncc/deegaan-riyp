@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deegaan-Riyo: Join the Top 10 Hotels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            padding: 15mm;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+            border-left: 3px solid #333;
+            padding-left: 10px;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .highlight-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .slots-remaining {
+            font-size: 20px;
+            font-weight: 700;
+            color: #d32f2f;
+            margin-top: 5px;
+        }
+
+        .partner-hotels {
+            background: #f0f8f0;
+            border: 1px solid #4caf50;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .partner-hotels h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .hotel-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .hotel-item {
+            background: white;
+            border: 1px solid #4caf50;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .benefit-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .benefit-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 3px;
+        }
+
+        .benefit-desc {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .pricing-box {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 900;
+            color: #e65100;
+            margin: 10px 0;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 15px 0;
+        }
+
+        .features-list li {
+            font-size: 12px;
+            margin: 5px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .guarantee-box {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 10px 0;
+        }
+
+        .guarantee-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .guarantee-text {
+            font-size: 12px;
+            color: #333;
+        }
+
+        .monthly-fee {
+            background: #f3e5f5;
+            border: 1px solid #9c27b0;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .monthly-fee-amount {
+            font-size: 16px;
+            font-weight: 700;
+            color: #7b1fa2;
+            margin-bottom: 5px;
+        }
+
+        .risk-free {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .contact-section {
+            background: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .contact-info h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contact-details p {
+            font-size: 12px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .contact-details strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        .next-steps {
+            text-align: center;
+        }
+
+        .next-steps h5 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .next-steps p {
+            font-size: 11px;
+            margin: 3px 0;
+            color: #666;
+        }
+
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-codes {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .qr-code {
+            text-align: center;
+        }
+
+        .qr-code h6 {
+            font-size: 10px;
+            margin-bottom: 5px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .qr-code canvas {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 3px;
+        }
+
+        .qr-code p {
+            font-size: 9px;
+            color: #666;
+        }
+
+        .website-bonus {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+            color: #1565c0;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; }
+            .main-content { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">DEEGAAN-RIYO</div>
+        <div class="tagline">Top 10 Best Hotels in Eastleigh - Curated Excellence</div>
+    </div>
+
+    <!-- Highlight Box -->
+    <div class="highlight-box">
+        <div class="highlight-title">🏆 LIMITED TO TOP 10 HOTELS ONLY 🏆</div>
+        <div class="slots-remaining">5 SLOTS REMAINING</div>
+        
+        <div class="partner-hotels">
+            <h4>🌟 Current Partners 🌟</h4>
+            <div class="hotel-list">
+                <div class="hotel-item">Yare Towers</div>
+                <div class="hotel-item">Urban Point</div>
+                <div class="hotel-item">Baraka Towers</div>
+                <div class="hotel-item">Atis Hotel</div>
+                <div class="hotel-item">Bushra Hotel</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- About -->
+            <div class="section">
+                <h3 class="section-title">Why Deegaan-Riyo?</h3>
+                <p>We showcase only the <strong>Top 10 Best Hotels in Eastleigh</strong>. Guests discover premium stays and connect directly with hotels through WhatsApp - <strong>no commissions, no middlemen</strong>.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔍</div>
+                        <div class="benefit-title">Curated Selection</div>
+                        <div class="benefit-desc">Only finest hotels</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <div class="benefit-title">Direct Bookings</div>
+                        <div class="benefit-desc">WhatsApp connection</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💸</div>
+                        <div class="benefit-title">Zero Commissions</div>
+                        <div class="benefit-desc">Keep 100% revenue</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-title">Elite Recognition</div>
+                        <div class="benefit-desc">Prestigious listing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="section">
+                <h3 class="section-title">How It Works</h3>
+                <ol style="font-size: 12px; line-height: 1.4; color: #333;">
+                    <li><strong>Premium Listing:</strong> Professional photos, Top 10 recognition</li>
+                    <li><strong>Customer Discovery:</strong> Guests browse curated selection</li>
+                    <li><strong>Direct Contact:</strong> One-tap WhatsApp booking</li>
+                    <li><strong>Ongoing Support:</strong> Continuous partnership & growth</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Pricing -->
+            <div class="pricing-box">
+                <div class="pricing-title">Platform Partnership</div>
+                <div class="price">KES 30,000</div>
+                <div class="price-period">12 Month Partnership</div>
+                
+                <ul class="features-list">
+                    <li>Top 10 Best Hotels recognition</li>
+                    <li>Professional photo shoot</li>
+                    <li>WhatsApp booking integration</li>
+                    <li>Premium platform listing</li>
+                    <li>Customer support & follow-up</li>
+                    <li>Direct customer connections</li>
+                </ul>
+
+                <div class="guarantee-box">
+                    <div class="guarantee-title">🎯 RIO GUARANTEE</div>
+                    <div class="guarantee-text">Don't realize ROI in 7 months? Get 7 more months FREE!</div>
+                </div>
+
+                <div class="website-bonus">
+                    💻 <strong>Bonus:</strong> We design your website if you don't have one!
+                </div>
+
+                <div class="monthly-fee">
+                    <div class="monthly-fee-amount">Monthly: KES 2,000</div>
+                    <div class="risk-free">Only when we bring 5+ customers that month</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <div class="contact-details">
+                <p><strong>WhatsApp:</strong><br>+254 712 221 079</p>
+                <p><strong>Email:</strong><br>deegaan@riyo.com</p>
+                <p><strong>Website:</strong><br>www.deegaanriyo.online</p>
+            </div>
+        </div>
+        
+        <div class="next-steps">
+            <h5>What's Next?</h5>
+            <p>1. Contact via WhatsApp</p>
+            <p>2. Schedule photo shoot</p>
+            <p>3. Launch listing</p>
+            <p>4. Receive bookings!</p>
+        </div>
+
+        <div class="qr-section">
+            <div class="qr-codes">
+                <div class="qr-code">
+                    <h6>Visit Platform</h6>
+                    <canvas id="website-qr" width="50" height="50"></canvas>
+                    <p>Scan to visit</p>
+                </div>
+                <div class="qr-code">
+                    <h6>WhatsApp</h6>
+                    <canvas id="whatsapp-qr" width="50" height="50"></canvas>
+                    <p>Scan to chat</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <script>
+        function generateQR(canvasId, text) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            const qr = qrcode(0, 'M');
+            qr.addData(text);
+            qr.make();
+            
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            const modules = qr.getModuleCount();
+            const cellSize = canvas.width / modules;
+            
+            ctx.fillStyle = '#000000';
+            for (let row = 0; row < modules; row++) {
+                for (let col = 0; col < modules; col++) {
+                    if (qr.isDark(row, col) {
+                        ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
+                    }
+                }
+            }
+        }
+
+        window.onload = function() {
+            generateQR('website-qr', 'https://www.deegaanriyo.online');
+            generateQR('whatsapp-qr', 'https://wa.link/ak0pqk');
+        };
+    </script>
+</body>
+</html>
