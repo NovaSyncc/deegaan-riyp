@@ -44,38 +44,40 @@ const HYYAT = ({ onBack }) => {
     location: language === 'en' ? 'Nairobi Eastleigh' : 'Nairobi Eastleigh',
     city: 'nairobi',
     country: 'kenya',
-    priceRange: 'KES 1,800 - KES 4,000',
-    whatsappNumber: '254712345678',
+    priceRange: 'KES 2,000 - KES 4,500',
+    whatsappNumber: '254701387612',
+    email: 'info@hyyatgoldenhotel.online',
+    website: 'https://hyyatgoldenhotel.online',
     roomTypes: [
       {
         type: "Classic King Suite",
-        daily: "KES 1,800",
-        weekly: "Contact for rates",
-        monthly: "Contact for rates"
+        daily: "KES 2,000",
+        size: "25 sqm",
+        guests: "2 guests"
       },
       {
         type: "Superior King Suite",
-        daily: "KES 2,300",
-        weekly: "Contact for rates", 
-        monthly: "Contact for rates"
+        daily: "KES 2,500",
+        size: "30 sqm",
+        guests: "2 guests"
       },
       {
         type: "Deluxe King Suite",
-        daily: "KES 2,500",
-        weekly: "Contact for rates",
-        monthly: "Contact for rates"
+        daily: "KES 2,800",
+        size: "35 sqm",
+        guests: "2 guests"
       },
       {
         type: "Twin Comfort Room",
         daily: "KES 2,500",
-        weekly: "Contact for rates",
-        monthly: "Contact for rates"
+        size: "28 sqm",
+        guests: "2 guests"
       },
       {
         type: "Family Executive Suite",
-        daily: "KES 4,000",
-        weekly: "Contact for rates",
-        monthly: "Contact for rates"
+        daily: "KES 4,500",
+        size: "45 sqm",
+        guests: "4 guests"
       }
     ]
   };
@@ -119,30 +121,39 @@ const HYYAT = ({ onBack }) => {
       },
       amenitiesList: [
         "9-Floor Hotel Building",
-        "On-site Masjid Facilities",
-        "Halal Restaurant & Dining",
-        "Underground Secure Parking",
-        "24/7 Reception Service",
+        "Restaurant & Halal Dining",
+        "On-site Masjid",
+        "Underground Parking",
+        "24/7 Reception",
         "Free High-Speed WiFi",
         "Conference & Meeting Rooms",
+        "Room Service",
+        "Laundry & Dry Cleaning Service",
+        "Air Conditioning (All Rooms)",
         "Daily Housekeeping",
-        "Room Service Available",
-        "Elevator Access All Floors",
-        "Safe Deposit Boxes"
+        "Elevator Access (All Floors)",
+        "Safe Deposit Boxes",
+        "Luggage Storage Service",
+        "Taxi & Transport Service"
       ],
       additionalNotes: [
         "Located in the centre of Eastleigh Nairobi on 11th Street Second Avenue",
         "9-floor modern hotel building with elevator access to all floors",
         "Beautiful on-site Masjid with proper Qibla direction and ablution areas",
-        "Halal-certified restaurant serving local Somali cuisine and international dishes",
-        "Secure underground parking with 24/7 CCTV surveillance",
+        "Full-service restaurant offering local Somali cuisine and international dishes with halal certification",
+        "Secure underground parking facility with 24/7 CCTV surveillance and valet service",
         "All rooms feature air conditioning, private bathrooms, and modern amenities",
-        "Business facilities including conference rooms and meeting spaces",
-        "Perfect location for both business travelers and families",
+        "Conference and meeting rooms available for business travelers",
+        "Room service available 24/7 for guest convenience",
+        "Daily housekeeping and laundry services including dry cleaning",
+        "Safe deposit boxes and luggage storage for guest security",
+        "Perfect location for both business travelers and families visiting Eastleigh",
         "Walking distance to major Eastleigh shopping and business areas",
-        "Multilingual staff providing exceptional customer service"
+        "Multilingual staff providing exceptional customer service in Somali, English, and Arabic",
+        "Operating hours: Reception 24/7, Restaurant 6:00 AM - 11:00 PM, Parking 24/7",
+        "Check-in: 14:00, Check-out: 11:00, Non-smoking hotel, Pets not allowed"
       ],
-      description: "Experience exceptional hospitality at HYYAT Golden Hotel, located in the vibrant centre of Eastleigh, Nairobi. Our 9-floor establishment offers premium accommodation with modern amenities, halal dining, and beautiful Masjid facilities. From our Classic King Suites to spacious Family Executive Suites, each room is designed for comfort and convenience with air conditioning, free WiFi, and 24/7 room service.",
+      description: "Experience exceptional hospitality at HYYAT Golden Hotel in the heart of Eastleigh, Nairobi. Our 9-floor establishment offers premium rooms with modern amenities, halal dining, masjid facilities, and secure underground parking for business and leisure travelers. From our Classic King Suites to spacious Family Executive Suites, each room is designed for comfort with air conditioning, free WiFi, and 24/7 room service.",
       bookNow: "Book Your Stay",
       bookingLabel: "Make a Reservation",
       contactForRates: "Contact for rates"
@@ -175,30 +186,39 @@ const HYYAT = ({ onBack }) => {
       },
       amenitiesList: [
         "Dhisme Huteel 9 Dabaqad",
-        "Adeegyada Masjidka Gudaha",
-        "Maqaayad Xalaal & Cunto",
-        "Gaadhi Hoosta Dhulka Ammaan ah",
-        "Adeegga Soo dhaweynta 24/7",
+        "Maqaayad & Cunto Xalaal",
+        "Masjidka Gudaha",
+        "Gaadhi Hoosta Dhulka",
+        "Soo dhaweyn 24/7",
         "WiFi Dhaqso Sare oo Bilaash",
         "Qolalka Shirarka & Kulanada",
-        "Nadiifinta Maalinlaha ah",
         "Adeegga Qolka",
-        "Wiishka Dhammaan Dabaqadaha",
-        "Sanduuqyada Kaydka Ammaan"
+        "Adeegga Maydaha & Nadiifinta Qalalan",
+        "Qaboojinta Hawada (Dhammaan Qolalka)",
+        "Nadiifinta Maalinlaha ah",
+        "Wiishka (Dhammaan Dabaqadaha)",
+        "Sanduuqyada Kaydka Ammaan",
+        "Adeegga Kaydinta Shantooyinka",
+        "Adeegga Taxi & Gaadiidka"
       ],
       additionalNotes: [
         "Ku yaal xarunta Eastleigh Nairobi 11th Street Second Avenue",
         "Dhisme huteel casri ah 9 dabaqad oo leh wiish dhammaan dabaqadaha",
         "Masjid qurux badan oo gudaha ah oo leh jiheeda saxda ah ee Qiblada iyo meelaha wuduu",
-        "Maqaayad shahaado xalaal leh oo u adeegta cuntada Soomaalida iyo caalamka",
-        "Gaadhi hoosta dhulka ammaan ah oo leh kormeer CCTV 24/7",
+        "Maqaayad adeeg buuxa ah oo bixisa cunto Soomaali ah iyo cuntooyinka caalamka oo leh shahaado xalaal",
+        "Xarun ammaan ah oo gaadhi hoosta dhulka ah oo leh kormeer CCTV 24/7 iyo adeegga valet",
         "Dhammaan qolalka waxay leeyihiin qaboojiye hawada, musqul gaarka ah, iyo adeegyo casri ah",
-        "Adeegyada ganacsiga oo ay ku jiraan qolalka shirarka iyo meelaha kulanada",
-        "Meel ku habboon socdaalayaasha ganacsiga iyo qoysaska labadaba",
+        "Qolalka shirarka iyo kulanada ayaa u diyaar ganacsatada",
+        "Adeegga qolka ayaa la heli karaa 24/7 raaxada martida",
+        "Nadiifinta maalinlaha ah iyo adeegyada maydaha oo ay ku jiraan nadiifinta qalalan",
+        "Sanduuqyada kaydka ammaan iyo kaydinta shantooyinka ammanka martida",
+        "Meel ku habboon socdaalayaasha ganacsiga iyo qoysaska labadaba ee booqda Eastleigh",
         "Masafo lugaynta ah dukaannada waaweyn ee Eastleigh iyo aagga ganacsiga",
-        "Shaqaale luqado badan ku hadla oo bixiya adeeg aad u fiican"
+        "Shaqaale luqado badan ku hadla oo bixiya adeeg aad u fiican Soomaali, Ingiriis, iyo Carabi",
+        "Wakhtiyada shaqada: Soo dhaweynta 24/7, Maqaayada 6:00 subaxnimo - 11:00 habeenkii, Gaadhi 24/7",
+        "Soo galka: 14:00, Ka bixitaanka: 11:00, Huteel aan sigaarka lagu cabi karin, Xayawaanka la joogi maayo"
       ],
-      description: "Ku raaxayso martiqaad cajiib ah HYYAT Golden Hotel, oo ku yaal xarunta firfircoon ee Eastleigh, Nairobi. Dhismahayaga 9 dabaqad ah wuxuu bixiyaa degan heer sare ah oo leh adeegyo casri ah, cunto xalaal, iyo adeegyada masjidka qurxoon. Laga bilaabo Classic King Suites ilaa Family Executive Suites ballaaran, qol kasta wuxuu loogu talagalay raaxo iyo fududeyn oo leh qaboojiye hawada, WiFi bilaash, iyo adeegga qolka 24/7.",
+      description: "La kulaan martiqaad cajiib ah HYYAT Golden Hotel ee wadnaha Eastleigh, Nairobi. Dhismahayaga 9 dabaqad ah wuxuu bixiyaa qolal heer sare ah oo leh adeegyo casri ah, cunto xalaal, adeegyada masjidka, iyo gaadhi ammaan ah hoosta dhulka ganacsatada iyo dadka dalxiiska. Laga bilaabo Classic King Suites ilaa Family Executive Suites ballaaran, qol kasta wuxuu loogu talagalay raaxo oo leh qaboojiye hawada, WiFi bilaash, iyo adeegga qolka 24/7.",
       bookNow: "Buug Joogitaankaaga",
       bookingLabel: "Samee Buukin",
       contactForRates: "Xiriir qiimayaalka"
@@ -207,7 +227,7 @@ const HYYAT = ({ onBack }) => {
 
   const t = translations[language];
 
-  // Hotel images - 11 images from the hyyat folder (removed familyroom1 reference)
+  // Hotel images - 11 images from the hyyat folder
   const hotelImages = [
     {
       src: hyyatGoldenHotelEntrance,
@@ -258,47 +278,56 @@ const HYYAT = ({ onBack }) => {
   const roomRates = [
     {
       type: t.roomTypes.classicKing,
-      daily: "KES 1,800",
+      daily: "KES 2,000",
+      size: "25 sqm",
+      guests: "2 guests",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
       type: t.roomTypes.superiorKing,
-      daily: "KES 2,300",
+      daily: "KES 2,500",
+      size: "30 sqm",
+      guests: "2 guests",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
       type: t.roomTypes.deluxeKing,
-      daily: "KES 2,500",
+      daily: "KES 2,800",
+      size: "35 sqm",
+      guests: "2 guests",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
       type: t.roomTypes.twinComfort,
       daily: "KES 2,500",
+      size: "28 sqm",
+      guests: "2 guests",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
       type: t.roomTypes.familyExecutive,
-      daily: "KES 4,000",
+      daily: "KES 4,500",
+      size: "45 sqm",
+      guests: "4 guests",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     }
   ];
 
   const handleCallClick = () => {
-    window.open('tel:+254712345678', '_self');
+    window.open('tel:+254701387612', '_self');
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/254712345678', '_blank');
+    window.open('https://wa.me/254701387612', '_blank');
   };
 
   const handleWebsiteClick = () => {
-    // Update this with actual website when available
-    window.open('https://hyyatgoldenhotel.com', '_blank');
+    window.open('https://hyyatgoldenhotel.online', '_blank');
   };
 
   const handleMapsClick = () => {
@@ -399,8 +428,8 @@ const HYYAT = ({ onBack }) => {
                 <tr>
                   <th>Room Type</th>
                   <th>Daily Rate</th>
-                  <th>Weekly Rate</th>
-                  <th>Monthly Rate</th>
+                  <th>Size</th>
+                  <th>Guests</th>
                 </tr>
               </thead>
               <tbody>
@@ -408,8 +437,8 @@ const HYYAT = ({ onBack }) => {
                   <tr key={index}>
                     <td className="hyyat-room-type">{rate.type}</td>
                     <td data-label="Daily Rate">{rate.daily}</td>
-                    <td data-label="Weekly Rate">{rate.weekly}</td>
-                    <td data-label="Monthly Rate">{rate.monthly}</td>
+                    <td data-label="Size">{rate.size}</td>
+                    <td data-label="Guests">{rate.guests}</td>
                   </tr>
                 ))}
               </tbody>
@@ -426,11 +455,11 @@ const HYYAT = ({ onBack }) => {
               <span>{t.amenitiesList[0]}</span>
             </div>
             <div className="hyyat-amenity-item">
-              <FaMosque className="hyyat-amenity-icon" />
+              <FaUtensils className="hyyat-amenity-icon" />
               <span>{t.amenitiesList[1]}</span>
             </div>
             <div className="hyyat-amenity-item">
-              <FaUtensils className="hyyat-amenity-icon" />
+              <FaMosque className="hyyat-amenity-icon" />
               <span>{t.amenitiesList[2]}</span>
             </div>
             <div className="hyyat-amenity-item">
@@ -454,7 +483,7 @@ const HYYAT = ({ onBack }) => {
               <span>{t.amenitiesList[7]}</span>
             </div>
             <div className="hyyat-amenity-item">
-              <FaBed className="hyyat-amenity-icon" />
+              <FaShower className="hyyat-amenity-icon" />
               <span>{t.amenitiesList[8]}</span>
             </div>
             <div className="hyyat-amenity-item">
@@ -462,8 +491,24 @@ const HYYAT = ({ onBack }) => {
               <span>{t.amenitiesList[9]}</span>
             </div>
             <div className="hyyat-amenity-item">
-              <FaShower className="hyyat-amenity-icon" />
+              <FaBed className="hyyat-amenity-icon" />
               <span>{t.amenitiesList[10]}</span>
+            </div>
+            <div className="hyyat-amenity-item">
+              <FaArrowsAltV className="hyyat-amenity-icon" />
+              <span>{t.amenitiesList[11]}</span>
+            </div>
+            <div className="hyyat-amenity-item">
+              <FaShower className="hyyat-amenity-icon" />
+              <span>{t.amenitiesList[12]}</span>
+            </div>
+            <div className="hyyat-amenity-item">
+              <FaBed className="hyyat-amenity-icon" />
+              <span>{t.amenitiesList[13]}</span>
+            </div>
+            <div className="hyyat-amenity-item">
+              <FaCar className="hyyat-amenity-icon" />
+              <span>{t.amenitiesList[14]}</span>
             </div>
           </div>
         </div>
@@ -486,7 +531,7 @@ const HYYAT = ({ onBack }) => {
               <FaPhone className="hyyat-contact-icon" />
               <div className="hyyat-contact-info">
                 <span className="hyyat-contact-label">{t.callNow}</span>
-                <span className="hyyat-contact-value">0712 345 678</span>
+                <span className="hyyat-contact-value">0701 387 612</span>
               </div>
             </button>
             
@@ -494,7 +539,7 @@ const HYYAT = ({ onBack }) => {
               <FaWhatsapp className="hyyat-contact-icon" />
               <div className="hyyat-contact-info">
                 <span className="hyyat-contact-label">{t.whatsappUs}</span>
-                <span className="hyyat-contact-value">+254 712 345 678</span>
+                <span className="hyyat-contact-value">+254 701 387 612</span>
               </div>
             </button>
             
@@ -502,7 +547,7 @@ const HYYAT = ({ onBack }) => {
               <FaGlobe className="hyyat-contact-icon" />
               <div className="hyyat-contact-info">
                 <span className="hyyat-contact-label">{t.visitWebsite}</span>
-                <span className="hyyat-contact-value">hyyatgoldenhotel.com</span>
+                <span className="hyyat-contact-value">hyyatgoldenhotel.online</span>
               </div>
             </button>
             

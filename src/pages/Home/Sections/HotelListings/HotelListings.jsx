@@ -387,62 +387,72 @@ const HotelListings = () => {
       ],
       isComingSoon: false
     },
-    // NEW - HYYAT GOLDEN HOTEL (Real hotel #5)
+    // Real hotel #5 - HYYAT GOLDEN HOTEL (Updated with correct info)
     {
       id: 5,
       name: "HYYAT GOLDEN HOTEL",
       location: t.cities.nairobi,
       city: "nairobi",
       country: "kenya",
-      priceRange: "KES 1,800 - KES 4,000",
+      priceRange: "KES 2,000 - KES 4,500",
       description: language === 'en'
         ? "Experience exceptional hospitality at HYYAT Golden Hotel in the heart of Eastleigh, Nairobi. Our 9-floor establishment offers premium rooms with modern amenities, halal dining, masjid facilities, and secure underground parking for business and leisure travelers."
         : "La kulaan martiqaad cajiib ah HYYAT Golden Hotel ee wadnaha Eastleigh, Nairobi. Dhismahayaga 9 dabaqad ah wuxuu bixiyaa qolal heer sare ah oo leh adeegyo casri ah, cunto xalaal, adeegyada masjidka, iyo gaadhi ammaan ah hoosta dhulka.",
       amenities: language === 'en'
-        ? ["9-Floor Hotel Building", "Premium Room Types", "On-site Masjid", "Halal Restaurant & Dining", "Underground Parking", "24/7 Reception", "Free Wi-Fi", "Conference Rooms", "Room Service"]
-        : ["Dhisme Huteel 9 Dabaqad", "Noocyada Qolalka Heer-sare", "Masjidka Gudaha", "Maqaayad Xalaal", "Gaadhi Hoosta Dhulka", "Soo dhaweyn 24/7", "Wi-Fi Bilaash", "Qolalka Shirarka", "Adeegga Qolka"],
+        ? ["9-Floor Hotel Building", "Restaurant & Halal Dining", "On-site Masjid", "Underground Parking", "24/7 Reception", "Free High-Speed WiFi", "Conference & Meeting Rooms", "Room Service", "Laundry & Dry Cleaning", "Air Conditioning All Rooms", "Daily Housekeeping", "Safe Deposit Boxes"]
+        : ["Dhisme Huteel 9 Dabaqad", "Maqaayad & Cunto Xalaal", "Masjidka Gudaha", "Gaadhi Hoosta Dhulka", "Soo dhaweyn 24/7", "WiFi Dhaqso Sare oo Bilaash", "Qolalka Shirarka & Kulanada", "Adeegga Qolka", "Adeegga Maydaha & Nadiifinta", "Qaboojinta Hawada Dhammaan Qolalka", "Nadiifinta Maalinlaha", "Sanduuqyada Kaydka Ammaan"],
       roomTypes: [
         {
           type: "Classic King Suite",
-          daily: "KES 1,800",
-          weekly: "Contact for rates",
-          monthly: "Contact for rates"
+          daily: "KES 2,000",
+          size: "25 sqm",
+          guests: "2 guests"
         },
         {
           type: "Superior King Suite",
-          daily: "KES 2,300",
-          weekly: "Contact for rates", 
-          monthly: "Contact for rates"
+          daily: "KES 2,500",
+          size: "30 sqm",
+          guests: "2 guests"
         },
         {
           type: "Deluxe King Suite",
-          daily: "KES 2,500",
-          weekly: "Contact for rates",
-          monthly: "Contact for rates"
+          daily: "KES 2,800",
+          size: "35 sqm",
+          guests: "2 guests"
         },
         {
           type: "Twin Comfort Room",
           daily: "KES 2,500",
-          weekly: "Contact for rates",
-          monthly: "Contact for rates"
+          size: "28 sqm",
+          guests: "2 guests"
         },
         {
           type: "Family Executive Suite",
-          daily: "KES 4,000",
-          weekly: "Contact for rates",
-          monthly: "Contact for rates"
+          daily: "KES 4,500",
+          size: "45 sqm",
+          guests: "4 guests"
         }
       ],
-      whatsappNumber: "254712345678", // From hotelConfig.js
+      whatsappNumber: "254701387612",
+      email: "info@hyyatgoldenhotel.online",
+      website: "https://hyyatgoldenhotel.online",
       images: [
-        // Using placeholder images since no images were provided
-        createPlaceholderImage(),
-        createPlaceholderImage()
+        hyyatGoldenHotelEntrance,
+        hyyatGoldenReception,
+        hyyatDeluxeKing,
+        hyyatBed1,
+        hyyatSuperiorSingle,
+        hyyatTwin,
+        hyyatMasjid,
+        hyyatResta,
+        hyyatResta1,
+        hyyatNic,
+        hyyatPreview
       ],
       isComingSoon: false,
       location_details: "Centre of Eastleigh Nairobi, 11th Street Second Avenue"
     },
-    // NEW - Crown Point Hotel (Coming Soon)
+    // Coming Soon hotel - Crown Point Hotel
     {
       id: 6,
       name: "Crown Point Hotel",
@@ -505,7 +515,6 @@ const HotelListings = () => {
     } else if (hotelName === "Bushra Hotel") {
       navigate('/bushra');
     } else if (hotelName === "HYYAT GOLDEN HOTEL") {
-      // Navigate to HYYAT page when implemented
       navigate('/hyyat');
     } else {
       setExpandedHotels(prev => ({
@@ -597,17 +606,17 @@ const HotelListings = () => {
       return [bushraSingle1, bushraDeluxe1, bushraView, bushraImage1, bushraReception, bushraTwin1, bushraDouble, bushraCafe, bushraImage3];
     } else if (hotel.name === "HYYAT GOLDEN HOTEL") {
       return [
-        hyyatNic, // First image - bed room (you mentioned this is a bed)
-        hyyatBed1, // Second image - another bed room
-        hyyatDeluxeKing, // Third image - deluxe room
-        hyyatGoldenHotelEntrance, // Hotel entrance
-        hyyatGoldenReception, // Reception area
-        hyyatSuperiorSingle, // Superior room
-        hyyatTwin, // Twin room
-        hyyatMasjid, // Masjid
-        hyyatResta, // Restaurant
-        hyyatResta1, // Dining area
-        hyyatPreview // Hotel preview
+        hyyatGoldenHotelEntrance,
+        hyyatGoldenReception,
+        hyyatDeluxeKing,
+        hyyatBed1,
+        hyyatSuperiorSingle,
+        hyyatTwin,
+        hyyatMasjid,
+        hyyatResta,
+        hyyatResta1,
+        hyyatNic,
+        hyyatPreview
       ];
     } else if (hotel.name === "Crown Point Hotel") {
       return [createPlaceholderImage(), createPlaceholderImage()];
