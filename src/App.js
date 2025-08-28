@@ -11,7 +11,8 @@ import Yare from './pages/Home/Sections/Yare/Yare';
 import Urban from './pages/Home/Sections/Urban/Urban';
 import Bushra from './pages/Home/Sections/Bushra/Bushra';
 import Baraka from './pages/Home/Sections/Baraka/Baraka';
-import HYYAT from './pages/Home/Sections/HYYAT/HYYAT'; // ⬅️ Import HYYAT component
+import HYYAT from './pages/Home/Sections/HYYAT/HYYAT';
+import MogadishuSalesOnePager from './pages/MogadishuSalesOnePager/MogadishuSalesOnePager'; // ⬅️ New import
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -45,7 +46,8 @@ function App() {
               <Route path="/urban" element={<Urban />} />
               <Route path="/bushra" element={<Bushra />} />
               <Route path="/baraka" element={<Baraka />} />
-              <Route path="/hyyat" element={<HYYAT />} /> {/* ⬅️ HYYAT hotel detail page */}
+              <Route path="/hyyat" element={<HYYAT />} />
+              <Route path="/mogadishu-sales" element={<MogadishuSalesOnePager />} /> {/* ⬅️ New route */}
             </Routes>
           </Layout>
         </Suspense>
