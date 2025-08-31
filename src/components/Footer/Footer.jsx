@@ -92,14 +92,16 @@ const MogadishuSalesOnePager = () => {
               </ul>
             </div>
           </div>
-        </section>
-
-        <section className="section">
-          <h2>Key Benefits for Your Hotel</h2>
           
-          <div className="benefit">
-            <h4>🎯 Premium Positioning</h4>
-            <p>You get featured among East Africa's Top 10 Best Hotels with professional photography and content creation included. You'll have an elite digital presence that attracts quality guests and share the same platform as prestigious hotels like Yare Towers and Urban Point.</p>
+          <div className="link-column">
+            <h3 className="column-title">Deegaan-Riyo</h3>
+            <ul className="footer-nav">
+              <li><Link to="/eastleigh-hotels">Browse Hotels</Link></li>
+              <li><Link to="/mogadishu-sales">Call for Hotles</Link></li>
+              <li><Link to="/contact">Locations</Link></li>
+              <li><Link to="/contact">Partner With Us</Link></li>
+              <li><Link to="/faq">FAQ</Link></li>
+            </ul>
           </div>
 
           <div className="benefit">
@@ -231,4 +233,4 @@ const MogadishuSalesOnePager = () => {
   );
 };
 
-export default MogadishuSalesOnePager;
+export default Footer;
