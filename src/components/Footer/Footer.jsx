@@ -115,7 +115,7 @@ const Footer = () => {
             <h3 className="column-title">Deegaan-Riyo</h3>
             <ul className="footer-nav">
               <li><Link to="/eastleigh-hotels">Browse Hotels</Link></li>
-              <li><Link to="/mogadishu-hotels-sale">Mogadishu Hotels Sale</Link></li>
+              <li><Link to="/mogadishu-sales">Call for Hotles</Link></li>
               <li><Link to="/contact">Locations</Link></li>
               <li><Link to="/contact">Partner With Us</Link></li>
               <li><Link to="/faq">FAQ</Link></li>

@@ -12,7 +12,7 @@ import Urban from './pages/Home/Sections/Urban/Urban';
 import Bushra from './pages/Home/Sections/Bushra/Bushra';
 import Baraka from './pages/Home/Sections/Baraka/Baraka';
 import HYYAT from './pages/Home/Sections/HYYAT/HYYAT';
-import MogadishuSalesOnePager from './pages/MogadishuSalesOnePager/MogadishuSalesOnePager'; // ⬅️ New import
+import MogadishuSalesOnePager from './components/MogadishuSalesOnePager/MogadishuSalesOnePager'; // ⬅️ New import
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
