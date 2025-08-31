@@ -27,6 +27,7 @@ const MogadishuSalesOnePager = () => {
           <ul className="cities-list">
             <li><strong>Nairobi (Eastleigh, Kenya)</strong> 🇰🇪</li>
             <li><strong>Mogadishu (Somalia)</strong> 🇸🇴</li>
+            <li><strong>Puntland (Somalia)</strong> 🇸🇴</li>
             <li><strong>Addis Ababa (Ethiopia)</strong> 🇪🇹</li>
             <li><strong>Djibouti (Djibouti)</strong> 🇩🇯</li>
             <li><strong>Hargeisa (Somaliland)</strong></li>
@@ -149,31 +150,31 @@ const MogadishuSalesOnePager = () => {
               <tbody>
                 <tr>
                   <td>🌟 <strong>Luxury Hotels</strong></td>
-                  <td>$40-$150 per night</td>
+                  <td>$50-$200+ per night</td>
                   <td>$150/month</td>
-                  <td>$800/year</td>
-                  <td><strong>Save $1,000</strong></td>
+                  <td>$1,350/year</td>
+                  <td><strong>Save $450</strong> (25% off)</td>
                 </tr>
                 <tr>
                   <td>🏢 <strong>Business Hotels</strong></td>
-                  <td>$30-$100 per night</td>
-                  <td>$90/month</td>
-                  <td>$500/year</td>
-                  <td><strong>Save $580</strong></td>
+                  <td>$70-$120 per night</td>
+                  <td>$120/month</td>
+                  <td>$1,080/year</td>
+                  <td><strong>Save $360</strong> (25% off)</td>
                 </tr>
                 <tr>
                   <td>🏨 <strong>Standard Hotels</strong></td>
-                  <td>$20-$60 per night</td>
-                  <td>$70/month</td>
-                  <td>$350/year</td>
-                  <td><strong>Save $370</strong></td>
+                  <td>$40-$80 per night</td>
+                  <td>$80/month</td>
+                  <td>$720/year</td>
+                  <td><strong>Save $240</strong> (25% off)</td>
                 </tr>
                 <tr>
                   <td>💼 <strong>Budget Hotels</strong></td>
-                  <td>$20-$40 per night</td>
+                  <td>$25-$60 per night</td>
                   <td>$50/month</td>
-                  <td>$200/year</td>
-                  <td><strong>Save $210</strong></td>
+                  <td>$450/year</td>
+                  <td><strong>Save $150</strong> (25% off)</td>
                 </tr>
               </tbody>
             </table>
