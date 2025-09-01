@@ -1,0 +1,64 @@
+{
+  "en": {
+    "title": "Deegaan-Riyo Hotel Network",
+    "subtitle": "Premium Hotels Across East Africa",
+    "selectCountry": "Select Country",
+    "selectCity": "Select City",
+    "allCities": "All Cities",
+    "bookNow": "Book Now",
+    "amenities": "Amenities",
+    "perNight": "per night",
+    "comingSoon": "Coming to Platform",
+    "comingSoonMessage": "We are excited to announce that this hotel will be joining our booking platform soon! Stay tuned for updates when booking becomes available.",
+    "closePopup": "Got it!",
+    "placeholderHotelName": "Deegaan-Riyo Hotel",
+    "placeholderDescription": "We're bringing premium hospitality to this amazing destination. Our new hotel will feature world-class amenities and exceptional service. Opening soon!",
+    "learnMore": "Learn More",
+    "furnished": "Furnished Apartment",
+    "countries": {
+      "kenya": "Kenya",
+      "somalia": "Somalia",
+      "ethiopia": "Ethiopia",
+      "djibouti": "Djibouti",
+      "somaliland": "Somaliland"
+    },
+    "cities": {
+      "nairobi": "Nairobi Eastleigh",
+      "mogadishu": "Mogadishu",
+      "addisAbaba": "Addis Ababa",
+      "djibouti": "Djibouti City",
+      "hargeisa": "Hargeisa"
+    }
+  },
+  "so": {
+    "title": "Shabakadda Huteelada Deegaan-Riyo",
+    "subtitle": "Huteelada Heer-sare ah Bariga Afrika",
+    "selectCountry": "Dooro Waddan",
+    "selectCity": "Dooro Magaalo",
+    "allCities": "Dhammaan Magaalooyinka",
+    "bookNow": "Buug Hadda",
+    "amenities": "Adeegyada",
+    "perNight": "habeenkii",
+    "comingSoon": "Waa ku biiri Platform-ka",
+    "comingSoonMessage": "Waxaan ku faraxsanahay inaan ku dhawaaqno in huteelkani uu dhowaan ku biiri doono boggeena bukashada! Sug warbixinnada marka bukashada la heli karo.",
+    "closePopup": "Waan Fahmay!",
+    "placeholderHotelName": "Huteelka Deegaan-Riyo",
+    "placeholderDescription": "Waxaan keenayaa martiqaad heer sare ah meeshan cajiibka ah. Huteelkayagu cusub wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg aad u fiican. Dhowaan waa furaysaa!",
+    "learnMore": "Wax Badan Ogow",
+    "furnished": "Guriga la Qalabeeyey",
+    "countries": {
+      "kenya": "Kiinya",
+      "somalia": "Soomaaliya",
+      "ethiopia": "Itoobiya",
+      "djibouti": "Jabuuti",
+      "somaliland": "Somaliland"
+    },
+    "cities": {
+      "nairobi": "Nairobi Eastleigh",
+      "mogadishu": "Muqdisho",
+      "addisAbaba": "Addis Ababa",
+      "djibouti": "Magaalada Jabuuti",
+      "hargeisa": "Hargeysa"
+    }
+  }
+}

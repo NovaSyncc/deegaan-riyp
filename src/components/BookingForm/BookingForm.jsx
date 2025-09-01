@@ -299,19 +299,33 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
   // Compact hotel info renderer
   const renderHotelInfo = () => {
     if (selectedHotelState) {
+      // Handle different data structures for amenities
+      let amenitiesArray = [];
+      if (selectedHotelState.amenities) {
+        if (selectedHotelState.amenities[language]) {
+          amenitiesArray = selectedHotelState.amenities[language];
+        } else if (Array.isArray(selectedHotelState.amenities)) {
+          amenitiesArray = selectedHotelState.amenities;
+        }
+      }
+
+      // Handle different data structures for location
+      const location = selectedHotelState.location || 
+                      (selectedHotelState.city && selectedHotelState.city.charAt(0).toUpperCase() + selectedHotelState.city.slice(1));
+
       return (
         <div className="selected-hotel-info">
           <h3>{selectedHotelState.name}</h3>
-          <div className="hotel-location">{selectedHotelState.location}</div>
+          <div className="hotel-location">{location}</div>
           <div className="price-range">{selectedHotelState.priceRange}</div>
           <div className="hotel-rating">
-            {Array(selectedHotelState.stars).fill().map((_, i) => (
+            {Array(selectedHotelState.stars || 4).fill().map((_, i) => (
               <span key={i} className="star">★</span>
             ))}
           </div>
-          {selectedHotelState.amenities && selectedHotelState.amenities.length > 0 && (
+          {amenitiesArray.length > 0 && (
             <div className="hotel-amenities">
-              {selectedHotelState.amenities.slice(0, 2).join(', ')}{selectedHotelState.amenities.length > 2 ? ' +more' : ''}
+              {amenitiesArray.slice(0, 2).join(', ')}{amenitiesArray.length > 2 ? ' +more' : ''}
             </div>
           )}
         </div>
@@ -381,7 +395,7 @@ const BookingForm = ({ isOpen, onClose, selectedHotel, selectedHotelId }) => {
           <div className="check-in-section">
             <h4 className="section-title">{t.checkInDate}</h4>
             
-            <div className="form-row">
+            <div className="form-row two-cols">
               <div className="form-group">
                 <label htmlFor="checkInMonth">{t.month}</label>
                 <select

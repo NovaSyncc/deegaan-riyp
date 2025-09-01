@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaBed, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar, FaTv, FaShower } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './Bushra.css';
-
-// Import Bushra hotel images
-import bushraImage1 from '../../../../assets/images/bushra/1.jpg';
-import bushraImage3 from '../../../../assets/images/bushra/3.jpg';
-import bushraCafe from '../../../../assets/images/bushra/cafe.jpg';
-import bushraDeluxe1 from '../../../../assets/images/bushra/Deluxe1.jpg';
-import bushraDouble from '../../../../assets/images/bushra/Double.png';
-import bushraReception from '../../../../assets/images/bushra/reception.jpg';
-import bushraSingle1 from '../../../../assets/images/bushra/Single1.jpg';
-import bushraTwin1 from '../../../../assets/images/bushra/Twin1.png';
-import bushraView from '../../../../assets/images/bushra/view.jpg';
 
 const Bushra = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Get images using the new system
+  const bushraImage1 = getHotelImage('bushra', '1.jpg');
+  const bushraImage3 = getHotelImage('bushra', '3.jpg');
+  const bushraCafe = getHotelImage('bushra', 'cafe.jpg');
+  const bushraDeluxe1 = getHotelImage('bushra', 'Deluxe1.jpg');
+  const bushraDouble = getHotelImage('bushra', 'Double.png');
+  const bushraReception = getHotelImage('bushra', 'reception.jpg');
+  const bushraSingle1 = getHotelImage('bushra', 'Single1.jpg');
+  const bushraTwin1 = getHotelImage('bushra', 'Twin1.png');
+  const bushraView = getHotelImage('bushra', 'view.jpg');
   
   // Auto-advance slideshow for mobile
   useEffect(() => {
@@ -86,7 +87,7 @@ const Bushra = ({ onBack }) => {
     en: {
       title: "Bushra Hotel",
       subtitle: "Comfortable Accommodation in Eastleigh, Nairobi",
-      ranking: "★ Experience Comfort and Hospitality in Eastleigh",
+      ranking: "⭐ Experience Comfort and Hospitality in Eastleigh",
       backToListings: "← Back to Hotel Listings",
       roomRates: "Room Rates",
       amenities: "Hotel Amenities",
@@ -135,7 +136,7 @@ const Bushra = ({ onBack }) => {
     so: {
       title: "Huteel Bushra",
       subtitle: "Hoy Raaxo ah oo ku yaal Eastleigh, Nairobi",
-      ranking: "★ Ku raaxayso Raaxada iyo Martiqaadka Eastleigh",
+      ranking: "⭐ Ku raaxayso Raaxada iyo Martiqaadka Eastleigh",
       backToListings: "← Dib ugu noqo Liiska Huteellada",
       roomRates: "Qiimayaalka Qolalka",
       amenities: "Adeegyada Huteelka",
@@ -322,6 +323,7 @@ const Bushra = ({ onBack }) => {
                     alt={image.alt}
                     className="bushra-image"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -344,6 +346,7 @@ const Bushra = ({ onBack }) => {
                   alt={image.alt}
                   className="bushra-image"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             ))

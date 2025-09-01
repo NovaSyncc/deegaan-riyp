@@ -2,292 +2,309 @@
   "hotels": [
     {
       "id": 1,
-      "name": "Hotel Bilan",
-      "location": "Eastleigh, 7th Street",
-      "priceRange": "$30 - $50 per night",
-      "priceFrom": 30,
-      "description": "A modern hotel offering clean, air-conditioned rooms with free Wi-Fi and breakfast. Ideal for business and leisure travelers.",
-      "amenities": ["Free Wi-Fi", "Breakfast", "24/7 Security", "Conference Room"],
-      "whatsappNumber": "254790958286",
-      "adminNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      "name": "Yare Towers Hotel",
+      "slug": "yare-towers",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "Ksh 7,000 - Ksh 9,000",
+      "descriptions": {
+        "en": "Luxury furnished apartments featuring spacious rooms with daily, weekly, and monthly rates. Choose from 1 bedroom to 2-bedroom executive suites. Enjoy premium amenities including a swimming pool and rooftop area.",
+        "so": "Guryaha la qalabeeyey ee raaxada leh oo leh qolal ballaaran oo leh qiimayaal maalinle, todobaadle, iyo bile ah. Dooro qolal 1 ilaa 2 qol. Ku raaxayso adeegyada heer sare ah oo ay ku jiraan berkadda dabaasha iyo aagga saqafka."
+      },
+      "amenities": {
+        "en": ["Furnished Apartments", "24/7 Reception", "Swimming Pool", "Rooftop Area", "Restaurants", "Free Wi-Fi", "Conference Room"],
+        "so": ["Guryaha la Qalabeeyey", "Soo dhaweyn 24/7", "Berkadda Dabaasha", "Aagga Saqafka", "Makhaayadaha", "Wi-Fi Bilaash", "Qolka Shirarka"]
+      },
+      "roomTypes": [
+        {
+          "type": "1 Bedroom",
+          "daily": "Ksh 7,000",
+          "weekly": "Ksh 35,000",
+          "monthly": "Ksh 130,000"
+        },
+        {
+          "type": "2-Bedroom Standard",
+          "daily": "Ksh 8,000",
+          "weekly": "Ksh 40,000",
+          "monthly": "Ksh 140,000"
+        },
+        {
+          "type": "2-Bedroom Executive",
+          "daily": "Ksh 9,000",
+          "weekly": "Ksh 43,000",
+          "monthly": "Ksh 150,000"
+        }
       ],
-      "featured": true
+      "whatsappNumber": "254703422456",
+      "images": [
+        "yareroom.jpg",
+        "yarepool.jpg",
+        "yarel.jpg",
+        "yareroom2.jpg",
+        "yareconf.jpg",
+        "yareseats.jpg"
+      ],
+      "isComingSoon": false,
+      "isFurnishedApartment": true
     },
     {
       "id": 2,
-      "name": "Al Noor Suites",
-      "location": "Eastleigh, 12th Street",
-      "priceRange": "$25 - $45 per night",
-      "priceFrom": 25,
-      "description": "Comfortable suites featuring spacious rooms, private balconies, and a quiet atmosphere for relaxation.",
-      "amenities": ["Private Balcony", "Air Conditioning", "Restaurant", "Room Service"],
-      "whatsappNumber": "254790958286",
-      "stars": 3,
-      "images": [
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      "name": "Urban Point Hotel",
+      "slug": "urban-point",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "Ksh 5,000 - Ksh 8,500",
+      "descriptions": {
+        "en": "Nestled in the vibrant heart of Eastleigh, Urban Point Hotel is where quality Kenyan hospitality meets unparalleled luxury and comfort. 99 spacious contemporary rooms and suites designed to exceed the highest standards of comfort.",
+        "so": "Ku dhex yaal wadnaha firfircoon ee Eastleigh, Huteel Urban Point waa meesha ay martiqaadka Kiinya ee tayada leh uu la kulmo raaxada aan la barbar dhigi karin. 99 qolal ballaaran oo casri ah."
+      },
+      "amenities": {
+        "en": ["99 Contemporary Rooms", "Global Cuisine", "Prime Eastleigh Location", "Business Facilities", "24/7 Concierge", "Free Wi-Fi"],
+        "so": ["99 Qolal Casri ah", "Cunto Heer Caalami ah", "Goobta Muhiimka ah", "Xarumaha Ganacsiga", "Adeegga 24/7", "Wi-Fi Bilaash"]
+      },
+      "roomTypes": [
+        {
+          "type": "Standard Suite",
+          "daily": "Ksh 5,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Standard Double Suite",
+          "daily": "Ksh 6,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Deluxe Twin Bed",
+          "daily": "Ksh 7,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "VIP Suite",
+          "daily": "Ksh 7,500",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Deluxe Triple Bed",
+          "daily": "Ksh 8,500",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        }
       ],
-      "featured": true
+      "whatsappNumber": "254742555222",
+      "images": [
+        "bed1.jpg",
+        "bed2.jpg",
+        "veiw1.jpg",
+        "11.jpg",
+        "double.jpg",
+        "bed3.jpg",
+        "sofa.jpg",
+        "food.png",
+        "view.jpg"
+      ],
+      "isComingSoon": false
     },
     {
       "id": 3,
-      "name": "Golden Star Hotel",
-      "location": "Eastleigh, 1st Avenue",
-      "priceRange": "$35 - $60 per night",
-      "priceFrom": 35,
-      "description": "A premium experience with well-furnished rooms, rooftop dining, and an on-site fitness center.",
-      "amenities": ["Rooftop Dining", "Fitness Center", "Free Parking", "24/7 Front Desk"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      "name": "Baraka Tower Hotel",
+      "slug": "baraka-tower",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "Ksh 4,000 - Ksh 9,000",
+      "descriptions": {
+        "en": "Welcome to Baraka Tower Hotel, Eastleigh's premier luxury destination. We offer discerning business travelers a serene environment for work and relaxation. Indulge in exquisite culinary delights at our all-day dining restaurant.",
+        "so": "Ku soo dhowow Baraka Tower Hotel, oo ah goobta ugu qaalisan ee raaxada ee Eastleigh. Waxaan u soo bandhignaa socdaalayaasha ganacsiga jawi degan oo ay ku shaqeeyaan oo ay ku nastaan."
+      },
+      "amenities": {
+        "en": ["Premier Luxury Location", "All-Day Dining Restaurant", "Business & Meeting Facilities", "Free Wi-Fi Throughout", "24/7 Reception Service", "Safe & Secure Environment"],
+        "so": ["Goob Raaxo ah oo Heer Sare ah", "Makhaayadda Maalinta oo dhan", "Goobaha Shaqada & Kulamada", "Wi-Fi Bilaash ah Meel kasta", "Adeegga Soo dhaweynta 24/7", "Deegaan Ammaan ah"]
+      },
+      "roomTypes": [
+        {
+          "type": "Standard Room",
+          "singleRate": "Ksh 4,000",
+          "doubleRate": "Ksh 5,000"
+        },
+        {
+          "type": "Deluxe Room",
+          "singleRate": "Ksh 6,500",
+          "doubleRate": "Ksh 7,500"
+        },
+        {
+          "type": "Executive Room",
+          "singleRate": "Ksh 7,000",
+          "doubleRate": "Ksh 8,000"
+        },
+        {
+          "type": "The Suite",
+          "singleRate": "Ksh 8,000",
+          "doubleRate": "Ksh 9,000"
+        }
       ],
-      "featured": false
+      "whatsappNumber": "254712511311",
+      "website": "https://barakatowerhotel.com/",
+      "googleMaps": "https://maps.app.goo.gl/Tf1TGHZDfgTbyTcKA",
+      "images": [
+        "room2.jpg",
+        "room3.jpg",
+        "room4.jpg",
+        "room4 (1).jpg",
+        "room-20.jpg",
+        "room-21.jpg",
+        "room-26.jpg",
+        "room-27.jpg",
+        "facility-16.jpg",
+        "facility-17.jpg"
+      ],
+      "isComingSoon": false
     },
     {
       "id": 4,
-      "name": "Horizon Palace",
-      "location": "Eastleigh, 5th Street",
-      "priceRange": "$20 - $40 per night",
-      "priceFrom": 20,
-      "description": "Budget-friendly accommodation with excellent service and easy access to local markets and transport.",
-      "amenities": ["Free Wi-Fi", "Laundry Service", "Taxi Booking", "24-Hour Security"],
-      "whatsappNumber": "254790958286",
-      "stars": 3,
-      "images": [
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      "name": "Bushra Hotel",
+      "slug": "bushra",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "Ksh 2,500 - Ksh 4,000",
+      "descriptions": {
+        "en": "Experience exceptional quality and value at Bushra Hotel, perfectly located in the prime area of Eastleigh. What sets us apart is our unmatched quality-to-price ratio, prime location, and on-site Masjid for our Muslim guests.",
+        "so": "Ku raaxayso tayada iyo qiimaha gaar ah ee Huteel Bushra, oo si fiican ugu dhex yaal aagga muhiimka ah ee Eastleigh. Waxa naga kala saara saamiga tayada iyo qiimaha, goobta muhiimka ah, iyo masjidka gudaha huteelka."
+      },
+      "amenities": {
+        "en": ["Prime Location in Eastleigh", "Exceptional Quality for Price", "On-site Masjid", "Restaurant & Cafe", "24/7 Reception", "Free Wi-Fi"],
+        "so": ["Meel Heer-sare ah Eastleigh", "Tayada Fiican ee Qiimaha", "Masjid Gudaha Huteelka", "Makhaayadda & Cafe", "Soo dhaweyn 24/7", "Wi-Fi Bilaash"]
+      },
+      "roomTypes": [
+        {
+          "type": "Standard Double Room",
+          "daily": "Ksh 2,500",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Standard Room",
+          "daily": "Ksh 3,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Deluxe Twin Bed",
+          "daily": "Ksh 3,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "VIP Room",
+          "daily": "Ksh 4,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        }
       ],
-      "featured": false
+      "whatsappNumber": "254720972757",
+      "images": [
+        "Single1.jpg",
+        "Deluxe1.jpg",
+        "view.jpg",
+        "1.jpg",
+        "reception.jpg",
+        "Twin1.png",
+        "Double.png",
+        "cafe.jpg",
+        "3.jpg"
+      ],
+      "isComingSoon": false
     },
     {
       "id": 5,
-      "name": "Emerald Inn",
-      "location": "Eastleigh, 9th Street",
-      "priceRange": "$40 - $70 per night",
-      "priceFrom": 40,
-      "description": "A stylish hotel with luxurious suites, a rooftop terrace, and excellent customer service.",
-      "amenities": ["Rooftop Lounge", "Smart TV", "Fine Dining", "Business Center"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      "name": "HYYAT GOLDEN HOTEL",
+      "slug": "hyyat-golden",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "KES 2,000 - KES 4,500",
+      "descriptions": {
+        "en": "Experience exceptional hospitality at HYYAT Golden Hotel in the heart of Eastleigh, Nairobi. Our 9-floor establishment offers premium rooms with modern amenities, halal dining, masjid facilities, and secure underground parking for business and leisure travelers.",
+        "so": "La kulaan martiqaad cajiib ah HYYAT Golden Hotel ee wadnaha Eastleigh, Nairobi. Dhismahayaga 9 dabaqad ah wuxuu bixiyaa qolal heer sare ah oo leh adeegyo casri ah, cunto xalaal, adeegyada masjidka, iyo gaadhi ammaan ah hoosta dhulka."
+      },
+      "amenities": {
+        "en": ["9-Floor Hotel Building", "Restaurant & Halal Dining", "On-site Masjid", "Underground Parking", "24/7 Reception", "Free High-Speed WiFi", "Conference & Meeting Rooms", "Room Service", "Laundry & Dry Cleaning", "Air Conditioning All Rooms", "Daily Housekeeping", "Safe Deposit Boxes"],
+        "so": ["Dhisme Huteel 9 Dabaqad", "Maqaayad & Cunto Xalaal", "Masjidka Gudaha", "Gaadhi Hoosta Dhulka", "Soo dhaweyn 24/7", "WiFi Dhaqso Sare oo Bilaash", "Qolalka Shirarka & Kulanada", "Adeegga Qolka", "Adeegga Maydaha & Nadiifinta", "Qaboojinta Hawada Dhammaan Qolalka", "Nadiifinta Maalinlaha", "Sanduuqyada Kaydka Ammaan"]
+      },
+      "roomTypes": [
+        {
+          "type": "Classic King Suite",
+          "daily": "KES 2,000",
+          "size": "25 sqm",
+          "guests": "2 guests"
+        },
+        {
+          "type": "Superior King Suite",
+          "daily": "KES 2,500",
+          "size": "30 sqm",
+          "guests": "2 guests"
+        },
+        {
+          "type": "Deluxe King Suite",
+          "daily": "KES 2,800",
+          "size": "35 sqm",
+          "guests": "2 guests"
+        },
+        {
+          "type": "Twin Comfort Room",
+          "daily": "KES 2,500",
+          "size": "28 sqm",
+          "guests": "2 guests"
+        },
+        {
+          "type": "Family Executive Suite",
+          "daily": "KES 4,500",
+          "size": "45 sqm",
+          "guests": "4 guests"
+        }
       ],
-      "featured": true
+      "whatsappNumber": "254701387612",
+      "email": "info@hyyatgoldenhotel.online",
+      "website": "https://hyyatgoldenhotel.online",
+      "images": [
+        "hyyatgoldenhotelentrance.jpg",
+        "hyyatgoldenreception.jpg",
+        "deluxeking.jpg",
+        "bed1.jpg",
+        "superiorsingle.jpg",
+        "twin.jpg",
+        "masjid.jpg",
+        "resta.jpg",
+        "resta1.jpg",
+        "nic.jpg",
+        "hyyatpreview.jpg"
+      ],
+      "isComingSoon": false,
+      "locationDetails": "Centre of Eastleigh Nairobi, 11th Street Second Avenue"
     },
     {
       "id": 6,
-      "name": "Bluewave Residency",
-      "location": "Eastleigh, 3rd Avenue",
-      "priceRange": "$28 - $55 per night",
-      "priceFrom": 28,
-      "description": "A cozy and affordable stay with modern rooms, a restaurant, and high-speed internet.",
-      "amenities": ["High-Speed Wi-Fi", "Restaurant", "Laundry Service", "Airport Shuttle"],
-      "whatsappNumber": "254790958286",
-      "stars": 3,
+      "name": "Crown Point Hotel",
+      "slug": "crown-point",
+      "city": "nairobi",
+      "country": "kenya",
+      "priceRange": "Coming Soon",
+      "descriptions": {
+        "en": "Crown Point Hotel is coming soon to the Deegaan-Riyo platform! This premium hotel will feature world-class amenities and exceptional service in the heart of Eastleigh. Stay tuned for booking availability and special opening rates.",
+        "so": "Crown Point Hotel ayaa dhowaan ku iman doona platform-ka Deegaan-Riyo! Huteelkani heer sare ah wuxuu lahaan doonaa adeegyo heer caalami ah iyo adeeg gaar ah ee wadnaha Eastleigh. Sug heli karista bukashada iyo qiimayaalka furitaanka gaarka ah."
+      },
+      "amenities": {
+        "en": ["Premium Location", "Modern Facilities", "World-Class Service", "Business Center", "Restaurant & Dining", "Coming Soon"],
+        "so": ["Meel Heer-sare ah", "Xarumo Casri ah", "Adeeg Heer Caalami ah", "Xarunta Ganacsiga", "Maqaayad & Cunto", "Waa Imanaya"]
+      },
+      "whatsappNumber": "254700000000",
       "images": [
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        "placeholder.svg",
+        "placeholder.svg"
       ],
-      "featured": false
-    },
-    {
-      "id": 7,
-      "name": "Neon Heights",
-      "location": "Eastleigh, Main Street",
-      "priceRange": "$75 - $120 per night",
-      "priceFrom": 75,
-      "description": "Stunning city view, free Wi-Fi & breakfast included",
-      "amenities": ["Free Wi-Fi", "Breakfast", "City View", "Air Conditioning"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 8,
-      "name": "Cyber Suite",
-      "location": "Eastleigh, Business District",
-      "priceRange": "$120 - $180 per night",
-      "priceFrom": 120,
-      "description": "Urban retreat with smart amenities & rooftop pool",
-      "amenities": ["Rooftop Pool", "Smart Amenities", "Business Center", "Fitness Center"],
-      "whatsappNumber": "254790958286",
-      "stars": 5,
-      "images": [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1578541031144-dec595cfece5?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 9,
-      "name": "Pixel Lodge",
-      "location": "Eastleigh, South Quarter",
-      "priceRange": "$95 - $150 per night",
-      "priceFrom": 95,
-      "description": "Cozy rooms with tech upgrades & complimentary bar",
-      "amenities": ["Tech Upgrades", "Complimentary Bar", "Room Service", "Free Wi-Fi"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 10,
-      "name": "Digital Oasis",
-      "location": "Eastleigh, Hilltop Road",
-      "priceRange": "$110 - $160 per night",
-      "priceFrom": 110,
-      "description": "Modern comfort with panoramic views & spa access",
-      "amenities": ["Panoramic Views", "Spa Access", "Modern Rooms", "Room Service"],
-      "whatsappNumber": "254790958286",
-      "stars": 5,
-      "images": [
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 11,
-      "name": "Quantum Inn",
-      "location": "Eastleigh, Quiet District",
-      "priceRange": "$85 - $130 per night",
-      "priceFrom": 85,
-      "description": "Minimalist design with maximum comfort & gym",
-      "amenities": ["Minimalist Design", "Gym Access", "Work Space", "Fast Internet"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80"
-      ],
-      "featured": false
-    },
-    {
-      "id": 12,
-      "name": "Matrix Hotel",
-      "location": "Eastleigh, Entertainment District",
-      "priceRange": "$130 - $200 per night",
-      "priceFrom": 130,
-      "description": "VR gaming lounge, tech-forward rooms & cafe",
-      "amenities": ["VR Gaming Lounge", "Tech-Forward Rooms", "Cafe", "Entertainment"],
-      "whatsappNumber": "254790958286",
-      "stars": 5,
-      "images": [
-        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 13,
-      "name": "Byte Resort",
-      "location": "Eastleigh, Riverside Area",
-      "priceRange": "$70 - $110 per night",
-      "priceFrom": 70,
-      "description": "Riverside views, eco-friendly & breakfast buffet",
-      "amenities": ["Riverside Views", "Eco-Friendly", "Breakfast Buffet", "Lounge"],
-      "whatsappNumber": "254790958286",
-      "stars": 3,
-      "images": [
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1580041065738-e72023775cdc?auto=format&fit=crop&q=80"
-      ],
-      "featured": false
-    },
-    {
-      "id": 14,
-      "name": "Synth Suites",
-      "location": "Eastleigh, Music Quarter",
-      "priceRange": "$90 - $145 per night",
-      "priceFrom": 90,
-      "description": "Live music venue, artsy rooms & craft cocktails",
-      "amenities": ["Live Music", "Artsy Rooms", "Craft Cocktails", "Bar"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1615460549969-36fa19521a4f?auto=format&fit=crop&q=80"
-      ],
-      "featured": false
-    },
-    {
-      "id": 15,
-      "name": "Neon Nest",
-      "location": "Eastleigh, Downtown",
-      "priceRange": "$65 - $95 per night",
-      "priceFrom": 65,
-      "description": "Compact but luxurious rooms with smart controls",
-      "amenities": ["Smart Controls", "Luxurious Rooms", "Central Location", "Free Wi-Fi"],
-      "whatsappNumber": "254790958286",
-      "stars": 3,
-      "images": [
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?auto=format&fit=crop&q=80"
-      ],
-      "featured": false
-    },
-    {
-      "id": 16,
-      "name": "Cyber Central",
-      "location": "Eastleigh, Business Park",
-      "priceRange": "$100 - $150 per night",
-      "priceFrom": 100,
-      "description": "Business center, conference rooms & urban views",
-      "amenities": ["Business Center", "Conference Rooms", "Urban Views", "High-Speed Internet"],
-      "whatsappNumber": "254790958286",
-      "stars": 4,
-      "images": [
-        "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1562790879-dfde0c489689?auto=format&fit=crop&q=80"
-      ],
-      "featured": false
-    },
-    {
-      "id": 17,
-      "name": "Glow Gardens",
-      "location": "Eastleigh, Spa District",
-      "priceRange": "$115 - $180 per night",
-      "priceFrom": 115,
-      "description": "Serene courtyard, luxury amenities & spa treatments",
-      "amenities": ["Serene Courtyard", "Luxury Amenities", "Spa Treatments", "Fine Dining"],
-      "whatsappNumber": "254790958286",
-      "stars": 5,
-      "images": [
-        "https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1571003123935-2f6e22a5d2fd?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
-    },
-    {
-      "id": 18,
-      "name": "Pixel Palace",
-      "location": "Eastleigh, Historic District",
-      "priceRange": "$150 - $220 per night",
-      "priceFrom": 150,
-      "description": "Historic building with modern tech & fine dining",
-      "amenities": ["Historic Building", "Modern Tech", "Fine Dining", "Luxury Suites"],
-      "whatsappNumber": "254790958286",
-      "stars": 5,
-      "images": [
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80",
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80"
-      ],
-      "featured": true
+      "isComingSoon": true,
+      "isPlaceholder": false
     }
   ]
 }

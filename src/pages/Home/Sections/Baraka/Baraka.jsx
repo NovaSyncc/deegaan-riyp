@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaBed, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar, FaTv, FaShower, FaCoffee, FaShieldAlt } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './Baraka.css';
-
-// Import Baraka hotel images
-import facility16 from '../../../../assets/images/baraka/facility-16.jpg';
-import facility17 from '../../../../assets/images/baraka/facility-17.jpg';
-import room2 from '../../../../assets/images/baraka/room2.jpg';
-import room3 from '../../../../assets/images/baraka/room3.jpg';
-import room4_1 from '../../../../assets/images/baraka/room4 (1).jpg';
-import room4 from '../../../../assets/images/baraka/room4.jpg';
-import room20 from '../../../../assets/images/baraka/room-20.jpg';
-import room21 from '../../../../assets/images/baraka/room-21.jpg';
-import room26 from '../../../../assets/images/baraka/room-26.jpg';
-import room27 from '../../../../assets/images/baraka/room-27.jpg';
 
 const Baraka = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // Hotel images - 10 images in your preferred order (moved before useEffect)
+  // Get images using the new system
+  const facility16 = getHotelImage('baraka-tower', 'facility-16.jpg');
+  const facility17 = getHotelImage('baraka-tower', 'facility-17.jpg');
+  const room2 = getHotelImage('baraka-tower', 'room2.jpg');
+  const room3 = getHotelImage('baraka-tower', 'room3.jpg');
+  const room4_1 = getHotelImage('baraka-tower', 'room4 (1).jpg');
+  const room4 = getHotelImage('baraka-tower', 'room4.jpg');
+  const room20 = getHotelImage('baraka-tower', 'room-20.jpg');
+  const room21 = getHotelImage('baraka-tower', 'room-21.jpg');
+  const room26 = getHotelImage('baraka-tower', 'room-26.jpg');
+  const room27 = getHotelImage('baraka-tower', 'room-27.jpg');
+  
+  // Hotel images - 10 images in your preferred order
   const hotelImages = [
     {
       src: room2,
@@ -73,7 +74,7 @@ const Baraka = ({ onBack }) => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [hotelImages.length]); // Added dependency
+  }, [hotelImages.length]);
 
   // Handle manual slide change
   const changeSlide = (index) => {
@@ -82,7 +83,7 @@ const Baraka = ({ onBack }) => {
   
   // Updated hotel data to match HotelListings format
   const selectedHotel = {
-    id: 4,
+    id: 3,
     name: 'Baraka Tower Hotel',
     location: language === 'en' ? 'Nairobi Eastleigh' : 'Nairobi Eastleigh',
     city: 'nairobi',
@@ -127,7 +128,7 @@ const Baraka = ({ onBack }) => {
     en: {
       title: "Baraka Tower Hotel",
       subtitle: "Luxury Accommodation in Eastleigh, Nairobi",
-      ranking: "★ Premier Luxury Destination in Eastleigh",
+      ranking: "⭐ Premier Luxury Destination in Eastleigh",
       backToListings: "← Back to Hotel Listings",
       roomRates: "Room Rates",
       amenities: "Hotel Amenities",
@@ -174,7 +175,7 @@ const Baraka = ({ onBack }) => {
     so: {
       title: "Huteel Baraka Tower",
       subtitle: "Hoy Raaxo ah oo ku yaal Eastleigh, Nairobi",
-      ranking: "★ Goobta Raaxada ugu Fiican Eastleigh",
+      ranking: "⭐ Goobta Raaxada ugu Fiican Eastleigh",
       backToListings: "← Dib ugu noqo Liiska Huteellada",
       roomRates: "Qiimayaalka Qolalka",
       amenities: "Adeegyada Huteelka",
@@ -314,6 +315,7 @@ const Baraka = ({ onBack }) => {
                     alt={image.alt}
                     className="baraka-image"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -336,6 +338,7 @@ const Baraka = ({ onBack }) => {
                   alt={image.alt}
                   className="baraka-image"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             ))

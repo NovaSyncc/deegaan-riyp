@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaBed, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar, FaTv, FaShower, FaConciergeBell, FaCar, FaSwimmingPool } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './Urban.css';
-
-// Import Urban hotel images from the screenshot
-import urbanImage1 from '../../../../assets/images/urban/11.jpg';
-import urbanImage2 from '../../../../assets/images/urban/12.jpg';
-import urbanImage3 from '../../../../assets/images/urban/33.png';
-import urbanBed1 from '../../../../assets/images/urban/bed1.jpg';
-import urbanBed2 from '../../../../assets/images/urban/bed2.jpg';
-import urbanBed3 from '../../../../assets/images/urban/bed3.jpg';
-import urbanDouble from '../../../../assets/images/urban/double.jpg';
-import urbanFood from '../../../../assets/images/urban/food.png';
-import urbanSofa from '../../../../assets/images/urban/sofa.jpg';
-import urbanView1 from '../../../../assets/images/urban/veiw1.jpg';
-import urbanView from '../../../../assets/images/urban/view.jpg';
 
 const Urban = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Get images using the new system
+  const urbanImage1 = getHotelImage('urban-point', '11.jpg');
+  const urbanImage2 = getHotelImage('urban-point', '12.jpg');
+  const urbanImage3 = getHotelImage('urban-point', '33.png');
+  const urbanBed1 = getHotelImage('urban-point', 'bed1.jpg');
+  const urbanBed2 = getHotelImage('urban-point', 'bed2.jpg');
+  const urbanBed3 = getHotelImage('urban-point', 'bed3.jpg');
+  const urbanDouble = getHotelImage('urban-point', 'double.jpg');
+  const urbanFood = getHotelImage('urban-point', 'food.png');
+  const urbanSofa = getHotelImage('urban-point', 'sofa.jpg');
+  const urbanView1 = getHotelImage('urban-point', 'veiw1.jpg');
+  const urbanView = getHotelImage('urban-point', 'view.jpg');
   
   // Auto-advance slideshow for mobile
   useEffect(() => {
@@ -94,7 +95,7 @@ const Urban = ({ onBack }) => {
     en: {
       title: "Urban Point Hotel",
       subtitle: "Where Quality Kenyan Hospitality Meets Unparalleled Luxury",
-      ranking: "★ 99 Spacious Contemporary Rooms & Suites in Eastleigh",
+      ranking: "⭐ 99 Spacious Contemporary Rooms & Suites in Eastleigh",
       backToListings: "← Back to Hotel Listings",
       roomRates: "Room Rates",
       amenities: "Hotel Amenities",
@@ -144,7 +145,7 @@ const Urban = ({ onBack }) => {
     so: {
       title: "Huteel Urban Point",
       subtitle: "Halka Martiqaadka Kiinya ee Tayada leh uu la kulmo Raaxada aan la barbar dhigi karin",
-      ranking: "★ 99 Qolal Ballaaran oo Casri ah & Suites ku yaal Eastleigh",
+      ranking: "⭐ 99 Qolal Ballaaran oo Casri ah & Suites ku yaal Eastleigh",
       backToListings: "← Dib ugu noqo Liiska Huteellada",
       roomRates: "Qiimayaalka Qolalka",
       amenities: "Adeegyada Huteelka",
@@ -195,7 +196,7 @@ const Urban = ({ onBack }) => {
 
   const t = translations[language];
 
-  // Hotel images - 11 images from the urban folder
+  // Hotel images - 9 images from the urban folder (removed unused images)
   const hotelImages = [
     {
       src: urbanBed1,
@@ -338,6 +339,7 @@ const Urban = ({ onBack }) => {
                     alt={image.alt}
                     className="urban-image"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -360,6 +362,7 @@ const Urban = ({ onBack }) => {
                   alt={image.alt}
                   className="urban-image"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             ))

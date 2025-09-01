@@ -2,22 +2,58 @@
 User-agent: *
 Allow: /
 
-# Explicitly allow static HTML pages for SEO
+# Explicitly allow all static HTML pages for SEO
 Allow: /about.html
 Allow: /contact.html
 Allow: /eastleigh-hotels.html
 Allow: /why-book-with-us.html
 
-# Allow important files
+# Phase 1 Priority Pages - Eastleigh Focus
+Allow: /hotels-in-eastleigh-nairobi.html
+Allow: /best-hotels-in-eastleigh.html
+Allow: /top-5-hotels-eastleigh-nairobi.html
+Allow: /budget-hotels-eastleigh.html
+Allow: /luxury-hotels-eastleigh.html
+
+# Phase 2 Expansion Pages - Other Cities
+Allow: /hotels-in-mogadishu-somalia.html
+Allow: /best-hotels-mogadishu.html
+Allow: /hotels-in-addis-ababa-ethiopia.html
+Allow: /hotels-in-djibouti-city.html
+Allow: /hotels-in-hargeisa-somaliland.html
+
+# Blog Section for Content Marketing
+Allow: /blog/
+Allow: /blog/monthly-eastleigh-hotels-update.html
+Allow: /blog/mogadishu-hotels-review.html
+
+# Important SEO files
 Allow: /sitemap.xml
 Allow: /favicon.ico
 Allow: /logo.png
 Allow: /manifest.json
 
+# Image assets for hotel listings
+Allow: /images/
+Allow: /images/hotels/
+
 # Disallow source code and development files
 Disallow: /src/
 Disallow: /.git/
 Disallow: /node_modules/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+
+# Block common bot spam patterns
+Disallow: /wp-admin/
+Disallow: /admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
 
 # Sitemap location
 Sitemap: https://www.deegaanriyo.online/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

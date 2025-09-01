@@ -1,0 +1,32 @@
+{
+  "kenya": {
+    "nameKey": "kenya",
+    "cities": [
+      { "id": "nairobi", "nameKey": "nairobi" }
+    ]
+  },
+  "somalia": {
+    "nameKey": "somalia",
+    "cities": [
+      { "id": "mogadishu", "nameKey": "mogadishu" }
+    ]
+  },
+  "ethiopia": {
+    "nameKey": "ethiopia",
+    "cities": [
+      { "id": "addisAbaba", "nameKey": "addisAbaba" }
+    ]
+  },
+  "djibouti": {
+    "nameKey": "djibouti",
+    "cities": [
+      { "id": "djibouti", "nameKey": "djibouti" }
+    ]
+  },
+  "somaliland": {
+    "nameKey": "somaliland",
+    "cities": [
+      { "id": "hargeisa", "nameKey": "hargeisa" }
+    ]
+  }
+}

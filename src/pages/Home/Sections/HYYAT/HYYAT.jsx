@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaBed, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar, FaMosque, FaShower, FaConciergeBell, FaCar, FaArrowsAltV } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './HYYAT.css';
-
-// Import HYYAT GOLDEN HOTEL images (only using confirmed existing files)
-import hyyatBed1 from '../../../../assets/images/hyyat/bed1.jpg';
-import hyyatDeluxeKing from '../../../../assets/images/hyyat/deluxeking.jpg';
-import hyyatGoldenHotelEntrance from '../../../../assets/images/hyyat/hyyatgoldenhotelentrance.jpg';
-import hyyatGoldenReception from '../../../../assets/images/hyyat/hyyatgoldenreception.jpg';
-import hyyatPreview from '../../../../assets/images/hyyat/hyyatpreview.jpg';
-import hyyatMasjid from '../../../../assets/images/hyyat/masjid.jpg';
-import hyyatNic from '../../../../assets/images/hyyat/nic.jpg';
-import hyyatResta from '../../../../assets/images/hyyat/resta.jpg';
-import hyyatResta1 from '../../../../assets/images/hyyat/resta1.jpg';
-import hyyatSuperiorSingle from '../../../../assets/images/hyyat/superiorsingle.jpg';
-import hyyatTwin from '../../../../assets/images/hyyat/twin.jpg';
 
 const HYYAT = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Get images using the new system
+  const hyyatBed1 = getHotelImage('hyyat-golden', 'bed1.jpg');
+  const hyyatDeluxeKing = getHotelImage('hyyat-golden', 'deluxeking.jpg');
+  const hyyatGoldenHotelEntrance = getHotelImage('hyyat-golden', 'hyyatgoldenhotelentrance.jpg');
+  const hyyatGoldenReception = getHotelImage('hyyat-golden', 'hyyatgoldenreception.jpg');
+  const hyyatPreview = getHotelImage('hyyat-golden', 'hyyatpreview.jpg');
+  const hyyatMasjid = getHotelImage('hyyat-golden', 'masjid.jpg');
+  const hyyatNic = getHotelImage('hyyat-golden', 'nic.jpg');
+  const hyyatResta = getHotelImage('hyyat-golden', 'resta.jpg');
+  const hyyatResta1 = getHotelImage('hyyat-golden', 'resta1.jpg');
+  const hyyatSuperiorSingle = getHotelImage('hyyat-golden', 'superiorsingle.jpg');
+  const hyyatTwin = getHotelImage('hyyat-golden', 'twin.jpg');
   
   // Auto-advance slideshow for mobile
   useEffect(() => {
@@ -386,6 +387,7 @@ const HYYAT = ({ onBack }) => {
                     alt={image.alt}
                     className="hyyat-image"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -408,6 +410,7 @@ const HYYAT = ({ onBack }) => {
                   alt={image.alt}
                   className="hyyat-image"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             ))

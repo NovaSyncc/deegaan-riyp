@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaSwimmingPool, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
+import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './Yare.css';
-import yareConf from '../../../../assets/images/yareconf.jpg';
-import yareL from '../../../../assets/images/yarel.jpg';
-import yarePool from '../../../../assets/images/yarepool.jpg';
-import yareRoom from '../../../../assets/images/yareroom.jpg';
-import yareRoom2 from '../../../../assets/images/yareroom2.jpg';
-import yareSeats from '../../../../assets/images/yareseats.jpg';
 
 const Yare = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Get images using the new system
+  const yareConf = getHotelImage('yare-towers', 'yareconf.jpg');
+  const yareL = getHotelImage('yare-towers', 'yarel.jpg');
+  const yarePool = getHotelImage('yare-towers', 'yarepool.jpg');
+  const yareRoom = getHotelImage('yare-towers', 'yareroom.jpg');
+  const yareRoom2 = getHotelImage('yare-towers', 'yareroom2.jpg');
+  const yareSeats = getHotelImage('yare-towers', 'yareseats.jpg');
   
   // Auto-advance slideshow for mobile
   useEffect(() => {
@@ -75,7 +78,7 @@ const Yare = ({ onBack }) => {
     en: {
       title: "Yare Towers Hotel",
       subtitle: "Luxury Accommodation in Eastleigh, Nairobi",
-      ranking: "★ Ranked among the Top 10 Best Hotels in Eastleigh",
+      ranking: "⭐ Ranked among the Top 10 Best Hotels in Eastleigh",
       backToListings: "← Back to Hotel Listings",
       roomRates: "Room Rates",
       amenities: "Hotel Amenities",
@@ -117,7 +120,7 @@ const Yare = ({ onBack }) => {
     so: {
       title: "Huteel Yare Towers",
       subtitle: "Hoy Raaxo ah oo ku yaal Eastleigh, Nairobi",
-      ranking: "★ Waxaa loo tiriyaa mid ka mid ah 10-ka Huteel ee ugu fiican Eastleigh",
+      ranking: "⭐ Waxaa loo tiriyaa mid ka mid ah 10-ka Huteel ee ugu fiican Eastleigh",
       backToListings: "← Dib ugu noqo Liiska Huteellada",
       roomRates: "Qiimayaalka Qolalka",
       amenities: "Adeegyada Huteelka",
@@ -278,6 +281,7 @@ const Yare = ({ onBack }) => {
                     alt={image.alt}
                     className="yare-image"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
               ))}
@@ -300,6 +304,7 @@ const Yare = ({ onBack }) => {
                   alt={image.alt}
                   className="yare-image"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             ))
