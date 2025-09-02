@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+window.location.replace('/');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Commission Hotel Booking East Africa - Save 15-25% | Deegaan-Riyo 2025</title>
@@ -42,26 +46,280 @@
     </script>
     
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; background: #f8f9fa; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            background: #050A14;
+            color: #fff;
+        }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .hero { background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%); color: white; padding: 70px 20px; text-align: center; border-radius: 15px; margin: 20px; position: relative; overflow: hidden; }
+        
+        .hero { 
+            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%); 
+            color: white; 
+            padding: 70px 20px; 
+            text-align: center; 
+            border-radius: 15px; 
+            margin: 20px; 
+            position: relative; 
+            overflow: hidden; 
+        }
         .hero::before { content: '💰'; font-size: 6em; position: absolute; right: 40px; top: 30px; opacity: 0.15; }
-        .content { background: white; padding: 40px; border-radius: 15px; margin: 30px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .savings-calc { background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%); padding: 40px; border-radius: 15px; margin: 30px 0; text-align: center; }
-        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 40px 0; }
-        .comparison-card { padding: 30px; border-radius: 12px; text-align: center; }
-        .traditional-booking { background: linear-gradient(135deg, #fecaca 0%, #ef4444 100%); color: white; }
-        .deegaan-booking { background: linear-gradient(135deg, #d1fae5 0%, #16a34a 100%); color: white; }
-        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
-        .benefit-card { background: #16a34a; color: white; padding: 25px; border-radius: 10px; text-align: center; }
-        .hidden-fees-section { background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; padding: 40px; border-radius: 15px; margin: 30px 0; }
-        .how-it-works { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 40px; border-radius: 15px; margin: 30px 0; }
-        .whatsapp-btn { background: #25D366; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; font-size: 1.1em; }
-        .whatsapp-btn:hover { background: #128C7E; color: white; }
-        .save-btn { background: #16a34a; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; font-size: 1.1em; }
-        .save-btn:hover { background: #15803d; color: white; }
-        h1, h2, h3 { color: #16a34a; }
-        .hidden-fees-section h2, .hidden-fees-section h3 { color: white; }
+        
+        .content { 
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 20px; 
+            backdrop-filter: blur(10px);
+        }
+        
+        .savings-calc { 
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%); 
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 0; 
+            text-align: center; 
+        }
+        
+        .comparison-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin: 40px 0; 
+        }
+        
+        .comparison-card { 
+            padding: 30px; 
+            border-radius: 12px; 
+            text-align: center; 
+            transition: all 0.3s ease;
+        }
+        
+        .traditional-booking { 
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%); 
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fca5a5; 
+        }
+        
+        .deegaan-booking { 
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%); 
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #86efac; 
+        }
+        
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+        }
+        
+        .benefit-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin: 30px 0; 
+        }
+        
+        .benefit-card { 
+            background: linear-gradient(135deg, #0066FF, #00FFFF);
+            color: white; 
+            padding: 25px; 
+            border-radius: 10px; 
+            text-align: center; 
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+        
+        .hidden-fees-section { 
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%); 
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            color: #fca5a5; 
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 0; 
+        }
+        
+        .how-it-works { 
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 0; 
+        }
+        
+        .whatsapp-btn { 
+            background: #25D366; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 25px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-block; 
+            margin: 10px; 
+            font-size: 1.1em; 
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover { 
+            background: #128C7E; 
+            color: white; 
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+        }
+        
+        .save-btn { 
+            background: #16a34a; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 25px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-block; 
+            margin: 10px; 
+            font-size: 1.1em; 
+            transition: all 0.3s ease;
+        }
+        
+        .save-btn:hover { 
+            background: #15803d; 
+            color: white; 
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.5);
+        }
+        
+        h1, h2, h3 { color: #00FFFF; }
+        .hidden-fees-section h2, .hidden-fees-section h3 { color: #fca5a5; }
+        
+        /* Strategy Section Styles - Matching React Footer */
+        .strategy-section {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .strategy-card {
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .strategy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0066FF, #00FFFF);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .strategy-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+        
+        .strategy-title {
+            color: #00FFFF;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
+        }
+        
+        .strategy-description {
+            color: #AAEEFF;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .strategy-btn {
+            background: linear-gradient(135deg, #0066ff, #00c3ff);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .strategy-btn:hover {
+            background: linear-gradient(135deg, #0080ff, #00ffff);
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+            color: white;
+        }
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            color: #00FFFF;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+        }
+        
+        .hotel-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .hotel-example {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .hotel-name {
+            color: #00FFFF;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .price-comparison {
+            color: #AAEEFF;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .savings-highlight {
+            color: #22c55e;
+            font-weight: 600;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
@@ -74,34 +332,48 @@
         </div>
 
         <div class="savings-calc">
-            <h2 style="color: #92400e; margin-bottom: 30px;">💡 Your Potential Savings Calculator</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
-                <div style="background: white; padding: 20px; border-radius: 10px; color: #92400e;">
-                    <h3>$100/night hotel</h3>
-                    <p><strong>Traditional sites:</strong> $115-125</p>
-                    <p><strong>Deegaan-Riyo:</strong> $100</p>
-                    <p style="color: #16a34a; font-weight: bold;">Save: $15-25/night</p>
+            <h2 style="color: #f59e0b; margin-bottom: 30px;">💡 Real Savings with Our Partner Hotels</h2>
+            <p style="color: #f59e0b; margin-bottom: 30px;">Based on actual rates from our Eastleigh hotel network</p>
+            
+            <div class="hotel-examples">
+                <div class="hotel-example">
+                    <div class="hotel-name">Yare Towers Hotel</div>
+                    <div class="price-comparison">
+                        <strong>Traditional sites:</strong> KSh 8,050-10,350<br>
+                        <strong>Deegaan-Riyo:</strong> KSh 7,000-9,000<br>
+                    </div>
+                    <div class="savings-highlight">Save: KSh 1,050-1,350/night</div>
                 </div>
-                <div style="background: white; padding: 20px; border-radius: 10px; color: #92400e;">
-                    <h3>$200/night hotel</h3>
-                    <p><strong>Traditional sites:</strong> $230-250</p>
-                    <p><strong>Deegaan-Riyo:</strong> $200</p>
-                    <p style="color: #16a34a; font-weight: bold;">Save: $30-50/night</p>
+                
+                <div class="hotel-example">
+                    <div class="hotel-name">Urban Point Hotel</div>
+                    <div class="price-comparison">
+                        <strong>Traditional sites:</strong> KSh 5,750-9,775<br>
+                        <strong>Deegaan-Riyo:</strong> KSh 5,000-8,500<br>
+                    </div>
+                    <div class="savings-highlight">Save: KSh 750-1,275/night</div>
                 </div>
-                <div style="background: white; padding: 20px; border-radius: 10px; color: #92400e;">
-                    <h3>7-night stay</h3>
-                    <p><strong>Traditional sites:</strong> $1,610-1,750</p>
-                    <p><strong>Deegaan-Riyo:</strong> $1,400</p>
-                    <p style="color: #16a34a; font-weight: bold;">Save: $210-350 total</p>
+                
+                <div class="hotel-example">
+                    <div class="hotel-name">Bushra Hotel</div>
+                    <div class="price-comparison">
+                        <strong>Traditional sites:</strong> KSh 2,875-4,600<br>
+                        <strong>Deegaan-Riyo:</strong> KSh 2,500-4,000<br>
+                    </div>
+                    <div class="savings-highlight">Save: KSh 375-600/night</div>
                 </div>
-                <div style="background: white; padding: 20px; border-radius: 10px; color: #92400e;">
-                    <h3>Business trip (monthly)</h3>
-                    <p><strong>Traditional sites:</strong> $920-1,000</p>
-                    <p><strong>Deegaan-Riyo:</strong> $800</p>
-                    <p style="color: #16a34a; font-weight: bold;">Save: $120-200/month</p>
+                
+                <div class="hotel-example">
+                    <div class="hotel-name">7-Night Stay Average</div>
+                    <div class="price-comparison">
+                        <strong>Traditional sites:</strong> KSh 46,025-58,100<br>
+                        <strong>Deegaan-Riyo:</strong> KSh 40,000-50,500<br>
+                    </div>
+                    <div class="savings-highlight">Save: KSh 6,025-7,600 total</div>
                 </div>
             </div>
-            <p style="color: #92400e; font-size: 1.1em; margin-top: 20px;"><strong>Annual savings for regular travelers: $1,500 - $3,000+</strong></p>
+            
+            <p style="color: #f59e0b; font-size: 1.1em; margin-top: 30px;"><strong>Annual savings for regular East Africa travelers: $500 - $1,200+</strong></p>
         </div>
 
         <div class="content">
@@ -167,8 +439,8 @@
             </div>
             <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.2); border-radius: 15px;">
                 <h3>🧮 Total Hidden Costs: 25-35% Above Hotel Rate</h3>
-                <p style="font-size: 1.1em;">On a $150/night hotel, you could pay $190-200 through traditional sites</p>
-                <p style="font-size: 1.2em; font-weight: bold;">With Deegaan-Riyo: You pay exactly $150</p>
+                <p style="font-size: 1.1em;">On our KSh 6,000/night average, you could pay KSh 7,500-8,100 through traditional sites</p>
+                <p style="font-size: 1.2em; font-weight: bold;">With Deegaan-Riyo: You pay exactly KSh 6,000</p>
             </div>
         </div>
 
@@ -195,68 +467,124 @@
         </div>
 
         <div class="how-it-works">
-            <h2 style="color: #0c4a6e; text-align: center;">📱 How Zero Commission Booking Works</h2>
+            <h2 style="color: #00FFFF; text-align: center;">📱 How Zero Commission Booking Works</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 40px 0;">
                 <div style="text-align: center; padding: 25px;">
-                    <div style="background: #0c4a6e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">1</div>
-                    <h3 style="color: #0c4a6e;">Browse Premium Hotels</h3>
-                    <p>Explore our curated collection of top-rated hotels across 5 East African cities with transparent pricing</p>
+                    <div style="background: linear-gradient(135deg, #0066ff, #00c3ff); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">1</div>
+                    <h3 style="color: #00FFFF;">Browse Premium Hotels</h3>
+                    <p style="color: #AAEEFF;">Explore our curated collection of top-rated hotels across 5 East African cities with transparent pricing</p>
                 </div>
                 <div style="text-align: center; padding: 25px;">
-                    <div style="background: #0c4a6e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">2</div>
-                    <h3 style="color: #0c4a6e;">WhatsApp Direct</h3>
-                    <p>Click the WhatsApp button to start a direct conversation with the hotel's reservation team</p>
+                    <div style="background: linear-gradient(135deg, #0066ff, #00c3ff); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">2</div>
+                    <h3 style="color: #00FFFF;">WhatsApp Direct</h3>
+                    <p style="color: #AAEEFF;">Click the WhatsApp button to start a direct conversation with the hotel's reservation team</p>
                 </div>
                 <div style="text-align: center; padding: 25px;">
-                    <div style="background: #0c4a6e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">3</div>
-                    <h3 style="color: #0c4a6e;">Negotiate & Confirm</h3>
-                    <p>Discuss rates, availability, special requests, and confirm your reservation at the direct hotel rate</p>
+                    <div style="background: linear-gradient(135deg, #0066ff, #00c3ff); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">3</div>
+                    <h3 style="color: #00FFFF;">Negotiate & Confirm</h3>
+                    <p style="color: #AAEEFF;">Discuss rates, availability, special requests, and confirm your reservation at the direct hotel rate</p>
                 </div>
                 <div style="text-align: center; padding: 25px;">
-                    <div style="background: #0c4a6e; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">4</div>
-                    <h3 style="color: #0c4a6e;">Pay Hotel Direct</h3>
-                    <p>Pay the hotel directly via their preferred method - no middleman, no commission, no extra fees</p>
+                    <div style="background: linear-gradient(135deg, #0066ff, #00c3ff); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px;">4</div>
+                    <h3 style="color: #00FFFF;">Pay Hotel Direct</h3>
+                    <p style="color: #AAEEFF;">Pay the hotel directly via their preferred method - no middleman, no commission, no extra fees</p>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 40px;">
-                <p style="color: #0c4a6e; font-size: 1.2em; font-weight: bold;">Result: You save 15-25% on every booking while getting better service</p>
+                <p style="color: #00FFFF; font-size: 1.2em; font-weight: bold;">Result: You save 15-25% on every booking while getting better service</p>
+            </div>
+        </div>
+
+        <!-- NEW: Strategic Booking Resources Section -->
+        <div class="strategy-section">
+            <h2 class="section-title">🎯 Maximize Your Commission-Free Strategy</h2>
+            <p style="text-align: center; color: #AAEEFF; font-size: 1.1em; margin-bottom: 30px;">
+                Combine zero-commission savings with expert booking techniques for maximum value
+            </p>
+            
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h3 class="strategy-title">📱 Master WhatsApp Booking</h3>
+                    <p class="strategy-description">
+                        Learn the insider secrets of direct hotel communication. Discover the 4-step process 
+                        that gets you instant confirmation, better rooms, and personalized service every time.
+                    </p>
+                    <div style="margin: 15px 0; font-size: 0.9em; color: #00FFFF;">
+                        ✓ Instant Confirmation • No Apps Required • Multi-Language Support
+                    </div>
+                    <a href="/whatsapp-hotel-booking.html" class="strategy-btn">
+                        Get WhatsApp Booking Guide →
+                    </a>
+                </div>
+                
+                <div class="strategy-card">
+                    <h3 class="strategy-title">🇸🇴 Premium Mogadishu Access</h3>
+                    <p class="strategy-description">
+                        Unlock Somalia's luxury hotel market with military-grade security and VIP treatment. 
+                        Zero commission rates on diplomatic-level accommodations you can't find elsewhere.
+                    </p>
+                    <div style="margin: 15px 0; font-size: 0.9em; color: #00FFFF;">
+                        ✓ Embassy-Grade Security • Luxury at 60% Less • Direct Rates
+                    </div>
+                    <a href="/best-hotels-mogadishu-somalia.html" class="strategy-btn">
+                        Explore Mogadishu Hotels →
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: rgba(0, 255, 255, 0.1); border-radius: 10px;">
+                <h3 style="color: #00FFFF; margin-bottom: 20px;">🏨 Our Partner Hotel Network</h3>
+                <p style="color: #AAEEFF; font-size: 1.1em; margin-bottom: 15px;">
+                    <strong>5 Active Hotels in Nairobi Eastleigh</strong> • <strong>Mogadishu Expansion</strong> • <strong>3 More Hotels Joining Soon</strong>
+                </p>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="/best-hotels-in-eastleigh.html" class="strategy-btn">
+                        Browse Eastleigh Collection
+                    </a>
+                    <a href="/" class="whatsapp-btn" style="margin: 0;">
+                        Start Booking Now
+                    </a>
+                </div>
+                <p style="color: #AAEEFF; font-size: 0.95em; margin-top: 15px;">
+                    From KSh 2,500 budget options to KSh 9,000 luxury suites - all commission-free
+                </p>
             </div>
         </div>
 
         <div class="content">
             <h2>🌍 Available Across East Africa's Premier Destinations</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
-                <div style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%); border: 1px solid rgba(59, 130, 246, 0.3); color: #93c5fd; padding: 20px; border-radius: 10px; text-align: center;">
                     <h3>🇰🇪 Nairobi, Kenya</h3>
                     <p>Save on Eastleigh's premium hotels with cultural amenities and business facilities</p>
                 </div>
-                <div style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%); border: 1px solid rgba(239, 68, 68, 0.3); color: #fca5a5; padding: 20px; border-radius: 10px; text-align: center;">
                     <h3>🇸🇴 Mogadishu, Somalia</h3>
                     <p>Access luxury hotels with premium security at unbeatable direct rates</p>
                 </div>
-                <div style="background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3); color: #86efac; padding: 20px; border-radius: 10px; text-align: center;">
                     <h3>🇪🇹 Addis Ababa, Ethiopia</h3>
                     <p>Book elite accommodations serving Ethiopian-Somali communities commission-free</p>
                 </div>
-                <div style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="background: linear-gradient(135deg, rgba(8, 145, 178, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(6, 182, 212, 0.3); color: #7dd3fc; padding: 20px; border-radius: 10px; text-align: center;">
                     <h3>🇩🇯 Djibouti City</h3>
                     <p>Reserve premium coastal hotels for business and leisure at direct rates</p>
                 </div>
-                <div style="background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 100%); color: white; padding: 20px; border-radius: 10px; text-align: center;">
+                <div style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border: 1px solid rgba(139, 92, 246, 0.3); color: #c4b5fd; padding: 20px; border-radius: 10px; text-align: center;">
                     <h3>🏴 Hargeisa, Somaliland</h3>
                     <p>Secure the best hotels with modern facilities at unmatched prices</p>
                 </div>
             </div>
         </div>
 
-        <div class="content" style="text-align: center; background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%); color: white;">
+        <div class="content" style="text-align: center; background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3); color: #86efac;">
             <h2>💰 Start Saving 15-25% Today</h2>
             <p style="font-size: 1.3em; margin: 30px 0;">Join thousands of smart travelers who refuse to pay unnecessary booking fees</p>
             <div style="margin: 40px 0;">
                 <a href="/" class="whatsapp-btn" style="font-size: 1.2em; margin: 0 10px;">🏨 Browse Zero Commission Hotels</a>
-                <a href="/whatsapp-hotel-booking.html" style="background: transparent; border: 2px solid white; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px;">📱 How WhatsApp Booking Works</a>
+                <a href="/whatsapp-hotel-booking.html" style="background: transparent; border: 2px solid #86efac; color: #86efac; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; transition: all 0.3s ease;">📱 How WhatsApp Booking Works</a>
             </div>
-            <div style="margin-top: 40px; padding: 30px; background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <div style="margin-top: 40px; padding: 30px; background: rgba(34, 197, 94, 0.1); border-radius: 15px;">
                 <h3>🎯 Our Zero Commission Promise</h3>
                 <p style="font-size: 1.1em;">We will NEVER charge you a commission, booking fee, or service charge. Ever. If you find a hidden fee in your Deegaan-Riyo booking, we'll refund your entire stay and pay you $100 for the inconvenience.</p>
                 <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.9;">✅ Direct Hotel Rates Only • ✅ No Markup Ever • ✅ WhatsApp Transparency • ✅ Money-Back Guarantee</p>
@@ -265,68 +593,68 @@
 
         <div class="content">
             <h2>📊 Real Customer Savings Examples</h2>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">See how much our customers actually saved by booking commission-free through Deegaan-Riyo:</p>
+            <p style="font-size: 1.1em; color: #AAEEFF; margin-bottom: 30px;">See how much our customers actually saved by booking commission-free through Deegaan-Riyo:</p>
             
             <div style="display: grid; gap: 25px; margin: 30px 0;">
-                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #16a34a;">
-                    <h4 style="color: #166534; margin-bottom: 15px;">💼 Ahmed - Business Traveler, Mogadishu</h4>
+                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 25px; border-radius: 12px; border-left: 5px solid #22c55e;">
+                    <h4 style="color: #22c55e; margin-bottom: 15px;">💼 Ahmed - Business Traveler, Urban Point Hotel</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
-                            <p><strong>Traditional Site Quote:</strong> $280/night</p>
-                            <p><strong>Deegaan-Riyo Direct:</strong> $220/night</p>
-                            <p style="color: #dc2626;"><strong>Hidden fees avoided:</strong> Commission (15%), service fee ($12), payment processing (3%)</p>
+                            <p style="color: #AAEEFF;"><strong>Traditional Site Quote:</strong> KSh 9,775/night</p>
+                            <p style="color: #AAEEFF;"><strong>Deegaan-Riyo Direct:</strong> KSh 8,500/night</p>
+                            <p style="color: #fca5a5;"><strong>Hidden fees avoided:</strong> Commission (15%), service fee, payment processing</p>
                         </div>
                         <div style="text-align: right;">
-                            <p style="color: #16a34a; font-size: 1.2em; font-weight: bold;">Saved: $60/night</p>
-                            <p style="color: #16a34a;">7-day stay: <strong>$420 saved</strong></p>
+                            <p style="color: #22c55e; font-size: 1.2em; font-weight: bold;">Saved: KSh 1,275/night</p>
+                            <p style="color: #22c55e;">7-day stay: <strong>KSh 8,925 saved</strong></p>
                         </div>
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #16a34a;">
-                    <h4 style="color: #166534; margin-bottom: 15px;">👨‍👩‍👧‍👦 Fatima - Family Vacation, Djibouti</h4>
+                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 25px; border-radius: 12px; border-left: 5px solid #22c55e;">
+                    <h4 style="color: #22c55e; margin-bottom: 15px;">👨‍👩‍👧‍👦 Fatima - Family Stay, HYYAT Golden Hotel</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
-                            <p><strong>Traditional Site Quote:</strong> $185/night (2 rooms)</p>
-                            <p><strong>Deegaan-Riyo Direct:</strong> $160/night (2 rooms)</p>
-                            <p style="color: #dc2626;"><strong>Hidden fees avoided:</strong> Commission (18%), booking fee ($15/room), currency conversion (4%)</p>
+                            <p style="color: #AAEEFF;"><strong>Traditional Site Quote:</strong> KSh 5,175/night (2 rooms)</p>
+                            <p style="color: #AAEEFF;"><strong>Deegaan-Riyo Direct:</strong> KSh 4,500/night (2 rooms)</p>
+                            <p style="color: #fca5a5;"><strong>Hidden fees avoided:</strong> Commission (15%), booking fee per room, currency conversion</p>
                         </div>
                         <div style="text-align: right;">
-                            <p style="color: #16a34a; font-size: 1.2em; font-weight: bold;">Saved: $25/night</p>
-                            <p style="color: #16a34a;">5-day stay: <strong>$125 saved</strong></p>
+                            <p style="color: #22c55e; font-size: 1.2em; font-weight: bold;">Saved: KSh 675/night</p>
+                            <p style="color: #22c55e;">5-day stay: <strong>KSh 3,375 saved</strong></p>
                         </div>
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 25px; border-radius: 12px; border-left: 5px solid #16a34a;">
-                    <h4 style="color: #166534; margin-bottom: 15px;">🏢 Sarah - Corporate Retreat, Addis Ababa</h4>
+                <div style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); padding: 25px; border-radius: 12px; border-left: 5px solid #22c55e;">
+                    <h4 style="color: #22c55e; margin-bottom: 15px;">🏢 Sarah - Group Booking, Baraka Tower Hotel</h4>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                         <div>
-                            <p><strong>Traditional Site Quote:</strong> $1,840 (8 rooms, 2 nights)</p>
-                            <p><strong>Deegaan-Riyo Direct:</strong> $1,520 (8 rooms, 2 nights)</p>
-                            <p style="color: #dc2626;"><strong>Hidden fees avoided:</strong> Commission (20%), group booking fee ($80), service charges</p>
+                            <p style="color: #AAEEFF;"><strong>Traditional Site Quote:</strong> KSh 63,000 (10 rooms, 1 night)</p>
+                            <p style="color: #AAEEFF;"><strong>Deegaan-Riyo Direct:</strong> KSh 54,000 (10 rooms, 1 night)</p>
+                            <p style="color: #fca5a5;"><strong>Hidden fees avoided:</strong> Commission (20%), group booking fee, service charges</p>
                         </div>
                         <div style="text-align: right;">
-                            <p style="color: #16a34a; font-size: 1.2em; font-weight: bold;">Saved: $320 total</p>
-                            <p style="color: #16a34a;">Plus: <strong>Free room upgrade</strong></p>
+                            <p style="color: #22c55e; font-size: 1.2em; font-weight: bold;">Saved: KSh 9,000 total</p>
+                            <p style="color: #22c55e;">Plus: <strong>Free breakfast upgrade</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: white; border-radius: 15px;">
+            <div style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%); border: 1px solid rgba(251, 191, 36, 0.3); color: #fbbf24; border-radius: 15px;">
                 <h3>📈 Average Customer Savings</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 20px 0;">
                     <div>
-                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">22%</p>
+                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">18%</p>
                         <p>Average savings per booking</p>
                     </div>
                     <div>
-                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">$47</p>
+                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">KSh 1,200</p>
                         <p>Average saved per night</p>
                     </div>
                     <div>
-                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">$1,880</p>
+                        <p style="font-size: 2em; font-weight: bold; margin-bottom: 5px;">KSh 48,000</p>
                         <p>Average annual savings</p>
                     </div>
                 </div>
@@ -336,45 +664,59 @@
         <div class="content">
             <h2>❓ Frequently Asked Questions</h2>
             <div style="margin: 30px 0;">
-                <div style="margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                    <h4 style="color: #16a34a; margin-bottom: 10px;">Q: How do you make money if you don't charge commission?</h4>
-                    <p>We partner directly with hotels who pay us a small marketing fee (not passed to you) in exchange for bringing high-quality guests. Hotels prefer this model because they avoid the 15-25% commissions charged by traditional booking sites.</p>
+                <div style="margin-bottom: 25px; padding: 20px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;">
+                    <h4 style="color: #00FFFF; margin-bottom: 10px;">Q: How do you make money if you don't charge commission?</h4>
+                    <p style="color: #AAEEFF;">We partner directly with hotels who pay us a small marketing fee (not passed to you) in exchange for bringing high-quality guests. Hotels prefer this model because they avoid the 15-25% commissions charged by traditional booking sites.</p>
                 </div>
 
-                <div style="margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                    <h4 style="color: #16a34a; margin-bottom: 10px;">Q: Are the hotel rates really the same as if I called directly?</h4>
-                    <p>Yes, absolutely. In fact, many hotels offer slightly better rates through Deegaan-Riyo because they save on commission and want to encourage direct bookings. You can verify this by calling the hotel yourself.</p>
+                <div style="margin-bottom: 25px; padding: 20px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;">
+                    <h4 style="color: #00FFFF; margin-bottom: 10px;">Q: Are the hotel rates really the same as if I called directly?</h4>
+                    <p style="color: #AAEEFF;">Yes, absolutely. In fact, many hotels offer slightly better rates through Deegaan-Riyo because they save on commission and want to encourage direct bookings. You can verify this by calling the hotel yourself.</p>
                 </div>
 
-                <div style="margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                    <h4 style="color: #16a34a; margin-bottom: 10px;">Q: What if I need to cancel or change my booking?</h4>
-                    <p>Since you book directly with the hotel via WhatsApp, changes are handled by the hotel's standard policy - no additional fees from us. Many hotels are more flexible with direct bookings than with third-party reservations.</p>
+                <div style="margin-bottom: 25px; padding: 20px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;">
+                    <h4 style="color: #00FFFF; margin-bottom: 10px;">Q: What if I need to cancel or change my booking?</h4>
+                    <p style="color: #AAEEFF;">Since you book directly with the hotel via WhatsApp, changes are handled by the hotel's standard policy - no additional fees from us. Many hotels are more flexible with direct bookings than with third-party reservations.</p>
                 </div>
 
-                <div style="margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                    <h4 style="color: #16a34a; margin-bottom: 10px;">Q: Is my booking protected if something goes wrong?</h4>
-                    <p>Yes. You have a direct relationship with the hotel, which is actually stronger protection than booking through a third party. Plus, our team assists with any issues, and hotels prioritize resolving problems for direct guests.</p>
+                <div style="margin-bottom: 25px; padding: 20px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;">
+                    <h4 style="color: #00FFFF; margin-bottom: 10px;">Q: Is my booking protected if something goes wrong?</h4>
+                    <p style="color: #AAEEFF;">Yes. You have a direct relationship with the hotel, which is actually stronger protection than booking through a third party. Plus, our team assists with any issues, and hotels prioritize resolving problems for direct guests.</p>
                 </div>
 
-                <div style="margin-bottom: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-                    <h4 style="color: #16a34a; margin-bottom: 10px;">Q: Can I earn points or miles for these bookings?</h4>
-                    <p>Yes! Since you're booking directly with the hotel, you earn full loyalty points, elite benefits, and can use your status for upgrades - benefits often not available through third-party sites.</p>
+                <div style="margin-bottom: 25px; padding: 20px; background: rgba(0, 255, 255, 0.05); border: 1px solid rgba(0, 255, 255, 0.2); border-radius: 8px;">
+                    <h4 style="color: #00FFFF; margin-bottom: 10px;">Q: Can I earn points or miles for these bookings?</h4>
+                    <p style="color: #AAEEFF;">Yes! Since you're booking directly with the hotel, you earn full loyalty points, elite benefits, and can use your status for upgrades - benefits often not available through third-party sites.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Hidden footer for internal linking -->
+    <!-- Enhanced footer for internal linking -->
     <footer style="display: none;">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/whatsapp-hotel-booking.html">WhatsApp Booking</a>
-            <a href="/best-hotels-mogadishu-somalia.html">Hotels Mogadishu</a>
-            <a href="/top-hotels-eastleigh-nairobi.html">Hotels Nairobi</a>
-            <a href="/elite-hotels-addis-ababa.html">Hotels Addis Ababa</a>
-            <a href="/premium-hotels-djibouti.html">Hotels Djibouti</a>
-            <a href="/top-hotels-hargeisa-somaliland.html">Hotels Hargeisa</a>
-            <a href="/about-deegaan-riyo.html">About</a>
+        <nav aria-label="Internal site navigation">
+            <!-- Primary pages -->
+            <a href="/" title="Deegaan-Riyo Homepage">Home</a>
+            <a href="/about-deegaan-riyo.html" title="About Deegaan-Riyo platform">About Deegaan-Riyo</a>
+            
+            <!-- Service pages - strategic linking -->
+            <a href="/whatsapp-hotel-booking.html" title="WhatsApp hotel booking guide - instant confirmation">WhatsApp Hotel Booking</a>
+            <a href="/zero-commission-booking.html" title="Zero commission hotel booking - save 15-25%">Zero Commission Booking</a>
+            
+            <!-- City pages - regional authority -->
+            <a href="/best-hotels-mogadishu-somalia.html" title="Best hotels in Mogadishu Somalia">Best Hotels Mogadishu</a>
+            <a href="/hotels-in-eastleigh-nairobi.html" title="Hotels in Eastleigh Nairobi">Hotels Eastleigh Nairobi</a>
+            <a href="/best-hotels-in-eastleigh.html" title="Best hotels in Eastleigh">Best Hotels Eastleigh</a>
+            <a href="/top-5-hotels-eastleigh-nairobi.html" title="Top 5 hotels Eastleigh">Top 5 Hotels Eastleigh</a>
+            <a href="/eastleigh-hotels.html" title="Eastleigh hotels directory">Eastleigh Hotels Directory</a>
+            
+            <!-- Support pages -->
+            <a href="/contact.html" title="Contact Deegaan-Riyo">Contact</a>
+            <a href="/why-book-with-us.html" title="Why book with Deegaan-Riyo">Why Book With Us</a>
+            
+            <!-- SEO anchor links -->
+            <a href="/whatsapp-hotel-booking.html#booking-process" title="WhatsApp booking process steps">How WhatsApp Booking Works</a>
+            <a href="/best-hotels-mogadishu-somalia.html#security-standards" title="Mogadishu hotel security">Hotel Security Standards</a>
         </nav>
     </footer>
 </body>

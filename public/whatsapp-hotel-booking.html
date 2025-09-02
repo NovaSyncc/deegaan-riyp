@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+window.location.replace('/');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Hotel Booking East Africa - Instant Confirmation | Deegaan-Riyo 2025</title>
@@ -36,120 +41,297 @@
     </script>
     
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; background: #f8f9fa; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            background: #050A14;
+            color: #fff;
+        }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        .hero { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin: 20px; }
-        .content { background: white; padding: 40px; border-radius: 15px; margin: 30px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
-        .step-card { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 30px; border-radius: 12px; text-align: center; border-left: 5px solid #25D366; }
-        .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
-        .benefit-card { background: #25D366; color: white; padding: 25px; border-radius: 10px; text-align: center; }
-        .cities-section { background: linear-gradient(135deg, #005f73 0%, #0a9396 100%); color: white; padding: 40px; border-radius: 15px; margin: 30px 0; }
-        .whatsapp-btn { background: #25D366; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block; margin: 10px; font-size: 1.1em; }
-        .whatsapp-btn:hover { background: #128C7E; color: white; }
-        h1, h2, h3 { color: #005f73; }
+        
+        .hero { 
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            border-radius: 15px; 
+            margin: 20px; 
+        }
+        
+        .content { 
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 20px; 
+            backdrop-filter: blur(10px);
+        }
+        
+        .steps-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin: 40px 0; 
+        }
+        
+        .step-card { 
+            background: rgba(0, 255, 255, 0.08);
+            padding: 30px; 
+            border-radius: 12px; 
+            text-align: center; 
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        }
+        
+        .benefits-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+            margin: 30px 0; 
+        }
+        
+        .benefit-card { 
+            background: linear-gradient(135deg, #0066FF, #00FFFF);
+            color: white; 
+            padding: 25px; 
+            border-radius: 10px; 
+            text-align: center; 
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+        
+        .cities-section { 
+            background: linear-gradient(135deg, #005f73 0%, #0a9396 100%); 
+            color: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            margin: 30px 0; 
+        }
+        
+        .whatsapp-btn { 
+            background: #25D366; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 25px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-block; 
+            margin: 10px; 
+            font-size: 1.1em; 
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover { 
+            background: #128C7E; 
+            color: white; 
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+        }
+        
+        h1, h2, h3 { color: #00FFFF; }
         .cities-section h2, .cities-section h3 { color: white; }
+        
+        /* Related Resources Section */
+        .related-resources {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .resource-card {
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 30px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #0066FF, #00FFFF);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .resource-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+        
+        .resource-title {
+            color: #00FFFF;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(0, 195, 255, 0.5);
+        }
+        
+        .resource-description {
+            color: #AAEEFF;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .resource-btn {
+            background: linear-gradient(135deg, #0066ff, #00c3ff);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .resource-btn:hover {
+            background: linear-gradient(135deg, #0080ff, #00ffff);
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+            color: white;
+        }
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            color: #00FFFF;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="hero">
-            <h1>📱 WhatsApp Hotel Booking Revolution</h1>
+            <h1>WhatsApp Hotel Booking Revolution</h1>
             <p style="font-size: 1.3em; margin: 20px 0;">Book Premium East African Hotels Instantly via WhatsApp</p>
             <p style="font-size: 1.1em; opacity: 0.9;">No Apps • No Registration • No Commission • Instant Confirmation</p>
-            <a href="/" class="whatsapp-btn">🚀 Start Booking Now</a>
+            <a href="/" class="whatsapp-btn">Start Booking Now</a>
         </div>
 
         <div class="content">
-            <h2>🎯 Why WhatsApp Hotel Booking?</h2>
-            <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">In East Africa, WhatsApp isn't just messaging—it's the business lifeline. Deegaan-Riyo harnesses this power to revolutionize hotel bookings across 5 major cities.</p>
+            <h2>Why WhatsApp Hotel Booking?</h2>
+            <p style="font-size: 1.1em; color: #AAEEFF; margin-bottom: 30px;">In East Africa, WhatsApp isn't just messaging—it's the business lifeline. Deegaan-Riyo harnesses this power to revolutionize hotel bookings across 5 major cities.</p>
             
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <h3>⚡ Instant Response</h3>
+                    <h3>Instant Response</h3>
                     <p>Direct chat with hotel staff for immediate answers and booking confirmation</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>🚫 No Apps Required</h3>
+                    <h3>No Apps Required</h3>
                     <p>Use WhatsApp you already have - no downloads, no new accounts</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>💰 Zero Commission</h3>
+                    <h3>Zero Commission</h3>
                     <p>Pay hotel rates directly - no hidden fees or booking platform markups</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>🌍 Multi-Language</h3>
+                    <h3>Multi-Language</h3>
                     <p>Chat in English, Somali, Swahili, Arabic - whatever you're comfortable with</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>📋 Simple Process</h3>
+                    <h3>Simple Process</h3>
                     <p>Browse → Click → Chat → Book. That's it. No complex forms or procedures</p>
                 </div>
                 <div class="benefit-card">
-                    <h3>🔒 Secure & Private</h3>
+                    <h3>Secure & Private</h3>
                     <p>WhatsApp's end-to-end encryption keeps your booking details private</p>
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <h2>📋 How WhatsApp Booking Works</h2>
+            <h2>How WhatsApp Booking Works</h2>
             <div class="steps-grid">
                 <div class="step-card">
                     <h3 style="color: #25D366; font-size: 2em;">1</h3>
-                    <h4>🔍 Browse Hotels</h4>
+                    <h4>Browse Hotels</h4>
                     <p>Explore our curated collection of Top 10 hotels in each city with detailed photos, amenities, and pricing</p>
                 </div>
                 <div class="step-card">
                     <h3 style="color: #25D366; font-size: 2em;">2</h3>
-                    <h4>📱 Click WhatsApp</h4>
+                    <h4>Click WhatsApp</h4>
                     <p>Hit the green WhatsApp button on your chosen hotel - instantly opens a chat with the hotel team</p>
                 </div>
                 <div class="step-card">
                     <h3 style="color: #25D366; font-size: 2em;">3</h3>
-                    <h4>💬 Chat & Confirm</h4>
+                    <h4>Chat & Confirm</h4>
                     <p>Discuss dates, rooms, special requests directly with hotel staff. Get instant availability and pricing</p>
                 </div>
                 <div class="step-card">
                     <h3 style="color: #25D366; font-size: 2em;">4</h3>
-                    <h4>✅ Book Direct</h4>
+                    <h4>Book Direct</h4>
                     <p>Confirm your reservation through WhatsApp. Pay directly to hotel - no intermediaries, no extra fees</p>
                 </div>
             </div>
         </div>
 
         <div class="cities-section">
-            <h2>🌍 WhatsApp Booking Available in 5 Major Cities</h2>
+            <h2>WhatsApp Booking Available in 5 Major Cities</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0;">
                 <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                    <h3>🇰🇪 Nairobi (Eastleigh)</h3>
+                    <h3>Nairobi (Eastleigh)</h3>
                     <p>Premium hotels with cultural amenities</p>
                 </div>
                 <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                    <h3>🇸🇴 Mogadishu</h3>
+                    <h3>Mogadishu</h3>
                     <p>Luxury accommodations with top security</p>
                 </div>
                 <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                    <h3>🇪🇹 Addis Ababa</h3>
+                    <h3>Addis Ababa</h3>
                     <p>Elite hotels serving Ethiopian-Somali communities</p>
                 </div>
                 <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                    <h3>🇩🇯 Djibouti City</h3>
+                    <h3>Djibouti City</h3>
                     <p>Premium coastal business hotels</p>
                 </div>
                 <div style="text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
-                    <h3>🏴 Hargeisa</h3>
+                    <h3>Hargeisa</h3>
                     <p>Modern facilities with traditional hospitality</p>
                 </div>
             </div>
         </div>
 
         <div class="content">
-            <h2>💡 Perfect for East African Travelers</h2>
+            <h2>Perfect for East African Travelers</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0;">
                 <div>
-                    <h3>🏢 Business Travelers</h3>
-                    <ul>
+                    <h3>Business Travelers</h3>
+                    <ul style="color: #AAEEFF;">
                         <li>Quick booking between meetings</li>
                         <li>Direct hotel contact for special requirements</li>
                         <li>Expense receipt via WhatsApp</li>
@@ -157,8 +339,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>👨‍👩‍👧‍👦 Family Travelers</h3>
-                    <ul>
+                    <h3>Family Travelers</h3>
+                    <ul style="color: #AAEEFF;">
                         <li>Discuss family room arrangements</li>
                         <li>Ask about child-friendly amenities</li>
                         <li>Confirm halal dining options</li>
@@ -166,8 +348,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h3>✈️ International Visitors</h3>
-                    <ul>
+                    <h3>International Visitors</h3>
+                    <ul style="color: #AAEEFF;">
                         <li>Airport transfer arrangements</li>
                         <li>Currency exchange information</li>
                         <li>Local area recommendations</li>
@@ -177,22 +359,57 @@
             </div>
         </div>
 
-        <div class="content" style="text-align: center; background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);">
-            <h2 style="color: #856404;">🚀 Start Booking via WhatsApp Today</h2>
-            <p style="font-size: 1.2em; color: #856404; margin: 20px 0;">Experience the future of hotel booking - simple, direct, and commission-free</p>
-            <a href="/" class="whatsapp-btn">📱 Browse Hotels & Book Now</a>
-            <p style="margin-top: 20px; color: #856404;"><strong>Join thousands who've discovered the easiest way to book premium East African hotels</strong></p>
+        <!-- NEW: Related Booking Resources Section -->
+        <div class="related-resources">
+            <h2 class="section-title">Related Booking Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3 class="resource-title">Save More Money</h3>
+                    <p class="resource-description">Learn how WhatsApp booking eliminates commission fees completely</p>
+                    <a href="/zero-commission-booking.html" class="resource-btn">Discover Zero Commission Savings</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h3 class="resource-title">Premium Mogadishu Hotels</h3>
+                    <p class="resource-description">Explore luxury accommodations with world-class security via WhatsApp</p>
+                    <a href="/best-hotels-mogadishu-somalia.html" class="resource-btn">View Mogadishu Collection</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" style="text-align: center; background: linear-gradient(135deg, rgba(255, 243, 205, 0.1) 0%, rgba(255, 234, 167, 0.1) 100%); border: 1px solid rgba(255, 215, 0, 0.3);">
+            <h2 style="color: #FFD700;">Start Booking via WhatsApp Today</h2>
+            <p style="font-size: 1.2em; color: #AAEEFF; margin: 20px 0;">Experience the future of hotel booking - simple, direct, and commission-free</p>
+            <a href="/" class="whatsapp-btn">Browse Hotels & Book Now</a>
+            <p style="margin-top: 20px; color: #AAEEFF;"><strong>Join thousands who've discovered the easiest way to book premium East African hotels</strong></p>
         </div>
     </div>
 
-    <!-- Hidden footer for internal linking -->
+    <!-- Enhanced footer for internal linking -->
     <footer style="display: none;">
-        <nav>
-            <a href="/">Home</a>
-            <a href="/zero-commission-booking.html">Zero Commission Booking</a>
-            <a href="/best-hotels-mogadishu-somalia.html">Hotels in Mogadishu</a>
-            <a href="/top-hotels-eastleigh-nairobi.html">Hotels in Nairobi</a>
-            <a href="/about-deegaan-riyo.html">About Deegaan-Riyo</a>
+        <nav aria-label="Internal site navigation">
+            <!-- Primary pages -->
+            <a href="/" title="Deegaan-Riyo Homepage">Home</a>
+            <a href="/about-deegaan-riyo.html" title="About Deegaan-Riyo platform">About Deegaan-Riyo</a>
+            
+            <!-- Service pages - strategic linking -->
+            <a href="/zero-commission-booking.html" title="Zero commission hotel booking">Zero Commission Booking</a>
+            <a href="/whatsapp-hotel-booking.html" title="WhatsApp hotel booking guide">WhatsApp Hotel Booking</a>
+            
+            <!-- City pages - regional authority -->
+            <a href="/best-hotels-mogadishu-somalia.html" title="Best hotels in Mogadishu Somalia">Best Hotels Mogadishu</a>
+            <a href="/hotels-in-eastleigh-nairobi.html" title="Hotels in Eastleigh Nairobi">Hotels Eastleigh Nairobi</a>
+            <a href="/best-hotels-in-eastleigh.html" title="Best hotels in Eastleigh">Best Hotels Eastleigh</a>
+            <a href="/top-5-hotels-eastleigh-nairobi.html" title="Top 5 hotels Eastleigh">Top 5 Hotels Eastleigh</a>
+            <a href="/eastleigh-hotels.html" title="Eastleigh hotels directory">Eastleigh Hotels Directory</a>
+            
+            <!-- Support pages -->
+            <a href="/contact.html" title="Contact Deegaan-Riyo">Contact</a>
+            <a href="/why-book-with-us.html" title="Why book with Deegaan-Riyo">Why Book With Us</a>
+            
+            <!-- SEO anchor links -->
+            <a href="/zero-commission-booking.html#savings-calculator" title="Hotel savings calculator">Calculate Your Savings</a>
+            <a href="/best-hotels-mogadishu-somalia.html#security-standards" title="Mogadishu hotel security">Hotel Security Standards</a>
         </nav>
     </footer>
 </body>
