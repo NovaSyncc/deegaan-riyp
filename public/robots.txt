@@ -1,59 +1,108 @@
+# Deegaan-Riyo: Top 10 Hotels East Africa - WhatsApp Booking Platform
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Allow: /
 
-# Explicitly allow all static HTML pages for SEO
-Allow: /about.html
+# Core Platform Pages
+Allow: /about-deegaan-riyo.html
 Allow: /contact.html
-Allow: /eastleigh-hotels.html
-Allow: /why-book-with-us.html
+Allow: /how-it-works.html
+Allow: /why-choose-deegaan-riyo.html
 
-# Phase 1 Priority Pages - Eastleigh Focus
-Allow: /hotels-in-eastleigh-nairobi.html
-Allow: /best-hotels-in-eastleigh.html
-Allow: /top-5-hotels-eastleigh-nairobi.html
-Allow: /budget-hotels-eastleigh.html
-Allow: /luxury-hotels-eastleigh.html
+# Multi-City Hotel Pages - Primary Markets
+Allow: /top-hotels-eastleigh-nairobi.html
+Allow: /best-hotels-mogadishu-somalia.html
+Allow: /elite-hotels-addis-ababa.html
+Allow: /premium-hotels-djibouti.html
+Allow: /top-hotels-hargeisa-somaliland.html
 
-# Phase 2 Expansion Pages - Other Cities
-Allow: /hotels-in-mogadishu-somalia.html
-Allow: /best-hotels-mogadishu.html
-Allow: /hotels-in-addis-ababa-ethiopia.html
-Allow: /hotels-in-djibouti-city.html
-Allow: /hotels-in-hargeisa-somaliland.html
+# Service-Specific Landing Pages
+Allow: /whatsapp-hotel-booking.html
+Allow: /zero-commission-booking.html
+Allow: /somali-community-hotels.html
+Allow: /east-africa-hotel-network.html
 
-# Blog Section for Content Marketing
+# City-Specific Deep Pages
+Allow: /eastleigh-nairobi/
+Allow: /mogadishu-somalia/
+Allow: /addis-ababa-ethiopia/
+Allow: /djibouti-city/
+Allow: /hargeisa-somaliland/
+
+# Blog & Content Marketing
 Allow: /blog/
-Allow: /blog/monthly-eastleigh-hotels-update.html
-Allow: /blog/mogadishu-hotels-review.html
+Allow: /blog/east-africa-hotel-guide.html
+Allow: /blog/whatsapp-booking-revolution.html
+Allow: /blog/somali-hospitality-standards.html
+Allow: /blog/travel-guide-east-africa.html
 
-# Important SEO files
+# Essential SEO Files
 Allow: /sitemap.xml
 Allow: /favicon.ico
-Allow: /logo.png
+Allow: /deegaan-riyo-logo.png
+Allow: /deegaan-riyo-banner.jpg
 Allow: /manifest.json
 
-# Image assets for hotel listings
+# Hotel Images & Media Assets
 Allow: /images/
 Allow: /images/hotels/
+Allow: /images/cities/
+Allow: /media/
 
-# Disallow source code and development files
+# API Endpoints (if applicable)
+Allow: /api/hotels
+Allow: /api/cities
+Allow: /api/search
+
+# Block Development Files & Sensitive Data
 Disallow: /src/
 Disallow: /.git/
 Disallow: /node_modules/
-Disallow: /.env
-Disallow: /package.json
-Disallow: /package-lock.json
+Disallow: /.env*
+Disallow: /package*.json
 Disallow: /.gitignore
-
-# Block common bot spam patterns
-Disallow: /wp-admin/
+Disallow: /build/
 Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /analytics/
+
+# Block Common Attack Vectors
+Disallow: /wp-admin/
 Disallow: /wp-content/
 Disallow: /wp-includes/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signin/
+Disallow: /register/
 
-# Sitemap location
+# Block Test/Development Routes
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /beta/
+
+# High-Priority Sitemap Location
 Sitemap: https://www.deegaanriyo.online/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# Crawl Settings
 Crawl-delay: 1
+
+# Specific Instructions for Major Search Engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 2
+
+# Block Aggressive/Harmful Crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

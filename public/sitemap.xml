@@ -1,63 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://www.deegaanriyo.online/</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Eastleigh Hotel Pages - Only existing files -->
+  <!-- Core Platform Pages -->
+  <url>
+    <loc>https://www.deegaanriyo.online/about-deegaan-riyo.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/contact.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/how-it-works.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Service-Specific High-Value Pages -->
+  <url>
+    <loc>https://www.deegaanriyo.online/whatsapp-hotel-booking.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/zero-commission-booking.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/somali-community-hotels.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/east-africa-hotel-network.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- PRIMARY CITY PAGES - NAIROBI/EASTLEIGH (Existing Market) -->
+  <url>
+    <loc>https://www.deegaanriyo.online/top-hotels-eastleigh-nairobi.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <url>
     <loc>https://www.deegaanriyo.online/hotels-in-eastleigh-nairobi.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.deegaanriyo.online/best-hotels-in-eastleigh.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.deegaanriyo.online/top-5-hotels-eastleigh-nairobi.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.deegaanriyo.online/eastleigh-hotels.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Supporting Pages -->
+  <!-- EXPANSION MARKETS - HIGH PRIORITY -->
+  
+  <!-- MOGADISHU, SOMALIA -->
   <url>
-    <loc>https://www.deegaanriyo.online/about.html</loc>
-    <lastmod>2025-01-10</lastmod>
+    <loc>https://www.deegaanriyo.online/best-hotels-mogadishu-somalia.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/top-10-hotels-mogadishu.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/luxury-hotels-mogadishu.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ADDIS ABABA, ETHIOPIA -->
+  <url>
+    <loc>https://www.deegaanriyo.online/elite-hotels-addis-ababa.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/best-hotels-addis-ababa-ethiopia.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/somali-hotels-addis-ababa.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- DJIBOUTI CITY, DJIBOUTI -->
+  <url>
+    <loc>https://www.deegaanriyo.online/premium-hotels-djibouti.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/best-hotels-djibouti-city.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/top-hotels-djibouti.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- HARGEISA, SOMALILAND -->
+  <url>
+    <loc>https://www.deegaanriyo.online/top-hotels-hargeisa-somaliland.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/best-hotels-hargeisa.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/luxury-hotels-hargeisa.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- CITY-SPECIFIC DIRECTORY PAGES -->
+  <url>
+    <loc>https://www.deegaanriyo.online/eastleigh-nairobi/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/mogadishu-somalia/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/addis-ababa-ethiopia/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/djibouti-city/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/hargeisa-somaliland/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BLOG & CONTENT MARKETING -->
+  <url>
+    <loc>https://www.deegaanriyo.online/blog/</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/blog/east-africa-hotel-guide.html</loc>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.deegaanriyo.online/contact.html</loc>
-    <lastmod>2025-01-10</lastmod>
+    <loc>https://www.deegaanriyo.online/blog/whatsapp-booking-revolution.html</loc>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/blog/somali-hospitality-standards.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/blog/travel-guide-east-africa.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.deegaanriyo.online/blog/hotel-investment-opportunities.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- LEGACY PAGES (Keep for SEO continuity) -->
+  <url>
+    <loc>https://www.deegaanriyo.online/about.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://www.deegaanriyo.online/why-book-with-us.html</loc>
-    <lastmod>2025-01-10</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
