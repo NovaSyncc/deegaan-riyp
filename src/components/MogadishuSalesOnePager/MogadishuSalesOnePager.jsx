@@ -157,7 +157,7 @@ const MogadishuSalesOnePager = () => {
                 </tr>
                 <tr>
                   <td>🏢 <strong>Business Hotels</strong></td>
-                  <td>$70-$120 per night</td>
+                  <td>$40-$120 per night</td>
                   <td>$350 (6 months)<br/><em>$58.33/month</em></td>
                   <td>$500 (12 months)<br/><em>$41.67/month</em><br/><strong>29% OFF</strong></td>
                   <td><strong>Save $200/year</strong><br/>vs 6-month plan</td>
