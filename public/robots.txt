@@ -4,56 +4,36 @@
 User-agent: *
 Allow: /
 
-# Core Platform Pages
+# Core Platform Pages (Existing Only)
 Allow: /about-deegaan-riyo.html
 Allow: /contact.html
-Allow: /how-it-works.html
-Allow: /why-choose-deegaan-riyo.html
+Allow: /why-book-with-us.html
 
-# Multi-City Hotel Pages - Primary Markets
-Allow: /top-hotels-eastleigh-nairobi.html
+# Eastleigh Hotel Pages (Existing)
+Allow: /hotels-in-eastleigh-nairobi.html
+Allow: /best-hotels-in-eastleigh.html
+Allow: /top-5-hotels-eastleigh-nairobi.html
+Allow: /eastleigh-hotels.html
+
+# Mogadishu Expansion (Existing)
 Allow: /best-hotels-mogadishu-somalia.html
-Allow: /elite-hotels-addis-ababa.html
-Allow: /premium-hotels-djibouti.html
-Allow: /top-hotels-hargeisa-somaliland.html
 
-# Service-Specific Landing Pages
+# Service-Specific Landing Pages (Existing)
 Allow: /whatsapp-hotel-booking.html
 Allow: /zero-commission-booking.html
-Allow: /somali-community-hotels.html
-Allow: /east-africa-hotel-network.html
 
-# City-Specific Deep Pages
-Allow: /eastleigh-nairobi/
-Allow: /mogadishu-somalia/
-Allow: /addis-ababa-ethiopia/
-Allow: /djibouti-city/
-Allow: /hargeisa-somaliland/
-
-# Blog & Content Marketing
-Allow: /blog/
-Allow: /blog/east-africa-hotel-guide.html
-Allow: /blog/whatsapp-booking-revolution.html
-Allow: /blog/somali-hospitality-standards.html
-Allow: /blog/travel-guide-east-africa.html
-
-# Essential SEO Files
+# Essential SEO Files (Existing)
 Allow: /sitemap.xml
 Allow: /favicon.ico
-Allow: /deegaan-riyo-logo.png
-Allow: /deegaan-riyo-banner.jpg
+Allow: /android-chrome-192x192.png
+Allow: /android-chrome-512x512.png
+Allow: /apple-touch-icon.png
+Allow: /favicon-32x32.png
+Allow: /favicon-16x16.png
 Allow: /manifest.json
 
 # Hotel Images & Media Assets
 Allow: /images/
-Allow: /images/hotels/
-Allow: /images/cities/
-Allow: /media/
-
-# API Endpoints (if applicable)
-Allow: /api/hotels
-Allow: /api/cities
-Allow: /api/search
 
 # Block Development Files & Sensitive Data
 Disallow: /src/
@@ -71,7 +51,6 @@ Disallow: /analytics/
 Disallow: /wp-admin/
 Disallow: /wp-content/
 Disallow: /wp-includes/
-Disallow: /admin/
 Disallow: /login/
 Disallow: /signin/
 Disallow: /register/
