@@ -134,7 +134,7 @@ const MogadishuSalesOnePager = () => {
 
         <section className="section">
           <h2>Partnership Investment</h2>
-          <p>Choose the plan that fits your hotel's profile based on what you charge per night. <strong>Minimum commitment: 4 months</strong> - All plans come with exclusive discounts!</p>
+          <p>Choose the plan that fits your hotel's profile based on what you charge per night. <strong>Minimum commitment: 6 months</strong> - All plans come with exclusive discounts!</p>
           
           <div className="pricing-table-container">
             <table className="pricing-table">
@@ -142,7 +142,6 @@ const MogadishuSalesOnePager = () => {
                 <tr>
                   <th>Hotel Category</th>
                   <th>If You Charge Per Night</th>
-                  <th>4-Month Plan</th>
                   <th>6-Month Plan</th>
                   <th>12-Month Plan</th>
                   <th>Best Value</th>
@@ -152,46 +151,42 @@ const MogadishuSalesOnePager = () => {
                 <tr>
                   <td>🌟 <strong>Luxury Hotels</strong></td>
                   <td>$50-$200+ per night</td>
-                  <td>$540 (4 months)<br/><em>$135/month</em><br/><strong>10% OFF</strong></td>
-                  <td>$720 (6 months)<br/><em>$120/month</em><br/><strong>20% OFF</strong></td>
-                  <td>$1,200 (12 months)<br/><em>$100/month</em><br/><strong>33% OFF</strong></td>
-                  <td><strong>Save $600/year</strong><br/>vs regular pricing</td>
+                  <td>$400 (6 months)<br/><em>$66.67/month</em></td>
+                  <td>$600 (12 months)<br/><em>$50/month</em><br/><strong>25% OFF</strong></td>
+                  <td><strong>Save $200/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>🏢 <strong>Business Hotels</strong></td>
                   <td>$70-$120 per night</td>
-                  <td>$432 (4 months)<br/><em>$108/month</em><br/><strong>10% OFF</strong></td>
-                  <td>$576 (6 months)<br/><em>$96/month</em><br/><strong>20% OFF</strong></td>
-                  <td>$960 (12 months)<br/><em>$80/month</em><br/><strong>33% OFF</strong></td>
-                  <td><strong>Save $480/year</strong><br/>vs regular pricing</td>
+                  <td>$300 (6 months)<br/><em>$50/month</em></td>
+                  <td>$450 (12 months)<br/><em>$37.50/month</em><br/><strong>25% OFF</strong></td>
+                  <td><strong>Save $150/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>🏨 <strong>Standard Hotels</strong></td>
                   <td>$40-$80 per night</td>
-                  <td>$288 (4 months)<br/><em>$72/month</em><br/><strong>10% OFF</strong></td>
-                  <td>$384 (6 months)<br/><em>$64/month</em><br/><strong>20% OFF</strong></td>
-                  <td>$640 (12 months)<br/><em>$53.33/month</em><br/><strong>33% OFF</strong></td>
-                  <td><strong>Save $320/year</strong><br/>vs regular pricing</td>
+                  <td>$250 (6 months)<br/><em>$41.67/month</em></td>
+                  <td>$375 (12 months)<br/><em>$31.25/month</em><br/><strong>25% OFF</strong></td>
+                  <td><strong>Save $125/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>💼 <strong>Budget Hotels</strong></td>
                   <td>$25-$60 per night</td>
-                  <td>$180 (4 months)<br/><em>$45/month</em><br/><strong>10% OFF</strong></td>
-                  <td>$240 (6 months)<br/><em>$40/month</em><br/><strong>20% OFF</strong></td>
-                  <td>$400 (12 months)<br/><em>$33.33/month</em><br/><strong>33% OFF</strong></td>
-                  <td><strong>Save $200/year</strong><br/>vs regular pricing</td>
+                  <td>$200 (6 months)<br/><em>$33.33/month</em></td>
+                  <td>$300 (12 months)<br/><em>$25/month</em><br/><strong>25% OFF</strong></td>
+                  <td><strong>Save $100/year</strong><br/>vs 6-month plan</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="pricing-note"><em>All plans include a small one-time setup fee (20% of your monthly rate). Payment required upfront for chosen commitment period. Regular monthly rates: Luxury $150, Business $120, Standard $80, Budget $50.</em></p>
+          <p className="pricing-note"><em>Payment required upfront for chosen commitment period. All plans include complete digital transformation package at no extra cost.</em></p>
         </section>
 
         <section className="section">
           <h2>Your Success Journey Starts Here</h2>
           <p>Ready to join East Africa's most exclusive hotel showcase? Here's what happens:</p>
           <ol className="success-steps">
-            <li>Choose your partnership level and commitment period (4, 6, or 12 months)</li>
+            <li>Choose your partnership level and commitment period (6 or 12 months)</li>
             <li>We schedule your professional photo shoot within 7 days</li>
             <li>Your hotel goes live across all our channels</li>
             <li>Quality guests start connecting via WhatsApp</li>
