@@ -151,30 +151,30 @@ const MogadishuSalesOnePager = () => {
                 <tr>
                   <td>🌟 <strong>Luxury Hotels</strong></td>
                   <td>$50-$200+ per night</td>
-                  <td>$400 (6 months)<br/><em>$66.67/month</em></td>
-                  <td>$600 (12 months)<br/><em>$50/month</em><br/><strong>25% OFF</strong></td>
-                  <td><strong>Save $200/year</strong><br/>vs 6-month plan</td>
+                  <td>$450 (6 months)<br/><em>$75/month</em></td>
+                  <td>$650 (12 months)<br/><em>$54.17/month</em><br/><strong>28% OFF</strong></td>
+                  <td><strong>Save $250/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>🏢 <strong>Business Hotels</strong></td>
                   <td>$70-$120 per night</td>
-                  <td>$300 (6 months)<br/><em>$50/month</em></td>
-                  <td>$450 (12 months)<br/><em>$37.50/month</em><br/><strong>25% OFF</strong></td>
-                  <td><strong>Save $150/year</strong><br/>vs 6-month plan</td>
+                  <td>$350 (6 months)<br/><em>$58.33/month</em></td>
+                  <td>$500 (12 months)<br/><em>$41.67/month</em><br/><strong>29% OFF</strong></td>
+                  <td><strong>Save $200/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>🏨 <strong>Standard Hotels</strong></td>
                   <td>$40-$80 per night</td>
-                  <td>$250 (6 months)<br/><em>$41.67/month</em></td>
-                  <td>$375 (12 months)<br/><em>$31.25/month</em><br/><strong>25% OFF</strong></td>
-                  <td><strong>Save $125/year</strong><br/>vs 6-month plan</td>
+                  <td>$300 (6 months)<br/><em>$50/month</em></td>
+                  <td>$425 (12 months)<br/><em>$35.42/month</em><br/><strong>29% OFF</strong></td>
+                  <td><strong>Save $175/year</strong><br/>vs 6-month plan</td>
                 </tr>
                 <tr>
                   <td>💼 <strong>Budget Hotels</strong></td>
                   <td>$25-$60 per night</td>
-                  <td>$200 (6 months)<br/><em>$33.33/month</em></td>
-                  <td>$300 (12 months)<br/><em>$25/month</em><br/><strong>25% OFF</strong></td>
-                  <td><strong>Save $100/year</strong><br/>vs 6-month plan</td>
+                  <td>$250 (6 months)<br/><em>$41.67/month</em></td>
+                  <td>$350 (12 months)<br/><em>$29.17/month</em><br/><strong>30% OFF</strong></td>
+                  <td><strong>Save $150/year</strong><br/>vs 6-month plan</td>
                 </tr>
               </tbody>
             </table>
