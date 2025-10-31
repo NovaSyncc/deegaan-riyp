@@ -10,11 +10,58 @@ import countryDataRaw from '../data/countryData.json';
 let processedCountryData = null;
 
 /**
- * Get all hotels data
+ * Sort hotels with custom order: Sakina Hotel second, Crown Point last
+ * @param {Array} hotels - Array of hotel objects
+ * @returns {Array} Sorted array of hotels
+ */
+const sortHotelsCustomOrder = (hotels) => {
+  const hotelsCopy = [...hotels];
+  
+  // Find indices
+  const sakinaIndex = hotelsCopy.findIndex(h => 
+    h.name === "Sakina Hotel" || h.slug === "sakina-hotel"
+  );
+  const crownPointIndex = hotelsCopy.findIndex(h => 
+    h.name.toLowerCase().includes("crown point") || h.slug.includes("crown-point")
+  );
+  
+  // Remove Sakina and Crown Point from their current positions
+  const sakinaHotel = sakinaIndex !== -1 ? hotelsCopy.splice(sakinaIndex, 1)[0] : null;
+  const crownPointHotel = crownPointIndex !== -1 ? hotelsCopy.splice(
+    crownPointIndex > sakinaIndex ? crownPointIndex - 1 : crownPointIndex, 
+    1
+  )[0] : null;
+  
+  // Rebuild array with custom order
+  const sortedHotels = [];
+  
+  // Add first hotel (whatever was originally first, unless it was Sakina or Crown Point)
+  if (hotelsCopy.length > 0) {
+    sortedHotels.push(hotelsCopy.shift());
+  }
+  
+  // Add Sakina as second
+  if (sakinaHotel) {
+    sortedHotels.push(sakinaHotel);
+  }
+  
+  // Add remaining hotels except Crown Point
+  sortedHotels.push(...hotelsCopy);
+  
+  // Add Crown Point as last
+  if (crownPointHotel) {
+    sortedHotels.push(crownPointHotel);
+  }
+  
+  return sortedHotels;
+};
+
+/**
+ * Get all hotels data with custom sorting
  * @returns {Array} Array of hotel objects
  */
 export const getHotels = () => {
-  return hotelsData.hotels;
+  return sortHotelsCustomOrder(hotelsData.hotels);
 };
 
 /**

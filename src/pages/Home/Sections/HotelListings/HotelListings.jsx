@@ -33,13 +33,25 @@ const HotelListings = () => {
   const t = getTranslations(language);
   const countryData = getCountryData(language);
 
+  // Helper function to determine if a hotel should be treated as live
+  const getLiveHotelStatus = (hotel) => {
+    // Force Sakina to be live, regardless of what the data file says
+    if (hotel.name === "Sakina Hotel" || hotel.slug === "sakina-hotel") {
+      return { ...hotel, isComingSoon: false };
+    }
+    return hotel;
+  };
+
   const handleBookNowClick = (hotel) => {
-    if (hotel.isComingSoon) {
-      setSelectedCountryName(countryData[hotel.country]?.name || hotel.country);
+    // Use the live status
+    const liveHotel = getLiveHotelStatus(hotel);
+    
+    if (liveHotel.isComingSoon) {
+      setSelectedCountryName(countryData[liveHotel.country]?.name || liveHotel.country);
       setShowComingSoonPopup(true);
       return;
     }
-    setSelectedHotel(hotel);
+    setSelectedHotel(liveHotel);
     setIsBookingFormOpen(true);
   };
 
@@ -54,22 +66,26 @@ const HotelListings = () => {
   };
 
   const toggleHotelExpansion = (hotelId, hotelName, isComingSoon) => {
-    if (isComingSoon) {
-      const hotel = filteredHotels.find(h => h.id === hotelId);
+    // Use the live status
+    const hotel = filteredHotels.find(h => h.id === hotelId);
+    const liveHotel = hotel ? getLiveHotelStatus(hotel) : { isComingSoon };
+
+    if (liveHotel.isComingSoon) {
       if (hotel) {
-        setSelectedCountryName(countryData[hotel.country]?.name || hotel.country);
+        setSelectedCountryName(countryData[liveHotel.country]?.name || liveHotel.country);
       }
       setShowComingSoonPopup(true);
       return;
     }
     
-    // Navigation logic for specific hotels
+    // Navigation logic for specific hotels (Only runs if not coming soon)
     const navigationMap = {
       "Yare Towers Hotel": '/yare',
       "Urban Point Hotel": '/urban',
       "Baraka Tower Hotel": '/baraka',
       "Bushra Hotel": '/bushra',
-      "HYYAT GOLDEN HOTEL": '/hyyat'
+      "HYYAT GOLDEN HOTEL": '/hyyat',
+      "Sakina Hotel": '/sakina'
     };
 
     if (navigationMap[hotelName]) {
@@ -95,7 +111,8 @@ const HotelListings = () => {
         const newSlides = { ...prev };
         hotels.forEach(hotel => {
           const images = getHotelImages(hotel);
-          if (images.length > 2) {
+          // Only auto-slide for hotels that are considered live
+          if (!getLiveHotelStatus(hotel).isComingSoon && images.length > 0) {
             const current = prev[hotel.id] || 0;
             newSlides[hotel.id] = (current + 1) % images.length;
           }
@@ -126,7 +143,8 @@ const HotelListings = () => {
     return filtered;
   };
 
-  const filteredHotels = getFilteredHotels();
+  // Process filtered hotels to ensure Sakina is live
+  const filteredHotels = getFilteredHotels().map(getLiveHotelStatus);
 
   return (
     <section className="deegaan-hotel-listings-section" id="hotel-listings">
@@ -191,74 +209,50 @@ const HotelListings = () => {
             const currentAmenities = hotel.amenities?.[language] || hotel.amenities?.en || [];
             const currentLocation = countryData[hotel.country]?.cities.find(c => c.id === hotel.city)?.name || hotel.location;
             
+            // Use the processed isComingSoon value since filteredHotels is already processed by getLiveHotelStatus
+            const shouldShowComingSoon = hotel.isComingSoon;
+
             return (
-              <div className={`deegaan-hotel-card ${hotel.isComingSoon ? 'coming-soon' : ''}`} key={hotel.id}>
+              <div className={`deegaan-hotel-card ${shouldShowComingSoon ? 'coming-soon' : ''}`} data-slug={hotel.slug} key={hotel.id}>
                 <div className="deegaan-hotel-images">
-                  {window.innerWidth <= 768 ? (
-                    <div className="deegaan-hotel-images-slideshow">
-                      {hotelImages.map((image, i) => (
-                        <div
-                          className={`deegaan-hotel-image-slide ${i === (currentSlides[hotel.id] || 0) ? 'active' : ''}`}
-                          key={i}
-                        >
-                          <img 
-                            src={image} 
-                            alt={`${hotel.name} - view ${i+1}`} 
-                            onError={handleImageError}
-                          />
-                        </div>
-                      ))}
-                      {hotel.isComingSoon && (
-                        <div className="deegaan-coming-soon-overlay">
-                          <div className="deegaan-coming-soon-badge">
-                            {t.comingSoon}
-                          </div>
-                        </div>
-                      )}
-                      {hotel.isFurnishedApartment && (
-                        <div className="deegaan-furnished-apartment-patch">
-                          <div className="deegaan-furnished-badge">
-                            {t.furnished}
-                          </div>
-                        </div>
-                      )}
-                      <div className="deegaan-slideshow-controls">
-                        {hotelImages.map((_, i) => (
-                          <div
-                            key={i}
-                            className={`deegaan-slideshow-dot ${i === (currentSlides[hotel.id] || 0) ? 'active' : ''}`}
-                            onClick={() => changeSlide(hotel.id, i)}
-                          />
-                        ))}
+                  {/* Slideshow now works on ALL screen sizes */}
+                  <div className="deegaan-hotel-images-slideshow">
+                    {hotelImages.map((image, i) => (
+                      <div
+                        className={`deegaan-hotel-image-slide ${i === (currentSlides[hotel.id] || 0) ? 'active' : ''}`}
+                        key={i}
+                      >
+                        <img 
+                          src={image} 
+                          alt={`${hotel.name} - view ${i+1}`} 
+                          onError={handleImageError}
+                        />
                       </div>
-                    </div>
-                  ) : (
-                    <>
-                      {hotelImages.slice(0, 2).map((image, i) => (
-                        <div className="deegaan-hotel-image" key={i}>
-                          <img 
-                            src={image} 
-                            alt={`${hotel.name} - view ${i+1}`} 
-                            onError={handleImageError}
-                          />
+                    ))}
+                    {shouldShowComingSoon && (
+                      <div className="deegaan-coming-soon-overlay">
+                        <div className="deegaan-coming-soon-badge">
+                          {t.comingSoon}
                         </div>
+                      </div>
+                    )}
+                    {hotel.isFurnishedApartment && (
+                      <div className="deegaan-furnished-apartment-patch">
+                        <div className="deegaan-furnished-badge">
+                          {t.furnished}
+                        </div>
+                      </div>
+                    )}
+                    <div className="deegaan-slideshow-controls">
+                      {hotelImages.map((_, i) => (
+                        <div
+                          key={i}
+                          className={`deegaan-slideshow-dot ${i === (currentSlides[hotel.id] || 0) ? 'active' : ''}`}
+                          onClick={() => changeSlide(hotel.id, i)}
+                        />
                       ))}
-                      {hotel.isComingSoon && (
-                        <div className="deegaan-coming-soon-overlay">
-                          <div className="deegaan-coming-soon-badge">
-                            {t.comingSoon}
-                          </div>
-                        </div>
-                      )}
-                      {hotel.isFurnishedApartment && (
-                        <div className="deegaan-furnished-apartment-patch">
-                          <div className="deegaan-furnished-badge">
-                            {t.furnished}
-                          </div>
-                        </div>
-                      )}
-                    </>
-                  )}
+                    </div>
+                  </div>
                 </div>
                 <div className="deegaan-hotel-content">
                   <h3
@@ -272,7 +266,7 @@ const HotelListings = () => {
                     <span>{currentLocation}</span>
                   </div>
                   <div className="deegaan-hotel-price">
-                    {hotel.isComingSoon ? hotel.priceRange : `${hotel.priceRange} ${t.perNight}`}
+                    {shouldShowComingSoon ? hotel.priceRange : `${hotel.priceRange} ${t.perNight}`}
                   </div>
                   <p
                     className="deegaan-hotel-description"
@@ -288,9 +282,9 @@ const HotelListings = () => {
                     className="deegaan-read-more-btn"
                     onClick={() => toggleHotelExpansion(hotel.id, hotel.name, hotel.isComingSoon)}
                   >
-                    {['Yare Towers Hotel', 'Urban Point Hotel', 'Baraka Tower Hotel', 'Bushra Hotel', 'HYYAT GOLDEN HOTEL'].includes(hotel.name) ?
+                    {['Yare Towers Hotel', 'Urban Point Hotel', 'Baraka Tower Hotel', 'Bushra Hotel', 'HYYAT GOLDEN HOTEL', 'Sakina Hotel'].includes(hotel.name) ?
                       (language === 'en' ? 'View Full Hotel Info' : 'Arag Macluumaadka Huteelka oo Dhan') :
-                      hotel.isComingSoon ?
+                      shouldShowComingSoon ?
                         t.learnMore :
                         (expandedHotels[hotel.id] ?
                           (language === 'en' ? 'Show Less' : 'Itus Yar') :

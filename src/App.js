@@ -12,6 +12,7 @@ import Urban from './pages/Home/Sections/Urban/Urban';
 import Bushra from './pages/Home/Sections/Bushra/Bushra';
 import Baraka from './pages/Home/Sections/Baraka/Baraka';
 import HYYAT from './pages/Home/Sections/HYYAT/HYYAT';
+import Sakina from './pages/Home/Sections/Sakina/Sakina';
 import MogadishuSalesOnePager from './components/MogadishuSalesOnePager/MogadishuSalesOnePager'; // ⬅️ New import
 
 // Lazy loaded components
@@ -47,6 +48,7 @@ function App() {
               <Route path="/bushra" element={<Bushra />} />
               <Route path="/baraka" element={<Baraka />} />
               <Route path="/hyyat" element={<HYYAT />} />
+              <Route path="/sakina" element={<Sakina />} />
               <Route path="/mogadishu-sales" element={<MogadishuSalesOnePager />} /> {/* ⬅️ New route */}
             </Routes>
           </Layout>
