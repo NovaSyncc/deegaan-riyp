@@ -438,58 +438,61 @@ const Sakina = ({ onBack }) => {
           </ul>
         </div>
 
-        {/* Contact Section */}
+        {/* Contact Information */}
         <div className="sakina-section">
           <h2 className="sakina-section-title">{t.contactInfo}</h2>
-          
-          <div className="sakina-contact-info">
-            <div className="sakina-contact-item">
-              <FaMapMarkerAlt className="sakina-contact-icon" />
-              <div>
-                <strong>{t.location}</strong>
-                <button className="sakina-maps-link" onClick={handleMapsClick}>
-                  {t.viewOnMaps}
-                </button>
+          <div className="sakina-contact-grid">
+            <button className="sakina-contact-btn call-btn" onClick={handleCallClick}>
+              <FaPhone className="sakina-contact-icon" />
+              <div className="sakina-contact-info">
+                <span className="sakina-contact-label">{t.callNow}</span>
+                <span className="sakina-contact-value">0741 947 770</span>
               </div>
-            </div>
-          </div>
-
-          <div className="sakina-contact-buttons">
-            <button className="sakina-contact-btn sakina-btn-phone" onClick={handleCallClick}>
-              <FaPhone className="sakina-btn-icon" />
-              {t.callNow}
             </button>
-            <button className="sakina-contact-btn sakina-btn-whatsapp" onClick={handleWhatsAppClick}>
-              <FaWhatsapp className="sakina-btn-icon" />
-              {t.whatsappUs}
+            
+            <button className="sakina-contact-btn whatsapp-btn" onClick={handleWhatsAppClick}>
+              <FaWhatsapp className="sakina-contact-icon" />
+              <div className="sakina-contact-info">
+                <span className="sakina-contact-label">{t.whatsappUs}</span>
+                <span className="sakina-contact-value">+254 741 947 770</span>
+              </div>
             </button>
-            <button className="sakina-contact-btn sakina-btn-website" onClick={handleWebsiteClick}>
-              <FaGlobe className="sakina-btn-icon" />
-              {t.visitWebsite}
+            
+            <button className="sakina-contact-btn website-btn" onClick={handleWebsiteClick}>
+              <FaGlobe className="sakina-contact-icon" />
+              <div className="sakina-contact-info">
+                <span className="sakina-contact-label">{t.visitWebsite}</span>
+                <span className="sakina-contact-value">sakina.ke</span>
+              </div>
+            </button>
+            
+            <button className="sakina-contact-btn maps-btn" onClick={handleMapsClick}>
+              <FaMapMarkerAlt className="sakina-contact-icon" />
+              <div className="sakina-contact-info">
+                <span className="sakina-contact-label">{t.viewOnMaps}</span>
+                <span className="sakina-contact-value">{t.location}</span>
+              </div>
             </button>
           </div>
         </div>
 
-        {/* Book Now CTA */}
-        <div className="sakina-cta-section">
-          <button className="sakina-book-btn" onClick={handleBookNowClick}>
+        {/* Book Now Button - Updated to match Urban style */}
+        <div className="sakina-book-now-container">
+          <button className="sakina-book-now-btn" onClick={handleBookNowClick}>
+            <FaWhatsapp className="sakina-whatsapp-icon" />
             {t.bookNow}
           </button>
-          <p className="sakina-price-note">{t.priceNote}</p>
         </div>
       </div>
 
-      {/* Booking Form Modal */}
-      {isBookingFormOpen && (
-        <div className="sakina-modal-overlay" onClick={closeBookingForm}>
-          <div className="sakina-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="sakina-modal-close" onClick={closeBookingForm}>×</button>
-            <BookingForm 
-              hotel={selectedHotel} 
-              onClose={closeBookingForm}
-            />
-          </div>
-        </div>
+      {/* Booking Form Modal - Updated to match Urban format */}
+      {isBookingFormOpen && selectedHotel && (
+        <BookingForm 
+          isOpen={isBookingFormOpen} 
+          onClose={closeBookingForm} 
+          selectedHotelId={selectedHotel.id}
+          selectedHotel={selectedHotel}
+        />
       )}
     </section>
   );
