@@ -1,9 +1,9 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Main Section */
+/* Main section styling */
 .sakina-hotel-section {
-  background-color: #080F1A;
+  background-color: #0F172A;
   padding: 60px 20px;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
@@ -23,9 +23,9 @@
   top: -20px;
   right: 0;
   display: flex;
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   border-radius: 25px;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   overflow: hidden;
   backdrop-filter: blur(10px);
   z-index: 10;
@@ -36,7 +36,7 @@
   border: none;
   color: rgba(255, 255, 255, 0.7);
   padding: 8px 16px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -45,12 +45,12 @@
 }
 
 .sakina-lang-btn:hover {
-  color: #00FFFF;
-  background: rgba(0, 255, 255, 0.1);
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.1);
 }
 
 .sakina-lang-btn.active {
-  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  background: linear-gradient(90deg, #10B981, #059669);
   color: #000000;
   font-weight: 700;
 }
@@ -59,9 +59,9 @@
 .sakina-back-btn {
   display: flex;
   align-items: center;
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  color: #00FFFF;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10B981;
   padding: 12px 20px;
   border-radius: 8px;
   font-family: 'Inter', sans-serif;
@@ -73,7 +73,7 @@
 }
 
 .sakina-back-btn:hover {
-  background: rgba(0, 255, 255, 0.2);
+  background: rgba(16, 185, 129, 0.2);
   transform: translateX(-5px);
 }
 
@@ -89,10 +89,10 @@
 }
 
 .sakina-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-size: 3rem;
-  color: #00FFFF;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  color: #10B981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
   letter-spacing: 2px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -103,26 +103,25 @@
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
   letter-spacing: 0.5px;
-  margin-bottom: 15px;
 }
 
+/* Ranking Badge */
 .sakina-ranking-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255, 215, 0, 0.15);
-  padding: 8px 16px;
-  border-radius: 20px;
+  background: rgba(255, 215, 0, 0.1);
   border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-top: 15px;
   font-size: 0.9rem;
   color: #FFD700;
-  font-weight: 600;
-  margin-top: 15px;
+  font-weight: 500;
 }
 
 .sakina-star-icon {
+  margin-right: 8px;
   color: #FFD700;
-  font-size: 1rem;
 }
 
 /* Image Grid Layout - Professional 4x3 for Desktop, Slideshow for Mobile */
@@ -145,7 +144,7 @@
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
-    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 119, 255, 0.1));
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(0, 119, 255, 0.1));
   }
 
   /* Creative shapes and layouts */
@@ -205,7 +204,7 @@
 
   .sakina-image-container:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.25);
     z-index: 2;
   }
 
@@ -216,7 +215,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent);
+    background: linear-gradient(45deg, rgba(16, 185, 129, 0.15), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -227,7 +226,7 @@
   }
 }
 
-/* Mobile Slideshow */
+/* Mobile Slideshow - Keep original slideshow functionality */
 @media (max-width: 768px) {
   .sakina-images-grid {
     position: relative;
@@ -250,6 +249,10 @@
   .sakina-image-container.active {
     opacity: 1;
   }
+
+  .sakina-image-container:first-child {
+    opacity: 1;
+  }
 }
 
 .sakina-image {
@@ -264,45 +267,47 @@
 }
 
 /* Slideshow controls for mobile */
-.sakina-slideshow-controls {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 15px;
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-}
+@media (max-width: 768px) {
+  .sakina-slideshow-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+  }
 
-.sakina-slideshow-dot {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
+  .sakina-slideshow-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
 
-.sakina-slideshow-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: scale(1.1);
-}
+  .sakina-slideshow-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+  }
 
-.sakina-slideshow-dot.active {
-  background: #00FFFF;
-  border-color: rgba(255, 255, 255, 0.8);
-  transform: scale(1.2);
+  .sakina-slideshow-dot.active {
+    background: #10B981;
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+  }
 }
 
 /* Description */
 .sakina-description {
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 50px;
@@ -317,130 +322,71 @@
   margin: 0;
 }
 
-/* Two Column Layout for Rates & Amenities */
-.sakina-content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
 /* Section Styling */
 .sakina-section {
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  margin-bottom: 50px;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 15px;
   padding: 30px;
   backdrop-filter: blur(5px);
 }
 
 .sakina-section-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-size: 1.8rem;
-  color: #00FFFF;
+  color: #10B981;
   margin-bottom: 25px;
   text-align: center;
   letter-spacing: 1px;
   font-weight: 600;
 }
 
-/* Rate Toggle Buttons */
-.sakina-rate-toggle {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  justify-content: center;
+/* Room Rates Table */
+.sakina-table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.sakina-rate-btn {
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.7);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-family: 'Inter', sans-serif;
+.sakina-rates-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sakina-rates-table th {
+  background: linear-gradient(90deg, #10B981, #059669);
+  color: #000000;
+  padding: 15px;
+  text-align: left;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1rem;
   letter-spacing: 0.5px;
 }
 
-.sakina-rate-btn:hover {
-  color: #00FFFF;
-  background: rgba(0, 255, 255, 0.15);
-}
-
-.sakina-rate-btn.active {
-  background: linear-gradient(90deg, #00FFFF, #0077FF);
-  color: #000000;
-  border-color: transparent;
-}
-
-/* Rate Cards - Compact Design */
-.sakina-rate-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.sakina-rate-card {
-  background: rgba(0, 119, 255, 0.1);
-  border: 1px solid rgba(0, 119, 255, 0.3);
-  border-radius: 10px;
+.sakina-rates-table td {
   padding: 15px;
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-.sakina-rate-card:hover {
-  background: rgba(0, 119, 255, 0.15);
-  transform: translateX(5px);
-}
-
-.sakina-rate-room-type {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 0.95rem;
-  color: #00FFFF;
-  margin-bottom: 10px;
+.sakina-room-type {
+  font-family: 'Playfair Display', sans-serif;
+  color: #10B981;
   font-weight: 600;
 }
 
-.sakina-rate-prices {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.sakina-rates-table tbody tr:hover {
+  background: rgba(16, 185, 129, 0.1);
 }
 
-.sakina-rate-price-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-}
-
-.sakina-rate-price-item.secondary {
-  opacity: 0.8;
-  font-size: 0.9rem;
-}
-
-.sakina-rate-label {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-}
-
-.sakina-rate-value {
-  color: #2B9CFF;
-  font-weight: 700;
-  font-size: 1rem;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.sakina-note {
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
-  text-align: center;
+.sakina-rates-table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 /* Amenities Grid */
@@ -466,23 +412,46 @@
 }
 
 .sakina-amenity-icon {
-  color: #00FFFF;
+  color: #10B981;
   font-size: 1.5rem;
   margin-right: 15px;
-  flex-shrink: 0;
 }
 
 .sakina-amenity-item span {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
+  font-size: 1rem;
 }
 
-/* Contact Section */
-.sakina-contact-section {
-  margin-bottom: 30px;
+/* Additional Information List */
+.sakina-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+.sakina-info-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+}
+
+.sakina-info-list li:before {
+  content: "•";
+  color: #10B981;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.sakina-info-list li:last-child {
+  border-bottom: none;
+}
+
+/* Contact Grid */
 .sakina-contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -492,8 +461,8 @@
 .sakina-contact-btn {
   display: flex;
   align-items: center;
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
   border-radius: 12px;
   padding: 20px;
   cursor: pointer;
@@ -504,9 +473,9 @@
 }
 
 .sakina-contact-btn:hover {
-  background: rgba(0, 255, 255, 0.2);
+  background: rgba(16, 185, 129, 0.2);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
 }
 
 .sakina-contact-icon {
@@ -521,10 +490,10 @@
 }
 
 .sakina-contact-label {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #00FFFF;
+  color: #10B981;
   margin-bottom: 5px;
 }
 
@@ -535,22 +504,27 @@
 }
 
 /* Contact button specific colors */
-.sakina-contact-btn.call-btn:hover .sakina-contact-icon {
+.call-btn:hover .sakina-contact-icon {
   color: #4CAF50;
   transform: scale(1.1);
 }
 
-.sakina-contact-btn.whatsapp-btn:hover .sakina-contact-icon {
+.whatsapp-btn:hover .sakina-contact-icon {
   color: #25D366;
   transform: scale(1.1);
 }
 
-.sakina-contact-btn.maps-btn:hover .sakina-contact-icon {
+.website-btn:hover .sakina-contact-icon {
+  color: #2196F3;
+  transform: scale(1.1);
+}
+
+.maps-btn:hover .sakina-contact-icon {
   color: #FF5722;
   transform: scale(1.1);
 }
 
-/* Book Now Button */
+/* Enhanced Book Now Button */
 .sakina-book-now-container {
   position: sticky;
   bottom: 20px;
@@ -562,12 +536,12 @@
 }
 
 .sakina-book-now-btn {
-  background: linear-gradient(90deg, #00FFFF, #0077FF);
+  background: linear-gradient(90deg, #10B981, #059669);
   color: #000000;
   border: none;
   padding: 16px 32px;
   border-radius: 30px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
@@ -576,13 +550,13 @@
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
 }
 
 .sakina-book-now-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
-  background: linear-gradient(90deg, #0077FF, #00FFFF);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(90deg, #059669, #10B981);
 }
 
 .sakina-whatsapp-icon {
@@ -591,14 +565,36 @@
 }
 
 /* Tablet Responsive */
-@media (max-width: 1024px) {
-  .sakina-content-grid {
-    gap: 20px;
+@media (max-width: 991px) and (min-width: 769px) {
+  .sakina-title {
+    font-size: 2.5rem;
+    color: #10B981;
+  }
+  
+  .sakina-contact-grid {
+    grid-template-columns: 1fr;
   }
   
   .sakina-amenities-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  }
+
+  .sakina-hotel-section {
+    background-color: #0F172A;
+  }
+
+  .sakina-section {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .sakina-section-title {
+    color: #10B981;
+  }
+
+  .sakina-description {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
   }
 }
 
@@ -628,20 +624,9 @@
     font-size: 1.1rem;
   }
   
-  .sakina-description {
-    padding: 25px;
-    margin-bottom: 30px;
-  }
-  
-  .sakina-description p {
-    font-size: 1rem;
-  }
-  
-  /* Stack on mobile */
-  .sakina-content-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
+  .sakina-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   
   .sakina-section {
@@ -652,18 +637,14 @@
     font-size: 1.5rem;
   }
   
-  .sakina-rate-toggle {
-    flex-wrap: wrap;
-  }
-  
-  .sakina-rate-btn {
-    flex: 1;
-    min-width: 80px;
+  .sakina-rates-table th,
+  .sakina-rates-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
   }
   
   .sakina-amenities-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
   }
   
   .sakina-amenity-item {
@@ -688,6 +669,14 @@
     font-size: 0.9rem;
   }
   
+  .sakina-description {
+    padding: 25px;
+  }
+  
+  .sakina-description p {
+    font-size: 1rem;
+  }
+  
   .sakina-book-now-container {
     bottom: 15px;
     padding: 0 15px;
@@ -696,6 +685,24 @@
   .sakina-book-now-btn {
     width: 100%;
     padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sakina-images-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .sakina-book-now-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .sakina-whatsapp-icon {
+    margin-right: 8px;
     font-size: 1rem;
   }
 }
@@ -722,8 +729,14 @@
     font-size: 1.3rem;
   }
   
-  .sakina-rate-card {
-    padding: 12px;
+  .sakina-table-container {
+    font-size: 0.85rem;
+  }
+  
+  .sakina-rates-table th,
+  .sakina-rates-table td {
+    padding: 8px 6px;
+    font-size: 0.8rem;
   }
   
   .sakina-amenity-item {
@@ -764,63 +777,153 @@
     padding: 6px 12px;
     font-size: 0.8rem;
   }
-
-  .sakina-book-now-btn {
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    min-width: auto;
-  }
-
-  .sakina-whatsapp-icon {
-    margin-right: 8px;
-    font-size: 1rem;
-  }
 }
 
-@media (max-width: 480px) {
-  .sakina-book-now-btn {
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    min-width: auto;
-  }
+/* RTL Support */
+.sakina-hotel-section[dir="rtl"] {
+  direction: rtl;
+}
 
-  .sakina-whatsapp-icon {
-    margin-right: 8px;
-    font-size: 1rem;
-  }
+.sakina-hotel-section[dir="rtl"] .sakina-back-icon {
+  margin-right: 0;
+  margin-left: 8px;
+  transform: scaleX(-1);
+}
+
+.sakina-hotel-section[dir="rtl"] .sakina-amenity-icon {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.sakina-hotel-section[dir="rtl"] .sakina-contact-icon {
+  margin-right: 0;
+  margin-left: 15px;
 }
 
 /* Accessibility */
 .sakina-lang-btn:focus,
 .sakina-back-btn:focus,
-.sakina-contact-btn:focus,
-.sakina-book-now-btn:focus {
-  outline: 2px solid #00FFFF;
+.sakina-contact-btn:focus {
+  outline: 2px solid #10B981;
   outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .sakina-title {
+    color: #FFFFFF;
+    text-shadow: 0 0 20px rgba(16, 185, 129, 1);
+  }
+  
+  .sakina-section {
+    border: 2px solid #10B981;
+    background: rgba(16, 185, 129, 0.2);
+  }
+  
+  .sakina-contact-btn {
+    border: 2px solid #10B981;
+    background: rgba(16, 185, 129, 0.3);
+  }
+}
+
+/* Print styles */
+@media print {
+  .sakina-hotel-section {
+    background: white;
+    color: black;
+  }
+  
+  .sakina-back-btn,
+  .sakina-language-toggle,
+  .sakina-contact-btn {
+    display: none;
+  }
+  
+  .sakina-images-grid {
+    display: none;
+  }
+  
+  .sakina-title,
+  .sakina-section-title {
+    color: black;
+    text-shadow: none;
+  }
+  
+  .sakina-section {
+    border: 1px solid black;
+    background: white;
+    break-inside: avoid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .sakina-image {
+    transition: none;
+  }
+  
+  .sakina-amenity-item:hover,
+  .sakina-contact-btn:hover {
+    transform: none;
+  }
+}
+
+/* Loading states */
+.sakina-image {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.2) 50%, rgba(16, 185, 129, 0.1) 100%);
+  background-size: 200% 100%;
+}
+
+.sakina-image:not([src]) {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 /* Focus visible for better keyboard navigation */
 .sakina-lang-btn:focus-visible,
 .sakina-back-btn:focus-visible,
-.sakina-contact-btn:focus-visible,
-.sakina-book-now-btn:focus-visible {
-  outline: 3px solid #00FFFF;
+.sakina-contact-btn:focus-visible {
+  outline: 3px solid #10B981;
   outline-offset: 2px;
-  box-shadow: 0 0 0 6px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.2);
 }
 
-/* Selection styling */
-::selection {
-  background: rgba(0, 255, 255, 0.3);
-  color: #FFFFFF;
-}
-
-::-moz-selection {
-  background: rgba(0, 255, 255, 0.3);
-  color: #FFFFFF;
+/* Hover effects for touch devices */
+@media (hover: none) {
+  .sakina-contact-btn:hover,
+  .sakina-amenity-item:hover,
+  .sakina-back-btn:hover {
+    transform: none;
+    background: rgba(16, 185, 129, 0.15);
+  }
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: #FFFFFF;
 }

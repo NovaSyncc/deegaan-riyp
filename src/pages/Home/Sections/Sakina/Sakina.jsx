@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaWhatsapp, FaPhone, FaMapMarkerAlt, FaWifi, FaSpa, FaUtensils, FaUsers, FaParking, FaArrowLeft, FaStar, FaTv, FaCoffee, FaLock } from 'react-icons/fa';
+import { FaWhatsapp, FaPhone, FaGlobe, FaMapMarkerAlt, FaWifi, FaBed, FaUtensils, FaUsers, FaBuilding, FaArrowLeft, FaStar, FaTv, FaShower, FaConciergeBell, FaCar, FaSpa, FaLock, FaCoffee, FaParking } from 'react-icons/fa';
 import BookingForm from '../../../../components/BookingForm/BookingForm';
 import { getHotelImage, handleImageError } from '../../../../utils/imageUtils';
 import './Sakina.css';
@@ -8,9 +8,8 @@ const Sakina = ({ onBack }) => {
   const [language, setLanguage] = useState('en');
   const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedRateType, setSelectedRateType] = useState('daily');
   
-  // Get images using the hotel image system - ALL REAL SAKINA IMAGES (using first 9 for grid)
+  // Get images using the hotel image system
   const sakina1 = getHotelImage('sakina', 'TNT03856-scaled.jpg');
   const sakina2 = getHotelImage('sakina', 'TNT03870-scaled.jpg');
   const sakina3 = getHotelImage('sakina', 'TNT03874-scaled.jpg');
@@ -20,19 +19,6 @@ const Sakina = ({ onBack }) => {
   const sakina7 = getHotelImage('sakina', 'TNT03952-scaled.jpg');
   const sakina8 = getHotelImage('sakina', 'TNT03957-scaled.jpg');
   const sakina9 = getHotelImage('sakina', 'TNT04009-scaled.jpg');
-  
-  // Hotel images - 9 images for 4x3 grid layout
-  const hotelImages = [
-    { src: sakina1, alt: 'Sakina Hotel - Exterior View' },
-    { src: sakina2, alt: 'Sakina Hotel - Lobby' },
-    { src: sakina3, alt: 'Sakina Hotel - Reception Area' },
-    { src: sakina4, alt: 'Sakina Hotel - Room Interior' },
-    { src: sakina5, alt: 'Sakina Hotel - Deluxe Room' },
-    { src: sakina6, alt: 'Sakina Hotel - Bathroom' },
-    { src: sakina7, alt: 'Sakina Hotel - Restaurant' },
-    { src: sakina8, alt: 'Sakina Hotel - Dining Area' },
-    { src: sakina9, alt: 'Sakina Hotel - Conference Room' }
-  ];
   
   // Auto-advance slideshow for mobile
   useEffect(() => {
@@ -50,19 +36,50 @@ const Sakina = ({ onBack }) => {
     setCurrentSlide(index);
   };
   
-  // Hotel data
+  // Updated hotel data to match Urban format
   const selectedHotel = {
     id: 'sakina-hotel',
     name: 'Sakina Hotel',
-    location: language === 'en' ? 'Eastleigh, Nairobi' : 'Eastleigh, Nairobi',
+    location: language === 'en' ? 'Nairobi Eastleigh' : 'Nairobi Eastleigh',
     city: 'nairobi',
     country: 'kenya',
-    priceRange: 'Ksh 2,000 - Ksh 6,500 (Daily)',
+    priceRange: 'Ksh 2,000 - Ksh 4,500',
     whatsappNumber: '254741947770',
-    roomTypes: [] 
+    roomTypes: [
+      {
+        type: "Classic King",
+        daily: "Ksh 2,000",
+        weekly: "Contact for rates",
+        monthly: "Contact for rates"
+      },
+      {
+        type: "Super King",
+        daily: "Ksh 2,500",
+        weekly: "Contact for rates",
+        monthly: "Contact for rates"
+      },
+      {
+        type: "Deluxe King Size",
+        daily: "Ksh 2,800",
+        weekly: "Contact for rates",
+        monthly: "Contact for rates"
+      },
+      {
+        type: "Deluxe Twin",
+        daily: "Ksh 2,500",
+        weekly: "Contact for rates",
+        monthly: "Contact for rates"
+      },
+      {
+        type: "Family Suite",
+        daily: "Ksh 4,500",
+        weekly: "Contact for rates",
+        monthly: "Contact for rates"
+      }
+    ]
   };
 
-  // Booking form handlers
+  // Booking form handlers - matching Urban format
   const handleBookNowClick = () => {
     setIsBookingFormOpen(true);
   };
@@ -71,112 +88,176 @@ const Sakina = ({ onBack }) => {
     setIsBookingFormOpen(false);
   };
 
-  // Translation object
+  // Translation object - matching Urban structure
   const translations = {
     en: {
       title: "Sakina Hotel",
-      subtitle: "Luxury, Comfort & Exceptional Service in Eastleigh",
-      ranking: "⭐ Premier Hotel in the Heart of Eastleigh",
+      subtitle: "Discover the Perfect Blend of Comfort, Luxury, and Exceptional Service",
+      ranking: "⭐ Premier Luxury Hotel in the Heart of Eastleigh",
       backToListings: "← Back to Hotel Listings",
       roomRates: "Room Rates",
       amenities: "Hotel Amenities",
       contactInfo: "Contact & Location",
-      location: "Eastleigh, Nairobi",
+      location: "6th Street, Eastleigh – Next to Masjidul Abubakar Mosque, Nairobi, Kenya",
       viewOnMaps: "View on Google Maps",
       callNow: "Call Now",
       whatsappUs: "WhatsApp Us",
-      daily: "Daily",
-      weekly: "Weekly",
-      monthly: "Monthly",
+      visitWebsite: "Visit Website",
+      contactForRates: "Contact for rates",
       roomTypes: {
-        standard: "Standard Room",
-        deluxe: "Deluxe Room",
-        vip: "VIP Suite",
-        family1: "Family Suite (1BR)",
-        family2: "Family Suite (2BR)",
+        classicKing: "Classic King",
+        superKing: "Super King",
+        deluxeKingSize: "Deluxe King Size",
+        deluxeTwin: "Deluxe Twin",
+        familySuite: "Family Suite"
       },
-      withBreakfast: "With Breakfast",
-      withoutBreakfast: "Without Breakfast",
       amenitiesList: [
+        "99 Spacious Contemporary Rooms",
+        "On-site Restaurant & Cuisine",
+        "Prime Eastleigh Location",
+        "Conference & Event Facilities",
+        "24/7 Concierge Service",
         "High-Speed Wi-Fi",
-        "Flat-Screen TVs",
-        "In-Room Safes",
-        "Tea & Coffee",
-        "Spa Services",
-        "Restaurant",
-        "Free Parking",
-        "24/7 Reception"
+        "Luxury Bedding & Linens",
+        "Secure Parking"
       ],
-      description: "Experience luxury and comfort at Sakina Hotel in the heart of Eastleigh. Our spacious rooms feature modern amenities including high-speed Wi-Fi, flat-screen TVs, in-room safes, and tea/coffee facilities. Enjoy our spa, restaurant, and exceptional 24/7 service.",
+      description: "Nestled in the vibrant heart of Eastleigh, Sakina Hotel is where quality Kenyan hospitality meets unparalleled luxury. Our spacious rooms are designed with the utmost attention to detail, featuring modern amenities including high-speed Wi-Fi, flat-screen TVs, in-room safes, and premium tea & coffee facilities. Indulge in our rejuvenating spa services, savor exceptional cuisine at our restaurant, and experience seamless 24/7 service.",
+      additionalInfo: "Additional Information",
+      additionalNotes: [
+        "All rooms feature modern amenities and luxury furnishings",
+        "Complimentary high-speed Wi-Fi throughout the property",
+        "24/7 reception and concierge services available",
+        "Spa and wellness services by appointment",
+        "On-site restaurant serving local and international cuisine",
+        "Conference facilities for business meetings and events",
+        "Free secure parking for all guests",
+        "Special rates available for long-term stays"
+      ],
       bookNow: "Book Your Stay",
-      priceNote: "* Long-stay rates available. Contact us for special offers."
+      priceNote: "* Special rates available for weekly and monthly stays. Contact us for details."
     },
     so: {
       title: "Huteel Sakina",
-      subtitle: "Raaxo, Qurux iyo Adeeg Heer Sare ah oo Eastleigh ah",
-      ranking: "⭐ Huteelka Ugu Fiican Wadnaha Eastleigh",
+      subtitle: "Hel Isku-darka Ugu Fiican ee Raaxada, Quruxda iyo Adeegga Heer Sare",
+      ranking: "⭐ Huteelka Ugu Quruxda badan Wadnaha Eastleigh",
       backToListings: "← Dib ugu noqo Liiska Huteellada",
       roomRates: "Qiimayaalka Qolalka",
       amenities: "Adeegyada Huteelka",
       contactInfo: "Xiriir & Goobta",
-      location: "Eastleigh, Nairobi",
+      location: "Waddada 6aad, Eastleigh – Ku xiga Masjidka Masjidul Abubakar, Nairobi, Kenya",
       viewOnMaps: "Ku eeg Google Maps",
       callNow: "War Hadda",
       whatsappUs: "WhatsApp",
-      daily: "Maalinle",
-      weekly: "Todobaadle",
-      monthly: "Bile",
+      visitWebsite: "Booqo Websitekan",
+      contactForRates: "Nala soo xiriir qiimaha",
       roomTypes: {
-        standard: "Qol Caadi ah",
-        deluxe: "Qol Qurux badan",
-        vip: "Suite VIP",
-        family1: "Suite Qoyska (1BR)",
-        family2: "Suite Qoyska (2BR)",
+        classicKing: "Classic King",
+        superKing: "Super King",
+        deluxeKingSize: "Deluxe King Size",
+        deluxeTwin: "Deluxe Twin",
+        familySuite: "Qol Qoys"
       },
-      withBreakfast: "Quraac Wadata",
-      withoutBreakfast: "Quraac La'aan",
       amenitiesList: [
+        "99 Qol oo Ballaaran oo Casri ah",
+        "Makhaayadda iyo Cuntada",
+        "Goob Fiican Eastleigh",
+        "Shirarka & Xafladaha",
+        "Adeeg 24/7",
         "Wi-Fi Xawaare Sare",
-        "TV-yada Shaashadda",
-        "Khasnado Qolka",
-        "Shaah & Qaxwe",
-        "Spa Nasasho",
-        "Makhaayadda",
-        "Baakiin Bilaash",
-        "Qabasho 24/7"
+        "Sariirta Quruxda badan",
+        "Baakiin Ammaan ah"
       ],
-      description: "Ku raaxayso raaxada iyo quruxda Huteel Sakina oo ku yaal wadnaha Eastleigh. Qolalkeenna ballaaran waxay leeyihiin Wi-Fi xawaare sare, TV-yada casriga ah, khasnado, iyo alaabta shaaha iyo qaxwaha. Hel spa, makhaayadda, iyo adeeg 24/7.",
+      description: "Ku yaalla wadnaha firfircoon ee Eastleigh, Huteel Sakina waa halka tayada adeegga Kenyan uu la kulmo raaxada heerka sare ah. Qolalkeenna ballaaran waxaa lagu habeeyay dareen gaar ah, oo ay ku jiraan agabka casriga ah sida Wi-Fi xawaare sare, TV-yada shaashadda, khasnado, iyo shaah & qaxwe. Ku raaxayso adeegyada spa, ku dhadhami cuntada heerka sare ah makhaayaddeena, oo aad ku hesho adeeg 24/7.",
+      additionalInfo: "Macluumaad Dheeraad ah",
+      additionalNotes: [
+        "Dhammaan qolalka waxay leeyihiin agabka casriga ah iyo alaabta quruxda badan",
+        "Wi-Fi bilaash ah oo xawaare sare oo guriga oo dhan",
+        "24/7 qabasho iyo adeegyada",
+        "Spa iyo adeegyada caafimaadka",
+        "Makhaayadda cunto maxalli ah iyo caalami ah",
+        "Goobaha shirarka ganacsiga iyo xafladaha",
+        "Baakiin bilaash ah oo ammaan ah",
+        "Qiimayaal gaar ah joogitaanka dheer"
+      ],
       bookNow: "Buug Joogitaankaaga",
-      priceNote: "* Qiimayaal gaar ah joogitaanka dheer. Nala soo xiriir."
+      priceNote: "* Qiimayaal gaar ah todobaadle iyo bile. Nala soo xiriir macluumaadka."
     }
   };
 
   const t = translations[language];
 
-  // Simplified room rates with toggle view
-  const roomRates = {
-    daily: [
-      { type: t.roomTypes.standard, withB: "2,500", withoutB: "2,000" },
-      { type: t.roomTypes.deluxe, withB: "3,500", withoutB: "3,000" },
-      { type: t.roomTypes.vip, withB: "4,500", withoutB: "4,000" },
-      { type: t.roomTypes.family1, withB: "5,500", withoutB: "-" },
-      { type: t.roomTypes.family2, withB: "6,500", withoutB: "-" }
-    ],
-    weekly: [
-      { type: t.roomTypes.standard, withB: "15,000", withoutB: "12,000" },
-      { type: t.roomTypes.deluxe, withB: "22,000", withoutB: "19,000" },
-      { type: t.roomTypes.vip, withB: "28,000", withoutB: "25,000" },
-      { type: t.roomTypes.family1, withB: "35,000", withoutB: "-" },
-      { type: t.roomTypes.family2, withB: "40,000", withoutB: "-" }
-    ],
-    monthly: [
-      { type: t.roomTypes.standard, withB: "60,000", withoutB: "50,000" },
-      { type: t.roomTypes.deluxe, withB: "85,000", withoutB: "75,000" },
-      { type: t.roomTypes.vip, withB: "105,000", withoutB: "95,000" },
-      { type: t.roomTypes.family1, withB: "130,000", withoutB: "-" },
-      { type: t.roomTypes.family2, withB: "150,000", withoutB: "-" }
-    ]
-  };
+  // Hotel images - 9 images for grid layout
+  const hotelImages = [
+    {
+      src: sakina1,
+      alt: 'Sakina Hotel - Exterior View'
+    },
+    {
+      src: sakina2,
+      alt: 'Sakina Hotel - Lobby'
+    },
+    {
+      src: sakina3,
+      alt: 'Sakina Hotel - Reception'
+    },
+    {
+      src: sakina4,
+      alt: 'Sakina Hotel - Deluxe Room'
+    },
+    {
+      src: sakina5,
+      alt: 'Sakina Hotel - King Suite'
+    },
+    {
+      src: sakina6,
+      alt: 'Sakina Hotel - Bathroom'
+    },
+    {
+      src: sakina7,
+      alt: 'Sakina Hotel - Lounge'
+    },
+    {
+      src: sakina8,
+      alt: 'Sakina Hotel - Restaurant'
+    },
+    {
+      src: sakina9,
+      alt: 'Sakina Hotel - Conference Room'
+    }
+  ];
+
+  const roomRates = [
+    {
+      type: t.roomTypes.classicKing,
+      daily: "Ksh 2,000",
+      weekly: t.contactForRates,
+      monthly: t.contactForRates
+    },
+    {
+      type: t.roomTypes.superKing,
+      daily: "Ksh 2,500",
+      weekly: t.contactForRates,
+      monthly: t.contactForRates
+    },
+    {
+      type: t.roomTypes.deluxeKingSize,
+      daily: "Ksh 2,800",
+      weekly: t.contactForRates,
+      monthly: t.contactForRates
+    },
+    {
+      type: t.roomTypes.deluxeTwin,
+      daily: "Ksh 2,500",
+      weekly: t.contactForRates,
+      monthly: t.contactForRates
+    },
+    {
+      type: t.roomTypes.familySuite,
+      daily: "Ksh 4,500",
+      weekly: t.contactForRates,
+      monthly: t.contactForRates
+    }
+  ];
 
   const handleCallClick = () => {
     window.open('tel:+254741947770', '_self');
@@ -186,8 +267,12 @@ const Sakina = ({ onBack }) => {
     window.open('https://wa.me/254741947770', '_blank');
   };
 
+  const handleWebsiteClick = () => {
+    window.open('https://sakina.ke', '_blank');
+  };
+
   const handleMapsClick = () => {
-    window.open('https://maps.app.goo.gl/9PWSBYV8awHQLVSq5', '_blank');
+    window.open('https://maps.google.com/?q=Sakina+Hotel+6th+Street+Eastleigh+Nairobi', '_blank');
   };
 
   return (
@@ -227,7 +312,7 @@ const Sakina = ({ onBack }) => {
           </div>
         </div>
 
-        {/* Hotel Images - Desktop 4x3 Grid / Mobile Slideshow */}
+        {/* Hotel Images - Desktop Grid / Mobile Slideshow */}
         <div className="sakina-images-grid">
           {window.innerWidth <= 768 ? (
             // Mobile Slideshow
@@ -252,12 +337,12 @@ const Sakina = ({ onBack }) => {
                     key={index}
                     className={`sakina-slideshow-dot ${index === currentSlide ? 'active' : ''}`}
                     onClick={() => changeSlide(index)}
-                  />
+                  ></div>
                 ))}
               </div>
             </>
           ) : (
-            // Desktop Grid - 4x3 layout with creative shapes
+            // Desktop Grid
             hotelImages.map((image, index) => (
               <div key={index} className="sakina-image-container">
                 <img 
@@ -277,144 +362,134 @@ const Sakina = ({ onBack }) => {
           <p>{t.description}</p>
         </div>
 
-        {/* Two Column Layout for Rates and Amenities */}
-        <div className="sakina-content-grid">
-          {/* Room Rates - Compact Design */}
-          <div className="sakina-section sakina-rates-section">
-            <h2 className="sakina-section-title">{t.roomRates}</h2>
-            
-            {/* Rate Type Toggle */}
-            <div className="sakina-rate-toggle">
-              <button 
-                className={`sakina-rate-btn ${selectedRateType === 'daily' ? 'active' : ''}`}
-                onClick={() => setSelectedRateType('daily')}
-              >
-                {t.daily}
-              </button>
-              <button 
-                className={`sakina-rate-btn ${selectedRateType === 'weekly' ? 'active' : ''}`}
-                onClick={() => setSelectedRateType('weekly')}
-              >
-                {t.weekly}
-              </button>
-              <button 
-                className={`sakina-rate-btn ${selectedRateType === 'monthly' ? 'active' : ''}`}
-                onClick={() => setSelectedRateType('monthly')}
-              >
-                {t.monthly}
-              </button>
-            </div>
-
-            {/* Compact Rate Cards */}
-            <div className="sakina-rate-cards">
-              {roomRates[selectedRateType].map((rate, index) => (
-                <div key={index} className="sakina-rate-card">
-                  <div className="sakina-rate-room-type">{rate.type}</div>
-                  <div className="sakina-rate-prices">
-                    <div className="sakina-rate-price-item">
-                      <span className="sakina-rate-label">{t.withBreakfast}</span>
-                      <span className="sakina-rate-value">Ksh {rate.withB}</span>
-                    </div>
-                    {rate.withoutB !== "-" && (
-                      <div className="sakina-rate-price-item secondary">
-                        <span className="sakina-rate-label">{t.withoutBreakfast}</span>
-                        <span className="sakina-rate-value">Ksh {rate.withoutB}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="sakina-note">{t.priceNote}</p>
+        {/* Room Rates Table */}
+        <div className="sakina-section">
+          <h2 className="sakina-section-title">{t.roomRates}</h2>
+          <div className="sakina-table-container">
+            <table className="sakina-rates-table">
+              <thead>
+                <tr>
+                  <th>Room Type</th>
+                  <th>Daily Rate</th>
+                  <th>Weekly Rate</th>
+                  <th>Monthly Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                {roomRates.map((rate, index) => (
+                  <tr key={index}>
+                    <td className="sakina-room-type">{rate.type}</td>
+                    <td data-label="Daily Rate">{rate.daily}</td>
+                    <td data-label="Weekly Rate">{rate.weekly}</td>
+                    <td data-label="Monthly Rate">{rate.monthly}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          {/* Amenities - Grid */}
-          <div className="sakina-section sakina-amenities-section">
-            <h2 className="sakina-section-title">{t.amenities}</h2>
-            <div className="sakina-amenities-grid">
-              <div className="sakina-amenity-item">
-                <FaWifi className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[0]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaTv className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[1]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaLock className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[2]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaCoffee className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[3]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaSpa className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[4]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaUtensils className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[5]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaParking className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[6]}</span>
-              </div>
-              <div className="sakina-amenity-item">
-                <FaUsers className="sakina-amenity-icon" />
-                <span>{t.amenitiesList[7]}</span>
-              </div>
+        {/* Amenities */}
+        <div className="sakina-section">
+          <h2 className="sakina-section-title">{t.amenities}</h2>
+          <div className="sakina-amenities-grid">
+            <div className="sakina-amenity-item">
+              <FaBuilding className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[0]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaUtensils className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[1]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaMapMarkerAlt className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[2]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaUsers className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[3]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaConciergeBell className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[4]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaWifi className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[5]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaBed className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[6]}</span>
+            </div>
+            <div className="sakina-amenity-item">
+              <FaCar className="sakina-amenity-icon" />
+              <span>{t.amenitiesList[7]}</span>
             </div>
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="sakina-section sakina-contact-section">
+        {/* Additional Information */}
+        <div className="sakina-section">
+          <h2 className="sakina-section-title">{t.additionalInfo}</h2>
+          <ul className="sakina-info-list">
+            {t.additionalNotes.map((note, index) => (
+              <li key={index}>{note}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Section */}
+        <div className="sakina-section">
           <h2 className="sakina-section-title">{t.contactInfo}</h2>
-          <div className="sakina-contact-grid">
-            <button className="sakina-contact-btn call-btn" onClick={handleCallClick}>
-              <FaPhone className="sakina-contact-icon" />
-              <div className="sakina-contact-info">
-                <span className="sakina-contact-label">{t.callNow}</span>
-                <span className="sakina-contact-value">0741 947 770</span>
-              </div>
-            </button>
-            
-            <button className="sakina-contact-btn whatsapp-btn" onClick={handleWhatsAppClick}>
-              <FaWhatsapp className="sakina-contact-icon" />
-              <div className="sakina-contact-info">
-                <span className="sakina-contact-label">{t.whatsappUs}</span>
-                <span className="sakina-contact-value">+254 741 947 770</span>
-              </div>
-            </button>
-            
-            <button className="sakina-contact-btn maps-btn" onClick={handleMapsClick}>
+          
+          <div className="sakina-contact-info">
+            <div className="sakina-contact-item">
               <FaMapMarkerAlt className="sakina-contact-icon" />
-              <div className="sakina-contact-info">
-                <span className="sakina-contact-label">{t.viewOnMaps}</span>
-                <span className="sakina-contact-value">{t.location}</span>
+              <div>
+                <strong>{t.location}</strong>
+                <button className="sakina-maps-link" onClick={handleMapsClick}>
+                  {t.viewOnMaps}
+                </button>
               </div>
+            </div>
+          </div>
+
+          <div className="sakina-contact-buttons">
+            <button className="sakina-contact-btn sakina-btn-phone" onClick={handleCallClick}>
+              <FaPhone className="sakina-btn-icon" />
+              {t.callNow}
+            </button>
+            <button className="sakina-contact-btn sakina-btn-whatsapp" onClick={handleWhatsAppClick}>
+              <FaWhatsapp className="sakina-btn-icon" />
+              {t.whatsappUs}
+            </button>
+            <button className="sakina-contact-btn sakina-btn-website" onClick={handleWebsiteClick}>
+              <FaGlobe className="sakina-btn-icon" />
+              {t.visitWebsite}
             </button>
           </div>
         </div>
 
-        {/* Book Now Button */}
-        <div className="sakina-book-now-container">
-          <button className="sakina-book-now-btn" onClick={handleBookNowClick}>
-            <FaWhatsapp className="sakina-whatsapp-icon" />
+        {/* Book Now CTA */}
+        <div className="sakina-cta-section">
+          <button className="sakina-book-btn" onClick={handleBookNowClick}>
             {t.bookNow}
           </button>
+          <p className="sakina-price-note">{t.priceNote}</p>
         </div>
       </div>
 
       {/* Booking Form Modal */}
-      {isBookingFormOpen && selectedHotel && (
-        <BookingForm 
-          isOpen={isBookingFormOpen} 
-          onClose={closeBookingForm} 
-          selectedHotelId={selectedHotel.id}
-          selectedHotel={selectedHotel}
-        />
+      {isBookingFormOpen && (
+        <div className="sakina-modal-overlay" onClick={closeBookingForm}>
+          <div className="sakina-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="sakina-modal-close" onClick={closeBookingForm}>×</button>
+            <BookingForm 
+              hotel={selectedHotel} 
+              onClose={closeBookingForm}
+            />
+          </div>
+        </div>
       )}
     </section>
   );
