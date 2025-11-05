@@ -1,9 +1,9 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* Main section styling */
 .sakina-hotel-section {
-  background-color: #0F172A;
+  background-color: #080F1A;
   padding: 60px 20px;
   color: #FFFFFF;
   font-family: 'Inter', sans-serif;
@@ -23,9 +23,9 @@
   top: -20px;
   right: 0;
   display: flex;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(0, 255, 255, 0.1);
   border-radius: 25px;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.3);
   overflow: hidden;
   backdrop-filter: blur(10px);
   z-index: 10;
@@ -36,7 +36,7 @@
   border: none;
   color: rgba(255, 255, 255, 0.7);
   padding: 8px 16px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -45,12 +45,12 @@
 }
 
 .sakina-lang-btn:hover {
-  color: #10B981;
-  background: rgba(16, 185, 129, 0.1);
+  color: #00FFFF;
+  background: rgba(0, 255, 255, 0.1);
 }
 
 .sakina-lang-btn.active {
-  background: linear-gradient(90deg, #10B981, #059669);
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
   color: #000000;
   font-weight: 700;
 }
@@ -59,9 +59,9 @@
 .sakina-back-btn {
   display: flex;
   align-items: center;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #10B981;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #00FFFF;
   padding: 12px 20px;
   border-radius: 8px;
   font-family: 'Inter', sans-serif;
@@ -73,7 +73,7 @@
 }
 
 .sakina-back-btn:hover {
-  background: rgba(16, 185, 129, 0.2);
+  background: rgba(0, 255, 255, 0.2);
   transform: translateX(-5px);
 }
 
@@ -89,10 +89,10 @@
 }
 
 .sakina-title {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
-  color: #10B981;
-  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  color: #00FFFF;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
   letter-spacing: 2px;
   font-weight: 700;
   margin-bottom: 15px;
@@ -144,7 +144,7 @@
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(0, 119, 255, 0.1));
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 119, 255, 0.1));
   }
 
   /* Creative shapes and layouts */
@@ -204,7 +204,7 @@
 
   .sakina-image-container:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.25);
     z-index: 2;
   }
 
@@ -215,7 +215,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(16, 185, 129, 0.15), transparent);
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.15), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -298,7 +298,7 @@
   }
 
   .sakina-slideshow-dot.active {
-    background: #10B981;
+    background: #00FFFF;
     border-color: rgba(255, 255, 255, 0.8);
     transform: scale(1.2);
   }
@@ -306,8 +306,8 @@
 
 /* Description */
 .sakina-description {
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: 15px;
   padding: 30px;
   margin-bottom: 50px;
@@ -325,17 +325,17 @@
 /* Section Styling */
 .sakina-section {
   margin-bottom: 50px;
-  background: rgba(16, 185, 129, 0.05);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 15px;
   padding: 30px;
   backdrop-filter: blur(5px);
 }
 
 .sakina-section-title {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
-  color: #10B981;
+  color: #00FFFF;
   margin-bottom: 25px;
   text-align: center;
   letter-spacing: 1px;
@@ -352,17 +352,17 @@
 .sakina-rates-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(0, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .sakina-rates-table th {
-  background: linear-gradient(90deg, #10B981, #059669);
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
   color: #000000;
   padding: 15px;
   text-align: left;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -370,19 +370,19 @@
 
 .sakina-rates-table td {
   padding: 15px;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
   font-weight: 500;
   font-size: 1rem;
 }
 
 .sakina-room-type {
-  font-family: 'Playfair Display', sans-serif;
-  color: #10B981;
+  font-family: 'Orbitron', sans-serif;
+  color: #00FFFF;
   font-weight: 600;
 }
 
 .sakina-rates-table tbody tr:hover {
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(0, 255, 255, 0.1);
 }
 
 .sakina-rates-table tbody tr:last-child td {
@@ -412,7 +412,7 @@
 }
 
 .sakina-amenity-icon {
-  color: #10B981;
+  color: #00FFFF;
   font-size: 1.5rem;
   margin-right: 15px;
 }
@@ -431,7 +431,7 @@
 
 .sakina-info-list li {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
   font-size: 1rem;
   line-height: 1.6;
   position: relative;
@@ -440,7 +440,7 @@
 
 .sakina-info-list li:before {
   content: "•";
-  color: #10B981;
+  color: #00FFFF;
   font-size: 1.2rem;
   position: absolute;
   left: 0;
@@ -461,8 +461,8 @@
 .sakina-contact-btn {
   display: flex;
   align-items: center;
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: 12px;
   padding: 20px;
   cursor: pointer;
@@ -473,9 +473,9 @@
 }
 
 .sakina-contact-btn:hover {
-  background: rgba(16, 185, 129, 0.2);
+  background: rgba(0, 255, 255, 0.2);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
 }
 
 .sakina-contact-icon {
@@ -490,10 +490,10 @@
 }
 
 .sakina-contact-label {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #10B981;
+  color: #00FFFF;
   margin-bottom: 5px;
 }
 
@@ -536,12 +536,12 @@
 }
 
 .sakina-book-now-btn {
-  background: linear-gradient(90deg, #10B981, #059669);
+  background: linear-gradient(90deg, #00FFFF, #0077FF);
   color: #000000;
   border: none;
   padding: 16px 32px;
   border-radius: 30px;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
@@ -550,13 +550,13 @@
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
 }
 
 .sakina-book-now-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
-  background: linear-gradient(90deg, #059669, #10B981);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
+  background: linear-gradient(90deg, #0077FF, #00FFFF);
 }
 
 .sakina-whatsapp-icon {
@@ -568,7 +568,7 @@
 @media (max-width: 991px) and (min-width: 769px) {
   .sakina-title {
     font-size: 2.5rem;
-    color: #10B981;
+    color: #00FFFF;
   }
   
   .sakina-contact-grid {
@@ -580,21 +580,21 @@
   }
 
   .sakina-hotel-section {
-    background-color: #0F172A;
+    background-color: #080F1A;
   }
 
   .sakina-section {
-    background: rgba(16, 185, 129, 0.05);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
   }
 
   .sakina-section-title {
-    color: #10B981;
+    color: #00FFFF;
   }
 
   .sakina-description {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
   }
 }
 
@@ -804,7 +804,7 @@
 .sakina-lang-btn:focus,
 .sakina-back-btn:focus,
 .sakina-contact-btn:focus {
-  outline: 2px solid #10B981;
+  outline: 2px solid #00FFFF;
   outline-offset: 2px;
 }
 
@@ -812,17 +812,17 @@
 @media (prefers-contrast: high) {
   .sakina-title {
     color: #FFFFFF;
-    text-shadow: 0 0 20px rgba(16, 185, 129, 1);
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1);
   }
   
   .sakina-section {
-    border: 2px solid #10B981;
-    background: rgba(16, 185, 129, 0.2);
+    border: 2px solid #00FFFF;
+    background: rgba(0, 255, 255, 0.2);
   }
   
   .sakina-contact-btn {
-    border: 2px solid #10B981;
-    background: rgba(16, 185, 129, 0.3);
+    border: 2px solid #00FFFF;
+    background: rgba(0, 255, 255, 0.3);
   }
 }
 
@@ -876,7 +876,7 @@
 
 /* Loading states */
 .sakina-image {
-  background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.2) 50%, rgba(16, 185, 129, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 255, 255, 0.2) 50%, rgba(0, 255, 255, 0.1) 100%);
   background-size: 200% 100%;
 }
 
@@ -897,9 +897,9 @@
 .sakina-lang-btn:focus-visible,
 .sakina-back-btn:focus-visible,
 .sakina-contact-btn:focus-visible {
-  outline: 3px solid #10B981;
+  outline: 3px solid #00FFFF;
   outline-offset: 2px;
-  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 0 6px rgba(0, 255, 255, 0.2);
 }
 
 /* Hover effects for touch devices */
@@ -908,7 +908,7 @@
   .sakina-amenity-item:hover,
   .sakina-back-btn:hover {
     transform: none;
-    background: rgba(16, 185, 129, 0.15);
+    background: rgba(0, 255, 255, 0.15);
   }
 }
 
@@ -919,11 +919,11 @@ html {
 
 /* Selection styling */
 ::selection {
-  background: rgba(16, 185, 129, 0.3);
+  background: rgba(0, 255, 255, 0.3);
   color: #FFFFFF;
 }
 
 ::-moz-selection {
-  background: rgba(16, 185, 129, 0.3);
+  background: rgba(0, 255, 255, 0.3);
   color: #FFFFFF;
 }
