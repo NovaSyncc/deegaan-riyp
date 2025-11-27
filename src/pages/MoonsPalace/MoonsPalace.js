@@ -131,7 +131,7 @@ const MoonsPalaceProposal = () => {
 
           <div className="mp-flex mp-flex-col mp-items-center mp-gap-4" style={{ marginBottom: '2rem' }}>
             <a
-              href="https://wa.me/254705373022?text=I'm%20interested%20in%20the%2045K%20premium%20website%20for%20Moons%20Palace%20Hotel"
+              href="https://wa.me/254712221079?text=I'm%20interested%20in%20the%2045K%20premium%20website%20for%20Moons%20Palace%20Hotel"
               className="mp-btn-primary"
             >
               <MessageCircle style={{ width: '1.5rem', height: '1.5rem' }} />
@@ -307,7 +307,7 @@ const MoonsPalaceProposal = () => {
             </div>
 
             <a
-              href="https://wa.me/254705373022?text=I'm%20ready%20to%20invest%2045K%20in%20a%20premium%20website%20for%20Moons%20Palace"
+              href="https://wa.me/254712221079?text=I'm%20ready%20to%20invest%2045K%20in%20a%20premium%20website%20for%20Moons%20Palace"
               className="mp-pricing-cta"
             >
               Start Your Website Today
@@ -403,11 +403,11 @@ const MoonsPalaceProposal = () => {
 
           <div className="mp-flex mp-flex-col mp-items-center mp-gap-4 mp-mb-12">
             <a
-              href="https://wa.me/254705373022?text=I%20want%20to%20discuss%20the%2045K%20premium%20website%20for%20Moons%20Palace"
+              href="https://wa.me/254712221079?text=I%20want%20to%20discuss%20the%2045K%20premium%20website%20for%20Moons%20Palace"
               className="mp-btn-primary"
             >
               <MessageCircle style={{ width: '1.5rem', height: '1.5rem' }} />
-              <span>WhatsApp: +254 705 373 022</span>
+              <span>WhatsApp: 0712 221 079</span>
             </a>
           </div>
 
