@@ -32,28 +32,35 @@ function App() {
       <ScrollToTop />
       <div className="app">
         <Suspense fallback={<LoadingFallback />}>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/eastleigh-hotels" element={<EastleighHotels />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/legal" element={<Legal />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/blog" element={<BlogSystem />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/registration" element={<Registration />} />
-              <Route path="/yare" element={<Yare />} />
-              <Route path="/urban" element={<Urban />} />
-              <Route path="/bushra" element={<Bushra />} />
-              <Route path="/baraka" element={<Baraka />} />
-              <Route path="/hyyat" element={<HYYAT />} />
-              <Route path="/sakina" element={<Sakina />} />
-              <Route path="/mogadishu-sales" element={<MogadishuSalesOnePager />} /> {/* ⬅️ New route */}
-              <Route path="/moons-palace" element={<MoonsPalaceProposal />} />
-            </Routes>
-          </Layout>
+          <Routes>
+            {/* Standalone pages without Layout */}
+            <Route path="/moons-palace" element={<MoonsPalaceProposal />} />
+
+            {/* Regular pages with Layout */}
+            <Route path="*" element={
+              <Layout>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/eastleigh-hotels" element={<EastleighHotels />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/legal" element={<Legal />} />
+                  <Route path="/about" element={<AboutUs />} />
+                  <Route path="/cookies" element={<Cookies />} />
+                  <Route path="/blog" element={<BlogSystem />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/registration" element={<Registration />} />
+                  <Route path="/yare" element={<Yare />} />
+                  <Route path="/urban" element={<Urban />} />
+                  <Route path="/bushra" element={<Bushra />} />
+                  <Route path="/baraka" element={<Baraka />} />
+                  <Route path="/hyyat" element={<HYYAT />} />
+                  <Route path="/sakina" element={<Sakina />} />
+                  <Route path="/mogadishu-sales" element={<MogadishuSalesOnePager />} />
+                </Routes>
+              </Layout>
+            } />
+          </Routes>
         </Suspense>
       </div>
     </Router>
