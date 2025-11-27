@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Hotel, Camera, Star, TrendingUp, MessageCircle, CheckCircle, Globe, Users, Shield, Code, Smartphone, Zap } from 'lucide-react';
+import React from 'react';
+import { Camera, TrendingUp, MessageCircle, CheckCircle, Users, Shield, Code, Smartphone, Zap } from 'lucide-react';
+import './MoonsPalace.css';
 
 const MoonsPalaceProposal = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-
   const portfolioWebsites = [
     {
       name: "HYYAT Golden Hotel",
@@ -28,181 +27,216 @@ const MoonsPalaceProposal = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1600')] bg-cover bg-center opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/50 to-slate-900"></div>
+  const features = [
+    "Custom domain (moonspalacehotel.com) - your own brand",
+    "Mobile-responsive design - looks perfect on all devices",
+    "Direct booking system - WhatsApp integration, inquiry forms",
+    "Room showcase with photo galleries and pricing",
+    "Google Maps integration - guests can find you easily",
+    "Contact forms and booking calendar",
+    "Fast loading speed - optimized for poor connections",
+    "SEO setup - rank on Google for 'hotels near me'",
+    "Multilingual support (English & Somali)",
+    "1 year free hosting & domain included"
+  ];
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+  const problems = [
+    {
+      icon: <Users className="mp-card-icon" style={{ width: '2.5rem', height: '2.5rem', color: '#f87171' }} />,
+      title: "Lost Premium Guests",
+      desc: "High-value guests (corporate, international) only book hotels with professional websites. They won't trust WhatsApp-only bookings."
+    },
+    {
+      icon: <TrendingUp className="mp-card-icon" style={{ width: '2.5rem', height: '2.5rem', color: '#f87171' }} />,
+      title: "Zero Online Visibility",
+      desc: "Google doesn't rank hotels without websites. You're invisible to 95% of online searchers."
+    },
+    {
+      icon: <Shield className="mp-card-icon" style={{ width: '2.5rem', height: '2.5rem', color: '#f87171' }} />,
+      title: "No Brand Authority",
+      desc: "Without your own domain, you look unprofessional compared to competitors with polished websites."
+    }
+  ];
+
+  const packages = [
+    {
+      icon: <Code style={{ width: '2rem', height: '2rem' }} />,
+      iconClass: "cyan",
+      title: "Website Development",
+      items: ["Custom design & branding", "5-7 page website", "Mobile-responsive layout", "Admin dashboard for updates"],
+      value: "25,000 KES"
+    },
+    {
+      icon: <Camera style={{ width: '2rem', height: '2rem' }} />,
+      iconClass: "purple",
+      title: "Professional Content",
+      items: ["Professional photography session", "15-20 high-quality images", "Copywriting & descriptions", "SEO optimization"],
+      value: "10,000 KES"
+    },
+    {
+      icon: <Smartphone style={{ width: '2rem', height: '2rem' }} />,
+      iconClass: "yellow",
+      title: "Booking System",
+      items: ["WhatsApp instant booking", "Contact form integration", "Room availability calendar", "Guest inquiry management"],
+      value: "7,000 KES"
+    },
+    {
+      icon: <Zap style={{ width: '2rem', height: '2rem' }} />,
+      iconClass: "green",
+      title: "Launch & Support",
+      items: ["Domain setup & hosting (1 year)", "SSL security certificate", "Google Business integration", "30-day post-launch support"],
+      value: "3,000 KES"
+    }
+  ];
+
+  return (
+    <div className="moons-palace-wrapper">
+      {/* Hero Section */}
+      <div className="mp-hero">
+        <div className="mp-hero-bg"></div>
+        <div className="mp-hero-overlay"></div>
+
+        <div className="mp-hero-content">
           {/* Logo/Brand */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-3 bg-cyan-500/10 border border-cyan-500/30 rounded-full px-6 py-2 backdrop-blur-sm">
-              <Code className="text-cyan-400 w-5 h-5" />
-              <span className="font-bold text-cyan-400 tracking-wider">DEEGAAN RIYO</span>
-              <span className="text-cyan-300/60">|</span>
-              <span className="text-sm text-gray-300">Premium Web Development</span>
+          <div className="mp-text-center mp-mb-8">
+            <div className="mp-brand">
+              <Code className="mp-brand-icon" />
+              <span className="mp-brand-name">DEEGAAN RIYO</span>
+              <span className="mp-brand-divider">|</span>
+              <span className="mp-brand-tagline">Premium Web Development</span>
             </div>
-            <p className="text-xs text-gray-500 mt-2">Leading premium website developer for Eastleigh hotels</p>
+            <p className="mp-brand-subtitle">Leading premium website developer for Eastleigh hotels</p>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-6 leading-tight">
+          <h1 className="mp-title">
             Premium Website for<br />
-            <span className="text-cyan-400">Moons Palace Hotel</span>
+            <span className="mp-title-highlight">Moons Palace Hotel</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="mp-subtitle">
             Professional hotel website with booking system.
-            <span className="text-cyan-400 font-semibold"> 45,000 KES</span> investment,
-            <span className="text-green-400 font-semibold"> 3-6 month payback</span> guaranteed.
+            <span className="mp-price"> 45,000 KES</span> investment,
+            <span className="mp-payback"> 3-6 month payback</span> guaranteed.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="mp-flex mp-flex-col mp-items-center mp-gap-4" style={{ marginBottom: '2rem' }}>
             <a
               href="https://wa.me/254705373022?text=I'm%20interested%20in%20the%2045K%20premium%20website%20for%20Moons%20Palace%20Hotel"
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-full flex items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-green-500/30"
+              className="mp-btn-primary"
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle style={{ width: '1.5rem', height: '1.5rem' }} />
               <span>Schedule Director Meeting</span>
             </a>
             <button
               onClick={() => document.getElementById('package').scrollIntoView({ behavior: 'smooth' })}
-              className="border-2 border-cyan-400 hover:bg-cyan-400/10 text-cyan-400 font-bold py-4 px-8 rounded-full transition-all"
+              className="mp-btn-secondary"
             >
               View Full Package
             </button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 mt-16 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-2">6+</div>
-              <div className="text-xs sm:text-sm text-gray-400">Hotels in Eastleigh</div>
+          <div className="mp-trust-grid">
+            <div className="mp-trust-item">
+              <div className="mp-trust-number cyan">6+</div>
+              <div className="mp-trust-label">Hotels in Eastleigh</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">3</div>
-              <div className="text-xs sm:text-sm text-gray-400">Full Websites Built</div>
+            <div className="mp-trust-item">
+              <div className="mp-trust-number green">3</div>
+              <div className="mp-trust-label">Full Websites Built</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-2">100%</div>
-              <div className="text-xs sm:text-sm text-gray-400">Client Satisfaction</div>
+            <div className="mp-trust-item">
+              <div className="mp-trust-number yellow">100%</div>
+              <div className="mp-trust-label">Client Satisfaction</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Problem Section */}
-      <div className="bg-gradient-to-b from-slate-900 to-slate-800 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why Hotels Without Websites Lose Money</h2>
-            <p className="text-xl text-gray-300">In 2024, no website = no credibility = no premium bookings</p>
+      <div className="mp-section mp-section-dark">
+        <div className="mp-container">
+          <div className="mp-text-center mp-mb-12">
+            <h2 className="mp-section-title">Why Hotels Without Websites Lose Money</h2>
+            <p className="mp-section-subtitle">In 2024, no website = no credibility = no premium bookings</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <Users className="w-10 h-10 text-red-400" />,
-                title: "Lost Premium Guests",
-                desc: "High-value guests (corporate, international) only book hotels with professional websites. They won't trust WhatsApp-only bookings."
-              },
-              {
-                icon: <TrendingUp className="w-10 h-10 text-red-400" />,
-                title: "Zero Online Visibility",
-                desc: "Google doesn't rank hotels without websites. You're invisible to 95% of online searchers."
-              },
-              {
-                icon: <Shield className="w-10 h-10 text-red-400" />,
-                title: "No Brand Authority",
-                desc: "Without your own domain, you look unprofessional compared to competitors with polished websites."
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-800/50 border border-red-500/20 rounded-2xl p-6 backdrop-blur-sm">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-red-300">{item.title}</h3>
-                <p className="text-gray-400">{item.desc}</p>
+          <div className="mp-grid-3">
+            {problems.map((item, i) => (
+              <div key={i} className="mp-card">
+                {item.icon}
+                <h3 className="mp-card-title">{item.title}</h3>
+                <p className="mp-card-desc">{item.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-red-500/10 border border-red-500/30 rounded-xl p-6 max-w-3xl mx-auto">
-            <p className="text-center text-lg text-gray-300">
-              <span className="font-bold text-red-400">Reality Check:</span> Hotels like HYYAT Golden and BinAli charge 20% more per room and attract more bookings because they have professional websites. They look established and professional. Online presence matters.
+          <div className="mp-reality-box">
+            <p className="mp-reality-text">
+              <span className="mp-reality-label">Reality Check:</span> Hotels like HYYAT Golden and BinAli charge 20% more per room and attract more bookings because they have professional websites. They look established and professional. Online presence matters.
             </p>
           </div>
         </div>
       </div>
 
       {/* Solution Section */}
-      <div className="bg-gradient-to-b from-slate-800 to-slate-900 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Your <span className="text-cyan-400">Premium Website Solution</span>
+      <div className="mp-section mp-section-darker">
+        <div className="mp-container">
+          <div className="mp-text-center mp-mb-12">
+            <h2 className="mp-section-title">
+              Your <span className="mp-title-highlight">Premium Website Solution</span>
             </h2>
-            <p className="text-xl text-gray-300">Everything a modern hotel needs to dominate online</p>
+            <p className="mp-section-subtitle">Everything a modern hotel needs to dominate online</p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
+          <div className="mp-grid-2">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-cyan-400">What You Get:</h3>
-              <div className="space-y-4">
-                {[
-                  "Custom domain (moonspalacehotel.com) - your own brand",
-                  "Mobile-responsive design - looks perfect on all devices",
-                  "Direct booking system - WhatsApp integration, inquiry forms",
-                  "Room showcase with photo galleries and pricing",
-                  "Google Maps integration - guests can find you easily",
-                  "Contact forms and booking calendar",
-                  "Fast loading speed - optimized for poor connections",
-                  "SEO setup - rank on Google for 'hotels near me'",
-                  "Multilingual support (English & Somali)",
-                  "1 year free hosting & domain included"
-                ].map((point, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 w-5 h-5 mt-1 flex-shrink-0" />
-                    <p className="text-gray-300">{point}</p>
+              <h3 className="mp-section-title" style={{ fontSize: '1.5rem', textAlign: 'left', marginBottom: '1.5rem', color: '#22d3ee' }}>What You Get:</h3>
+              <div className="mp-feature-list">
+                {features.map((point, i) => (
+                  <div key={i} className="mp-feature-item">
+                    <CheckCircle className="mp-feature-icon" />
+                    <p className="mp-feature-text">{point}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
-                <h4 className="text-xl font-bold mb-4 text-cyan-400">Professional Design Sample</h4>
-                <div className="bg-slate-900/80 rounded-xl overflow-hidden border border-cyan-500/20">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div className="mp-design-sample">
+                <h4 className="mp-design-title">Professional Design Sample</h4>
+                <div className="mp-design-preview">
                   <img
                     src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
                     alt="Hotel website showcase"
-                    className="w-full h-48 object-cover"
+                    className="mp-design-image"
                   />
-                  <div className="p-4">
-                    <h5 className="font-bold text-lg mb-2">Moons Palace Hotel</h5>
-                    <p className="text-sm text-gray-400 mb-3">📍 Premium Location, Nairobi</p>
-                    <div className="grid grid-cols-2 gap-2 mb-3">
-                      <div className="bg-slate-800 p-2 rounded text-center">
-                        <div className="text-cyan-400 font-bold text-sm">Deluxe</div>
-                        <div className="text-xs text-gray-400">KSH 3,500/nt</div>
+                  <div className="mp-design-content">
+                    <h5 className="mp-design-hotel-name">Moons Palace Hotel</h5>
+                    <p className="mp-design-location">📍 Premium Location, Nairobi</p>
+                    <div className="mp-room-grid">
+                      <div className="mp-room-card">
+                        <div className="mp-room-type">Deluxe</div>
+                        <div className="mp-room-price">KSH 3,500/nt</div>
                       </div>
-                      <div className="bg-slate-800 p-2 rounded text-center">
-                        <div className="text-cyan-400 font-bold text-sm">Suite</div>
-                        <div className="text-xs text-gray-400">KSH 5,500/nt</div>
+                      <div className="mp-room-card">
+                        <div className="mp-room-type">Suite</div>
+                        <div className="mp-room-price">KSH 5,500/nt</div>
                       </div>
                     </div>
-                    <button className="w-full bg-green-500/20 border border-green-500/30 text-green-400 py-2 rounded-lg flex items-center justify-center gap-2">
-                      <MessageCircle className="w-4 h-4" /> Book Now
+                    <button className="mp-book-btn">
+                      <MessageCircle style={{ width: '1rem', height: '1rem' }} /> Book Now
                     </button>
                   </div>
                 </div>
-                <p className="text-sm text-gray-400 mt-4 text-center">
+                <p className="mp-design-caption">
                   Clean, professional, conversion-optimized
                 </p>
               </div>
 
-              <div className="bg-purple-500/10 border border-purple-500/30 rounded-xl p-4">
-                <p className="text-sm text-gray-300 text-center">
-                  <span className="font-bold text-purple-400">Bonus:</span> If your hotel qualifies, you may be eligible for free listing on our DGR platform (deegaanriyo.online) - additional exposure worth 15K
+              <div className="mp-bonus-box">
+                <p className="mp-bonus-text">
+                  <span className="mp-bonus-label">Bonus:</span> If your hotel qualifies, you may be eligible for free listing on our DGR platform (deegaanriyo.online) - additional exposure worth 15K
                 </p>
               </div>
             </div>
@@ -211,54 +245,29 @@ const MoonsPalaceProposal = () => {
       </div>
 
       {/* Package Section */}
-      <div id="package" className="bg-gradient-to-b from-slate-900 to-slate-800 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Complete Package: <span className="text-cyan-400">45,000 KES</span>
+      <div id="package" className="mp-section mp-section-dark">
+        <div className="mp-container">
+          <div className="mp-text-center mp-mb-12">
+            <h2 className="mp-section-title">
+              Complete Package: <span className="mp-title-highlight">45,000 KES</span>
             </h2>
-            <p className="text-xl text-gray-300">Premium web development - turnkey solution</p>
+            <p className="mp-section-subtitle">Premium web development - turnkey solution</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {[
-              {
-                icon: <Code className="w-8 h-8 text-cyan-400" />,
-                title: "Website Development",
-                items: ["Custom design & branding", "5-7 page website", "Mobile-responsive layout", "Admin dashboard for updates"],
-                value: "25,000 KES"
-              },
-              {
-                icon: <Camera className="w-8 h-8 text-purple-400" />,
-                title: "Professional Content",
-                items: ["Professional photography session", "15-20 high-quality images", "Copywriting & descriptions", "SEO optimization"],
-                value: "10,000 KES"
-              },
-              {
-                icon: <Smartphone className="w-8 h-8 text-yellow-400" />,
-                title: "Booking System",
-                items: ["WhatsApp instant booking", "Contact form integration", "Room availability calendar", "Guest inquiry management"],
-                value: "7,000 KES"
-              },
-              {
-                icon: <Zap className="w-8 h-8 text-green-400" />,
-                title: "Launch & Support",
-                items: ["Domain setup & hosting (1 year)", "SSL security certificate", "Google Business integration", "30-day post-launch support"],
-                value: "3,000 KES"
-              }
-            ].map((item, i) => (
-              <div key={i} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-500/40 transition-all">
-                <div className="flex items-center gap-3 mb-4">
-                  {item.icon}
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg">{item.title}</h3>
-                    <p className="text-cyan-400 text-sm">Value: {item.value}</p>
+          <div className="mp-package-grid">
+            {packages.map((item, i) => (
+              <div key={i} className="mp-package-card">
+                <div className="mp-package-header">
+                  <div className={`mp-package-icon ${item.iconClass}`}>{item.icon}</div>
+                  <div className="mp-package-info">
+                    <h3 className="mp-package-title">{item.title}</h3>
+                    <p className="mp-package-value">Value: {item.value}</p>
                   </div>
                 </div>
-                <ul className="space-y-2">
+                <ul className="mp-package-list">
                   {item.items.map((point, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-300">
-                      <CheckCircle className="text-green-400 w-4 h-4 mt-1 flex-shrink-0" />
+                    <li key={j} className="mp-package-item">
+                      <CheckCircle className="mp-package-check" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -268,74 +277,70 @@ const MoonsPalaceProposal = () => {
           </div>
 
           {/* Pricing Card */}
-          <div className="max-w-2xl mx-auto bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm">
-            <div className="text-center">
-              <div className="inline-block bg-cyan-400/20 border border-cyan-400 rounded-full px-4 py-2 mb-4">
-                <span className="text-cyan-400 font-bold">PREMIUM WEB DEVELOPMENT</span>
-              </div>
-              <h3 className="text-4xl sm:text-5xl font-bold mb-2">45,000 KES</h3>
-              <p className="text-gray-300 mb-6">One-time investment • Your website forever</p>
-
-              <div className="bg-slate-900/50 rounded-xl p-6 mb-6">
-                <div className="flex items-center justify-between mb-3 pb-3 border-b border-gray-700">
-                  <span className="text-gray-400">Total Package Value:</span>
-                  <span className="font-bold line-through text-gray-500">45,000 KES</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-bold">Your Investment:</span>
-                  <span className="text-3xl font-bold text-cyan-400">45,000 KES</span>
-                </div>
-                <p className="text-xs text-gray-500 mt-3">+ Annual renewal: 15K/year (hosting & domain)</p>
-              </div>
-
-              <a
-                href="https://wa.me/254705373022?text=I'm%20ready%20to%20invest%2045K%20in%20a%20premium%20website%20for%20Moons%20Palace"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/30"
-              >
-                Start Your Website Today
-              </a>
+          <div className="mp-pricing-card">
+            <div className="mp-pricing-badge">
+              <span className="mp-pricing-badge-text">PREMIUM WEB DEVELOPMENT</span>
             </div>
+            <h3 className="mp-pricing-amount">45,000 KES</h3>
+            <p className="mp-pricing-subtitle">One-time investment • Your website forever</p>
+
+            <div className="mp-pricing-breakdown">
+              <div className="mp-pricing-row">
+                <span className="mp-pricing-label">Total Package Value:</span>
+                <span className="mp-pricing-value strikethrough">45,000 KES</span>
+              </div>
+              <div className="mp-pricing-row">
+                <span className="mp-pricing-label cyan">Your Investment:</span>
+                <span className="mp-pricing-value cyan">45,000 KES</span>
+              </div>
+              <p className="mp-pricing-note">+ Annual renewal: 15K/year (hosting & domain)</p>
+            </div>
+
+            <a
+              href="https://wa.me/254705373022?text=I'm%20ready%20to%20invest%2045K%20in%20a%20premium%20website%20for%20Moons%20Palace"
+              className="mp-pricing-cta"
+            >
+              Start Your Website Today
+            </a>
           </div>
         </div>
       </div>
 
       {/* ROI Section */}
-      <div className="bg-gradient-to-b from-slate-800 to-slate-900 py-16 sm:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-2 border-green-400 rounded-3xl p-8 sm:p-12 backdrop-blur-sm">
-            <div className="text-center">
-              <Shield className="w-16 h-16 text-green-400 mx-auto mb-6" />
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                <span className="text-green-400">3-6 Month</span> Payback Guarantee
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Here's why this is the smartest 45K you'll ever spend
-              </p>
+      <div className="mp-section mp-section-darker">
+        <div className="mp-container" style={{ maxWidth: '64rem' }}>
+          <div className="mp-roi-card">
+            <Shield className="mp-roi-icon" />
+            <h2 className="mp-roi-title">
+              <span className="mp-roi-highlight">3-6 Month</span> Payback Guarantee
+            </h2>
+            <p className="mp-roi-subtitle">
+              Here's why this is the smartest 45K you'll ever spend
+            </p>
 
-              <div className="bg-slate-900/70 border border-green-400/30 rounded-xl p-6 mb-8">
-                <h4 className="font-bold text-lg mb-4 text-green-400">Conservative ROI Math:</h4>
-                <div className="text-left space-y-3 text-sm sm:text-base">
-                  <p className="text-gray-300">✓ With a website, attract <strong className="text-white">more bookings</strong> and charge <strong className="text-white">~20% more</strong> per room (premium positioning & professionalism)</p>
-                  <p className="text-gray-300">✓ Example: If charging 3,500 KES, with website: <strong className="text-cyan-400">~4,200 KES (+700 KES/booking)</strong></p>
-                  <p className="text-gray-300">✓ Plus: <strong className="text-white">increased booking rate</strong> from online visibility</p>
-                  <p className="text-gray-300">✓ At 65-75 bookings = <strong className="text-green-400">Investment recovered in 3-6 months</strong></p>
-                  <p className="text-green-400 font-bold text-lg mt-4">✓ After that, every booking benefits from your professional online presence</p>
-                </div>
+            <div className="mp-roi-math">
+              <h4 className="mp-roi-math-title">Conservative ROI Math:</h4>
+              <div className="mp-roi-list">
+                <p className="mp-roi-item">✓ With a website, attract <strong>more bookings</strong> and charge <strong>~20% more</strong> per room (premium positioning & professionalism)</p>
+                <p className="mp-roi-item">✓ Example: If charging 3,500 KES, with website: <strong className="cyan">~4,200 KES (+700 KES/booking)</strong></p>
+                <p className="mp-roi-item">✓ Plus: <strong>increased booking rate</strong> from online visibility</p>
+                <p className="mp-roi-item">✓ At 65-75 bookings = <strong className="green">Investment recovered in 3-6 months</strong></p>
+                <p className="mp-roi-final">✓ After that, every booking benefits from your professional online presence</p>
               </div>
+            </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-slate-900/50 rounded-xl p-6">
-                  <div className="text-4xl font-bold text-red-400 mb-2">Without Website</div>
-                  <div className="text-sm text-gray-400 mb-3">Average Room Rate</div>
-                  <p className="text-2xl font-bold text-white mb-2">3,500 KES</p>
-                  <p className="text-xs text-gray-500">Limited to walk-ins & referrals only</p>
-                </div>
-                <div className="bg-slate-900/50 rounded-xl p-6 border-2 border-green-400">
-                  <div className="text-4xl font-bold text-green-400 mb-2">With Website</div>
-                  <div className="text-sm text-gray-400 mb-3">Average Room Rate</div>
-                  <p className="text-2xl font-bold text-white mb-2">~4,200 KES</p>
-                  <p className="text-xs text-green-400 font-semibold">Professional presence + more bookings + better rates</p>
-                </div>
+            <div className="mp-comparison-grid">
+              <div className="mp-comparison-card">
+                <div className="mp-comparison-label red">Without Website</div>
+                <div className="mp-comparison-sublabel">Average Room Rate</div>
+                <p className="mp-comparison-amount">3,500 KES</p>
+                <p className="mp-comparison-note">Limited to walk-ins & referrals only</p>
+              </div>
+              <div className="mp-comparison-card highlight">
+                <div className="mp-comparison-label green">With Website</div>
+                <div className="mp-comparison-sublabel">Average Room Rate</div>
+                <p className="mp-comparison-amount">~4,200 KES</p>
+                <p className="mp-comparison-note green">Professional presence + more bookings + better rates</p>
               </div>
             </div>
           </div>
@@ -343,115 +348,115 @@ const MoonsPalaceProposal = () => {
       </div>
 
       {/* Portfolio Section */}
-      <div className="bg-gradient-to-b from-slate-900 to-slate-800 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Eastleigh Hotels Trust Us</h2>
-            <p className="text-xl text-gray-300">We've built the digital presence for the area's top hotels</p>
+      <div className="mp-section mp-section-dark">
+        <div className="mp-container">
+          <div className="mp-text-center mp-mb-12">
+            <h2 className="mp-section-title">Eastleigh Hotels Trust Us</h2>
+            <p className="mp-section-subtitle">We've built the digital presence for the area's top hotels</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="mp-portfolio-grid">
             {portfolioWebsites.map((hotel, i) => (
-              <div key={i} className="bg-slate-800/50 border border-cyan-500/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:border-cyan-500/40 transition-all">
+              <div key={i} className="mp-portfolio-card">
                 <img
                   src={hotel.image}
                   alt={hotel.name}
-                  className="w-full h-48 object-cover"
+                  className="mp-portfolio-image"
                 />
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-1">{hotel.name}</h3>
-                  <p className="text-sm text-gray-400 mb-2">📍 {hotel.location}</p>
-                  <p className="text-xs text-cyan-400 mb-3 font-mono">{hotel.url}</p>
-                  <p className="text-xs text-gray-500">{hotel.features}</p>
+                <div className="mp-portfolio-content">
+                  <h3 className="mp-portfolio-name">{hotel.name}</h3>
+                  <p className="mp-portfolio-location">📍 {hotel.location}</p>
+                  <p className="mp-portfolio-url">{hotel.url}</p>
+                  <p className="mp-portfolio-features">{hotel.features}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-6 max-w-3xl mx-auto text-center">
-            <h3 className="font-bold text-xl mb-3 text-cyan-400">Our Track Record in Eastleigh:</h3>
-            <div className="grid sm:grid-cols-3 gap-4 text-center">
+          <div className="mp-track-record">
+            <h3 className="mp-track-title">Our Track Record in Eastleigh:</h3>
+            <div className="mp-track-grid">
               <div>
-                <div className="text-3xl font-bold text-cyan-400 mb-1">6+</div>
-                <div className="text-sm text-gray-400">Hotels Listed on DGR</div>
+                <div className="mp-track-number cyan">6+</div>
+                <div className="mp-track-label">Hotels Listed on DGR</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-green-400 mb-1">3</div>
-                <div className="text-sm text-gray-400">Full Websites Built</div>
+                <div className="mp-track-number green">3</div>
+                <div className="mp-track-label">Full Websites Built</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-yellow-400 mb-1">100%</div>
-                <div className="text-sm text-gray-400">Happy Clients</div>
+                <div className="mp-track-number yellow">100%</div>
+                <div className="mp-track-label">Happy Clients</div>
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
-            <p className="text-gray-400 text-sm">
-              <span className="font-semibold text-cyan-400">Note:</span> DGR platform listing is separate and requires qualification. This package is for your standalone premium website.
+          <div className="mp-track-note">
+            <p className="mp-track-note-text">
+              <span className="mp-track-note-label">Note:</span> DGR platform listing is separate and requires qualification. This package is for your standalone premium website.
             </p>
           </div>
         </div>
       </div>
 
       {/* Final CTA */}
-      <div className="bg-gradient-to-b from-slate-800 to-black py-20 sm:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+      <div className="mp-section mp-section-black">
+        <div className="mp-container" style={{ maxWidth: '64rem' }}>
+          <h2 className="mp-section-title" style={{ fontSize: 'clamp(2.25rem, 5vw, 3rem)', marginBottom: '1.5rem' }}>
             Ready to Launch Moons Palace Online?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="mp-section-subtitle">
             Let's build you a website that generates premium bookings
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="mp-flex mp-flex-col mp-items-center mp-gap-4 mp-mb-12">
             <a
               href="https://wa.me/254705373022?text=I%20want%20to%20discuss%20the%2045K%20premium%20website%20for%20Moons%20Palace"
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-full flex items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-green-500/30"
+              className="mp-btn-primary"
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle style={{ width: '1.5rem', height: '1.5rem' }} />
               <span>WhatsApp: +254 705 373 022</span>
             </a>
           </div>
 
-          <div className="bg-slate-800/50 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-sm max-w-2xl mx-auto">
-            <h3 className="font-bold text-lg mb-4 text-cyan-400">Project Timeline:</h3>
-            <div className="space-y-3 text-left">
-              <div className="flex items-start gap-3">
-                <span className="bg-cyan-500/20 border border-cyan-400 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-cyan-400 text-sm">1</span>
-                <p className="text-gray-300 pt-1 text-sm">Director approves 45K investment & signs agreement</p>
+          <div className="mp-timeline">
+            <h3 className="mp-timeline-title">Project Timeline:</h3>
+            <div className="mp-timeline-list">
+              <div className="mp-timeline-item">
+                <span className="mp-timeline-number">1</span>
+                <p className="mp-timeline-text">Director approves 45K investment & signs agreement</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="bg-cyan-500/20 border border-cyan-400 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-cyan-400 text-sm">2</span>
-                <p className="text-gray-300 pt-1 text-sm">Professional photography & content gathering (2-3 days)</p>
+              <div className="mp-timeline-item">
+                <span className="mp-timeline-number">2</span>
+                <p className="mp-timeline-text">Professional photography & content gathering (2-3 days)</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="bg-cyan-500/20 border border-cyan-400 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-cyan-400 text-sm">3</span>
-                <p className="text-gray-300 pt-1 text-sm">Website development & design (7-10 days)</p>
+              <div className="mp-timeline-item">
+                <span className="mp-timeline-number">3</span>
+                <p className="mp-timeline-text">Website development & design (7-10 days)</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="bg-cyan-500/20 border border-cyan-400 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-cyan-400 text-sm">4</span>
-                <p className="text-gray-300 pt-1 text-sm">Your review, revisions, and final approval (2-3 days)</p>
+              <div className="mp-timeline-item">
+                <span className="mp-timeline-number">4</span>
+                <p className="mp-timeline-text">Your review, revisions, and final approval (2-3 days)</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="bg-green-500/20 border border-green-400 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-green-400 text-sm">5</span>
-                <p className="text-green-300 pt-1 text-sm font-semibold">Website goes LIVE - start receiving premium bookings!</p>
+              <div className="mp-timeline-item">
+                <span className="mp-timeline-number green">5</span>
+                <p className="mp-timeline-text green">Website goes LIVE - start receiving premium bookings!</p>
               </div>
             </div>
-            <div className="mt-6 pt-6 border-t border-gray-700">
-              <p className="text-cyan-400 font-bold">Total Timeline: 14-21 days from payment to launch</p>
+            <div className="mp-timeline-total">
+              <p className="mp-timeline-total-text">Total Timeline: 14-21 days from payment to launch</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="bg-black py-8 border-t border-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-500 text-sm mb-2">
+      <div className="mp-footer">
+        <div className="mp-footer-content">
+          <p className="mp-footer-text">
             © 2024 Deegaan Riyo. Premium Hotel Web Development.
           </p>
-          <p className="text-gray-600 text-xs">
+          <p className="mp-footer-note">
             This proposal is valid for 30 days from presentation date. We serve hotels across Nairobi & Somalia.
           </p>
         </div>
