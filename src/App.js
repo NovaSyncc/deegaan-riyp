@@ -14,6 +14,7 @@ import Baraka from './pages/Home/Sections/Baraka/Baraka';
 import HYYAT from './pages/Home/Sections/HYYAT/HYYAT';
 import Sakina from './pages/Home/Sections/Sakina/Sakina';
 import MogadishuSalesOnePager from './components/MogadishuSalesOnePager/MogadishuSalesOnePager'; // ⬅️ New import
+import MoonsPalaceProposal from './pages/MoonsPalace/MoonsPalace';
 
 // Lazy loaded components
 const Privacy = lazy(() => import('./pages/Privacy/Privacy'));
@@ -50,6 +51,7 @@ function App() {
               <Route path="/hyyat" element={<HYYAT />} />
               <Route path="/sakina" element={<Sakina />} />
               <Route path="/mogadishu-sales" element={<MogadishuSalesOnePager />} /> {/* ⬅️ New route */}
+              <Route path="/moons-palace" element={<MoonsPalaceProposal />} />
             </Routes>
           </Layout>
         </Suspense>
