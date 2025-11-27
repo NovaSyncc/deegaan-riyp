@@ -7,22 +7,22 @@ const MoonsPalaceProposal = () => {
     {
       name: "HYYAT Golden Hotel",
       location: "Eastleigh, Nairobi",
-      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
-      url: "hyyatgoldenhotel.com",
+      image: "/images/hotels/hyyat-golden/hyyatgoldenhotelentrance.jpg",
+      url: "https://www.hyyatgoldenhotel.online/",
       features: "Full booking system, multilingual"
     },
     {
       name: "BinAli Hotel",
       location: "Eastleigh, Nairobi",
-      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800",
-      url: "binalihotel.com",
+      image: "/images/hotels/bushra/reception.jpg",
+      url: "https://www.binalihotel.online/",
       features: "Custom CMS, payment integration"
     },
     {
-      name: "Urban Point Hotel",
+      name: "Baraka Tower Hotel",
       location: "Eastleigh, Nairobi",
-      image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800",
-      url: "Listed on DGR Platform",
+      image: "/images/hotels/baraka-tower/room2.jpg",
+      url: "https://barakatowerhotel.com/",
       features: "Premium digital presence"
     }
   ];
@@ -32,12 +32,22 @@ const MoonsPalaceProposal = () => {
     "Mobile-responsive design - looks perfect on all devices",
     "Direct booking system - WhatsApp integration, inquiry forms",
     "Room showcase with photo galleries and pricing",
+    "Reception video loop - capturing rooms and all hotel amenities",
     "Google Maps integration - guests can find you easily",
     "Contact forms and booking calendar",
     "Fast loading speed - optimized for poor connections",
     "SEO setup - rank on Google for 'hotels near me'",
     "Multilingual support (English & Somali)",
     "1 year free hosting & domain included"
+  ];
+
+  const techStack = [
+    "React.js - Modern, fast user interface",
+    "Node.js - Powerful backend server",
+    "MongoDB - Secure database management",
+    "Tailwind CSS - Beautiful, responsive design",
+    "WhatsApp API - Direct booking integration",
+    "Google Analytics - Track visitor behavior"
   ];
 
   const problems = [
@@ -109,14 +119,14 @@ const MoonsPalaceProposal = () => {
           </div>
 
           <h1 className="mp-title">
+            <span style={{ fontSize: '0.6em', color: '#9ca3af', fontWeight: '500' }}>PROPOSAL FOR</span><br />
             Premium Website for<br />
             <span className="mp-title-highlight">Moons Palace Hotel</span>
           </h1>
 
           <p className="mp-subtitle">
             Professional hotel website with booking system.
-            <span className="mp-price"> 45,000 KES</span> investment,
-            <span className="mp-payback"> 3-6 month payback</span> guaranteed.
+            <span className="mp-price"> 45,000 KES</span> total investment.
           </p>
 
           <div className="mp-flex mp-flex-col mp-items-center mp-gap-4" style={{ marginBottom: '2rem' }}>
@@ -138,7 +148,7 @@ const MoonsPalaceProposal = () => {
           {/* Trust Indicators */}
           <div className="mp-trust-grid">
             <div className="mp-trust-item">
-              <div className="mp-trust-number cyan">6+</div>
+              <div className="mp-trust-number cyan" style={{ fontSize: '1.5rem' }}>Most</div>
               <div className="mp-trust-label">Hotels in Eastleigh</div>
             </div>
             <div className="mp-trust-item">
@@ -207,7 +217,7 @@ const MoonsPalaceProposal = () => {
                 <h4 className="mp-design-title">Professional Design Sample</h4>
                 <div className="mp-design-preview">
                   <img
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800"
+                    src="/images/hotels/hyyat-golden/hyyatgoldenreception.jpg"
                     alt="Hotel website showcase"
                     className="mp-design-image"
                   />
@@ -306,43 +316,25 @@ const MoonsPalaceProposal = () => {
         </div>
       </div>
 
-      {/* ROI Section */}
+      {/* Tech Stack Section */}
       <div className="mp-section mp-section-darker">
-        <div className="mp-container" style={{ maxWidth: '64rem' }}>
-          <div className="mp-roi-card">
-            <Shield className="mp-roi-icon" />
-            <h2 className="mp-roi-title">
-              <span className="mp-roi-highlight">3-6 Month</span> Payback Guarantee
+        <div className="mp-container">
+          <div className="mp-text-center mp-mb-12">
+            <h2 className="mp-section-title">
+              Built with <span className="mp-title-highlight">Modern Technology</span>
             </h2>
-            <p className="mp-roi-subtitle">
-              Here's why this is the smartest 45K you'll ever spend
-            </p>
+            <p className="mp-section-subtitle">Industry-leading tech stack for performance and reliability</p>
+          </div>
 
-            <div className="mp-roi-math">
-              <h4 className="mp-roi-math-title">Conservative ROI Math:</h4>
-              <div className="mp-roi-list">
-                <p className="mp-roi-item">✓ With a website, attract <strong>more bookings</strong> and charge <strong>~20% more</strong> per room (premium positioning & professionalism)</p>
-                <p className="mp-roi-item">✓ Example: If charging 3,500 KES, with website: <strong className="cyan">~4,200 KES (+700 KES/booking)</strong></p>
-                <p className="mp-roi-item">✓ Plus: <strong>increased booking rate</strong> from online visibility</p>
-                <p className="mp-roi-item">✓ At 65-75 bookings = <strong className="green">Investment recovered in 3-6 months</strong></p>
-                <p className="mp-roi-final">✓ After that, every booking benefits from your professional online presence</p>
+          <div className="mp-grid-3">
+            {techStack.map((tech, i) => (
+              <div key={i} className="mp-card" style={{ borderColor: 'rgba(34, 211, 238, 0.2)' }}>
+                <div className="mp-feature-item">
+                  <CheckCircle className="mp-feature-icon" />
+                  <p className="mp-feature-text">{tech}</p>
+                </div>
               </div>
-            </div>
-
-            <div className="mp-comparison-grid">
-              <div className="mp-comparison-card">
-                <div className="mp-comparison-label red">Without Website</div>
-                <div className="mp-comparison-sublabel">Average Room Rate</div>
-                <p className="mp-comparison-amount">3,500 KES</p>
-                <p className="mp-comparison-note">Limited to walk-ins & referrals only</p>
-              </div>
-              <div className="mp-comparison-card highlight">
-                <div className="mp-comparison-label green">With Website</div>
-                <div className="mp-comparison-sublabel">Average Room Rate</div>
-                <p className="mp-comparison-amount">~4,200 KES</p>
-                <p className="mp-comparison-note green">Professional presence + more bookings + better rates</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -377,8 +369,8 @@ const MoonsPalaceProposal = () => {
             <h3 className="mp-track-title">Our Track Record in Eastleigh:</h3>
             <div className="mp-track-grid">
               <div>
-                <div className="mp-track-number cyan">6+</div>
-                <div className="mp-track-label">Hotels Listed on DGR</div>
+                <div className="mp-track-number cyan" style={{ fontSize: '1.5rem' }}>Most</div>
+                <div className="mp-track-label">Hotels in Eastleigh</div>
               </div>
               <div>
                 <div className="mp-track-number green">3</div>
