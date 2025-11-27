@@ -31,8 +31,9 @@ const MoonsPalaceProposal = () => {
     "Custom domain (moonspalacehotel.com) - your own brand",
     "Mobile-responsive design - looks perfect on all devices",
     "Direct booking system - WhatsApp integration, inquiry forms",
-    "Room showcase with photo galleries and pricing",
+    "Room showcase with photo galleries, videos and pricing",
     "Reception video loop - capturing rooms and all hotel amenities",
+    "Professional video content - room tours, facilities walkthrough",
     "Google Maps integration - guests can find you easily",
     "Contact forms and booking calendar",
     "Fast loading speed - optimized for poor connections",
@@ -148,8 +149,8 @@ const MoonsPalaceProposal = () => {
           {/* Trust Indicators */}
           <div className="mp-trust-grid">
             <div className="mp-trust-item">
-              <div className="mp-trust-number cyan" style={{ fontSize: '1.5rem' }}>Most</div>
-              <div className="mp-trust-label">Hotels in Eastleigh</div>
+              <div className="mp-trust-number cyan">8+</div>
+              <div className="mp-trust-label">Eastleigh Hotels Worked With</div>
             </div>
             <div className="mp-trust-item">
               <div className="mp-trust-number green">3</div>
@@ -168,7 +169,7 @@ const MoonsPalaceProposal = () => {
         <div className="mp-container">
           <div className="mp-text-center mp-mb-12">
             <h2 className="mp-section-title">Why Hotels Without Websites Lose Money</h2>
-            <p className="mp-section-subtitle">In 2024, no website = no credibility = no premium bookings</p>
+            <p className="mp-section-subtitle">In 2025, no website = no credibility = no premium bookings</p>
           </div>
 
           <div className="mp-grid-3">
@@ -369,8 +370,8 @@ const MoonsPalaceProposal = () => {
             <h3 className="mp-track-title">Our Track Record in Eastleigh:</h3>
             <div className="mp-track-grid">
               <div>
-                <div className="mp-track-number cyan" style={{ fontSize: '1.5rem' }}>Most</div>
-                <div className="mp-track-label">Hotels in Eastleigh</div>
+                <div className="mp-track-number cyan">8+</div>
+                <div className="mp-track-label">Eastleigh Hotels Worked With</div>
               </div>
               <div>
                 <div className="mp-track-number green">3</div>
@@ -420,15 +421,15 @@ const MoonsPalaceProposal = () => {
               </div>
               <div className="mp-timeline-item">
                 <span className="mp-timeline-number">2</span>
-                <p className="mp-timeline-text">Professional photography & content gathering (2-3 days)</p>
+                <p className="mp-timeline-text">Content gathering - photos, videos, hotel information (Day 1)</p>
               </div>
               <div className="mp-timeline-item">
                 <span className="mp-timeline-number">3</span>
-                <p className="mp-timeline-text">Website development & design (7-10 days)</p>
+                <p className="mp-timeline-text">Website development & design (Days 2-4)</p>
               </div>
               <div className="mp-timeline-item">
                 <span className="mp-timeline-number">4</span>
-                <p className="mp-timeline-text">Your review, revisions, and final approval (2-3 days)</p>
+                <p className="mp-timeline-text">Your review, revisions, and final approval (Day 5)</p>
               </div>
               <div className="mp-timeline-item">
                 <span className="mp-timeline-number green">5</span>
@@ -436,7 +437,7 @@ const MoonsPalaceProposal = () => {
               </div>
             </div>
             <div className="mp-timeline-total">
-              <p className="mp-timeline-total-text">Total Timeline: 14-21 days from payment to launch</p>
+              <p className="mp-timeline-total-text">Total Timeline: 5 Business Days from payment to launch</p>
             </div>
           </div>
         </div>
@@ -446,7 +447,7 @@ const MoonsPalaceProposal = () => {
       <div className="mp-footer">
         <div className="mp-footer-content">
           <p className="mp-footer-text">
-            © 2024 Deegaan Riyo. Premium Hotel Web Development.
+            © 2025 Deegaan Riyo. Premium Hotel Web Development.
           </p>
           <p className="mp-footer-note">
             This proposal is valid for 30 days from presentation date. We serve hotels across Nairobi & Somalia.
