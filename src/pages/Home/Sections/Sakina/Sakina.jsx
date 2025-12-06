@@ -36,43 +36,37 @@ const Sakina = ({ onBack }) => {
     setCurrentSlide(index);
   };
   
-  // Updated hotel data to match Urban format
+  // FIXED: Updated hotel data with correct Sakina pricing
   const selectedHotel = {
     id: 'sakina-hotel',
     name: 'Sakina Hotel',
     location: language === 'en' ? 'Nairobi Eastleigh' : 'Nairobi Eastleigh',
     city: 'nairobi',
     country: 'kenya',
-    priceRange: 'Ksh 2,000 - Ksh 4,500',
+    priceRange: 'Ksh 2,000 - Ksh 4,000',
     whatsappNumber: '254741947770',
     roomTypes: [
       {
-        type: "Classic King",
+        type: "Standard Single",
         daily: "Ksh 2,000",
         weekly: "Contact for rates",
         monthly: "Contact for rates"
       },
       {
-        type: "Super King",
-        daily: "Ksh 2,500",
+        type: "Deluxe Double",
+        daily: "Ksh 3,000",
         weekly: "Contact for rates",
         monthly: "Contact for rates"
       },
       {
-        type: "Deluxe King Size",
-        daily: "Ksh 2,800",
+        type: "Twin Beds",
+        daily: "Ksh 3,000",
         weekly: "Contact for rates",
         monthly: "Contact for rates"
       },
       {
-        type: "Deluxe Twin",
-        daily: "Ksh 2,500",
-        weekly: "Contact for rates",
-        monthly: "Contact for rates"
-      },
-      {
-        type: "Family Suite",
-        daily: "Ksh 4,500",
+        type: "VIP Family",
+        daily: "Ksh 4,000",
         weekly: "Contact for rates",
         monthly: "Contact for rates"
       }
@@ -88,7 +82,7 @@ const Sakina = ({ onBack }) => {
     setIsBookingFormOpen(false);
   };
 
-  // Translation object - matching Urban structure
+  // FIXED: Translation object with correct room types
   const translations = {
     en: {
       title: "Sakina Hotel",
@@ -105,18 +99,17 @@ const Sakina = ({ onBack }) => {
       visitWebsite: "Visit Website",
       contactForRates: "Contact for rates",
       roomTypes: {
-        classicKing: "Classic King",
-        superKing: "Super King",
-        deluxeKingSize: "Deluxe King Size",
-        deluxeTwin: "Deluxe Twin",
-        familySuite: "Family Suite"
+        standardSingle: "Standard Single",
+        deluxeDouble: "Deluxe Double",
+        twinBeds: "Twin Beds",
+        vipFamily: "VIP Family"
       },
       amenitiesList: [
-        "99 Spacious Contemporary Rooms",
+        "Premium Spacious Rooms",
         "On-site Restaurant & Cuisine",
         "Prime Eastleigh Location",
         "Conference & Event Facilities",
-        "24/7 Concierge Service",
+        "24/7 Reception Service",
         "High-Speed Wi-Fi",
         "Luxury Bedding & Linens",
         "Secure Parking"
@@ -151,14 +144,13 @@ const Sakina = ({ onBack }) => {
       visitWebsite: "Booqo Websitekan",
       contactForRates: "Nala soo xiriir qiimaha",
       roomTypes: {
-        classicKing: "Classic King",
-        superKing: "Super King",
-        deluxeKingSize: "Deluxe King Size",
-        deluxeTwin: "Deluxe Twin",
-        familySuite: "Qol Qoys"
+        standardSingle: "Qol Hal Qof",
+        deluxeDouble: "Qol Laba Qof (Deluxe)",
+        twinBeds: "Laba Sariir",
+        vipFamily: "Qol Qoys VIP"
       },
       amenitiesList: [
-        "99 Qol oo Ballaaran oo Casri ah",
+        "Qolal Ballaaran oo Heer Sare ah",
         "Makhaayadda iyo Cuntada",
         "Goob Fiican Eastleigh",
         "Shirarka & Xafladaha",
@@ -226,34 +218,29 @@ const Sakina = ({ onBack }) => {
     }
   ];
 
+  // FIXED: Room rates with correct Sakina pricing
   const roomRates = [
     {
-      type: t.roomTypes.classicKing,
+      type: t.roomTypes.standardSingle,
       daily: "Ksh 2,000",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
-      type: t.roomTypes.superKing,
-      daily: "Ksh 2,500",
+      type: t.roomTypes.deluxeDouble,
+      daily: "Ksh 3,000",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
-      type: t.roomTypes.deluxeKingSize,
-      daily: "Ksh 2,800",
+      type: t.roomTypes.twinBeds,
+      daily: "Ksh 3,000",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     },
     {
-      type: t.roomTypes.deluxeTwin,
-      daily: "Ksh 2,500",
-      weekly: t.contactForRates,
-      monthly: t.contactForRates
-    },
-    {
-      type: t.roomTypes.familySuite,
-      daily: "Ksh 4,500",
+      type: t.roomTypes.vipFamily,
+      daily: "Ksh 4,000",
       weekly: t.contactForRates,
       monthly: t.contactForRates
     }
