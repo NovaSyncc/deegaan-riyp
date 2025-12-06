@@ -313,7 +313,7 @@
       "city": "nairobi",
       "country": "kenya",
       "location": "Eastleigh, Nairobi",
-      "priceRange": "Ksh 3,500 - Ksh 8,000",
+      "priceRange": "Ksh 2,000 - Ksh 4,000",
       "descriptions": {
         "en": "Discover the perfect blend of comfort, luxury, and exceptional service at Sakina Hotel and Restaurant. Located in Eastleigh, Nairobi, we offer cozy rooms, attentive staff, and dining options to suit every palate.",
         "so": "Hel isku dhafka fiican ee raaxada iyo adeegga heer sare ah ee Sakina Hotel and Restaurant. Waxay ku taallaa Eastleigh, Nairobi, waxaanu bixinaa qolal raaxo leh iyo makhaayad u adeegta dhadhankaaga."
@@ -322,6 +322,32 @@
         "en": ["High-Speed Wi-Fi", "Flat-Screen TVs", "In-Room Safes", "Tea & Coffee", "Spa", "Restaurant"],
         "so": ["Wi-Fi Xawaare Sare", "TV-yada", "Khasnado", "Shaah iyo Qaxwe", "Spa", "Makhaayadda"]
       },
+      "roomTypes": [
+        {
+          "type": "Standard Single",
+          "daily": "Ksh 2,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Deluxe Double",
+          "daily": "Ksh 3,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "Twin Beds",
+          "daily": "Ksh 3,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        },
+        {
+          "type": "VIP Family",
+          "daily": "Ksh 4,000",
+          "weekly": "Contact for rates",
+          "monthly": "Contact for rates"
+        }
+      ],
       "whatsappNumber": "254741947770",
       "images": [
         "TNT03856-scaled.jpg",
